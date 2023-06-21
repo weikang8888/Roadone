@@ -12,7 +12,7 @@ const SubContact = () => {
   useEffect(() => {
     const handleScroll = () => {
       const toTopButton = document.getElementById("toTop");
-      if (window.scrollY > 100) {
+      if (window.scrollY > 300) {
         toTopButton.classList.add("show");
       } else {
         toTopButton.classList.remove("show");
@@ -51,7 +51,7 @@ const SubContact = () => {
             </a>
           </li>
         </ul>
-        <div className="wmkc-top" onClick={handleScrollUp}>
+        <div id="toTop" className="wmkc-top" onClick={handleScrollUp}>
           <i className="wmkc-icon"></i>
         </div>
       </div>
