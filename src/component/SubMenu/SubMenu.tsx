@@ -3,15 +3,25 @@ import { NavLink } from "react-router-dom";
 
 interface SubMenuOptions {
   currentpage: string;
+  currentlink: string;
+  previouslink?: string;
+  previouspage?: string;
 }
 
-const SubMenu = ({ currentpage }: SubMenuOptions) => {
+const SubMenu = ({
+  currentpage,
+  previouspage,
+  currentlink,
+  previouslink,
+}: SubMenuOptions) => {
   return (
     <>
       <div className="bPosition">
-        <NavLink to="/">Home</NavLink>
+        <a href="/">Home</a>
+        {previouspage && " > "}
+        {previouspage && <a href={previouslink}>{previouspage}</a>}
         {" > "}
-        {currentpage}
+        <a href={currentlink}>{currentpage}</a>
       </div>
     </>
   );

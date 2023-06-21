@@ -1,0 +1,151 @@
+#wmkc {
+  position: fixed;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif !important;
+  padding-bottom: 65px;
+  z-index: 99999;
+}
+
+#wmkc * {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 100%;
+  transform: scale(0.97);
+}
+
+.wmkc-list {
+  padding: 0;
+  border: 1px solid #eee;
+  background-color: #fff;
+  max-width: 70px;
+  overflow-x: hidden;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.wmkc-list > li:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.wmkc-list > li {
+  width: 100%;
+  line-height: 115%;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+  text-align: center;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.wmkc-list > li a {
+  color: #555;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+
+.wmkc-email .wmkc-icon {
+  background-position: -6px -6px;
+}
+.wmkc-list li:hover a {
+  color: #fff;
+}
+.wmkc-email:hover {
+  background-color: #f90;
+}
+.wmkc-whatsapp:hover {
+  background-color: #2cb740;
+}
+.wmkc-skype:hover {
+  background-color: #0091df;
+}
+.wmkc-email:hover .wmkc-icon {
+  background-position: -94px -6px;
+}
+.wmkc-whatsapp:hover .wmkc-icon {
+  background-position: -50px -94px;
+}
+.wmkc-skype:hover .wmkc-icon {
+  background-position: -94px -50px;
+}
+.wmkc-list > li:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.wmkc-list > li:last-child {
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+}
+.wmkc-top {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #eee;
+  background-color: #fff;
+  padding: 5px 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.wmkc-top .wmkc-icon {
+  background-position: -6px -50px;
+}
+.wmkc-top p {
+  color: #777;
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+.wmkc-top:hover {
+  background-color: #bbb;
+}
+.wmkc-top:hover p {
+  color: #fff;
+}
+.wmkc-top:hover .wmkc-icon {
+  background-position: -6px -94px;
+}
+@media (max-width: 768px) {
+  #wmkc {
+    display: none;
+  }
+}
+.wmkc-wechat .wmkc-icon {
+  background-position: -142px -10px;
+}
+.wmkc-wechat:hover {
+  background-color: #51c332;
+}
+.wmkc-wechat:hover .wmkc-icon {
+  background-position: -142px -62px;
+}
+.wmkc-list > li p {
+  margin: 2px 0 0;
+  font-size: 11px;
+}
+
+.wmkc-icon {
+  display: inline-block;
+  background: url(../../static/image//main/wmkc-ico23.png) no-repeat;
+  width: 32px;
+  height: 32px;
+}
+.wmkc-whatsapp .wmkc-icon {
+  background-position: -50px -50px;
+}
+
+.wmkc-wechat .wmkc-icon {
+  background-position: -142px -10px;
+}
+.wmkc-top .wmkc-icon {
+  background-position: -6px -50px;
+}
+.wmkc-list > li:last-child {
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+}

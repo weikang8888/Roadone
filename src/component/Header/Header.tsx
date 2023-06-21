@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { NavLink, Link,useLocation } from "react-router-dom";
-
+import { NavLink, Link, useLocation } from "react-router-dom";
+import "./header.css";
 import Logo from "../../static/image/main/logo.png";
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       <nav className="navbar">
@@ -22,7 +27,7 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li id="liproducts">
-                  <NavLink to="" className="inmenu">
+                  <NavLink to="/products" className="inmenu">
                     Product
                   </NavLink>
                   <ul className="submenu nav0">
@@ -49,34 +54,34 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li id="linewslist-1">
-                  <NavLink to="" className="inmenu">
+                  <NavLink to="/news" className="inmenu">
                     News
                   </NavLink>
                   <ul className="submenu">
                     <li id="HeadNewsCat1">
-                      <Link to="" title="New products">
+                      <Link to="/news/newproducts" title="New products">
                         New products
                       </Link>
                     </li>
                     <li id="HeadNewsCat2">
-                      <Link to="" title="Trade Fair">
+                      <Link to="/news/tradefair" title="Trade Fair">
                         Trade Fair
                       </Link>
                     </li>
                     <li id="HeadNewsCat3">
-                      <Link to="" title="TYRE TEST">
+                      <Link to="/news/tyretest" title="TYRE TEST">
                         TYRE TEST
                       </Link>
                     </li>
                     <li id="HeadNewsCat4">
-                      <Link to="" title="Company update">
+                      <Link to="/news/companyupdate" title="Company update">
                         Company update
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li id="liInfo">
-                  <NavLink to="" className="inmenu">
+                  <NavLink to="/services" className="inmenu">
                     Service
                   </NavLink>
                   <ul className="submenu">
@@ -88,12 +93,12 @@ const Header = () => {
                   </ul>
                 </li>
                 <li id="licontact-us">
-                  <NavLink to="" className="inmenu">
+                  <NavLink to="/contact" className="inmenu">
                     Contact Us
                   </NavLink>
                 </li>
                 <li id="lidownload">
-                  <NavLink to="" className="inmenu">
+                  <NavLink to="/download" className="inmenu">
                     Download
                   </NavLink>
                 </li>

@@ -1522,7 +1522,11 @@ li.tick {
   color: #b2b2b2;
   clear: both;
 }
-.pages a,
+.pages button.disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.pages button,
 .pages span {
   display: inline-block;
   margin: 1px 5px;
@@ -1530,14 +1534,16 @@ li.tick {
   height: 30px;
   padding: 0 10px;
   line-height: 30px;
+  border: 0;
+  background: transparent;
 }
-.pages a:link,
-.pages a:visited {
+.pages button:link,
+.pages button:visited {
   color: #666;
   background: #fff;
 }
-.pages a:active,
-.pages a:hover,
+.pages button:active,
+.pages button:hover,
 .pages span.ctxt {
   color: #fff;
   background: #333;

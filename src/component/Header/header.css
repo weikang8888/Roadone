@@ -1,0 +1,16 @@
+.active {
+  background: #d80808;
+  z-index: -1;
+}
+
+#liproducts:hover .submenu {
+  display: block;
+}
+
+#linewslist-1:hover .submenu {
+  display: block;
+}
+
+#liInfo:hover .submenu {
+  display: block;
+}

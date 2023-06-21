@@ -36,11 +36,11 @@ const Aboutpage = () => {
       <section>
         <div className="container container1">
           <div className="ejfl">Tongli Tyre Factory</div>
-          <SubMenu currentpage="Tongli Tyre Factory" />{" "}
+          <SubMenu currentpage="Tongli Tyre Factory" currentlink={"/about"} />
           <div className="main">
             <div className="pinfo">
               <p className="center">
-                <span className="title">
+                <span className="section-title-text">
                   <strong>Group Profile</strong>
                 </span>
               </p>
@@ -280,7 +280,7 @@ const Aboutpage = () => {
                 <legend className="section-legend center">
                   <span className="section-legend-text">
                     <strong className="section-legend-title">
-                      <span className="section-title-text">
+                      <span className="title">
                         Industrial Park
                       </span>
                     </strong>
@@ -343,7 +343,7 @@ const Aboutpage = () => {
                 <legend className="section-legend center">
                   <span className="section-legend-text">
                     <strong className="section-legend-title">
-                      <span className="section-title-text">
+                      <span className="title">
                         EQUIPMENTS FROM THE WORLD
                       </span>
                     </strong>
