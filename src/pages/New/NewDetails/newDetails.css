@@ -1,0 +1,84 @@
+.highlight {
+  color: rgb(255, 0, 0);
+}
+
+.font-size-26 {
+  font-size: 26px;
+}
+
+.production-intro {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.skew-line {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #fa8b8b;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: skew(-45deg);
+}
+
+.skew-line-bt {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #fa8b8b;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: skew(45deg);
+}
+
+.circle {
+  display: inline-block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 4px;
+  top: 50%;
+  margin-top: -3px;
+}
+
+.specifications {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 20px 8px 56px;
+  box-sizing: border-box;
+  background: url(https://www.roadone-hixih.com/Content/images/nine-icon.png)
+    no-repeat 20px #30b1e8;
+  border-left: 3px solid #0787b2;
+  border-radius: 0 5px 5px 0;
+}
+
+.box {
+  width: 49%;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-right: 2%;
+}
+
+.image-container {
+  max-width: 100%;
+}
+
+.text {
+  margin-top: 5px;
+}
+
+.clear {
+  clear: both;
+}

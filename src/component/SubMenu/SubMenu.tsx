@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 interface SubMenuOptions {
   currentpage: string;
-  currentlink: string;
+  currentlink?: string;
   previouslink?: string;
   previouspage?: string;
 }
@@ -21,7 +21,11 @@ const SubMenu = ({
         {previouspage && " > "}
         {previouspage && <a href={previouslink}>{previouspage}</a>}
         {" > "}
-        <a href={currentlink}>{currentpage}</a>
+        {currentlink ? (
+          <a href={currentlink}>{currentpage}</a>
+        ) : (
+          <span>{currentpage}</span>
+        )}{" "}
       </div>
     </>
   );

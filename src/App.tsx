@@ -20,6 +20,7 @@ import TradeFair from "./pages/New/TradeFair";
 import TyreTest from "./pages/New/TyreTest";
 import CompanyUpdate from "./pages/New/CompanyUpdate";
 import SubContact from "./component/SubMenu/SubContact";
+import NewDetails_19AUG21 from "./pages/New/NewDetails/NewDetails_19AUG21";
 
 function App() {
   return (
@@ -35,11 +36,15 @@ function App() {
           <Route path="/news/tradefair" element={<TradeFair />} />
           <Route path="/news/tyretest" element={<TyreTest />} />
           <Route path="/news/companyupdate" element={<CompanyUpdate />} />
+          <Route
+            path="/news/385-65r22-5-new-pattern-hf281"
+            element={<NewDetails_19AUG21 />}
+          />
 
           <Route path="/services" element={<Servicepage />} />
           <Route path="/contact" element={<Contactpage />} />
         </Routes>
-        <SubContact/>
+        <SubContact />
         <Footer />
       </Router>
     </>
