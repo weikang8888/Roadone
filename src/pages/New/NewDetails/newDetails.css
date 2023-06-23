@@ -6,6 +6,14 @@
   font-size: 26px;
 }
 
+.font-UI {
+  font-family: "Microsoft YaHei UI", sans-serif;
+}
+
+.font-Dengxian {
+  font-family: 等线!important;
+}
+
 .production-intro {
   position: relative;
   display: inline-block;
@@ -15,7 +23,12 @@
   margin-left: 10px;
   color: #fff;
 }
-
+.pinfo-title {
+  font-size: 32px;
+  font-family: Arial;
+  color: black;
+  font-weight: bold;
+}
 .skew-line {
   display: inline-block;
   position: absolute;
