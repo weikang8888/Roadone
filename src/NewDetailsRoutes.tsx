@@ -14,6 +14,11 @@ import NewDetails_21AUG20_2 from "./pages/New/NewDetails/NewDetails_21AUG20_2";
 import NewDetails_24JUL20 from "./pages/New/NewDetails/NewDetails_24JUL20";
 import NewDetails_27SEP19 from "./pages/New/NewDetails/NewDetails_27SEP19";
 import NewDetails_30JUL19 from "./pages/New/NewDetails/NewDetails_30JUL19";
+import NewDetails_01AUG18 from "./pages/New/NewDetails/NewDetails_01AUG18";
+import NewDetails_01AUG18_2 from "./pages/New/NewDetails/NewDetails_01AUG18_2";
+import NewDetails_01AUG18_3 from "./pages/New/NewDetails/NewDetails_01AUG18_3";
+import NewDetails_01AUG18_4 from "./pages/New/NewDetails/NewDetails_01AUG18_4";
+import NewDetails_01AUG18_5 from "./pages/New/NewDetails/NewDetails_01AUG18_5";
 
 const NewDetailsRoutes = [
   { path: "385-65r22-5-new-pattern-hf281", component: NewDetails_19AUG21 },
@@ -69,6 +74,26 @@ const NewDetailsRoutes = [
   {
     path: "roadone-attend-philauto-at-24th-to-26th-july-2019",
     component: NewDetails_30JUL19,
+  },
+  {
+    path: "components-of-a-tyre",
+    component: NewDetails_01AUG18,
+  },
+  {
+    path: "tyre-pressure-why-is-it-important",
+    component: NewDetails_01AUG18_2,
+  },
+  {
+    path: "how-do-you-keep-your-best-driving-performance-and-comfort-longer",
+    component: NewDetails_01AUG18_3,
+  },
+  {
+    path: "inspection-and-repair-of-tyres",
+    component: NewDetails_01AUG18_4,
+  },
+  {
+    path: "considerations-for-replacing-tires",
+    component: NewDetails_01AUG18_5,
   },
 ];
 
