@@ -9,6 +9,11 @@ import NewDetails_30NOV20 from "./pages/New/NewDetails/NewDetails_30NOV20";
 import NewDetails_10NOV20 from "./pages/New/NewDetails/NewDetails_10NOV20";
 import NewDetails_01SEP20 from "./pages/New/NewDetails/NewDetails_01SEP20_2";
 import NewDetails_01SEP20_2 from "./pages/New/NewDetails/NewDetails_01SEP20_2";
+import NewDetails_21AUG20 from "./pages/New/NewDetails/NewDetails_21AUG20";
+import NewDetails_21AUG20_2 from "./pages/New/NewDetails/NewDetails_21AUG20_2";
+import NewDetails_24JUL20 from "./pages/New/NewDetails/NewDetails_24JUL20";
+import NewDetails_27SEP19 from "./pages/New/NewDetails/NewDetails_27SEP19";
+import NewDetails_30JUL19 from "./pages/New/NewDetails/NewDetails_30JUL19";
 
 const NewDetailsRoutes = [
   { path: "385-65r22-5-new-pattern-hf281", component: NewDetails_19AUG21 },
@@ -44,6 +49,26 @@ const NewDetailsRoutes = [
   {
     path: "roadone-m665a-heavy-duty-13r22.5-test",
     component: NewDetails_01SEP20_2,
+  },
+  {
+    path: "roadone-tire-2019-cambodia-dealers-conference-successfully-held",
+    component: NewDetails_21AUG20,
+  },
+  {
+    path: "roadone-tyre-national-agent-meeting",
+    component: NewDetails_21AUG20_2,
+  },
+  {
+    path: "265-70r19-5-new-tyre",
+    component: NewDetails_24JUL20,
+  },
+  {
+    path: "roadone-tyre-in-pakistan-ceremony",
+    component: NewDetails_27SEP19,
+  },
+  {
+    path: "roadone-attend-philauto-at-24th-to-26th-july-2019",
+    component: NewDetails_30JUL19,
   },
 ];
 
