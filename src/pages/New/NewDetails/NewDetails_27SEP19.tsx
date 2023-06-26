@@ -9,9 +9,9 @@ import NewDetailsImage48 from "./picture/nd48.jpg";
 import NewDetailsImage49 from "./picture/nd49.jpg";
 import NewDetailsImage50 from "./picture/nd50.jpg";
 import NewDetailsImage51 from "./picture/nd51.jpg";
-import NewDetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
-import NewDetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
-import NewDetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
+import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
+import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const NewDetails_27SEP19 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -450,13 +450,13 @@ const NewDetails_27SEP19 = () => {
                     </p>
                   </div>
 
-                  <NewDetailsButton />
-                  <NewDetailsPreviousNext
+                  <DetailsButton />
+                  <DetailsPreviousNext
                     prevText={"No information"}
                     nextLink="/news/295-80r22-5-hf21-truck-tire-test"
                     nextText={"295/80R22.5 HF21 Truck Tire Test"}
                   />
-                  <NewDetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
+                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>
               )}
             </div>

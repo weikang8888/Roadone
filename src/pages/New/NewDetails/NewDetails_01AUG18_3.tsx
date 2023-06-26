@@ -4,9 +4,9 @@ import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
 import "./newDetails.css";
-import NewDetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
-import NewDetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
-import NewDetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
+import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
+import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const NewDetails_21AUG20 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -80,13 +80,13 @@ const NewDetails_21AUG20 = () => {
                     </p>
                   </div>
 
-                  <NewDetailsButton />
-                  <NewDetailsPreviousNext
+                  <DetailsButton />
+                  <DetailsPreviousNext
                     prevText={"No information"}
                     nextLink="/news/295-80r22-5-hf21-truck-tire-test"
                     nextText={"295/80R22.5 HF21 Truck Tire Test"}
                   />
-                  <NewDetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
+                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>
               )}
             </div>

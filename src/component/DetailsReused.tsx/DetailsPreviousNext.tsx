@@ -1,17 +1,17 @@
 import React from "react";
 
-interface NewDetailsPreviousNextOptions {
+interface DetailsPreviousNextOptions {
   prevLink?: string;
   prevText: string;
   nextLink?: string;
   nextText: string;
 }
-const NewDetailsPreviousNext = ({
+const DetailsPreviousNext = ({
   prevLink,
   prevText,
   nextLink,
   nextText,
-}: NewDetailsPreviousNextOptions) => {
+}: DetailsPreviousNextOptions) => {
   return (
     <>
       <div className="pn">
@@ -35,4 +35,4 @@ const NewDetailsPreviousNext = ({
     </>
   );
 };
-export default NewDetailsPreviousNext;
+export default DetailsPreviousNext;

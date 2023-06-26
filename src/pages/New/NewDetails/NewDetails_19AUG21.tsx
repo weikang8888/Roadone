@@ -9,9 +9,9 @@ import NewDetailsImage2 from "./picture/nd2.jpg";
 import NewDetailsImage3 from "./picture/nd3.jpg";
 import NewDetailsImage4 from "./picture/nd4.jpg";
 import NewDetailsImage5 from "./picture/nd5.jpg";
-import NewDetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
-import NewDetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
-import NewDetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
+import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
+import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const NewDetails_19AUG21 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -225,13 +225,13 @@ const NewDetails_19AUG21 = () => {
                       </div>
                     </div>
                   </div>
-                  <NewDetailsButton />
-                  <NewDetailsPreviousNext
+                  <DetailsButton />
+                  <DetailsPreviousNext
                     prevText={"No informtaion"}
                     nextLink="/"
                     nextText={"HD520 PATTERN ROAD TEST"}
                   />
-                  <NewDetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />
+                  <DetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />
                 </>
               )}
             </div>

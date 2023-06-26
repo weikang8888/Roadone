@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const NewDetailsRelatedNews = ({ ids }) => {
+const DetailsRelatedNews = ({ ids }) => {
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const NewDetailsRelatedNews = ({ ids }) => {
   );
 };
 
-export default NewDetailsRelatedNews;
+export default DetailsRelatedNews;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./deatilsreused.css";
 
-const NewDetailsButton = () => {
+const DetailsButton = () => {
   const handlePrint = () => {
     window.print();
   };
@@ -33,4 +33,4 @@ const NewDetailsButton = () => {
     </>
   );
 };
-export default NewDetailsButton;
+export default DetailsButton;

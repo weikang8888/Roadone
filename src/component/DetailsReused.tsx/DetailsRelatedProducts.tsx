@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewDetailsRelatedNews = () => {
+const DetailsRelatedNews = () => {
   return <></>;
 };
-export default NewDetailsRelatedNews;
+export default DetailsRelatedNews;
