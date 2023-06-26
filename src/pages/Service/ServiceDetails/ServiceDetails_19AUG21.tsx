@@ -13,7 +13,7 @@ const ServiceDetails_19AUG21 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/news?ids=17")
+      .get("http://localhost:8080/api_roadone/services/services?ids=1")
       .then((response) => {
         setNewsItems(response.data);
       })
@@ -30,7 +30,7 @@ const ServiceDetails_19AUG21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">Service</div>
           <SubMenu
             previouslink="/news"
             previouspage="News"
@@ -45,29 +45,7 @@ const ServiceDetails_19AUG21 = () => {
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
 
-                  <div className="pinfo">
-                    <p>
-                      Improper tyre pressure can lead to a large number of
-                      problems-from uneven tires and accelerated wear to
-                      structural damage, or even a reduction in mileage per unit
-                      of petrol. Maintaining proper tyre pressure can increase
-                      mileage per unit of petrol and significantly save fuel
-                      cost.
-                    </p>
-                    <p>
-                      Check the tire pressure at least once a month or before a
-                      long trip. Goodyear recommends that you check the tyre
-                      pressure once a month or before a long trip.
-                    </p>
-                    <p>
-                      The tyre pressure should be adjusted to the car door sign
-                      or the user manual for the vehicle manufacturer's
-                      recommended values. Proper maintenance of vehicles and
-                      tyres is a useful investment because it translates into
-                      the best driving experience, dramatically saving costs and
-                      increasing mileage per unit of petrol.
-                    </p>
-                  </div>
+                  <div className="pinfo"></div>
 
                   <NewDetailsButton />
                   <NewDetailsPreviousNext

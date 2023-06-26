@@ -6,26 +6,26 @@
 }
 
 .share-btn-list .facebook {
-  background: url(../../../../static//image/news/share-facebook.png) no-repeat;
+  background: url(../../static//image/news/share-facebook.png) no-repeat;
   background-size: 30px 30px;
 }
 .share-btn-list .twitter {
-  background: url(../../../../static//image/news/share-twitter.png) -4px -4px
+  background: url(../../static//image/news/share-twitter.png) -4px -4px
     no-repeat;
   background-size: 37px 37px;
 }
 .share-btn-list .linkedin {
-  background: url(../../../../static//image/news/share-linkedin.png) -4px -4px
+  background: url(../../static//image/news/share-linkedin.png) -4px -4px
     no-repeat;
   background-size: 36px 36px;
 }
 .share-btn-list .pinterest {
-  background: url(../../../../static//image/news/share-pinterest.png) -2px -2px
+  background: url(../../static//image/news/share-pinterest.png) -2px -2px
     no-repeat;
   background-size: 32px 32px;
 }
 .share-btn-list .print {
-  background: url(../../../../static//image/news/share-print.png) center
+  background: url(../../static//image/news/share-print.png) center
     no-repeat #2e3192;
   background-size: 18px 18px;
 }

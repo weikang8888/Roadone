@@ -17,6 +17,7 @@ import TyreTest from "./pages/New/TyreTest";
 import CompanyUpdate from "./pages/New/CompanyUpdate";
 import SubContact from "./component/SubMenu/SubContact";
 import NewDetailsRoutes from "./routes/NewDetailsRoutes";
+import ServiceDetailsRoutes from "./routes/ServiceDetailsRoutes";
 
 class App extends Component {
   componentDidMount() {
@@ -31,6 +32,16 @@ class App extends Component {
         <Route
           key={path}
           path={`/news/${path}`}
+          element={React.createElement(component)}
+        />
+      )
+    );
+
+    const renderedServiceDetailsRoutes = ServiceDetailsRoutes.map(
+      ({ path, component }) => (
+        <Route
+          key={path}
+          path={`/services/${path}`}
           element={React.createElement(component)}
         />
       )
@@ -51,6 +62,7 @@ class App extends Component {
             <Route path="/news/companyupdate" element={<CompanyUpdate />} />
             {renderedNewDetailsRoutes}
             <Route path="/services" element={<Servicepage />} />
+            {renderedServiceDetailsRoutes}
             <Route path="/contact" element={<Contactpage />} />
           </Routes>
           <SubContact />
