@@ -3,12 +3,11 @@ import axios from "axios";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
-import "./newDetails.css";
 import NewDetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
 import NewDetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import NewDetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
-const NewDetails_21AUG20 = () => {
+const ServiceDetails_19AUG21 = () => {
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -25,7 +24,6 @@ const NewDetails_21AUG20 = () => {
 
   // Assuming you want to render the first news item
   const newsItem = newsItems.length > 0 ? newsItems[0] : null;
-
   return (
     <>
       <InnerBanner bannerimage={NewsBanner} />
@@ -48,7 +46,7 @@ const NewDetails_21AUG20 = () => {
                   </div>
 
                   <div className="pinfo">
-                  <p>
+                    <p>
                       Improper tyre pressure can lead to a large number of
                       problems-from uneven tires and accelerated wear to
                       structural damage, or even a reduction in mileage per unit
@@ -88,4 +86,4 @@ const NewDetails_21AUG20 = () => {
   );
 };
 
-export default NewDetails_21AUG20;
+export default ServiceDetails_19AUG21;

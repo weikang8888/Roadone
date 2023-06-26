@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import WOW from "wowjs";
-
 import HM1 from "../../static/image/main/hm1.png";
 import HM2 from "../../static/image/main/hm2.png";
 import HM3 from "../../static/image/main/hm3.png";
@@ -14,10 +12,7 @@ const Footer = () => {
     fontFamily: "arial, helvetica, sans-serif",
     fontSize: "16px",
   };
-  useEffect(() => {
-    const wow = new WOW.WOW();
-    wow.init();
-  }, []);
+
   return (
     <>
       <footer>

@@ -8,9 +8,9 @@ import NewDetailsImage8 from "./picture/nd8.webp";
 import NewDetailsImage9 from "./picture/nd9.webp";
 import NewDetailsImage10 from "./picture/nd10.webp";
 import NewDetailsImage11 from "./picture/nd11.webp";
-import NewDetailsButton from "./NewDetailsReused.tsx/NewDetailsButton";
-import NewDetailsPreviousNext from "./NewDetailsReused.tsx/NewDetailsPreviousNext";
-import NewDetailsRelatedNews from "./NewDetailsReused.tsx/NewDetailsRelatedNews";
+import NewDetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
+import NewDetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
+import NewDetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const NewDetails_03FEB21 = () => {
   const [newsItems, setNewsItems] = useState([]);

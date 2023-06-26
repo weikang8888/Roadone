@@ -6,9 +6,9 @@ import NewsBanner from "../../../static/image/news/news-banner.webp";
 import "./newDetails.css";
 import NewDetailsImage18 from "./picture/nd18.webp";
 import NewDetailsImage19 from "./picture/nd19.webp";
-import NewDetailsButton from "./NewDetailsReused.tsx/NewDetailsButton";
-import NewDetailsPreviousNext from "./NewDetailsReused.tsx/NewDetailsPreviousNext";
-import NewDetailsRelatedNews from "./NewDetailsReused.tsx/NewDetailsRelatedNews";
+import NewDetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
+import NewDetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
+import NewDetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const NewDetails_30NOV20 = () => {
   const [newsItems, setNewsItems] = useState([]);

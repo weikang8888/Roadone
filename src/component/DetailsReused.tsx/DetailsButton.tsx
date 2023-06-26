@@ -1,5 +1,5 @@
 import React from "react";
-import "./newdeatilsreused.css";
+import "./deatilsreused.css";
 
 const NewDetailsButton = () => {
   const handlePrint = () => {

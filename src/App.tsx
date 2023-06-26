@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import WOW from "wowjs";
 import Header from "./component/Header/Header";
 import "./static/css/style.css";
 import "./static/css/animate.min.css";
@@ -15,40 +16,49 @@ import TradeFair from "./pages/New/TradeFair";
 import TyreTest from "./pages/New/TyreTest";
 import CompanyUpdate from "./pages/New/CompanyUpdate";
 import SubContact from "./component/SubMenu/SubContact";
-import NewDetailsRoutes from "./NewDetailsRoutes";
+import NewDetailsRoutes from "./routes/NewDetailsRoutes";
 
-function App() {
-  const renderedNewDetailsRoutes = NewDetailsRoutes.map(
-    ({ path, component }) => (
-      <Route
-        key={path}
-        path={`/news/${path}`}
-        element={React.createElement(component)}
-      />
-    )
-  );
-  return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<Aboutpage />} />
-          <Route path="/products" element={<Productpage />} />
-          <Route path="/news" element={<Newpage />} />
-          <Route path="/news/newproducts" element={<NewProducts />} />
-          <Route path="/news/tradefair" element={<TradeFair />} />
-          <Route path="/news/tyretest" element={<TyreTest />} />
-          <Route path="/news/companyupdate" element={<CompanyUpdate />} />
-          {renderedNewDetailsRoutes}
-          <Route path="/services" element={<Servicepage />} />
-          <Route path="/contact" element={<Contactpage />} />
-        </Routes>
-        <SubContact />
-        <Footer />
-      </Router>
-    </>
-  );
+class App extends Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }
+
+  render() {
+    const renderedNewDetailsRoutes = NewDetailsRoutes.map(
+      ({ path, component }) => (
+        <Route
+          key={path}
+          path={`/news/${path}`}
+          element={React.createElement(component)}
+        />
+      )
+    );
+
+    return (
+      <>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<Aboutpage />} />
+            <Route path="/products" element={<Productpage />} />
+            <Route path="/news" element={<Newpage />} />
+            <Route path="/news/newproducts" element={<NewProducts />} />
+            <Route path="/news/tradefair" element={<TradeFair />} />
+            <Route path="/news/tyretest" element={<TyreTest />} />
+            <Route path="/news/companyupdate" element={<CompanyUpdate />} />
+            {renderedNewDetailsRoutes}
+            <Route path="/services" element={<Servicepage />} />
+            <Route path="/contact" element={<Contactpage />} />
+          </Routes>
+          <SubContact />
+          <Footer />
+        </Router>
+      </>
+    );
+  }
 }
 
 export default App;

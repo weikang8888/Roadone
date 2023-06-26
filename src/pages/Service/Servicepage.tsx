@@ -22,7 +22,7 @@ const Servicepage = () => {
         console.error("Error fetching data:", error);
       });
   }, []);
-
+ 
   // Pagination
   const indexOfLastNews = currentPage * newsPerPage;
   const indexOfFirstNews = indexOfLastNews - newsPerPage;
