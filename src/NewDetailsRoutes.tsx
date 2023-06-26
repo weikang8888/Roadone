@@ -19,6 +19,11 @@ import NewDetails_01AUG18_2 from "./pages/New/NewDetails/NewDetails_01AUG18_2";
 import NewDetails_01AUG18_3 from "./pages/New/NewDetails/NewDetails_01AUG18_3";
 import NewDetails_01AUG18_4 from "./pages/New/NewDetails/NewDetails_01AUG18_4";
 import NewDetails_01AUG18_5 from "./pages/New/NewDetails/NewDetails_01AUG18_5";
+import NewDetails_01AUG18_6 from "./pages/New/NewDetails/NewDetails_01AUG18_6";
+import NewDetails_01AUG18_7 from "./pages/New/NewDetails/NewDetails_01AUG18_7";
+import NewDetails_01AUG18_8 from "./pages/New/NewDetails/NewDetails_01AUG18_8";
+import NewDetails_01AUG18_9 from "./pages/New/NewDetails/NewDetails_01AUG18_9";
+import NewDetails_01AUG18_10 from "./pages/New/NewDetails/NewDetails_01AUG18_10";
 
 const NewDetailsRoutes = [
   { path: "385-65r22-5-new-pattern-hf281", component: NewDetails_19AUG21 },
@@ -94,6 +99,26 @@ const NewDetailsRoutes = [
   {
     path: "considerations-for-replacing-tires",
     component: NewDetails_01AUG18_5,
+  },
+  {
+    path: "tyre-maintenance-and-maintenance-guide",
+    component: NewDetails_01AUG18_6,
+  },
+  {
+    path: "how-to-replace-flat-gas-tires",
+    component: NewDetails_01AUG18_7,
+  },
+  {
+    path: "driving-skills-in-wet-sliding-road",
+    component: NewDetails_01AUG18_8,
+  },
+  {
+    path: "driving-skills-in-winter",
+    component: NewDetails_01AUG18_9,
+  },
+  {
+    path: "tyre-performance-standard",
+    component: NewDetails_01AUG18_10,
   },
 ];
 
