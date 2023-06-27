@@ -18,6 +18,7 @@ import CompanyUpdate from "./pages/New/CompanyUpdate";
 import SubContact from "./component/SubMenu/SubContact";
 import NewDetailsRoutes from "./routes/NewDetailsRoutes";
 import ServiceDetailsRoutes from "./routes/ServiceDetailsRoutes";
+import ServiceCompanyNews from "./pages/Service/ServiceCompanyNews";
 
 class App extends Component {
   componentDidMount() {
@@ -62,6 +63,7 @@ class App extends Component {
             <Route path="/news/companyupdate" element={<CompanyUpdate />} />
             {renderedNewDetailsRoutes}
             <Route path="/services" element={<Servicepage />} />
+            <Route path="/services/companynews" element={<ServiceCompanyNews />} />
             {renderedServiceDetailsRoutes}
             <Route path="/contact" element={<Contactpage />} />
           </Routes>

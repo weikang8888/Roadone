@@ -86,7 +86,7 @@ const Header = () => {
                   </NavLink>
                   <ul className="submenu">
                     <li id="HeadIndustryCat1">
-                      <Link to="" title="Company News">
+                      <Link to="/services/companynews" title="Company News">
                         Company News
                       </Link>
                     </li>
