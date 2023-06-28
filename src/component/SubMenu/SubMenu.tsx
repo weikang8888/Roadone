@@ -6,6 +6,8 @@ interface SubMenuOptions {
   currentlink?: string;
   previouslink?: string;
   previouspage?: string;
+  typelink?: string;
+  typepage?: string;
 }
 
 const SubMenu = ({
@@ -13,6 +15,8 @@ const SubMenu = ({
   previouspage,
   currentlink,
   previouslink,
+  typelink,
+  typepage,
 }: SubMenuOptions) => {
   return (
     <>
@@ -26,6 +30,8 @@ const SubMenu = ({
         ) : (
           <span>{currentpage}</span>
         )}{" "}
+        {typepage && " > "}
+        {typepage && <a href={typelink}>{typepage}</a>}
       </div>
     </>
   );

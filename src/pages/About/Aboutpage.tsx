@@ -36,7 +36,7 @@ const Aboutpage = () => {
       <section>
         <div className="container container1">
           <div className="ejfl">Tongli Tyre Factory</div>
-          <SubMenu currentpage="Tongli Tyre Factory" currentlink={"/about"} />
+          <SubMenu currentpage="Tongli Tyre Factory" currentlink={"/about"}/>
           <div className="main">
             <div className="pinfo">
               <p className="center">
