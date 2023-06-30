@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductBanner from "../../static/image/products/product-banner.webp";
-import HotProductImage1 from "../../static/picture/hotproductImage1.webp";
-import HotProductImage2 from "../../static/picture/hotproductImage2.webp";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
+
 const Productpage = () => {
   const [showFirstSubMenu, setShowFirstSubMenu] = useState(true);
   const [showSecondSubMenu, setShowSecondSubMenu] = useState(false);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api_roadone/products/products")
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   const [menuState, setMenuState] = useState({
     previousLink: "",
@@ -17,7 +28,8 @@ const Productpage = () => {
     typePage: "",
     typeLink: "",
   });
-  const handleTruckTireClick = (event, currentPage) => {
+
+  const handleProductTypeClick = (event, currentPage) => {
     event.preventDefault();
 
     setMenuState((prevState) => ({
@@ -27,16 +39,42 @@ const Productpage = () => {
       currentPage: currentPage,
     }));
 
-    if (currentPage === "Truck Tire") {
-      setShowFirstSubMenu(false);
-      setShowSecondSubMenu(true);
-    } else {
-      setShowFirstSubMenu(true);
-      setShowSecondSubMenu(false);
+    const pageToProductsTypeMap = {
+      "Truck Tire": "truck-tire",
+      "Bus Tire": "bus-tire",
+      "Light Truck Tire": "light-truck-tire",
+      "RADIAL OTR TIRES": "radial-otr-tires",
+      "ROADONE TYRE DEMONSTRATION": "roadone-tyre-demonstration",
+    };
+
+    if (pageToProductsTypeMap.hasOwnProperty(currentPage)) {
+      const productsType = pageToProductsTypeMap[currentPage];
+
+      // Fetch the data from the API again
+      axios
+        .get("http://localhost:8080/api_roadone/products/products")
+        .then((response) => {
+          // Filter the retrieved data based on the selected product type
+          const filteredProducts = response.data.filter(
+            (product) => product.products_type === productsType
+          );
+          setProducts(filteredProducts);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+
+      if (currentPage === "Truck Tire") {
+        setShowFirstSubMenu(false);
+        setShowSecondSubMenu(true);
+      } else {
+        setShowFirstSubMenu(true);
+        setShowSecondSubMenu(false);
+      }
     }
   };
 
-  const handleSecondDivClick = (event, typePage) => {
+  const handleTruckTireClick = (event, typePage) => {
     event.preventDefault();
 
     setMenuState((prevState) => ({
@@ -45,6 +83,39 @@ const Productpage = () => {
       previousPage: "Product",
       typePage: typePage,
     }));
+
+    const pageToTruckTireTypeMap = {
+      "Quarry & Building Sites": "quarry-building-sites",
+      "Mid-long Distance Wearable": "mid-long-distance-wearable",
+      "Mid-Short distance Heavy Load": "mid-short-distance-heavy-load",
+      "Long Haul Wearable Tyre": "long-haul-wearable-tyre",
+      "HIGH END OFF-ROAD TYRE": "high-end-off-read-tyre",
+      "High End Heavy Loading Tyre": "high-end-heavy-loading-tyre",
+      "HIGH END WEARABLE TYRE": "high-end-wearable-tyre",
+      "12R22.5 QA919": "12r22-5-qa919",
+    };
+    if (pageToTruckTireTypeMap.hasOwnProperty(typePage)) {
+      const productsType = pageToTruckTireTypeMap[typePage];
+      axios
+        .get("http://localhost:8080/api_roadone/products/products")
+        .then((response) => {
+          // Filter the retrieved data based on the selected product type
+          const filteredProducts = response.data.filter(
+            (product) => product.products_truck_tire_type === productsType
+          );
+          setProducts(filteredProducts);
+          console.log(filteredProducts);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+
+      if (typePage) {
+        setShowSecondSubMenu(false);
+      } else {
+        setShowSecondSubMenu(true);
+      }
+    }
   };
 
   return (
@@ -71,14 +142,16 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate1"
                   onClick={(event) =>
-                    handleTruckTireClick(event, "Truck Tire")
+                    handleProductTypeClick(event, "Truck Tire")
                   }>
                   <a href="">+Truck Tire</a>
                 </li>
                 <li
                   className="LiProCateOne"
                   id="LiProCate2"
-                  onClick={(event) => handleTruckTireClick(event, "Bus Tire")}>
+                  onClick={(event) =>
+                    handleProductTypeClick(event, "Bus Tire")
+                  }>
                   <a href="https://www.roadone-hixih.com/bus-tire/">
                     +Bus Tire
                   </a>
@@ -87,7 +160,7 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate3"
                   onClick={(event) =>
-                    handleTruckTireClick(event, "Light Truck Tire")
+                    handleProductTypeClick(event, "Light Truck Tire")
                   }>
                   <a href="https://www.roadone-hixih.com/light-truck-tire/">
                     +Light Truck Tire
@@ -97,7 +170,7 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate4"
                   onClick={(event) =>
-                    handleTruckTireClick(event, "RADIAL OTR TIRES")
+                    handleProductTypeClick(event, "RADIAL OTR TIRES")
                   }>
                   <a href="https://www.roadone-hixih.com/radial-otr-tires/">
                     +RADIAL OTR TIRES
@@ -107,7 +180,7 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate5"
                   onClick={(event) =>
-                    handleTruckTireClick(event, "ROADONE TYRE DEMONSTRATION")
+                    handleProductTypeClick(event, "ROADONE TYRE DEMONSTRATION")
                   }>
                   <a href="https://www.roadone-hixih.com/roadone-tyre-demonstration/">
                     +ROADONE TYRE DEMONSTRATION
@@ -121,7 +194,7 @@ const Productpage = () => {
               <ul className="d-flex flex-wrap">
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "Quarry & Building Sites")
+                    handleTruckTireClick(event, "Quarry & Building Sites")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/mine-truck-tire/">
                     Quarry &amp; Building Sites
@@ -129,7 +202,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "Mid-long Distance Wearable")
+                    handleTruckTireClick(event, "Mid-long Distance Wearable")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/long-distance-standard-load-truck-tire/">
                     Mid-long Distance Wearable
@@ -137,7 +210,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "Mid-Short distance Heavy Load")
+                    handleTruckTireClick(event, "Mid-Short distance Heavy Load")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/medium-and-short-distance-hybrid-truck-tires/">
                     Mid-Short distance Heavy Load
@@ -145,7 +218,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "Long Haul Wearable Tyre")
+                    handleTruckTireClick(event, "Long Haul Wearable Tyre")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/highway-truck-tire/">
                     Long Haul Wearable Tyre
@@ -153,7 +226,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "HIGH END OFF-ROAD TYRE")
+                    handleTruckTireClick(event, "HIGH END OFF-ROAD TYRE")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-off-road-tyre/">
                     HIGH END OFF-ROAD TYRE
@@ -161,7 +234,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "High End Heavy Loading Tyres")
+                    handleTruckTireClick(event, "High End Heavy Loading Tyres")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-heavy-loading-tyres/">
                     High End Heavy Loading Tyres
@@ -169,7 +242,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "HIGH END WEARABLE TYRE")
+                    handleTruckTireClick(event, "HIGH END WEARABLE TYRE")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-wearable-tyre/">
                     HIGH END WEARABLE TYRE
@@ -177,7 +250,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleSecondDivClick(event, "12R22.5 QA919")
+                    handleTruckTireClick(event, "12R22.5 QA919")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/12r22-5-qa919/">
                     12R22.5 QA919
@@ -186,60 +259,30 @@ const Productpage = () => {
               </ul>
             </div>
             <div className="row mx-0 justify-content-between">
-              <div className="pro-bigbox d-flex align-items-center">
-                <div className="bigboximg col-4 me-4">
-                  <a href="https://www.roadone-hixih.com/radial-otr-tires/16-00r25-all-steel-wide-body-dump-truck-tire.html">
-                    <img
-                      src={HotProductImage1}
-                      alt="16.00R25 ALL STEEL WIDE BODY DUMP TRUCK TIRE"
-                    />
-                  </a>
-                </div>
-                <div className="bigboxword col-6">
-                  {" "}
-                  <a href="https://www.roadone-hixih.com/radial-otr-tires/16-00r25-all-steel-wide-body-dump-truck-tire.html">
-                    <h3>16.00R25 ALL STEEL WIDE BODY DUMP TRUCK TIRE</h3>
-                  </a>
-                  <p>
-                    ROADONE 14.00R25 ， 16.00R25 RADIAL TIRES FOR WIDE BODY DUMP
-                    TRUCK SUIT FOR SOFT MINE AND HARD MINES
-                  </p>
-                  <div className="bigboxmore">
-                    <a
-                      href="https://www.roadone-hixih.com/radial-otr-tires/16-00r25-all-steel-wide-body-dump-truck-tire.html"
-                      rel="nofollow">
-                      Read More
+              {products.map((product, index) => (
+                <div
+                  className="pro-bigbox d-flex align-items-center"
+                  key={index}>
+                  <div className="bigboximg col-4 me-4">
+                    <a href={product.products_url}>
+                      <img
+                        src={require(`../../static/picture/${product.products_image}`)}
+                      />
                     </a>
                   </div>
-                </div>
-              </div>
-              <div className="pro-bigbox d-flex align-items-center">
-                <div className="bigboximg col-4 me-4">
-                  <a href="https://www.roadone-hixih.com/radial-otr-tires/16-00r25-all-steel-wide-body-dump-truck-tire.html">
-                    <img
-                      src={HotProductImage2}
-                      alt="16.00R25 ALL STEEL WIDE BODY DUMP TRUCK TIRE"
-                    />
-                  </a>
-                </div>
-                <div className="bigboxword col-6">
-                  {" "}
-                  <a href="https://www.roadone-hixih.com/radial-otr-tires/16-00r25-all-steel-wide-body-dump-truck-tire.html">
-                    <h3>16.00R25 ALL STEEL WIDE BODY DUMP TRUCK TIRE</h3>
-                  </a>
-                  <p>
-                    ROADONE 14.00R25 ， 16.00R25 RADIAL TIRES FOR WIDE BODY DUMP
-                    TRUCK SUIT FOR SOFT MINE AND HARD MINES
-                  </p>
-                  <div className="bigboxmore">
-                    <a
-                      href="https://www.roadone-hixih.com/radial-otr-tires/16-00r25-all-steel-wide-body-dump-truck-tire.html"
-                      rel="nofollow">
-                      Read More
+                  <div className="bigboxword col-6">
+                    <a href={product.products_url}>
+                      <h3>{product.products_name}</h3>
                     </a>
+                    <p>{product.products_description}</p>
+                    <div className="bigboxmore">
+                      <a href={product.products_url} rel="nofollow">
+                        Read More
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
