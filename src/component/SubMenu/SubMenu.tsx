@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 interface SubMenuOptions {
   currentpage: string;
@@ -8,32 +7,97 @@ interface SubMenuOptions {
   previouspage?: string;
   typelink?: string;
   typepage?: string;
+  className?: string;
+  onSubMenuClick?: (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    previousPage: string,
+    currentPage: string,
+    typePage: string
+  ) => void;
 }
 
-const SubMenu = ({
+const SubMenu: React.FC<SubMenuOptions> = ({
   currentpage,
   previouspage,
   currentlink,
   previouslink,
   typelink,
   typepage,
-}: SubMenuOptions) => {
+  className,
+  onSubMenuClick,
+}) => {
+  const handlePreviousPageClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
+    if (onSubMenuClick) {
+      onSubMenuClick(event, previouspage || "", "", typepage || "");
+    }
+  };
+
+  const handleCurrentPageClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
+    if (onSubMenuClick) {
+      onSubMenuClick(
+        event,
+        previouspage || "",
+        currentpage || "",
+        typepage || ""
+      );
+    }
+  };
+
   return (
-    <>
-      <div className="bPosition">
-        <a href="/">Home</a>
-        {previouspage && " > "}
-        {previouspage && <a href={previouslink}>{previouspage}</a>}
-        {" > "}
-        {currentlink ? (
-          <a href={currentlink}>{currentpage}</a>
-        ) : (
-          <span>{currentpage}</span>
-        )}{" "}
-        {typepage && " > "}
-        {typepage && <a href={typelink}>{typepage}</a>}
-      </div>
-    </>
+    <div className="bPosition">
+      <a href="/">Home</a>
+      {previouslink ? (
+        <>
+          {previouspage && " > "}
+          {previouspage && <a href={previouslink}>{previouspage}</a>}
+        </>
+      ) : (
+        <>
+          {previouspage && " > "}
+          {previouspage && (
+            <span onClick={handlePreviousPageClick} className={className}>
+              {previouspage}
+            </span>
+          )}
+        </>
+      )}
+      {currentlink ? (
+        <>
+          {currentpage && " > "}
+          {currentpage && (
+            <a href={currentlink} onClick={handleCurrentPageClick}>
+              {currentpage}
+            </a>
+          )}
+        </>
+      ) : (
+        <>
+          {currentpage && " > "}
+          {currentpage && (
+            <span onClick={handleCurrentPageClick} className={className}>
+              {currentpage}
+            </span>
+          )}
+        </>
+      )}
+      {typelink ? (
+        <>
+          {typepage && " > "}
+          {typepage && <a href={typelink}>{typepage}</a>}
+        </>
+      ) : (
+        <>
+          {typepage && " > "}
+          {typepage && <span>{typepage}</span>}
+        </>
+      )}
+    </div>
   );
 };
 

@@ -333,6 +333,9 @@ img {
 #nav-menu {
   margin-left: auto;
 }
+.pointer {
+  cursor: pointer;
+}
 .prosubmenu li {
   border-radius: 30px;
   border: 1px solid;
@@ -1560,7 +1563,7 @@ li.tick {
 }
 .pages button:active,
 .pages button:hover,
-.pages span.ctxt {
+.pages button.active {
   color: #fff;
   background: #333;
   color: #fff;
@@ -1651,7 +1654,7 @@ li.tick {
 }
 .pro-bigbox {
   background: #eee;
-  width:49%;
+  width: 49%;
   margin-bottom: 20px;
   height: 250px;
 }

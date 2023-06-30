@@ -8,6 +8,26 @@ const Productpage = () => {
   const [showFirstSubMenu, setShowFirstSubMenu] = useState(true);
   const [showSecondSubMenu, setShowSecondSubMenu] = useState(false);
   const [products, setProducts] = useState([]);
+  const [currentProduct, setCurrentPage] = useState(1);
+  const [newsPerProduct] = useState(12);
+
+  const indexOfLastNews = currentProduct * newsPerProduct;
+  const indexOfFirstNews = indexOfLastNews - newsPerProduct;
+  const currentNews = products.slice(indexOfFirstNews, indexOfLastNews);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const isFirstPage = currentProduct === 1;
+  const isLastPage =
+    currentProduct === Math.ceil(products.length / newsPerProduct);
+
+  const [menuState, setMenuState] = useState({
+    previousPage: "Product",
+    currentPage: "",
+    typePage: "",
+  });
 
   useEffect(() => {
     axios
@@ -20,14 +40,63 @@ const Productpage = () => {
       });
   }, []);
 
-  const [menuState, setMenuState] = useState({
-    previousLink: "",
-    previousPage: "",
-    currentPage: "Product",
-    currentLink: "/products",
-    typePage: "",
-    typeLink: "",
-  });
+  const handleSubMenuClick = (event, previousPage, currentPage, typePage) => {
+    event.preventDefault();
+
+    setMenuState((prevState) => ({
+      ...prevState,
+      previousLink: "/products",
+      previousPage: previousPage,
+      currentPage: currentPage !== previousPage ? currentPage : "",
+      typePage: previousPage !== currentPage ? null : typePage,
+    }));
+
+    const pageToProductsTypeMap = {
+      "Truck Tire": "truck-tire",
+      "Bus Tire": "bus-tire",
+      "Light Truck Tire": "light-truck-tire",
+      "RADIAL OTR TIRES": "radial-otr-tires",
+      "ROADONE TYRE DEMONSTRATION": "roadone-tyre-demonstration",
+    };
+    if (previousPage && !currentPage) {
+      axios
+        .get("http://localhost:8080/api_roadone/products/products")
+        .then((response) => {
+          console.log(response.data);
+          setProducts(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+
+      setShowFirstSubMenu(true);
+      setShowSecondSubMenu(false);
+    }
+    if (pageToProductsTypeMap.hasOwnProperty(currentPage)) {
+      const productsType = pageToProductsTypeMap[currentPage];
+
+      axios
+        .get("http://localhost:8080/api_roadone/products/products")
+        .then((response) => {
+          if (currentPage === "Truck Tire") {
+            setShowFirstSubMenu(false);
+            setShowSecondSubMenu(true);
+          } else {
+            setShowFirstSubMenu(true);
+            setShowSecondSubMenu(false);
+          }
+
+          const filteredProducts = response.data.filter(
+            (product) => product.products_type === productsType
+          );
+          setProducts(filteredProducts);
+          console.log(filteredProducts);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }
+  };
 
   const handleProductTypeClick = (event, currentPage) => {
     event.preventDefault();
@@ -50,11 +119,9 @@ const Productpage = () => {
     if (pageToProductsTypeMap.hasOwnProperty(currentPage)) {
       const productsType = pageToProductsTypeMap[currentPage];
 
-      // Fetch the data from the API again
       axios
         .get("http://localhost:8080/api_roadone/products/products")
         .then((response) => {
-          // Filter the retrieved data based on the selected product type
           const filteredProducts = response.data.filter(
             (product) => product.products_type === productsType
           );
@@ -74,7 +141,7 @@ const Productpage = () => {
     }
   };
 
-  const handleTruckTireClick = (event, typePage) => {
+  const handleTruckTireTypeClick = (event, typePage) => {
     event.preventDefault();
 
     setMenuState((prevState) => ({
@@ -95,16 +162,14 @@ const Productpage = () => {
       "12R22.5 QA919": "12r22-5-qa919",
     };
     if (pageToTruckTireTypeMap.hasOwnProperty(typePage)) {
-      const productsType = pageToTruckTireTypeMap[typePage];
+      const truckTireType = pageToTruckTireTypeMap[typePage];
       axios
         .get("http://localhost:8080/api_roadone/products/products")
         .then((response) => {
-          // Filter the retrieved data based on the selected product type
           const filteredProducts = response.data.filter(
-            (product) => product.products_truck_tire_type === productsType
+            (product) => product.products_truck_tire_type === truckTireType
           );
           setProducts(filteredProducts);
-          console.log(filteredProducts);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -118,6 +183,53 @@ const Productpage = () => {
     }
   };
 
+  const renderPageNumbers = () => {
+    const totalPages = Math.ceil(products.length / newsPerProduct);
+
+    return (
+      <div className="pages">
+        <button
+          onClick={() => paginate(1)}
+          disabled={isFirstPage}
+          className={isFirstPage ? "disabled" : ""}>
+          First
+        </button>
+        <button
+          onClick={() => paginate(currentProduct - 1)}
+          disabled={isFirstPage}
+          className={isFirstPage ? "disabled" : ""}>
+          Prev
+        </button>
+        {[...Array(totalPages)].map((_, index) => {
+          const pageNumber = index + 1;
+          return (
+            <button
+              key={pageNumber}
+              onClick={() => paginate(pageNumber)}
+              className={currentProduct === pageNumber ? "active" : ""}>
+              {pageNumber}
+            </button>
+          );
+        })}
+        <button
+          onClick={() => paginate(currentProduct + 1)}
+          disabled={isLastPage}
+          className={isLastPage ? "disabled" : ""}>
+          Next
+        </button>
+        <button
+          onClick={() => paginate(Math.ceil(products.length / newsPerProduct))}
+          disabled={isLastPage}
+          className={isLastPage ? "disabled" : ""}>
+          Last
+        </button>
+        <span className="pageInfo">
+          {currentProduct}/{totalPages}
+        </span>
+      </div>
+    );
+  };
+
   return (
     <>
       {" "}
@@ -126,12 +238,11 @@ const Productpage = () => {
         <div className="container">
           <div className="ejfl">Product Categories</div>
           <SubMenu
-            previouslink={menuState.previousLink}
             previouspage={menuState.previousPage}
             currentpage={menuState.currentPage}
-            currentlink={menuState.currentLink}
-            typelink=""
             typepage={menuState.typePage}
+            onSubMenuClick={handleSubMenuClick}
+            className="pointer"
           />
           <div className="main">
             <div
@@ -194,7 +305,7 @@ const Productpage = () => {
               <ul className="d-flex flex-wrap">
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "Quarry & Building Sites")
+                    handleTruckTireTypeClick(event, "Quarry & Building Sites")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/mine-truck-tire/">
                     Quarry &amp; Building Sites
@@ -202,7 +313,10 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "Mid-long Distance Wearable")
+                    handleTruckTireTypeClick(
+                      event,
+                      "Mid-long Distance Wearable"
+                    )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/long-distance-standard-load-truck-tire/">
                     Mid-long Distance Wearable
@@ -210,7 +324,10 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "Mid-Short distance Heavy Load")
+                    handleTruckTireTypeClick(
+                      event,
+                      "Mid-Short distance Heavy Load"
+                    )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/medium-and-short-distance-hybrid-truck-tires/">
                     Mid-Short distance Heavy Load
@@ -218,7 +335,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "Long Haul Wearable Tyre")
+                    handleTruckTireTypeClick(event, "Long Haul Wearable Tyre")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/highway-truck-tire/">
                     Long Haul Wearable Tyre
@@ -226,7 +343,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "HIGH END OFF-ROAD TYRE")
+                    handleTruckTireTypeClick(event, "HIGH END OFF-ROAD TYRE")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-off-road-tyre/">
                     HIGH END OFF-ROAD TYRE
@@ -234,7 +351,10 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "High End Heavy Loading Tyres")
+                    handleTruckTireTypeClick(
+                      event,
+                      "High End Heavy Loading Tyres"
+                    )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-heavy-loading-tyres/">
                     High End Heavy Loading Tyres
@@ -242,7 +362,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "HIGH END WEARABLE TYRE")
+                    handleTruckTireTypeClick(event, "HIGH END WEARABLE TYRE")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-wearable-tyre/">
                     HIGH END WEARABLE TYRE
@@ -250,7 +370,7 @@ const Productpage = () => {
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireClick(event, "12R22.5 QA919")
+                    handleTruckTireTypeClick(event, "12R22.5 QA919")
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/12r22-5-qa919/">
                     12R22.5 QA919
@@ -259,7 +379,7 @@ const Productpage = () => {
               </ul>
             </div>
             <div className="row mx-0 justify-content-between">
-              {products.map((product, index) => (
+              {currentNews.map((product, index) => (
                 <div
                   className="pro-bigbox d-flex align-items-center"
                   key={index}>
@@ -284,6 +404,7 @@ const Productpage = () => {
                 </div>
               ))}
             </div>
+            {renderPageNumbers()}
           </div>
         </div>
       </section>

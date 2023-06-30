@@ -35,6 +35,53 @@ const Newpage = () => {
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === Math.ceil(newsItems.length / newsPerPage);
 
+  const renderPageNumbers = () => {
+    const totalPages = Math.ceil(newsItems.length / newsPerPage);
+
+    return (
+      <div className="pages">
+        <button
+          onClick={() => paginate(1)}
+          disabled={isFirstPage}
+          className={isFirstPage ? "disabled" : ""}>
+          First
+        </button>
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={isFirstPage}
+          className={isFirstPage ? "disabled" : ""}>
+          Prev
+        </button>
+        {[...Array(totalPages)].map((_, index) => {
+          const pageNumber = index + 1;
+          return (
+            <button
+              key={pageNumber}
+              onClick={() => paginate(pageNumber)}
+              className={currentPage === pageNumber ? "active" : ""}>
+              {pageNumber}
+            </button>
+          );
+        })}
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={isLastPage}
+          className={isLastPage ? "disabled" : ""}>
+          Next
+        </button>
+        <button
+          onClick={() => paginate(Math.ceil(newsItems.length / newsPerPage))}
+          disabled={isLastPage}
+          className={isLastPage ? "disabled" : ""}>
+          Last
+        </button>
+        <span className="pageInfo">
+          {currentPage}/{totalPages}
+        </span>
+      </div>
+    );
+  };
+
   return (
     <>
       <InnerBanner bannerimage={NewsBanner} />
@@ -42,7 +89,7 @@ const Newpage = () => {
       <section>
         <div className="container">
           <div className="ejfl">News</div>
-          <SubMenu currentpage={"News"} currentlink={"/news"}/>
+          <SubMenu currentpage={"News"} currentlink={"/news"} />
           <div className="main">
             <ul className="news_message clearfix">
               <div className="newslist">
@@ -58,36 +105,7 @@ const Newpage = () => {
                 ))}
               </div>
             </ul>
-            <div className="pages">
-              <button
-                onClick={() => paginate(1)}
-                disabled={isFirstPage}
-                className={isFirstPage ? "disabled" : ""}>
-                First
-              </button>
-              <button
-                onClick={() => paginate(currentPage - 1)}
-                disabled={isFirstPage}
-                className={isFirstPage ? "disabled" : ""}>
-                Prev
-              </button>
-              <span className="ctxt">{currentPage}</span>
-              <button
-                onClick={() => paginate(currentPage + 1)}
-                disabled={isLastPage}
-                className={isLastPage ? "disabled" : ""}>
-                Next
-              </button>
-              <button
-                onClick={() =>
-                  paginate(Math.ceil(newsItems.length / newsPerPage))
-                }
-                disabled={isLastPage}
-                className={isLastPage ? "disabled" : ""}>
-                Last
-              </button>
-              {currentPage}/{Math.ceil(newsItems.length / newsPerPage)}
-            </div>
+            {renderPageNumbers()}
           </div>
         </div>
       </section>
