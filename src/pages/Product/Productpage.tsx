@@ -7,6 +7,8 @@ import SubMenu from "../../component/SubMenu/SubMenu";
 const Productpage = () => {
   const [showFirstSubMenu, setShowFirstSubMenu] = useState(true);
   const [showSecondSubMenu, setShowSecondSubMenu] = useState(false);
+  const [showQA919, setShowQA919] = useState(false);
+
   const [products, setProducts] = useState([]);
   const [currentProduct, setCurrentPage] = useState(1);
   const [newsPerProduct] = useState(12);
@@ -71,6 +73,7 @@ const Productpage = () => {
 
       setShowFirstSubMenu(true);
       setShowSecondSubMenu(false);
+      setShowQA919(false);
     }
     if (pageToProductsTypeMap.hasOwnProperty(currentPage)) {
       const productsType = pageToProductsTypeMap[currentPage];
@@ -81,9 +84,11 @@ const Productpage = () => {
           if (currentPage === "Truck Tire") {
             setShowFirstSubMenu(false);
             setShowSecondSubMenu(true);
+            setShowQA919(false);
           } else {
             setShowFirstSubMenu(true);
             setShowSecondSubMenu(false);
+            setShowQA919(false);
           }
 
           const filteredProducts = response.data.filter(
@@ -180,6 +185,12 @@ const Productpage = () => {
       } else {
         setShowSecondSubMenu(true);
       }
+
+      if (typePage === "12R22.5 QA919") {
+        setShowQA919(true);
+      } else {
+        setShowQA919(false);
+      }
     }
   };
 
@@ -245,6 +256,18 @@ const Productpage = () => {
             className="pointer"
           />
           <div className="main">
+            <div
+              className="plist"
+              style={{ display: showQA919 ? "block" : "none" }}>
+              <div className="pro-body">QA919</div>
+              <div className="pro-list"></div>
+
+              <div className="proIntro">
+                We're professional 12r22.5 qa919 manufacturers and suppliers in
+                China, providing bulk products for sale. Welcome to wholesale
+                high-quality 12r22.5 qa919 in stock here from our factory.
+              </div>
+            </div>
             <div
               className="prosubmenu clearfix"
               style={{ display: showFirstSubMenu ? "block" : "none" }}>
@@ -353,7 +376,7 @@ const Productpage = () => {
                   onClick={(event) =>
                     handleTruckTireTypeClick(
                       event,
-                      "High End Heavy Loading Tyres"
+                      "High End Heavy Loading Tyre"
                     )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-heavy-loading-tyres/">
