@@ -286,9 +286,7 @@ const Productpage = () => {
                   onClick={(event) =>
                     handleProductTypeClick(event, "Bus Tire")
                   }>
-                  <a href="https://www.roadone-hixih.com/bus-tire/">
-                    +Bus Tire
-                  </a>
+                  <a>+Bus Tire</a>
                 </li>
                 <li
                   className="LiProCateOne"
@@ -296,9 +294,7 @@ const Productpage = () => {
                   onClick={(event) =>
                     handleProductTypeClick(event, "Light Truck Tire")
                   }>
-                  <a href="https://www.roadone-hixih.com/light-truck-tire/">
-                    +Light Truck Tire
-                  </a>
+                  <a>+Light Truck Tire</a>
                 </li>
                 <li
                   className="LiProCateOne"
@@ -306,9 +302,7 @@ const Productpage = () => {
                   onClick={(event) =>
                     handleProductTypeClick(event, "RADIAL OTR TIRES")
                   }>
-                  <a href="https://www.roadone-hixih.com/radial-otr-tires/">
-                    +RADIAL OTR TIRES
-                  </a>
+                  <a>+RADIAL OTR TIRES</a>
                 </li>
                 <li
                   className="LiProCateOne"
@@ -316,9 +310,7 @@ const Productpage = () => {
                   onClick={(event) =>
                     handleProductTypeClick(event, "ROADONE TYRE DEMONSTRATION")
                   }>
-                  <a href="https://www.roadone-hixih.com/roadone-tyre-demonstration/">
-                    +ROADONE TYRE DEMONSTRATION
-                  </a>
+                  <a>+ROADONE TYRE DEMONSTRATION</a>
                 </li>
               </ul>
             </div>
