@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import InnerBanner from "../../../component/Banner/InnerBanner";
-import ProductBanner2 from "../../../static/image/products/product-banner-2.webp";
-import SubMenu from "../../../component/SubMenu/SubMenu";
-import "./productdetails.css";
-import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
-import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
+import InnerBanner from "../../../../component/Banner/InnerBanner";
+import ProductBanner2 from "../../../../static/image/products/product-banner-2.webp";
+import SubMenu from "../../../../component/SubMenu/SubMenu";
+import "../productdetails.css";
+import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
+import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const HF31 = () => {
+const RD35 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=1")
+      .get("http://localhost:8080/api_roadone/products/products?ids=19")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -34,7 +34,7 @@ const HF31 = () => {
             currentpage={"Truck Tire"}
             previouslink="/products"
             previouspage="Product"
-            typepage="Long Haul Wearable Tyre"
+            typepage="Mid-long Distance Wearable"
           />
           <div className="main">
             <div className="row">
@@ -44,7 +44,7 @@ const HF31 = () => {
                     <div id="preview" className="spec-preview">
                       <div className="jqzoom">
                         <img
-                          src={require(`../../../static/picture/${productItem.products_image}`)}
+                          src={require(`../../../../static/picture/${productItem.products_image}`)}
                         />
                       </div>
                     </div>
@@ -94,8 +94,8 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Designed for long-distance transportation on smooth and
-                  straight highway
+                  Dedicated block design provides superior driving force and wet
+                  grip, safe, durable and powerful.
                 </span>
               </p>
               <p>
@@ -109,8 +109,10 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Special tread compound and four-layer belts design, enhancing
-                  wear resistance, providing longer mileage.
+                  Widened and deepened driving surface,optimized profile
+                  design,special super wear-resistant tread formula for
+                  high-speed drive, ensure higher mileage in mixed road
+                  conditions such as high-way and national road.
                 </span>
               </p>
               <p>
@@ -124,24 +126,11 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Stone ejection design, reducing groove cracking.
+                  Special cap structure and specific 4 belt cap design, low
+                  heating recipe, optimised shoulder desigh, inhibiting deformed
+                  wear,ensure multiple retreading of tires.
                 </span>
               </p>
-              <p>
-                <span className="table-text">
-                  <span
-                    style={{
-                      fontFamily: "calibri",
-                      color: "rgb(229, 51, 51)",
-                      fontSize: "14px",
-                      lineHeight: "21px",
-                    }}>
-                    &gt;
-                  </span>
-                  Special shoulder design, avoiding irregular wear.
-                </span>
-              </p>
-
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
@@ -200,164 +189,101 @@ const HF31 = () => {
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">11.00R20</span>
+                      <span className="table-text">245/70R19.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR </span>
                     </td>
                     <td width="143">
-                      <span className="table-text">3350/3075</span>
+                      <span className="table-text">2180/2060 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">150/147</span>
+                      <span className="table-text">135/133 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">K</span>
+                      <span className="table-text">L </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1082</span>
+                      <span className="table-text">843 </span>
                     </td>
                     <td width="95">
-                      <span className="table-text">293</span>
+                      <span className="table-text">248</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">830</span>
+                      <span className="table-text">830 </span>
                     </td>
                     <td width="111">
-                      <span className="table-text">8.0</span>
+                      <span className="table-text">7.50</span>
                     </td>
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">12R22.5</span>
+                      <span className="table-text">245/70R19.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR </span>
                     </td>
                     <td width="143">
-                      <span className="table-text">3550/3250</span>
+                      <span className="table-text">2800/2650 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">152/149</span>
+                      <span className="table-text">144/142 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">M</span>
+                      <span className="table-text">L </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1083</span>
+                      <span className="table-text">843 </span>
                     </td>
                     <td width="95">
-                      <span className="table-text">300</span>
+                      <span className="table-text">248</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">930</span>
+                      <span className="table-text">900 </span>
                     </td>
                     <td width="111">
-                      <span className="table-text">9.00</span>
+                      <span className="table-text">7.50</span>
                     </td>
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">315/80R22.5</span>
+                      <span className="table-text">295/80R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR </span>
                     </td>
                     <td width="143">
-                      <span className="table-text">3750/3450</span>
+                      <span className="table-text">3550/3250 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">154/151</span>
+                      <span className="table-text">152/149 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">M</span>
+                      <span className="table-text">L </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1080</span>
+                      <span className="table-text">1062 </span>
                     </td>
                     <td width="95">
-                      <span className="table-text">312</span>
+                      <span className="table-text">298</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">830</span>
+                      <span className="table-text">900 </span>
                     </td>
                     <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" style={{ wordBreak: "break-all" }}>
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3750/3450</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">154/151</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" style={{ wordBreak: "break-all" }}>
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">20PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">4125/3750</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">157/154</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">900</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
+                      <span className="table-text">7.50</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
-
               <DetailsPreviousNext
-                prevText={"No Information"}
-                nextText={"HF21"}
-                nextLink="/products/truck-tire/highway-truck-tire/hf21"
+                prevText={"RD65"}
+                prevLink="/products/truck-tire/long-distance-standard-load-truck-tire/rd65"
+                nextText={"RD05"}
+                nextLink="/products/truck-tire/long-distance-standard-load-truck-tire/rd05"
               />
-              <p className="productsTags">
-                Hot Tags: hHF31,Tire, Light Truck Tire , Truck Tire , Bus Tire,
-                Commercial Tire， Radial Tyre Tyre, Light Truck Tyre , Truck
-                Tyre , Bus Tyre, Commercial Tyre， Radial Tyre TBR, LTR, Brand
-                tryck tyre
-              </p>
-              <DetailsRelatedProducts ids="23,43" />
+              <p className="productsTags">Hot Tags: RD35</p>
+              <DetailsRelatedProducts ids="14" />
             </div>
           </div>
         </div>
@@ -366,4 +292,4 @@ const HF31 = () => {
   );
 };
 
-export default HF31;
+export default RD35;
