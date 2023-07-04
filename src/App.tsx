@@ -18,6 +18,7 @@ import CompanyUpdate from "./pages/New/CompanyUpdate";
 import SubContact from "./component/SubMenu/SubContact";
 import NewDetailsRoutes from "./routes/NewDetailsRoutes";
 import ServiceDetailsRoutes from "./routes/ServiceDetailsRoutes";
+import ProductDetailsRoutes from "./routes/ProductDetailsRoutes";
 import ServiceCompanyNews from "./pages/Service/ServiceCompanyNews";
 
 class App extends Component {
@@ -48,6 +49,16 @@ class App extends Component {
       )
     );
 
+    const renderedProductsDetailsRoutes = ProductDetailsRoutes.map(
+      ({ path, component }) => (
+        <Route
+          key={path}
+          path={`/products/${path}`}
+          element={React.createElement(component)}
+        />
+      )
+    );
+
     return (
       <>
         <Router>
@@ -56,6 +67,7 @@ class App extends Component {
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<Aboutpage />} />
             <Route path="/products" element={<Productpage />} />
+            {renderedProductsDetailsRoutes}
             <Route path="/news" element={<Newpage />} />
             <Route path="/news/newproducts" element={<NewProducts />} />
             <Route path="/news/tradefair" element={<TradeFair />} />
@@ -63,7 +75,10 @@ class App extends Component {
             <Route path="/news/companyupdate" element={<CompanyUpdate />} />
             {renderedNewDetailsRoutes}
             <Route path="/services" element={<Servicepage />} />
-            <Route path="/services/companynews" element={<ServiceCompanyNews />} />
+            <Route
+              path="/services/companynews"
+              element={<ServiceCompanyNews />}
+            />
             {renderedServiceDetailsRoutes}
             <Route path="/contact" element={<Contactpage />} />
           </Routes>

@@ -3,6 +3,7 @@ import InnerBanner from "../../component/Banner/InnerBanner";
 import ContactBanner from "../../static/image/main/contact-banner.webp";
 import ContactHouse from "../../static/image/main/contact-house.png";
 import SubMenu from "../../component/SubMenu/SubMenu";
+import "./contact.css";
 const Contactpage = () => {
   return (
     <>

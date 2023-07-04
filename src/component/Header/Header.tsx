@@ -30,7 +30,7 @@ const Header = () => {
                   <NavLink to="/products" className="inmenu">
                     Product
                   </NavLink>
-                  <ul className="submenu nav0">
+                  {/* <ul className="submenu nav0">
                     <li className="side_nav1" id="HeadProCat1">
                       <Link to="">Truck Tire</Link>
                     </li>
@@ -46,7 +46,7 @@ const Header = () => {
                     <li className="side_nav1" id="HeadProCat5">
                       <Link to="">ROADONE TYRE DEMONSTRATION</Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li id="liabout-us">
                   <NavLink to="/about" className="inmenu">

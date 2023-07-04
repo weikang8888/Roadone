@@ -103,7 +103,7 @@ const Productpage = () => {
     }
   };
 
-  const handleProductTypeClick = (event, currentPage) => {
+  const handleProductTypeClick = (event, currentPage, currentLink) => {
     event.preventDefault();
 
     setMenuState((prevState) => ({
@@ -111,6 +111,7 @@ const Productpage = () => {
       previousLink: "/products",
       previousPage: "Product",
       currentPage: currentPage,
+      currentLink: currentLink,
     }));
 
     const pageToProductsTypeMap = {
@@ -276,7 +277,7 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate1"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "Truck Tire")
+                    handleProductTypeClick(event, "Truck Tire", "/truck-tire")
                   }>
                   <a href="">+Truck Tire</a>
                 </li>
@@ -284,7 +285,7 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate2"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "Bus Tire")
+                    handleProductTypeClick(event, "Bus Tire", "/bus-tire")
                   }>
                   <a>+Bus Tire</a>
                 </li>
@@ -292,7 +293,11 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate3"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "Light Truck Tire")
+                    handleProductTypeClick(
+                      event,
+                      "Light Truck Tire",
+                      "/light-truck-tire"
+                    )
                   }>
                   <a>+Light Truck Tire</a>
                 </li>
@@ -300,7 +305,11 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate4"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "RADIAL OTR TIRES")
+                    handleProductTypeClick(
+                      event,
+                      "RADIAL OTR TIRES",
+                      "/radial-otr-tire"
+                    )
                   }>
                   <a>+RADIAL OTR TIRES</a>
                 </li>
@@ -308,7 +317,11 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate5"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "ROADONE TYRE DEMONSTRATION")
+                    handleProductTypeClick(
+                      event,
+                      "ROADONE TYRE DEMONSTRATION",
+                      "/roadone-tyre-demonstration"
+                    )
                   }>
                   <a>+ROADONE TYRE DEMONSTRATION</a>
                 </li>

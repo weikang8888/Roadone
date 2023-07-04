@@ -12,6 +12,7 @@ import NewDetailsImage5 from "./picture/nd5.jpg";
 import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
 import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_19AUG21 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -232,6 +233,7 @@ const NewDetails_19AUG21 = () => {
                     nextText={"HD520 PATTERN ROAD TEST"}
                   />
                   <DetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />
+                  <DetailsRelatedProducts ids="1,2,3,4,5" />
                 </>
               )}
             </div>
