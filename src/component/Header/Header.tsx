@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./header.css";
 import Logo from "../../static/image/main/logo.png";
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isSubMenuOpen, setSubMenuOpen] = useState(false); // Added state variable for submenu
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -15,6 +21,7 @@ const Header = () => {
   const changeToChinese = () => {
     changeLanguage("zh");
   };
+
   return (
     <>
       <nav className="navbar">
@@ -26,7 +33,10 @@ const Header = () => {
           </div>
           <div id="nav-menu">
             <div id="nav">
-              <ul className="menu nav_en site_363820">
+              <ul
+                className={`menu nav_en site_363820 ${
+                  isMenuOpen ? "d-block" : ""
+                }`}>
                 <li id="liHome">
                   <NavLink to="/" className="inmenu">
                     {t("header.home")}
@@ -36,7 +46,7 @@ const Header = () => {
                   <NavLink to="/products" className="inmenu">
                     {t("header.product")}
                   </NavLink>
-                  {/* <ul className="submenu nav0">
+                  {/* <ul className="submenu nav0 ">
                     <li className="side_nav1" id="HeadProCat1">
                       <Link to="">Truck Tire</Link>
                     </li>
@@ -63,7 +73,10 @@ const Header = () => {
                   <NavLink to="/news" className="inmenu">
                     {t("header.news")}
                   </NavLink>
-                  <ul className="submenu">
+                  <ul
+                    className={`submenu ${
+                      isSubMenuOpen ? "display-block" : ""
+                    }`}>
                     <li id="HeadNewsCat1">
                       <Link to="/news/newproducts" title="New products">
                         New products
@@ -90,7 +103,10 @@ const Header = () => {
                   <NavLink to="/services" className="inmenu">
                     {t("header.service")}
                   </NavLink>
-                  <ul className="submenu">
+                  <ul
+                    className={`submenu ${
+                      isSubMenuOpen ? "display-block" : ""
+                    }`}>
                     <li id="HeadIndustryCat1">
                       <Link to="/services/companynews" title="Company News">
                         Company News
@@ -103,14 +119,17 @@ const Header = () => {
                     {t("header.contact")}
                   </NavLink>
                 </li>
-                <li id="lidownload">
+                {/* <li id="lidownload">
                   <NavLink to="/download" className="inmenu">
                     {t("header.download")}
                   </NavLink>
-                </li>
+                </li> */}
                 <li id="liInfo">
                   <a className="inmenu"> {t("header.language")} </a>
-                  <ul className="submenu">
+                  <ul
+                    className={`submenu ${
+                      isSubMenuOpen ? "display-block" : ""
+                    }`}>
                     <li>
                       <Link to="" onClick={changeToEnglish}>
                         English
@@ -126,8 +145,9 @@ const Header = () => {
 
                 <div className="clr"></div>
               </ul>
-              <span className="fl">Navigation</span>
-              <span className="fr nbtn">Menu</span>
+              <span className="fr nbtn" onClick={toggleMenu}>
+                Menu
+              </span>
             </div>
           </div>
         </div>

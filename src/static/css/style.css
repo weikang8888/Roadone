@@ -2204,7 +2204,7 @@ span.at-icon-wrapper {
     padding: 0 12px;
   }
 }
-@media only screen and (max-width: 965px) and (min-width: 755px) {
+@media only screen and (max-width: 965px) {
   #nav .fr {
     display: block;
   }
@@ -2213,6 +2213,7 @@ span.at-icon-wrapper {
   }
   #nav ul {
     display: none;
+    width: 100%;
     position: absolute;
     top: 100px;
     right: 0;

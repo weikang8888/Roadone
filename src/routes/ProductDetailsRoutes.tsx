@@ -23,6 +23,19 @@ import RA85 from "../pages/Product/ProductDetails/Truck-Tire/RA85";
 import RD15L from "../pages/Product/ProductDetails/Truck-Tire/RD15L";
 import RF202HighEnd from "../pages/Product/ProductDetails/Truck-Tire/RF202HighEnd";
 import HF201HighEnd from "../pages/Product/ProductDetails/Truck-Tire/HF201HighEnd";
+import GD08 from "../pages/Product/ProductDetails/Truck-Tire/GD08";
+import GA36 from "../pages/Product/ProductDetails/Truck-Tire/GA36";
+import GD09 from "../pages/Product/ProductDetails/Truck-Tire/GD09";
+import GA26 from "../pages/Product/ProductDetails/Truck-Tire/GA26";
+import GA98 from "../pages/Product/ProductDetails/Truck-Tire/GA98";
+import GA06 from "../pages/Product/ProductDetails/Truck-Tire/GA06";
+import GD58 from "../pages/Product/ProductDetails/Truck-Tire/GD58";
+import GA36_Neumaticos from "../pages/Product/ProductDetails/Truck-Tire/GA36-Neumaticos";
+import GD08_MidShort from "../pages/Product/ProductDetails/Truck-Tire/GD08-MidShort";
+import GA665HighEnd from "../pages/Product/ProductDetails/Truck-Tire/GA665HighEnd";
+import GD08TruckTire from "../pages/Product/ProductDetails/Truck-Tire/GD08TruckTire";
+import ChinaZigzag from "../pages/Product/ProductDetails/Truck-Tire/ChinaZigzag";
+import GD09MidShort from "../pages/Product/ProductDetails/Truck-Tire/GD09MidShort";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -105,6 +118,62 @@ const NewDetailsRoutes = [
   {
     path: "truck-tire/long-distance-standard-load-truck-tire/hf201-high-end",
     component: HF201HighEnd,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08",
+    component: GD08,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36",
+    component: GA36,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/gd09",
+    component: GD09,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga26",
+    component: GA26,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga98",
+    component: GA98,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga06",
+    component: GA06,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/gd58",
+    component: GD58,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36-neumaticos",
+    component: GA36_Neumaticos,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08-mid-short",
+    component: GD08_MidShort,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga665-high-end",
+    component: GA665HighEnd,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08-truck-tire",
+    component: GD08TruckTire,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga98-china-zigzag",
+    component: ChinaZigzag,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga09-mid-short",
+    component: GD09MidShort,
+  },
+  {
+    path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga665-high-end",
+    component: GA665HighEnd,
   },
 ];
 
