@@ -16,6 +16,13 @@ import RF12 from "../pages/Product/ProductDetails/Truck-Tire/RF12";
 import RD65 from "../pages/Product/ProductDetails/Truck-Tire/RD65";
 import RA25 from "../pages/Product/ProductDetails/Truck-Tire/RA25";
 import RD35 from "../pages/Product/ProductDetails/Truck-Tire/RD35";
+import RD05 from "../pages/Product/ProductDetails/Truck-Tire/RD05";
+import RT02 from "../pages/Product/ProductDetails/Truck-Tire/RT02";
+import RA05 from "../pages/Product/ProductDetails/Truck-Tire/RA05";
+import RA85 from "../pages/Product/ProductDetails/Truck-Tire/RA85";
+import RD15L from "../pages/Product/ProductDetails/Truck-Tire/RD15L";
+import RF202HighEnd from "../pages/Product/ProductDetails/Truck-Tire/RF202HighEnd";
+import HF201HighEnd from "../pages/Product/ProductDetails/Truck-Tire/HF201HighEnd";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -72,36 +79,32 @@ const NewDetailsRoutes = [
     component: RD35,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/rd05",
+    component: RD05,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/rt02",
+    component: RT02,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/ra05",
+    component: RA05,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/ra85",
+    component: RA85,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/rd15L",
+    component: RD15L,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/rf202-high-end",
+    component: RF202HighEnd,
   },
   {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
-  },
-  {
-    path: "truck-tire/long-distance-standard-load-truck-tire/ra16",
-    component: RA16,
+    path: "truck-tire/long-distance-standard-load-truck-tire/hf201-high-end",
+    component: HF201HighEnd,
   },
 ];
 

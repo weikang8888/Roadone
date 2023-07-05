@@ -14,3 +14,13 @@
 #liInfo:hover .submenu {
   display: block;
 }
+
+.container1 {
+  max-width: 81.875em;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  height: auto;
+}

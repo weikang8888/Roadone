@@ -1,18 +1,24 @@
 import React, { useState } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./header.css";
 import Logo from "../../static/image/main/logo.png";
 
 const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const handleMenuToggle = () => {
-    setMenuOpen(!isMenuOpen);
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+  const changeToEnglish = () => {
+    changeLanguage("en");
+  };
+  const changeToChinese = () => {
+    changeLanguage("zh");
   };
   return (
     <>
       <nav className="navbar">
-        <div className="container clearfix top">
+        <div className="container1 clearfix top d-flex">
           <div className="pull-left logo">
             <Link to="/">
               <img src={Logo} alt="Tongli Tyre Co.,Ltd" />
@@ -23,12 +29,12 @@ const Header = () => {
               <ul className="menu nav_en site_363820">
                 <li id="liHome">
                   <NavLink to="/" className="inmenu">
-                    Home
+                    {t("header.home")}
                   </NavLink>
                 </li>
                 <li id="liproducts">
                   <NavLink to="/products" className="inmenu">
-                    Product
+                    {t("header.product")}
                   </NavLink>
                   {/* <ul className="submenu nav0">
                     <li className="side_nav1" id="HeadProCat1">
@@ -50,12 +56,12 @@ const Header = () => {
                 </li>
                 <li id="liabout-us">
                   <NavLink to="/about" className="inmenu">
-                    Tongli Tyre Factory
+                    {t("header.about")}
                   </NavLink>
                 </li>
                 <li id="linewslist-1">
                   <NavLink to="/news" className="inmenu">
-                    News
+                    {t("header.news")}
                   </NavLink>
                   <ul className="submenu">
                     <li id="HeadNewsCat1">
@@ -82,7 +88,7 @@ const Header = () => {
                 </li>
                 <li id="liInfo">
                   <NavLink to="/services" className="inmenu">
-                    Service
+                    {t("header.service")}
                   </NavLink>
                   <ul className="submenu">
                     <li id="HeadIndustryCat1">
@@ -94,13 +100,28 @@ const Header = () => {
                 </li>
                 <li id="licontact-us">
                   <NavLink to="/contact" className="inmenu">
-                    Contact Us
+                    {t("header.contact")}
                   </NavLink>
                 </li>
                 <li id="lidownload">
                   <NavLink to="/download" className="inmenu">
-                    Download
+                    {t("header.download")}
                   </NavLink>
+                </li>
+                <li id="liInfo">
+                  <a className="inmenu"> {t("header.language")} </a>
+                  <ul className="submenu">
+                    <li>
+                      <Link to="" onClick={changeToEnglish}>
+                        English
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="" onClick={changeToChinese}>
+                        Chinese
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
 
                 <div className="clr"></div>

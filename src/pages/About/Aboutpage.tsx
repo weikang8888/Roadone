@@ -34,7 +34,7 @@ const Aboutpage = () => {
       <InnerBanner bannerimage={AboutBanner} />
 
       <section>
-        <div className="container container1">
+        <div className="container1">
           <div className="ejfl">Tongli Tyre Factory</div>
           <SubMenu currentpage="Tongli Tyre Factory" currentlink={"/about"}/>
           <div className="main">

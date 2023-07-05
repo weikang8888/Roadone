@@ -1,0 +1,25 @@
+{
+  "header": {
+    "home": "Home",
+    "product": "Product",
+    "about": "Tongli Tyre Factory",
+    "news": "News",
+    "service": "Service",
+    "contact": "Contact Us",
+    "download": "Download",
+    "language": "Language"
+  },
+  "homepage": {
+    "title": "TONGLI TYRE CO.,LTD.",
+    "description": "ROADONE registered in 2003 by Hixih group, and grandly launched once again after more than 10 years successful cooperation between Hixih group and world top-level group. We can supply you international high-end quality and suitable for all kinds of road conditions and meet different market demands.",
+    "teamTitle": "Design team",
+    "teamDescription": "Hixih Rubber Industry Group, located in Yanzhou district, Jining city, Shandong Province, which is one of the most flourishing economic areas in China. Which founded in 1989, is an international, diversified and innovative enterprise group, occupying an area of 200 thousand square meters. The total number of employees is over 10,000.",
+    "advantageTitle": "OUR ADVANTAGE",
+    "advantage1": "Tongli tire has 15 years of experience in joint venture with a world-class brand tyre, and the production standard is based on world top-level group, which reaches the joint venture level.",
+    "advantage2": "Tongli applies the network control technology to guarantee the good quality and performance of the products and ensure the tires produced can meet DOT and ECE standards and internal control specifications.",
+    "advantage3": "All the key equipment is from the famous world-class tire equipment suppliers like Netherlands VMI, German WP, United States RJS, all customized according to the special requirements of top tire producer.",
+    "advantage4": "Tongli tire adopted the special HBW bead wire, 3SB new sandwich belts, DTL compound and FRC high penetration steel cord design, ensured the tire has high mileage, retreadability, heavy load capacity.",
+    "customerCount": "Our company have more than",
+    "customers": "200,000 customers around the world!"
+  }
+}
