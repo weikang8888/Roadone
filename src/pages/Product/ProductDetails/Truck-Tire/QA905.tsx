@@ -8,13 +8,13 @@ import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const GD08 = () => {
+const QA905 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=28")
+      .get("http://localhost:8080/api_roadone/products/products?ids=47")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -94,10 +94,10 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Strong drive, heat-dissipation, shoulder rip-proof
-                  reinforcement joints provide strong driving performance,
-                  effectively prevent cracking, smashing, and suppress deformed
-                  wear.
+                  Unique lateral groove, large block design, widened&deepened
+                  tread pattern design, enhancing the grounding area and
+                  performance in the hard industrial and mining pavement, and
+                  ensure the longer service life of the product.
                 </span>
               </p>
               <p>
@@ -111,11 +111,10 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Specific tread for mid-short distance transport and low
-                  heating recipe, high wear resistance, low heating, tear
-                  resistance and block resistance,effectively reduces the
-                  quality risk of shoulder explosion, chipping, groove splitting
-                  and crown removal.
+                  Low heating tread recipe designed for hard mining
+                  condition,provides better perofrmance of
+                  anti-stab、anti-tear、low heating,reducing shoulder/crown
+                  separation effectively under rough condition.
                 </span>
               </p>
               <p>
@@ -129,10 +128,12 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Tube-in products 0°structure explosion proof cap design,
-                  effectively improve the cap loading capacity, enhancing the
-                  puncture resistance and explosion proof perforamce under
-                  complex conditions.{" "}
+                  Ⅲ generation explosion-proof & puncture resistance design,
+                  Extra thick sidewall and thickened groove bottom design
+                  enhancing capabilities of impact and puncture on unpaved road.
+                  Special steel structure and specific 4 belt cap design, low
+                  heating recipe, optimised shoulder desigh, inhibiting deformed
+                  wear,ensure multiple retreading of tires.
                 </span>
               </p>
               <p>
@@ -146,9 +147,10 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre bead adopts heavy
-                  load tech,improves the fatigue and shear resistance ,reduce
-                  quality risks of the tyre bead open, crack or explosion.{" "}
+                  Reinforced carcass and bead structure,tyre bead adopt special
+                  Ⅲ generation heavy loading technology providing higher
+                  performance of high pressure and heavy loading, and
+                  effectively reduce the risk of tyre bead crack/seperation.
                 </span>
               </p>
 
@@ -210,122 +212,6 @@ const GD08 = () => {
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">235/75R17.5 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">16PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">2000/1850 </span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">132/129 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">J </span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">803</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">233</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">6.75</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">235/75R17.5 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">2725/2575 </span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">143/141 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">J</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">803</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">233</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">875</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">6.75</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">9.00R20</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">16PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">2800/2650 </span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">144/142 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">K</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1023</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">259</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">900 </span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">7.0</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
-                      <span className="table-text">10.00R20 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3250/3000 </span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">149/146 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">J</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1054</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">278</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">930 </span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">7.5</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
                       <span className="table-text">11.00R20 </span>
                     </td>
                     <td width="72">
@@ -338,23 +224,23 @@ const GD08 = () => {
                       <span className="table-text">152/149 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">J</span>
+                      <span className="table-text">D </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1091</span>
+                      <span className="table-text">1103</span>
                     </td>
                     <td width="95">
                       <span className="table-text">293</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">930 </span>
+                      <span className="table-text">930</span>
                     </td>
                     <td width="111">
                       <span className="table-text">8.0</span>
                     </td>
                   </tr>{" "}
                   <tr>
-                    <td width="127" >
+                    <td width="127">
                       <span className="table-text">12.00R20 </span>
                     </td>
                     <td width="72">
@@ -367,60 +253,35 @@ const GD08 = () => {
                       <span className="table-text">156/153 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">J</span>
+                      <span className="table-text">D </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1127</span>
+                      <span className="table-text">1134 </span>
                     </td>
                     <td width="95">
                       <span className="table-text">315</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">900 </span>
+                      <span className="table-text">900</span>
                     </td>
                     <td width="111">
                       <span className="table-text">8.5</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
-                      <span className="table-text">12.00R24 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">20PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">4500/4125 </span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">160/157 </span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">K</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1128</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">315</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">900 </span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">8.55</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
 
               <DetailsPreviousNext
-                prevText={"No Information"}
-                nextText={"GA36"}
-                nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36"
+                prevText={"QA906"}
+                prevLink="/products/truck-tire/high-end-off-road-tyre/qa906"
+                nextText={"QA999"}
+                nextLink="/products/truck-tire/high-end-off-road-tyre/qa999"
               />
-              <p className="productsTags">Hot Tags: GD08, China, suppliers</p>
-              <DetailsRelatedProducts ids="11,5,15,67" />
+              <p className="productsTags">
+                Hot Tags: QA905, China, Quarry tyre, commercial tyre, factory,
+                wholesale, high-quality
+              </p>
+              <DetailsRelatedProducts ids="79,77,11,43,21,75" />
             </div>
           </div>
         </div>
@@ -429,4 +290,4 @@ const GD08 = () => {
   );
 };
 
-export default GD08;
+export default QA905;

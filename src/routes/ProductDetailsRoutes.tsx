@@ -1,4 +1,3 @@
-import React from "react";
 import HF31 from "../pages/Product/ProductDetails/Truck-Tire/HF31";
 import HF21 from "../pages/Product/ProductDetails/Truck-Tire/HF21";
 import QA99 from "../pages/Product/ProductDetails/Truck-Tire/QA99";
@@ -36,13 +35,25 @@ import GA665HighEnd from "../pages/Product/ProductDetails/Truck-Tire/GA665HighEn
 import GD08TruckTire from "../pages/Product/ProductDetails/Truck-Tire/GD08TruckTire";
 import ChinaZigzag from "../pages/Product/ProductDetails/Truck-Tire/ChinaZigzag";
 import GD09MidShort from "../pages/Product/ProductDetails/Truck-Tire/GD09MidShort";
+import HF82 from "../pages/Product/ProductDetails/Truck-Tire/HF82";
+import HF01 from "../pages/Product/ProductDetails/Truck-Tire/HF01";
+import HF31TBR from "../pages/Product/ProductDetails/Truck-Tire/HF31TBR";
+import QA906 from "../pages/Product/ProductDetails/Truck-Tire/QA906";
+import QA905 from "../pages/Product/ProductDetails/Truck-Tire/QA905";
+import QA999 from "../pages/Product/ProductDetails/Truck-Tire/QA999";
+import QA919 from "../pages/Product/ProductDetails/Truck-Tire/QA919";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
   { path: "truck-tire/highway-truck-tire/hf21", component: HF21 },
+  { path: "truck-tire/highway-truck-tire/hf82", component: HF82 },
+  { path: "truck-tire/highway-truck-tire/hf01", component: HF01 },
+  { path: "truck-tire/highway-truck-tire/hf82", component: HF31TBR },
+
   { path: "truck-tire/mine-truck-tire/qa99", component: QA99 },
   { path: "truck-tire/mine-truck-tire/qa09", component: QA09 },
   { path: "truck-tire/mine-truck-tire/qa19", component: QA19 },
+
   {
     path: "truck-tire/long-distance-standard-load-truck-tire/rf02",
     component: RF02,
@@ -119,6 +130,7 @@ const NewDetailsRoutes = [
     path: "truck-tire/long-distance-standard-load-truck-tire/hf201-high-end",
     component: HF201HighEnd,
   },
+
   {
     path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08",
     component: GD08,
@@ -174,6 +186,23 @@ const NewDetailsRoutes = [
   {
     path: "truck-tire/medium-and-short-distance-hybrid-truck-tires/ga665-high-end",
     component: GA665HighEnd,
+  },
+
+  {
+    path: "truck-tire/high-end-off-road-tyre/qa906",
+    component: QA906,
+  },
+  {
+    path: "truck-tire/high-end-off-road-tyre/qa905",
+    component: QA905,
+  },
+  {
+    path: "truck-tire/high-end-off-road-tyre/qa999",
+    component: QA999,
+  },
+  {
+    path: "truck-tire/high-end-off-road-tyre/qa919",
+    component: QA919,
   },
 ];
 

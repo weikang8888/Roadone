@@ -8,13 +8,13 @@ import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const HF31 = () => {
+const QA906 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=1")
+      .get("http://localhost:8080/api_roadone/products/products?ids=46")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -94,8 +94,10 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Designed for long-distance transportation on smooth and
-                  straight highway
+                  Unique lateral groove, large block design, widened&deepened
+                  tread pattern design, enhancing the grounding area and
+                  performance in the hard industrial and mining pavement, and
+                  ensure the longer service life of the product.
                 </span>
               </p>
               <p>
@@ -109,8 +111,10 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Special tread compound and four-layer belts design, enhancing
-                  wear resistance, providing longer mileage.
+                  Low heating tread recipe designed for hard mining
+                  condition,provides better perofrmance of
+                  anti-stab、anti-tear、low heating,reducing shoulder/crown
+                  separation effectively under rough condition.
                 </span>
               </p>
               <p>
@@ -124,7 +128,12 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Stone ejection design, reducing groove cracking.
+                  Ⅲ generation explosion-proof & puncture resistance design,
+                  Extra thick sidewall and thickened groove bottom design
+                  enhancing capabilities of impact and puncture on unpaved road.
+                  Special steel structure and specific 4 belt cap design, low
+                  heating recipe, optimised shoulder desigh, inhibiting deformed
+                  wear,ensure multiple retreading of tires.
                 </span>
               </p>
               <p>
@@ -138,7 +147,10 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Special shoulder design, avoiding irregular wear.
+                  Reinforced carcass and bead structure,tyre bead adopt special
+                  Ⅲ generation heavy loading technology providing higher
+                  performance of high pressure and heavy loading, and
+                  effectively reduce the risk of tyre bead crack/seperation.
                 </span>
               </p>
 
@@ -200,147 +212,31 @@ const HF31 = () => {
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">11.00R20</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">16PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3350/3075</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">150/147</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">K</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1082</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">293</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">8.0</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">12R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3550/3250</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">152/149</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1083</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">300</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">930</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3750/3450</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">154/151</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3750/3450</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">154/151</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
-                      <span className="table-text">315/80R22.5</span>
+                      <span className="table-text">12.00R20</span>
                     </td>
                     <td width="72">
                       <span className="table-text">20PR</span>
                     </td>
                     <td width="143">
-                      <span className="table-text">4125/3750</span>
+                      <span className="table-text">4000/3650 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">157/154</span>
+                      <span className="table-text">156/153 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">M</span>
+                      <span className="table-text">D </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1080</span>
+                      <span className="table-text">1134</span>
                     </td>
                     <td width="95">
-                      <span className="table-text">312</span>
+                      <span className="table-text">315</span>
                     </td>
                     <td width="72">
                       <span className="table-text">900</span>
                     </td>
                     <td width="111">
-                      <span className="table-text">9.00</span>
+                      <span className="table-text">8.5</span>
                     </td>
                   </tr>
                 </tbody>
@@ -348,16 +244,14 @@ const HF31 = () => {
 
               <DetailsPreviousNext
                 prevText={"No Information"}
-                nextText={"HF21"}
-                nextLink="/products/truck-tire/highway-truck-tire/hf21"
+                nextText={"QA905"}
+                nextLink="/products/truck-tire/high-end-off-road-tyre/qa905"
               />
               <p className="productsTags">
-                Hot Tags: hHF31,Tire, Light Truck Tire , Truck Tire , Bus Tire,
-                Commercial Tire， Radial Tyre Tyre, Light Truck Tyre , Truck
-                Tyre , Bus Tyre, Commercial Tyre， Radial Tyre TBR, LTR, Brand
-                tryck tyre
+                Hot Tags: QA906, China, factory, wholesale, high-quality, heavy
+                loading
               </p>
-              <DetailsRelatedProducts ids="23,43" />
+              <DetailsRelatedProducts ids="66,28,11,68,1,15" />
             </div>
           </div>
         </div>
@@ -366,4 +260,4 @@ const HF31 = () => {
   );
 };
 
-export default HF31;
+export default QA906;

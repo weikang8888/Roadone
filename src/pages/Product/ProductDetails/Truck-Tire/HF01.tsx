@@ -8,13 +8,13 @@ import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const HF31 = () => {
+const HF01 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=1")
+      .get("http://localhost:8080/api_roadone/products/products?ids=43")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -94,8 +94,9 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Designed for long-distance transportation on smooth and
-                  straight highway
+                  Optimized profile design, stone ejection treatment at the
+                  bottom groove, provide excellent anti-biasing performance and
+                  better stone ejection effect in different road conditions.
                 </span>
               </p>
               <p>
@@ -109,8 +110,9 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Special tread compound and four-layer belts design, enhancing
-                  wear resistance, providing longer mileage.
+                  The high-speed special super wearable tread recipe design
+                  ensures higher mileage in mixed road conditions such as high
+                  speed and national road.
                 </span>
               </p>
               <p>
@@ -124,24 +126,11 @@ const HF31 = () => {
                     }}>
                     &gt;
                   </span>
-                  Stone ejection design, reducing groove cracking.
+                  Special cap structure and specific 4 belt cap design, low
+                  heating recipe, optimised shoulder desigh, inhibiting deformed
+                  wear,ensure multiple retreading of tires.
                 </span>
               </p>
-              <p>
-                <span className="table-text">
-                  <span
-                    style={{
-                      fontFamily: "calibri",
-                      color: "rgb(229, 51, 51)",
-                      fontSize: "14px",
-                      lineHeight: "21px",
-                    }}>
-                    &gt;
-                  </span>
-                  Special shoulder design, avoiding irregular wear.
-                </span>
-              </p>
-
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
@@ -198,35 +187,7 @@ const HF31 = () => {
                       </span>
                     </td>
                   </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">11.00R20</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">16PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3350/3075</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">150/147</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">K</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1082</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">293</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">8.0</span>
-                    </td>
-                  </tr>
+
                   <tr>
                     <td width="127">
                       <span className="table-text">12R22.5</span>
@@ -235,16 +196,16 @@ const HF31 = () => {
                       <span className="table-text">18PR</span>
                     </td>
                     <td width="143">
-                      <span className="table-text">3550/3250</span>
+                      <span className="table-text">3550/3250 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">152/149</span>
+                      <span className="table-text">152/149 </span>
                     </td>
                     <td width="72">
                       <span className="table-text">M</span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1083</span>
+                      <span className="table-text">1085</span>
                     </td>
                     <td width="95">
                       <span className="table-text">300</span>
@@ -256,108 +217,19 @@ const HF31 = () => {
                       <span className="table-text">9.00</span>
                     </td>
                   </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3750/3450</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">154/151</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">18PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">3750/3450</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">154/151</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">830</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127" >
-                      <span className="table-text">315/80R22.5</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">20PR</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">4125/3750</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">157/154</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">M</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">1080</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">312</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">900</span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">9.00</span>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
 
               <DetailsPreviousNext
-                prevText={"No Information"}
-                nextText={"HF21"}
-                nextLink="/products/truck-tire/highway-truck-tire/hf21"
+                prevText={"HF82"}
+                prevLink="/products/truck-tire/highway-truck-tire/hf82"
+                nextText={"HF31 Tire, Truck Tyre TBR"}
+                nextLink="/products/truck-tire/highway-truck-tire/hf31-tbr"
               />
               <p className="productsTags">
-                Hot Tags: hHF31,Tire, Light Truck Tire , Truck Tire , Bus Tire,
-                Commercial Tire， Radial Tyre Tyre, Light Truck Tyre , Truck
-                Tyre , Bus Tyre, Commercial Tyre， Radial Tyre TBR, LTR, Brand
-                tryck tyre
+                Hot Tags: HF01 Long Distance Wearable Tire
               </p>
-              <DetailsRelatedProducts ids="23,43" />
+              <DetailsRelatedProducts ids="29,34" />
             </div>
           </div>
         </div>
@@ -366,4 +238,4 @@ const HF31 = () => {
   );
 };
 
-export default HF31;
+export default HF01;

@@ -286,7 +286,7 @@ const HF21 = () => {
                     </td>
                   </tr>
                   <tr>
-                    <td width="127" style={{ wordBreak: "break-all" }}>
+                    <td width="127" >
                       <span className="table-text">235/75R17.5 </span>
                     </td>
                     <td width="72">
