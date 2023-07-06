@@ -42,6 +42,15 @@ import QA906 from "../pages/Product/ProductDetails/Truck-Tire/QA906";
 import QA905 from "../pages/Product/ProductDetails/Truck-Tire/QA905";
 import QA999 from "../pages/Product/ProductDetails/Truck-Tire/QA999";
 import QA919 from "../pages/Product/ProductDetails/Truck-Tire/QA919";
+import GD708 from "../pages/Product/ProductDetails/Truck-Tire/GD708";
+import GD858 from "../pages/Product/ProductDetails/Truck-Tire/GD858";
+import GD888 from "../pages/Product/ProductDetails/Truck-Tire/GD888";
+import GD800 from "../pages/Product/ProductDetails/Truck-Tire/GD800";
+import RA625 from "../pages/Product/ProductDetails/Truck-Tire/RA625";
+import RA685 from "../pages/Product/ProductDetails/Truck-Tire/RA685";
+import RA695 from "../pages/Product/ProductDetails/Truck-Tire/RA695";
+import GA898 from "../pages/Product/ProductDetails/Truck-Tire/GA898";
+import GD888HighEnd from "../pages/Product/ProductDetails/Truck-Tire/GD888HighEnd";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -203,6 +212,43 @@ const NewDetailsRoutes = [
   {
     path: "truck-tire/high-end-off-road-tyre/qa919",
     component: QA919,
+  },
+
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/gd708",
+    component: GD708,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/gd858",
+    component: GD858,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/gd888",
+    component: GD888,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/gd800",
+    component: GD800,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/ra625",
+    component: RA625,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/ra685",
+    component: RA685,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/ra695",
+    component: RA695,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/ga898",
+    component: GA898,
+  },
+  {
+    path: "truck-tire/high-end-heavy-loading-tyres/gd888-high-end",
+    component: GD888HighEnd,
   },
 ];
 
