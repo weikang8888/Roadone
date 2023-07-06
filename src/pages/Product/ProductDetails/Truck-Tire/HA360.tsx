@@ -8,13 +8,13 @@ import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const QA906 = () => {
+const HA360 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=46")
+      .get("http://localhost:8080/api_roadone/products/products?ids=66")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -34,7 +34,7 @@ const QA906 = () => {
             currentpage={"Truck Tire"}
             previouslink="/products"
             previouspage="Product"
-            typepage="HIGH END OFF-ROAD TYRE"
+            typepage="HIGH END WEARABLE TYRE"
           />
           <div className="main">
             <div className="row">
@@ -94,10 +94,9 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Unique lateral groove, large block design, widened&deepened
-                  tread pattern design, enhancing the grounding area and
-                  performance in the hard industrial and mining pavement, and
-                  ensure the longer service life of the product.
+                  Optimize the design of pattern block structure and special
+                  pattern steel sheet, provide strong driving performance and
+                  grip, effectively restrain the abnormal wear.
                 </span>
               </p>
               <p>
@@ -111,10 +110,9 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Low heating tread recipe designed for hard mining
-                  condition,provides better perofrmance of
-                  anti-stab、anti-tear、low heating,reducing shoulder/crown
-                  separation effectively under rough condition.
+                  Widened driving surface, deepened tread depth, special super
+                  wear-resistant tread formula for high-way drive, ensuring
+                  higher mileage.
                 </span>
               </p>
               <p>
@@ -128,14 +126,12 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Ⅲ generation explosion-proof & puncture resistance design,
-                  Extra thick sidewall and thickened groove bottom design
-                  enhancing capabilities of impact and puncture on unpaved road.
-                  Special steel structure and specific 4 belt cap design, low
+                  Reinforced cap structure and specific 4 belt cap design, low
                   heating recipe, optimised shoulder desigh, inhibiting deformed
-                  wear,ensure multiple retreading of tires.
+                  wear and reducing the quality risk as shoulder cap explosion,
+                  cap off etc.
                 </span>
-              </p>
+              </p>{" "}
               <p>
                 <span className="table-text">
                   <span
@@ -147,13 +143,12 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre bead adopt special
-                  Ⅲ generation heavy loading technology providing higher
-                  performance of high pressure and heavy loading, and
-                  effectively reduce the risk of tyre bead crack/seperation.
+                  Reinforced carcass and bead structure,tyre bead adopts heavy
+                  load tech,improves the fatigue and shear resistance ,reduce
+                  quality risks of the bead seperation, crack or
+                  explosion,ensure multiple retreading of tires.
                 </span>
               </p>
-
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
@@ -212,46 +207,44 @@ const QA906 = () => {
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">12.00R20</span>
+                      <span className="table-text">12R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">18PR </span>
                     </td>
                     <td width="143">
-                      <span className="table-text">4000/3650 </span>
+                      <span className="table-text">3550/3250 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">156/153 </span>
+                      <span className="table-text">152/149 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">D </span>
+                      <span className="table-text">L </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1134</span>
+                      <span className="table-text">1086 </span>
                     </td>
                     <td width="95">
-                      <span className="table-text">315</span>
+                      <span className="table-text">300</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">900</span>
+                      <span className="table-text">930 </span>
                     </td>
                     <td width="111">
-                      <span className="table-text">8.5</span>
+                      <span className="table-text">9.00</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
-
               <DetailsPreviousNext
-                prevText={"No Information"}
-                nextText={"QA905"}
-                nextLink="/products/truck-tire/high-end-off-road-tyre/qa905"
+                prevText={"HF231"}
+                prevLink="/products/truck-tire/high-end-wearable-tyre/hf231"
+                nextText={"No Information"}
               />
               <p className="productsTags">
-                Hot Tags: QA906, China, factory, wholesale, high-quality, heavy
-                loading
+                Hot Tags:
               </p>
-              <DetailsRelatedProducts ids="66,28,11,68,1,15" />
+              <DetailsRelatedProducts ids="24,40" />
             </div>
           </div>
         </div>
@@ -260,4 +253,4 @@ const QA906 = () => {
   );
 };
 
-export default QA906;
+export default HA360;

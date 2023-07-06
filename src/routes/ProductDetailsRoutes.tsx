@@ -51,6 +51,15 @@ import RA685 from "../pages/Product/ProductDetails/Truck-Tire/RA685";
 import RA695 from "../pages/Product/ProductDetails/Truck-Tire/RA695";
 import GA898 from "../pages/Product/ProductDetails/Truck-Tire/GA898";
 import GD888HighEnd from "../pages/Product/ProductDetails/Truck-Tire/GD888HighEnd";
+import RD535 from "../pages/Product/ProductDetails/Truck-Tire/RD535";
+import HF252 from "../pages/Product/ProductDetails/Truck-Tire/HF252";
+import HF262 from "../pages/Product/ProductDetails/Truck-Tire/HF262";
+import HD520 from "../pages/Product/ProductDetails/Truck-Tire/HD520";
+import RD525 from "../pages/Product/ProductDetails/Truck-Tire/RD525";
+import HF231 from "../pages/Product/ProductDetails/Truck-Tire/HF231";
+import HA360 from "../pages/Product/ProductDetails/Truck-Tire/HA360";
+import RF22City from "../pages/Product/ProductDetails/Bus-Tire/RF22City";
+import RA325 from "../pages/Product/ProductDetails/Truck-Tire/RA325";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -249,6 +258,55 @@ const NewDetailsRoutes = [
   {
     path: "truck-tire/high-end-heavy-loading-tyres/gd888-high-end",
     component: GD888HighEnd,
+  },
+
+  {
+    path: "truck-tire/high-end-wearable-tyre/rd535",
+    component: RD535,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/hf252",
+    component: HF252,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/hf262",
+    component: HF262,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/hd520",
+    component: HD520,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/rd535",
+    component: RD535,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/rd525",
+    component: RD525,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/ra325",
+    component: RA325,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/hf231",
+    component: HF231,
+  },
+  {
+    path: "truck-tire/high-end-wearable-tyre/ha360",
+    component: HA360,
+  },
+
+
+  {
+    path: "bus-tire/rf22",
+    component: RF22City,
+  },  {
+    path: "truck-tire/high-end-wearable-tyre/ha360",
+    component: HA360,
+  },  {
+    path: "truck-tire/high-end-wearable-tyre/ha360",
+    component: HA360,
   },
 ];
 

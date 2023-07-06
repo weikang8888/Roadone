@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import InnerBanner from "../../../../component/Banner/InnerBanner";
-import ProductBanner2 from "../../../../static/image/products/product-banner-2.webp";
+import ProductBannerBus from "../../../../static/image/products/product-banner-bus.webp";
 import SubMenu from "../../../../component/SubMenu/SubMenu";
 import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const QA906 = () => {
+const RF22City = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=46")
+      .get("http://localhost:8080/api_roadone/products/products?ids=3")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -27,14 +27,13 @@ const QA906 = () => {
 
   return (
     <>
-      <InnerBanner bannerimage={ProductBanner2} />
+      <InnerBanner bannerimage={ProductBannerBus} />
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={"Bus Tire"}
             previouslink="/products"
             previouspage="Product"
-            typepage="HIGH END OFF-ROAD TYRE"
           />
           <div className="main">
             <div className="row">
@@ -94,10 +93,9 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Unique lateral groove, large block design, widened&deepened
-                  tread pattern design, enhancing the grounding area and
-                  performance in the hard industrial and mining pavement, and
-                  ensure the longer service life of the product.
+                  Optimized profile design, special fine lines treatment,
+                  improve the grip of wet road surface, safe, comfortable and
+                  fuel-efficient.
                 </span>
               </p>
               <p>
@@ -111,10 +109,8 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Low heating tread recipe designed for hard mining
-                  condition,provides better perofrmance of
-                  anti-stab、anti-tear、low heating,reducing shoulder/crown
-                  separation effectively under rough condition.
+                  Passenger-designed ultra-wearable tread design for higher
+                  mileage.
                 </span>
               </p>
               <p>
@@ -128,32 +124,13 @@ const QA906 = () => {
                     }}>
                     &gt;
                   </span>
-                  Ⅲ generation explosion-proof & puncture resistance design,
-                  Extra thick sidewall and thickened groove bottom design
-                  enhancing capabilities of impact and puncture on unpaved road.
-                  Special steel structure and specific 4 belt cap design, low
-                  heating recipe, optimised shoulder desigh, inhibiting deformed
-                  wear,ensure multiple retreading of tires.
+                  Cap special super four-belt technology, low heat-generating
+                  tread under-layer rubber formula design, shoulder material
+                  optimization design technology, effectively reduce rolling
+                  resistance, green, environmental protection, suitable for
+                  multiple renovations.
                 </span>
-              </p>
-              <p>
-                <span className="table-text">
-                  <span
-                    style={{
-                      fontFamily: "calibri",
-                      color: "rgb(229, 51, 51)",
-                      fontSize: "14px",
-                      lineHeight: "21px",
-                    }}>
-                    &gt;
-                  </span>
-                  Reinforced carcass and bead structure,tyre bead adopt special
-                  Ⅲ generation heavy loading technology providing higher
-                  performance of high pressure and heavy loading, and
-                  effectively reduce the risk of tyre bead crack/seperation.
-                </span>
-              </p>
-
+              </p>{" "}
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
@@ -212,46 +189,103 @@ const QA906 = () => {
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">12.00R20</span>
+                      <span className="table-text">9R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">14PR </span>
                     </td>
                     <td width="143">
-                      <span className="table-text">4000/3650 </span>
+                      <span className="table-text">2240/2120 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">156/153 </span>
+                      <span className="table-text">136/134 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">D </span>
+                      <span className="table-text">L </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">1134</span>
+                      <span className="table-text">972 </span>
                     </td>
                     <td width="95">
-                      <span className="table-text">315</span>
+                      <span className="table-text">229</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">900</span>
+                      <span className="table-text">830 </span>
                     </td>
                     <td width="111">
-                      <span className="table-text">8.5</span>
+                      <span className="table-text">6.75</span>
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td width="127">
+                      <span className="table-text">10R22.5 </span>
+                    </td>
+                    <td width="72">
+                      <span className="table-text">16PR </span>
+                    </td>
+                    <td width="143">
+                      <span className="table-text">2800/2650 </span>
+                    </td>
+                    <td width="131">
+                      <span className="table-text">144/142 </span>
+                    </td>
+                    <td width="72">
+                      <span className="table-text">L </span>
+                    </td>
+                    <td width="88">
+                      <span className="table-text">1018 </span>
+                    </td>
+                    <td width="95">
+                      <span className="table-text">254</span>
+                    </td>
+                    <td width="72">
+                      <span className="table-text">900 </span>
+                    </td>
+                    <td width="111">
+                      <span className="table-text">7.5</span>
+                    </td>
+                  </tr>{" "}
+                  <tr>
+                    <td width="127">
+                      <span className="table-text">215/75R17.5 </span>
+                    </td>
+                    <td width="72">
+                      <span className="table-text">16PR </span>
+                    </td>
+                    <td width="143">
+                      <span className="table-text">1750/1600 </span>
+                    </td>
+                    <td width="131">
+                      <span className="table-text">124/124 </span>
+                    </td>
+                    <td width="72">
+                      <span className="table-text">L </span>
+                    </td>
+                    <td width="88">
+                      <span className="table-text">773 </span>
+                    </td>
+                    <td width="95">
+                      <span className="table-text">215</span>
+                    </td>
+                    <td width="72">
+                      <span className="table-text">830 </span>
+                    </td>
+                    <td width="111">
+                      <span className="table-text">6.00</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
-
               <DetailsPreviousNext
                 prevText={"No Information"}
-                nextText={"QA905"}
-                nextLink="/products/truck-tire/high-end-off-road-tyre/qa905"
+                nextText={"HF21 City-City Bus Tire"}
+                nextLink="/products/bus-tire/hf21-city-bus"
               />
               <p className="productsTags">
-                Hot Tags: QA906, China, factory, wholesale, high-quality, heavy
-                loading
+                Hot Tags: rf22 city-city bus tire, China, suppliers,
+                manufacturers, factory, wholesale, high-quality
               </p>
-              <DetailsRelatedProducts ids="66,28,11,68,1,15" />
+              <DetailsRelatedProducts ids="9,17,32,15,16,43" />
             </div>
           </div>
         </div>
@@ -260,4 +294,4 @@ const QA906 = () => {
   );
 };
 
-export default QA906;
+export default RF22City;

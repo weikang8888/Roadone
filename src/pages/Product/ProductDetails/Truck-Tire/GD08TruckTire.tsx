@@ -34,7 +34,7 @@ const GD08TruckTire = () => {
             currentpage={"Truck Tire"}
             previouslink="/products"
             previouspage="Product"
-            typepage="Long Haul Wearable Tyre"
+            typepage="Mid-Short distance Heavy Load"
           />
           <div className="main">
             <div className="row">

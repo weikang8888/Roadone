@@ -34,7 +34,7 @@ const QA999 = () => {
             currentpage={"Truck Tire"}
             previouslink="/products"
             previouspage="Product"
-            typepage="Long Haul Wearable Tyre"
+            typepage="HIGH END OFF-ROAD TYRE"
           />
           <div className="main">
             <div className="row">
