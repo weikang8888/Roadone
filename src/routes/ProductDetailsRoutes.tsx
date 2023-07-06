@@ -60,6 +60,20 @@ import HF231 from "../pages/Product/ProductDetails/Truck-Tire/HF231";
 import HA360 from "../pages/Product/ProductDetails/Truck-Tire/HA360";
 import RF22City from "../pages/Product/ProductDetails/Bus-Tire/RF22City";
 import RA325 from "../pages/Product/ProductDetails/Truck-Tire/RA325";
+import HF21City from "../pages/Product/ProductDetails/Bus-Tire/HF21City";
+import CA10City from "../pages/Product/ProductDetails/Bus-Tire/CA10City";
+import RF02Light from "../pages/Product/ProductDetails/Light-Tire/RF02Light";
+import RA85Light from "../pages/Product/ProductDetails/Light-Tire/RA85Light";
+import GA06Light from "../pages/Product/ProductDetails/Light-Tire/GA06Light";
+import GD800L from "../pages/Product/ProductDetails/Light-Tire/GD800L";
+import QA39 from "../pages/Product/ProductDetails/Light-Tire/QA39";
+import QA999L from "../pages/Product/ProductDetails/Light-Tire/QA999L";
+import GD800Light from "../pages/Product/ProductDetails/Light-Tire/GD800Light";
+import GD08Light from "../pages/Product/ProductDetails/Light-Tire/GD08Light";
+import QA39Light from "../pages/Product/ProductDetails/Light-Tire/QA39Light";
+import QA999Light from "../pages/Product/ProductDetails/Light-Tire/QA999Light";
+import R251600 from "../pages/Product/ProductDetails/Radial-OTR-Tire/R251600";
+import R251400 from "../pages/Product/ProductDetails/Radial-OTR-Tire/R251400";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -297,16 +311,67 @@ const NewDetailsRoutes = [
     component: HA360,
   },
 
+  {
+    path: "bus-tire/rf22-city",
+    component: RF22City,
+  },
+  {
+    path: "bus-tire/hf21-city",
+    component: HF21City,
+  },
+  {
+    path: "bus-tire/ca10-inter-city",
+    component: CA10City,
+  },
 
   {
-    path: "bus-tire/rf22",
-    component: RF22City,
-  },  {
-    path: "truck-tire/high-end-wearable-tyre/ha360",
-    component: HA360,
-  },  {
-    path: "truck-tire/high-end-wearable-tyre/ha360",
-    component: HA360,
+    path: "light-truck-tire/rf02-light",
+    component: RF02Light,
+  },
+  {
+    path: "light-truck-tire/ra85-light",
+    component: RA85Light,
+  },
+  {
+    path: "light-truck-tire/ga06-light",
+    component: GA06Light,
+  },
+  {
+    path: "light-truck-tire/gd800",
+    component: GD800L,
+  },
+  {
+    path: "light-truck-tire/qa39",
+    component: QA39,
+  },
+  {
+    path: "light-truck-tire/qa999",
+    component: QA999L,
+  },
+  {
+    path: "light-truck-tire/gd800-light",
+    component: GD800Light,
+  },
+  {
+    path: "light-truck-tire/gd08-light",
+    component: GD08Light,
+  },
+  {
+    path: "light-truck-tire/qa39-light",
+    component: QA39Light,
+  },
+  {
+    path: "light-truck-tire/qa999-light",
+    component: QA999Light,
+  },
+
+  {
+    path: "radial-otr-tires/16-00r25",
+    component: R251600,
+  },
+  {
+    path: "radial-otr-tires/14-00r25",
+    component: R251400,
   },
 ];
 
