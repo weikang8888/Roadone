@@ -31,7 +31,7 @@ const ChinaHighQualityQA19 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"RADIAL OTR TIRES"}
+            currentpage={"ROADONE TYRE DEMONSTRATION"}
             previouslink="/products"
             previouspage="Product"
           />

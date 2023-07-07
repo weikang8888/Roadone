@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface SubMenuOptions {
   currentpage: string;
@@ -48,10 +49,11 @@ const SubMenu: React.FC<SubMenuOptions> = ({
       );
     }
   };
+  const { t } = useTranslation();
 
   return (
     <div className="bPosition">
-      <a href="/">Home</a>
+      <a href="/">{t("header.home")}</a>
       {previouslink ? (
         <>
           {previouspage && " > "}

@@ -1,49 +1,52 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import ContactBanner from "../../static/image/main/contact-banner.webp";
 import ContactHouse from "../../static/image/main/contact-house.png";
 import SubMenu from "../../component/SubMenu/SubMenu";
 import "./contact.css";
+
 const Contactpage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <InnerBanner bannerimage={ContactBanner} />
 
       <section>
         <div className="container">
-          <div className="ejfl">Contact</div>
-          <SubMenu currentpage={"Contact Us"} currentlink={"/contact"} />
+          <div className="ejfl">{t("contactpage.contact")}</div>
+          <SubMenu
+            currentpage={t("contactpage.submenuContactUs")}
+            currentlink={"/contact"}
+          />
           <div className="main">
             <div className="pinfo">
               <p>
                 <span className="text-wrap">
-                  <strong>TONGLI TYRE CO.,LTD.</strong>
+                  <strong>{t("contactpage.companyName")}</strong>
                 </span>
               </p>
               <div className="mb-3">
                 <p>
-                  <img width="26" src={ContactHouse} />
-                  Addresss: Hixih Inustrial Park ,Yanzhou ,Shandong
-                  Province,China
+                  <img width="26" src={ContactHouse} alt="Contact House" />
+                  {t("contactpage.address")}
                 </p>
-                <p>&nbsp; &nbsp; &nbsp; &nbsp;Postal Code: 272100</p>{" "}
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;{t("contactpage.postalCode")}</p>
               </div>
               <div className="mb-3">
-                <p className="text-wrap">Mob/Whatsapp/Wechat: +8615764288507</p>
-                <p className="text-wrap">Contact person:&nbsp; White</p>
+                <p className="text-wrap">{t("contactpage.contactInfo")}</p>
+                <p className="text-wrap">{t("contactpage.contactPerson")}</p>
                 <p className="text-wrap"></p>
               </div>
 
               <p className="text-wrap mb-3">
                 <strong className="text-wrap">
-                  Other Contacts:&nbsp;&nbsp;
+                  {t("contactpage.otherContacts")}&nbsp;&nbsp;
                 </strong>
               </p>
               <p className="text-wrap"></p>
-              <p className="text-wrap">
-                Please contact us by the information above , better than left
-                message at this website
-              </p>
+              <p className="text-wrap">{t("contactpage.contactUsMessage")}</p>
               <div className="feedbackForm">
                 <form
                   name="feedbackForm"
@@ -54,7 +57,9 @@ const Contactpage = () => {
                     <tbody>
                       <tr>
                         <td className="ftxt">
-                          <div className="lable">Your Name:</div>
+                          <div className="lable">
+                            {t("contactpage.yourName")}
+                          </div>
                         </td>
                         <td className="fput">
                           <input
@@ -67,7 +72,8 @@ const Contactpage = () => {
                       <tr>
                         <td>
                           <div className="lable">
-                            <span className="xh">*</span>E-mail:
+                            <span className="xh">*</span>
+                            {t("contactpage.email")}
                           </div>
                         </td>
                         <td>
@@ -75,13 +81,15 @@ const Contactpage = () => {
                             id="SubmitEmail"
                             name="SubmitEmail"
                             className="text"
-                            placeholder="Please input your email here, it is very important!"
+                            placeholder={t("contactpage.emailPlaceholder")}
                           />
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <div className="lable">Phone/WhatsApp:</div>
+                          <div className="lable">
+                            {t("contactpage.phoneWhatsApp")}
+                          </div>
                         </td>
                         <td>
                           <input
@@ -93,7 +101,9 @@ const Contactpage = () => {
                       </tr>
                       <tr>
                         <td>
-                          <div className="lable">Company:</div>
+                          <div className="lable">
+                            {t("contactpage.company")}
+                          </div>
                         </td>
                         <td>
                           <input
@@ -105,7 +115,9 @@ const Contactpage = () => {
                       </tr>
                       <tr>
                         <td>
-                          <div className="lable">Subject:</div>
+                          <div className="lable">
+                            {t("contactpage.subject")}
+                          </div>
                         </td>
                         <td>
                           <input
@@ -118,7 +130,8 @@ const Contactpage = () => {
                       <tr>
                         <td valign="top">
                           <div className="lable">
-                            <span className="xh">*</span>Content:
+                            <span className="xh">*</span>
+                            {t("contactpage.content")}
                           </div>
                         </td>
                         <td>
@@ -126,7 +139,9 @@ const Contactpage = () => {
                             name="SubmitContent"
                             id="SubmitContent"
                             className="atextarea"
-                            placeholder="Please include details like size, weight, destination port and etc., so that we can quote the best price."></textarea>
+                            placeholder={t(
+                              "contactpage.contentPlaceholder"
+                            )}></textarea>
                         </td>
                       </tr>
                       <tr>
@@ -137,7 +152,8 @@ const Contactpage = () => {
                               type="submit"
                               className="submita"
                               id="ImgSend">
-                              <span className="submita-loading"></span>Send
+                              <span className="submita-loading"></span>
+                              {t("contactpage.submitButton")}
                             </button>
                             <span id="msg"></span>
                           </div>

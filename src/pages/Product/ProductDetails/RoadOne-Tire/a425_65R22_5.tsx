@@ -12,13 +12,13 @@ import BusTire from "../../../../static/image/products/bus-tyre.webp";
 import LightTruckTire from "../../../../static/image/products/light-truck-tire.webp";
 import CommercialTire from "../../../../static/image/products/commercial-tyre.webp";
 
-const A12R22_5 = () => {
+const A425_65R22_5 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=87")
+      .get("http://localhost:8080/api_roadone/products/products?ids=90")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -341,31 +341,28 @@ const A12R22_5 = () => {
                 </p>
                 <p>
                   <span>11R22.5 Truck Tire</span>
-                </p>
+                </p>{" "}
                 <p>
                   <span>12.00R20 Truck Tire</span>
-                </p>
+                </p>{" "}
                 <p>
                   <span>12.00R24 Truck Tire</span>
-                </p>
+                </p>{" "}
                 <p>
-                  <span>12R22.5 Truck Tire</span>
+                  <span>385/65R22.5 Truck Tire</span>
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={
-                  "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                }
-                prevLink="China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                nextText={"385/65R22.5 Truck Tyre"}
-                nextLink="/products/roadone-tyre-demonstration/385-65R22-5"
+                prevText={"6.50R16 Light Truck Tire"}
+                prevLink="/products/roadone-tyre-demonstration/6-50r16-light"
+                nextText={"315/80R22.5 Truck Tire"}
+                nextLink="/products/roadone-tyre-demonstration/315-80r22-5"
               />
               <p className="productsTags">
-                Hot Tags: 11r22.5 295/80r22.5 mid-long distance truck tire tbr,
-                China, suppliers, manufacturers, factory, wholesale,
-                high-quality
+                Hot Tags: 425/65r22.5 tubeless truck tire, China, suppliers,
+                manufacturers, factory, wholesale, high-quality
               </p>
-              <DetailsRelatedProducts ids="95,96,94,93,32,97" />
+              <DetailsRelatedProducts ids="93,94,96,87,92,99" />
             </div>
           </div>
         </div>
@@ -374,4 +371,4 @@ const A12R22_5 = () => {
   );
 };
 
-export default A12R22_5;
+export default A425_65R22_5;

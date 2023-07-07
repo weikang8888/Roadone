@@ -21,5 +21,54 @@
     "advantage4": "Tongli tire adopted the special HBW bead wire, 3SB new sandwich belts, DTL compound and FRC high penetration steel cord design, ensured the tire has high mileage, retreadability, heavy load capacity.",
     "customerCount": "Our company have more than",
     "customers": "200,000 customers around the world!"
+  },
+  "contactpage": {
+    "contact": "Contact",
+    "submenuContactUs": "Contact Us",
+    "companyName": "TONGLI TYRE CO.,LTD.",
+    "address": "Address: Hixih Inustrial Park, Yanzhou, Shandong Province, China",
+    "postalCode": "Postal Code: 272100",
+    "contactInfo": "Mob/WhatsApp/WeChat: +8615764288507",
+    "contactPerson": "Contact person: White",
+    "otherContacts": "Other Contacts:",
+    "contactUsMessage": "Please contact us by the information above, better than leaving a message on this website",
+    "yourName": "Your Name:",
+    "email": "E-mail:",
+    "phoneWhatsApp": "Phone/WhatsApp:",
+    "company": "Company:",
+    "subject": "Subject:",
+    "content": "Content:",
+    "submitButton": "Send"
+  },
+  "footer": {
+    "tryBest": "TRY BEST! TO BE NO.1",
+    "tryBestDescription": "We can supply you international high end quality and suitable for all kinds of road conditions and meet different market demands.",
+    "contactUs": "Contact Us",
+    "companyName": "Tongli Tyre Co,. Ltd",
+    "companyAddress": "ADD: Hixih Inustrial Park, Yanzhou, Shandong Province, China",
+    "categories": "Categories",
+    "truckTire": "Truck Tire",
+    "busTire": "Bus Tire",
+    "copyRight": "Copyright © Tongli Tyre Co.,Ltd All Rights Reserved."
+  },
+  "other": {
+    "readMore": "Read More"
+  },
+  "submenu": {
+    "product": "Product",
+    "service": "Service",
+    "new": "New",
+    "truck-tire": "Truck Tire",
+    "bus-tire": "Bus Tire",
+    "light-truck-tire": "Light Truck Tire",
+    "radial-otr-tire": "Radial OTR Tire",
+    "roadone-tyre-demonstration": "ROADONE TYRE DEMONSTRATION",
+    "quarry-buidling-sites": "Quarry & Building Sites",
+    "mid-long-distance-wearable": "Mid-long Distance Wearable",
+    "mid-short-distance-heavy-load": "Mid-Short distance Heavy Load",
+    "long-haul-wearable-tyre": "Long Haul Wearable Tyre",
+    "high-end-off-road-tyre": "High End Off-Road Tyre",
+    "high-end-heavy-loading-tyre": "High End Heavy Loading Tyre",
+    "high-end-wearable-tyre": "Hight End Wearable Tyre"
   }
 }

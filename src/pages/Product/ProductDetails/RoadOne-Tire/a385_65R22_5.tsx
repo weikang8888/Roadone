@@ -12,13 +12,13 @@ import BusTire from "../../../../static/image/products/bus-tyre.webp";
 import LightTruckTire from "../../../../static/image/products/light-truck-tire.webp";
 import CommercialTire from "../../../../static/image/products/commercial-tyre.webp";
 
-const A12R22_5 = () => {
+const A385_65R22_5 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=87")
+      .get("http://localhost:8080/api_roadone/products/products?ids=88")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -325,47 +325,59 @@ const A12R22_5 = () => {
                   </strong>
                 </p>
                 <p>
-                  <span>9.00R20 Truck Tire</span>
+                  <span>13R22.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>10.00R20 Truck Tire</span>
+                  <span>215/75R17.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>9R22.5 Truck Tire</span>
+                  <span>235/75R17.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>10R22.5 Truck Tire</span>
+                  <span>245/70R19.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>11.00R20 Truck Tire</span>
+                  <span>265/70R19.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>11R22.5 Truck Tire</span>
+                  <span>275/70R22.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>12.00R20 Truck Tire</span>
+                  <span>295/60R22.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>12.00R24 Truck Tire</span>
+                  <span>295/80R22.5 Truck Tire</span>
                 </p>
                 <p>
-                  <span>12R22.5 Truck Tire</span>
+                  <span>315/60R22.5 Truck Tire</span>
+                </p>
+                <p>
+                  <span>315/70R22.5 Truck Tire</span>
+                </p>
+                <p>
+                  <span>315/80R22.5 Truck Tire</span>
+                </p>
+                <p>
+                  <span>385/65R22.5 Truck Tire</span>
+                </p>
+                <p>
+                  <span>425/65R22.5 Truck Tire</span>
+                </p>
+                <p>
+                  <span>14.00R20 Truck Tire</span>
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={
-                  "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                }
-                prevLink="China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                nextText={"385/65R22.5 Truck Tyre"}
-                nextLink="/products/roadone-tyre-demonstration/385-65R22-5"
+                prevText={"12R22.5 Tubeless Truck Tire"}
+                prevLink="/products/roadone-tyre-demonstration/12r22-5-tubeless"
+                nextText={"6.50R16 Light Truck Tire"}
+                nextLink="/products/roadone-tyre-demonstration/6-50r16-light"
               />
               <p className="productsTags">
-                Hot Tags: 11r22.5 295/80r22.5 mid-long distance truck tire tbr,
-                China, suppliers, manufacturers, factory, wholesale,
-                high-quality
+                Hot Tags: 385/65r22.5 truck tyre, China, suppliers,
+                manufacturers, factory, wholesale, high-quality
               </p>
-              <DetailsRelatedProducts ids="95,96,94,93,32,97" />
+              <DetailsRelatedProducts ids="94,92,100,93,99,97" />
             </div>
           </div>
         </div>
@@ -374,4 +386,4 @@ const A12R22_5 = () => {
   );
 };
 
-export default A12R22_5;
+export default A385_65R22_5;

@@ -12,13 +12,13 @@ import BusTire from "../../../../static/image/products/bus-tyre.webp";
 import LightTruckTire from "../../../../static/image/products/light-truck-tire.webp";
 import CommercialTire from "../../../../static/image/products/commercial-tyre.webp";
 
-const A12R22_5 = () => {
+const RoadCommercialTire = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=87")
+      .get("http://localhost:8080/api_roadone/products/products?ids=96")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -318,54 +318,17 @@ const A12R22_5 = () => {
                   <span>Radial Tire / Radial Tire&nbsp;</span>
                 </p>
               </div>
-              <div className="my-3">
-                <p>
-                  <strong>
-                    <span className="fs-3">Size of Truck Tire:</span>
-                  </strong>
-                </p>
-                <p>
-                  <span>9.00R20 Truck Tire</span>
-                </p>
-                <p>
-                  <span>10.00R20 Truck Tire</span>
-                </p>
-                <p>
-                  <span>9R22.5 Truck Tire</span>
-                </p>
-                <p>
-                  <span>10R22.5 Truck Tire</span>
-                </p>
-                <p>
-                  <span>11.00R20 Truck Tire</span>
-                </p>
-                <p>
-                  <span>11R22.5 Truck Tire</span>
-                </p>
-                <p>
-                  <span>12.00R20 Truck Tire</span>
-                </p>
-                <p>
-                  <span>12.00R24 Truck Tire</span>
-                </p>
-                <p>
-                  <span>12R22.5 Truck Tire</span>
-                </p>
-              </div>
               <DetailsPreviousNext
-                prevText={
-                  "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                }
-                prevLink="China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                nextText={"385/65R22.5 Truck Tyre"}
-                nextLink="/products/roadone-tyre-demonstration/385-65R22-5"
+                prevText={"Bus Tire"}
+                prevLink="/products/roadone-tyre-demonstration/bus-tire"
+                nextText={"11R22.5 Truck Tire"}
+                nextLink="/products/roadone-tyre-demonstration/11r22-5"
               />
               <p className="productsTags">
-                Hot Tags: 11r22.5 295/80r22.5 mid-long distance truck tire tbr,
-                China, suppliers, manufacturers, factory, wholesale,
-                high-quality
+                Hot Tags: 11r22.5 truck tire, China, suppliers, manufacturers,
+                factory, wholesale, high-quality
               </p>
-              <DetailsRelatedProducts ids="95,96,94,93,32,97" />
+              <DetailsRelatedProducts ids="93,94,95,96,1,2" />
             </div>
           </div>
         </div>
@@ -374,4 +337,4 @@ const A12R22_5 = () => {
   );
 };
 
-export default A12R22_5;
+export default RoadCommercialTire;

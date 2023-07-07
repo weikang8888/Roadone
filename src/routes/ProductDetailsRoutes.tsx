@@ -78,6 +78,18 @@ import a11R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a11R22_5";
 import ChinaHighQualityQA19 from "../pages/Product/ProductDetails/RoadOne-Tire/ChinaHighQualityQA19";
 import ChinaFactoryQA99 from "../pages/Product/ProductDetails/RoadOne-Tire/ChinaFactoryQA99";
 import a12R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a12R22_5";
+import a385_65R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a385_65R22_5";
+import a650R16 from "../pages/Product/ProductDetails/RoadOne-Tire/a650R16";
+import a425_65R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a425_65R22_5";
+import a315_80R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a315_80R22_5";
+import RoadOneTruckTire from "../pages/Product/ProductDetails/RoadOne-Tire/RoadOneTruckTire";
+import RoadOneLightTruckTire from "../pages/Product/ProductDetails/RoadOne-Tire/RoadOneLightTruckTire";
+import RoadOneBusTire from "../pages/Product/ProductDetails/RoadOne-Tire/RoadOneBusTire";
+import RoadCommercialTire from "../pages/Product/ProductDetails/RoadOne-Tire/RoadOneCommercialTire";
+import A11R22_5TruckTire from "../pages/Product/ProductDetails/RoadOne-Tire/a11R22_5TruckTire";
+import A12_00R24TruckTire from "../pages/Product/ProductDetails/RoadOne-Tire/a12_00R24TruckTire";
+import A14_00R20 from "../pages/Product/ProductDetails/RoadOne-Tire/a14_00R20";
+import RoadOneMineTruckTire from "../pages/Product/ProductDetails/RoadOne-Tire/MineTruckTire";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -395,12 +407,52 @@ const NewDetailsRoutes = [
     component: a12R22_5,
   },
   {
-    path: "roadone-tyre-demonstration/11r22-5-295-80r22-5",
-    component: a11R22_5,
+    path: "roadone-tyre-demonstration/385-65R22-5",
+    component: a385_65R22_5,
   },
   {
-    path: "roadone-tyre-demonstration/11r22-5-295-80r22-5",
-    component: a11R22_5,
+    path: "roadone-tyre-demonstration/6-50r16-light",
+    component: a650R16,
+  },
+  {
+    path: "roadone-tyre-demonstration/425-65r22-5-tubeless",
+    component: a425_65R22_5,
+  },
+  {
+    path: "roadone-tyre-demonstration/315-80r22-5",
+    component: a315_80R22_5,
+  },
+  {
+    path: "roadone-tyre-demonstration/truck-tire",
+    component: RoadOneTruckTire,
+  },
+  {
+    path: "roadone-tyre-demonstration/light-truck-tire",
+    component: RoadOneLightTruckTire,
+  },
+  {
+    path: "roadone-tyre-demonstration/bus-tire",
+    component: RoadOneBusTire,
+  },
+  {
+    path: "roadone-tyre-demonstration/commercial-radial",
+    component: RoadCommercialTire,
+  },
+  {
+    path: "roadone-tyre-demonstration/11r22-5",
+    component: A11R22_5TruckTire,
+  },
+  {
+    path: "roadone-tyre-demonstration/12-00r24",
+    component: A12_00R24TruckTire,
+  },
+  {
+    path: "roadone-tyre-demonstration/14-00r20-military",
+    component: A14_00R20,
+  },
+  {
+    path: "roadone-tyre-demonstration/mine-truck-tire",
+    component: RoadOneMineTruckTire,
   },
 ];
 

@@ -3,8 +3,10 @@ import axios from "axios";
 import ProductBanner from "../../static/image/products/product-banner.webp";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
+import { useTranslation } from "react-i18next";
 
 const Productpage = () => {
+  const { t } = useTranslation();
   const [showFirstSubMenu, setShowFirstSubMenu] = useState(true);
   const [showSecondSubMenu, setShowSecondSubMenu] = useState(false);
   const [showQA919, setShowQA919] = useState(false);
@@ -26,7 +28,7 @@ const Productpage = () => {
     currentProduct === Math.ceil(products.length / newsPerProduct);
 
   const [menuState, setMenuState] = useState({
-    previousPage: "Product",
+    previousPage: t("submenu.product"),
     currentPage: "",
     typePage: "",
   });
@@ -59,6 +61,11 @@ const Productpage = () => {
       "Light Truck Tire": "light-truck-tire",
       "RADIAL OTR TIRES": "radial-otr-tires",
       "ROADONE TYRE DEMONSTRATION": "roadone-tyre-demonstration",
+      卡车轮胎: "truck-tire",
+      巴士轮胎: "bus-tire",
+      轻型卡车轮胎: "light-truck-tire",
+      工程子午线轮胎: "radial-otr-tires",
+      "ROADONE 轮胎演示": "roadone-tyre-demonstration",
     };
     if (previousPage && !currentPage) {
       axios
@@ -81,7 +88,7 @@ const Productpage = () => {
       axios
         .get("http://localhost:8080/api_roadone/products/products")
         .then((response) => {
-          if (currentPage === "Truck Tire") {
+          if (currentPage === "Truck Tire" || currentPage === "卡车轮胎") {
             setShowFirstSubMenu(false);
             setShowSecondSubMenu(true);
             setShowQA919(false);
@@ -109,7 +116,7 @@ const Productpage = () => {
     setMenuState((prevState) => ({
       ...prevState,
       previousLink: "/products",
-      previousPage: "Product",
+      previousPage: t("submenu.product"),
       currentPage: currentPage,
     }));
 
@@ -119,6 +126,11 @@ const Productpage = () => {
       "Light Truck Tire": "light-truck-tire",
       "RADIAL OTR TIRES": "radial-otr-tires",
       "ROADONE TYRE DEMONSTRATION": "roadone-tyre-demonstration",
+      卡车轮胎: "truck-tire",
+      巴士轮胎: "bus-tire",
+      轻型卡车轮胎: "light-truck-tire",
+      工程子午线轮胎: "radial-otr-tires",
+      "ROADONE 轮胎演示": "roadone-tyre-demonstration",
     };
 
     if (pageToProductsTypeMap.hasOwnProperty(currentPage)) {
@@ -136,7 +148,7 @@ const Productpage = () => {
           console.error("Error fetching data:", error);
         });
 
-      if (currentPage === "Truck Tire") {
+      if (currentPage === "Truck Tire" || currentPage === "卡车轮胎") {
         setShowFirstSubMenu(false);
         setShowSecondSubMenu(true);
       } else {
@@ -152,7 +164,7 @@ const Productpage = () => {
     setMenuState((prevState) => ({
       ...prevState,
       previousLink: "/products",
-      previousPage: "Product",
+      previousPage: t("submenu.product"),
       typePage: typePage,
     }));
 
@@ -165,6 +177,13 @@ const Productpage = () => {
       "High End Heavy Loading Tyre": "high-end-heavy-loading-tyre",
       "HIGH END WEARABLE TYRE": "high-end-wearable-tyre",
       "12R22.5 QA919": "12r22-5-qa919",
+      采石场和建筑工地: "quarry-building-sites",
+      中远距离穿戴: "mid-long-distance-wearable",
+      中短距离重载: "mid-short-distance-heavy-load",
+      长途耐磨轮胎: "long-haul-wearable-tyre",
+      高端越野轮胎: "high-end-off-read-tyre",
+      高端重载轮胎: "high-end-heavy-loading-tyre",
+      高端耐磨轮胎: "high-end-wearable-tyre",
     };
     if (pageToTruckTireTypeMap.hasOwnProperty(typePage)) {
       const truckTireType = pageToTruckTireTypeMap[typePage];
@@ -276,41 +295,44 @@ const Productpage = () => {
                   className="LiProCateOne"
                   id="LiProCate1"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "Truck Tire")
+                    handleProductTypeClick(event, t("submenu.truck-tire"))
                   }>
-                  <a href="">+Truck Tire</a>
+                  <a href="">+{t("submenu.truck-tire")}</a>
                 </li>
                 <li
                   className="LiProCateOne"
                   id="LiProCate2"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "Bus Tire")
+                    handleProductTypeClick(event, t("submenu.bus-tire"))
                   }>
-                  <a>+Bus Tire</a>
+                  <a>+{t("submenu.bus-tire")}</a>
                 </li>
                 <li
                   className="LiProCateOne"
                   id="LiProCate3"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "Light Truck Tire")
+                    handleProductTypeClick(event, t("submenu.light-truck-tire"))
                   }>
-                  <a>+Light Truck Tire</a>
+                  <a>+{t("submenu.light-truck-tire")}</a>
                 </li>
                 <li
                   className="LiProCateOne"
                   id="LiProCate4"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "RADIAL OTR TIRES")
+                    handleProductTypeClick(event, t("submenu.radial-otr-tire"))
                   }>
-                  <a>+RADIAL OTR TIRES</a>
+                  <a>+{t("submenu.radial-otr-tire")}</a>
                 </li>
                 <li
                   className="LiProCateOne"
                   id="LiProCate5"
                   onClick={(event) =>
-                    handleProductTypeClick(event, "ROADONE TYRE DEMONSTRATION")
+                    handleProductTypeClick(
+                      event,
+                      t("submenu.roadone-tyre-demonstration")
+                    )
                   }>
-                  <a>+ROADONE TYRE DEMONSTRATION</a>
+                  <a>+{t("submenu.roadone-tyre-demonstration")}</a>
                 </li>
               </ul>
             </div>
@@ -320,67 +342,79 @@ const Productpage = () => {
               <ul className="d-flex flex-wrap">
                 <li
                   onClick={(event) =>
-                    handleTruckTireTypeClick(event, "Quarry & Building Sites")
+                    handleTruckTireTypeClick(
+                      event,
+                      t("submenu.quarry-buidling-sites")
+                    )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/mine-truck-tire/">
-                    Quarry &amp; Building Sites
+                    {t("submenu.quarry-buidling-sites")}
                   </a>
                 </li>
                 <li
                   onClick={(event) =>
                     handleTruckTireTypeClick(
                       event,
-                      "Mid-long Distance Wearable"
+                      t("submenu.mid-long-distance-wearable")
                     )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/long-distance-standard-load-truck-tire/">
-                    Mid-long Distance Wearable
+                    {t("submenu.mid-long-distance-wearable")}
                   </a>
                 </li>
                 <li
                   onClick={(event) =>
                     handleTruckTireTypeClick(
                       event,
-                      "Mid-Short distance Heavy Load"
+                      t("submenu.mid-short-distance-heavy-load")
                     )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/medium-and-short-distance-hybrid-truck-tires/">
-                    Mid-Short distance Heavy Load
-                  </a>
-                </li>
-                <li
-                  onClick={(event) =>
-                    handleTruckTireTypeClick(event, "Long Haul Wearable Tyre")
-                  }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/highway-truck-tire/">
-                    Long Haul Wearable Tyre
-                  </a>
-                </li>
-                <li
-                  onClick={(event) =>
-                    handleTruckTireTypeClick(event, "HIGH END OFF-ROAD TYRE")
-                  }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-off-road-tyre/">
-                    HIGH END OFF-ROAD TYRE
+                    {t("submenu.mid-short-distance-heavy-load")}
                   </a>
                 </li>
                 <li
                   onClick={(event) =>
                     handleTruckTireTypeClick(
                       event,
-                      "High End Heavy Loading Tyre"
+                      t("submenu.long-haul-wearable-tyre")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-heavy-loading-tyres/">
-                    High End Heavy Loading Tyres
+                  <a href="https://www.roadone-hixih.com/truck-tire/highway-truck-tire/">
+                    {t("submenu.long-haul-wearable-tyre")}
                   </a>
                 </li>
                 <li
                   onClick={(event) =>
-                    handleTruckTireTypeClick(event, "HIGH END WEARABLE TYRE")
+                    handleTruckTireTypeClick(
+                      event,
+                      t("submenu.high-end-off-road-tyre")
+                    )
+                  }>
+                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-off-road-tyre/">
+                    {t("submenu.high-end-off-road-tyre")}
+                  </a>
+                </li>
+                <li
+                  onClick={(event) =>
+                    handleTruckTireTypeClick(
+                      event,
+                      t("submenu.high-end-heavy-loading-tyre")
+                    )
+                  }>
+                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-heavy-loading-tyres/">
+                    {t("submenu.high-end-heavy-loading-tyre")}
+                  </a>
+                </li>
+                <li
+                  onClick={(event) =>
+                    handleTruckTireTypeClick(
+                      event,
+                      t("submenu.high-end-wearable-tyre")
+                    )
                   }>
                   <a href="https://www.roadone-hixih.com/truck-tire/high-end-wearable-tyre/">
-                    HIGH END WEARABLE TYRE
+                    {t("submenu.high-end-wearable-tyre")}
                   </a>
                 </li>
                 <li
@@ -395,9 +429,7 @@ const Productpage = () => {
             </div>
             <div className="row mx-0 justify-content-between">
               {currentNews.map((product, index) => (
-                <div
-                  className="pro-bigbox align-items-center"
-                  key={index}>
+                <div className="pro-bigbox align-items-center" key={index}>
                   <div className="bigboximg col-4 me-4">
                     <a href={product.products_url}>
                       <img

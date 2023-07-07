@@ -21,5 +21,54 @@
     "advantage4": "唐力轮胎采用特殊的HBW钢丝束线、3SB新型夹层带、DTL复合材料和FRC高渗透钢丝设计，确保轮胎具有高里程、可再翻新、承载能力强。",
     "customerCount": "我们公司在全球拥有超过",
     "customers": "200,000名客户！"
+  },
+  "contactpage": {
+    "contact": "联系我们",
+    "submenuContactUs": "联系我们",
+    "companyName": "唐力轮胎有限公司",
+    "address": "地址：山东省兖州市海西工业园",
+    "postalCode": "邮政编码：272100",
+    "contactInfo": "手机/WhatsApp/微信：+8615764288507",
+    "contactPerson": "联系人：White",
+    "otherContacts": "其他联系方式：",
+    "contactUsMessage": "请通过上述信息与我们联系，比在本网站留言更好",
+    "yourName": "您的姓名：",
+    "email": "邮箱：",
+    "phoneWhatsApp": "电话/WhatsApp：",
+    "company": "公司：",
+    "subject": "主题：",
+    "content": "内容：",
+    "submitButton": "发送"
+  },
+  "footer": {
+    "tryBest": "努力做到最好！成为第一",
+    "tryBestDescription": "我们可以为您提供国际高端品质的轮胎，适用于各种路况，并满足不同的市场需求。",
+    "contactUs": "联系我们",
+    "companyName": "唐力轮胎有限公司",
+    "companyAddress": "地址：山东省兖州市海西工业园",
+    "categories": "产品分类",
+    "truckTire": "卡车轮胎",
+    "busTire": "客车轮胎",
+    "copyRight": "版权所有 © 唐力轮胎有限公司"
+  },
+  "other": {
+    "readMore": "了解更多"
+  },
+  "submenu": {
+    "product": "产品",
+    "service": "服务",
+    "new": "新闻",
+    "truck-tire": "卡车轮胎",
+    "bus-tire": "巴士轮胎",
+    "light-truck-tire": "轻型卡车轮胎",
+    "radial-otr-tire": "工程子午线轮胎",
+    "roadone-tyre-demonstration": "ROADONE 轮胎演示",
+    "quarry-buidling-sites": "采石场和建筑工地",
+    "mid-long-distance-wearable": "中远距离穿戴",
+    "mid-short-distance-heavy-load": "中短距离重载",
+    "long-haul-wearable-tyre": "长途耐磨轮胎",
+    "high-end-off-road-tyre": "高端越野轮胎",
+    "high-end-heavy-loading-tyre": "高端重载轮胎",
+    "high-end-wearable-tyre": "高端耐磨轮胎"
   }
 }
