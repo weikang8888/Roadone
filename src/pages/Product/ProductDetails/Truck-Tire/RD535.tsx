@@ -210,7 +210,7 @@ const RD535 = () => {
                       <span className="table-text">295/80R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>

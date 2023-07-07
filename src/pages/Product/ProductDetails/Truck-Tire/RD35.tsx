@@ -192,7 +192,7 @@ const RD35 = () => {
                       <span className="table-text">245/70R19.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2180/2060 </span>
@@ -221,7 +221,7 @@ const RD35 = () => {
                       <span className="table-text">245/70R19.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2800/2650 </span>
@@ -250,7 +250,7 @@ const RD35 = () => {
                       <span className="table-text">295/80R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>

@@ -194,7 +194,7 @@ const GD09MidShort = () => {
                       <span className="table-text">12.00R20</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">4000/3650 </span>
@@ -223,7 +223,7 @@ const GD09MidShort = () => {
                       <span className="table-text">12R22.5 </span>
                     </td>
                     <td>
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3550/3250 </span>

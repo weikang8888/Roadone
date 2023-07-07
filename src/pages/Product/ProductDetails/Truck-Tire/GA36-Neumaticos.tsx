@@ -190,7 +190,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">12.00R20</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3750/3450</span>
@@ -219,7 +219,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">12.00R20</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">4000/3650</span>
@@ -248,7 +248,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">11R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3000/2725</span>
@@ -277,7 +277,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">11R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3250/3000</span>
@@ -306,7 +306,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">12R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3350/3075</span>
@@ -335,7 +335,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">12R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3550/3250</span>
@@ -364,7 +364,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">315/80R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3750/3450</span>
@@ -393,7 +393,7 @@ const GA36_Neumaticos = () => {
                       <span className="table-text">315/80R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">4125/3750</span>

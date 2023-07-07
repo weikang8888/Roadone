@@ -209,7 +209,7 @@ const RA85 = () => {
                       <span className="table-text">8.25R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2430/2300 </span>
@@ -238,7 +238,7 @@ const RA85 = () => {
                       <span className="table-text">9.00R20</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2800/2650 </span>
@@ -267,7 +267,7 @@ const RA85 = () => {
                       <span className="table-text">10.00R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3250/3000 </span>
@@ -296,7 +296,7 @@ const RA85 = () => {
                       <span className="table-text">12R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>
@@ -325,7 +325,7 @@ const RA85 = () => {
                       <span className="table-text">13R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3750/3450 </span>

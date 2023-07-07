@@ -192,7 +192,7 @@ const HF21City = () => {
                       <span className="table-text">11R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3000/2725 </span>
@@ -221,7 +221,7 @@ const HF21City = () => {
                       <span className="table-text">295/80R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>
@@ -250,7 +250,7 @@ const HF21City = () => {
                       <span className="table-text">235/75R17.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2000/1850 </span>

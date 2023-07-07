@@ -647,7 +647,6 @@ img {
 }
 .met-footer {
   width: 33.33333%;
-  float: left;
   padding: 0 1rem 1rem;
   color: #cacaca;
   font-size: 0.875rem;
@@ -749,6 +748,11 @@ footer {
 }
 #banner {
   margin-top: 100px;
+}
+@media only screen and (max-width: 760px) {
+  #banner {
+    margin-top: 60px;
+  }
 }
 @font-face {
   font-family: MisoBold;
@@ -1475,11 +1479,12 @@ li.tick {
   font-family: Ubuntu, sans-serif;
 }
 .inner-banner {
-  margin-top: 100px;
-  text-align: center;
+  height: 100vh;
 }
 .inner-banner img {
   max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 .bPosition {
   background: #eee;
@@ -1488,12 +1493,13 @@ li.tick {
   text-indent: 15px;
   margin-bottom: 15px;
 }
-.container .ejfl {
+.ejfl {
   font-size: 35px;
   text-align: center;
   margin: 15px 0;
   font-weight: 700;
 }
+
 .news-bigbox {
   width: 100%;
   display: inline-block;
@@ -1657,6 +1663,7 @@ li.tick {
   width: 49%;
   margin-bottom: 20px;
   height: 250px;
+  display: flex;
 }
 .pro-bigbox .bigboximg {
   width: 40%;
@@ -1955,6 +1962,7 @@ span.at-icon-wrapper {
     margin-bottom: 20px;
     margin-right: 0;
     height: auto;
+    display: block;
   }
   .pro-bigbox .bigboximg {
     width: 100%;
@@ -2017,6 +2025,9 @@ span.at-icon-wrapper {
   footer .met-footer {
     width: 50%;
   }
+  .footer-mobile-flex {
+    display: flex;
+  }
   .columns-box li {
     width: 50%;
     padding: 0 1rem 1rem;
@@ -2054,12 +2065,6 @@ span.at-icon-wrapper {
   .abouts-text h2.h2,
   .abouts-text .h2 {
     margin-bottom: 1rem;
-  }
-  .foot-01 {
-    display: none;
-  }
-  .foot-02 {
-    display: none;
   }
   footer .met-footer {
     width: 100%;
@@ -3576,7 +3581,7 @@ ul.pro-ulli li {
 @media (min-width: 576px) {
   .container,
   .container-sm {
-    max-width: 540px;
+    max-width: 680px;
   }
 }
 @media (min-width: 768px) {

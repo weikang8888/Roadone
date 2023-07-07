@@ -210,7 +210,7 @@ const HF82 = () => {
                       <span className="table-text">11R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3000/2725 </span>
@@ -239,7 +239,7 @@ const HF82 = () => {
                       <span className="table-text">12R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>
@@ -268,7 +268,7 @@ const HF82 = () => {
                       <span className="table-text">295/80R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3350/3075 </span>
@@ -297,7 +297,7 @@ const HF82 = () => {
                       <span className="table-text">315/60R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3650/3350 </span>
@@ -326,7 +326,7 @@ const HF82 = () => {
                       <span className="table-text">315/70R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3750/3450 </span>

@@ -223,7 +223,7 @@ const QA39Light = () => {
                       <span className="table-text">8.25R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1800/1600 </span>

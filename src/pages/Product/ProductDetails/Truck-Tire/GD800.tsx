@@ -207,7 +207,7 @@ const GD800 = () => {
                       <span className="table-text">8.25R20</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="107" style={{ wordBreak: "break-word" }}>
                       <span className="table-text">2430/2300 </span>
@@ -236,7 +236,7 @@ const GD800 = () => {
                       <span className="table-text">9.00R20 </span>
                     </td>
                     <td width="68">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">2800/2650 </span>
@@ -265,7 +265,7 @@ const GD800 = () => {
                       <span className="table-text">10.00R20</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3250/3000 </span>

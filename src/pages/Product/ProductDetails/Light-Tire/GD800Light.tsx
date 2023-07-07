@@ -223,7 +223,7 @@ const GD800Light = () => {
                       <span className="table-text">8.25R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2000/1800</span>

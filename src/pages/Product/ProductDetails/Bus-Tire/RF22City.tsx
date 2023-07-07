@@ -192,7 +192,7 @@ const RF22City = () => {
                       <span className="table-text">9R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">14PR </span>
+                      <span className="table-text">14PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2240/2120 </span>
@@ -221,7 +221,7 @@ const RF22City = () => {
                       <span className="table-text">10R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2800/2650 </span>
@@ -250,7 +250,7 @@ const RF22City = () => {
                       <span className="table-text">215/75R17.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1750/1600 </span>

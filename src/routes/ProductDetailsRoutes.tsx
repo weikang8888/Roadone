@@ -74,6 +74,10 @@ import QA39Light from "../pages/Product/ProductDetails/Light-Tire/QA39Light";
 import QA999Light from "../pages/Product/ProductDetails/Light-Tire/QA999Light";
 import R251600 from "../pages/Product/ProductDetails/Radial-OTR-Tire/R251600";
 import R251400 from "../pages/Product/ProductDetails/Radial-OTR-Tire/R251400";
+import a11R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a11R22_5";
+import ChinaHighQualityQA19 from "../pages/Product/ProductDetails/RoadOne-Tire/ChinaHighQualityQA19";
+import ChinaFactoryQA99 from "../pages/Product/ProductDetails/RoadOne-Tire/ChinaFactoryQA99";
+import a12R22_5 from "../pages/Product/ProductDetails/RoadOne-Tire/a12R22_5";
 
 const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf31", component: HF31 },
@@ -372,6 +376,31 @@ const NewDetailsRoutes = [
   {
     path: "radial-otr-tires/14-00r25",
     component: R251400,
+  },
+
+  {
+    path: "roadone-tyre-demonstration/11r22-5-295-80r22-5",
+    component: a11R22_5,
+  },
+  {
+    path: "roadone-tyre-demonstration/china-hight-quality-qa19",
+    component: ChinaHighQualityQA19,
+  },
+  {
+    path: "roadone-tyre-demonstration/china-factory-11-00r20-12-00r20-qa99",
+    component: ChinaFactoryQA99,
+  },
+  {
+    path: "roadone-tyre-demonstration/12r22-5-tubeless",
+    component: a12R22_5,
+  },
+  {
+    path: "roadone-tyre-demonstration/11r22-5-295-80r22-5",
+    component: a11R22_5,
+  },
+  {
+    path: "roadone-tyre-demonstration/11r22-5-295-80r22-5",
+    component: a11R22_5,
   },
 ];
 

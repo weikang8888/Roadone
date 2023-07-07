@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import InnerBanner from "../../../../component/Banner/InnerBanner";
-import ProductBannerLight from "../../../../static/image/products/product-banner-light.webp";
+import ProductBannerRoadOne from "../../../../static/image/products/product-banner-roadone.webp";
 import SubMenu from "../../../../component/SubMenu/SubMenu";
 import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
-const RA85Light = () => {
+const ChinaHighQualityQA19 = () => {
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=69")
+      .get("http://localhost:8080/api_roadone/products/products?ids=85")
       .then((response) => {
         setProductItems(response.data);
       })
@@ -27,11 +27,11 @@ const RA85Light = () => {
 
   return (
     <>
-      <InnerBanner bannerimage={ProductBannerLight} />
+      <InnerBanner bannerimage={ProductBannerRoadOne} />
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Light Truck Tire"}
+            currentpage={"RADIAL OTR TIRES"}
             previouslink="/products"
             previouspage="Product"
           />
@@ -95,9 +95,9 @@ const RA85Light = () => {
                     }}>
                     &gt;
                   </span>
-                  Unique three-line longitudinal groove, variable angle profile
-                  contour design, anti-cracking, anti-grooving, puncture
-                  resistance, anti-smashing block, inhibiting deformed grinding.
+                  Reinforced bead with nylon and strong carcass design for sizes
+                  with ★ , 0 degree structure on shoulder, providing high
+                  quality and performance under heavy load conditions.
                 </span>
               </p>
               <p>
@@ -111,8 +111,23 @@ const RA85Light = () => {
                     }}>
                     &gt;
                   </span>
-                  Light truck special low heat, high wear-resistant tread
-                  formula to ensure a longer service life.
+                  Low heat generation tread recipe, open shoulder design,
+                  reducing shoulder separation effectively.
+                </span>
+              </p>{" "}
+              <p>
+                <span className="table-text">
+                  <span
+                    style={{
+                      fontFamily: "calibri",
+                      color: "rgb(229, 51, 51)",
+                      fontSize: "14px",
+                      lineHeight: "21px",
+                    }}>
+                    &gt;
+                  </span>
+                  Optimized cap profile, durable tread formula, providing
+                  excellent sevice mileage on paved roads, cost-effective.
                 </span>
               </p>
               <table width="100%" className="table mt-3">
@@ -173,104 +188,51 @@ const RA85Light = () => {
                   </tr>
                   <tr>
                     <td width="127">
-                      <span className="table-text">8.25R16 LT</span>
+                      <span className="table-text">12R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR★ </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
-                      <span className="table-text">1800/1600</span>
+                      <span className="table-text">3550/3250 </span>
                     </td>
                     <td width="131">
-                      <span className="table-text">128/124</span>
+                      <span className="table-text">152/149 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">L </span>
+                      <span className="table-text">M </span>
                     </td>
                     <td width="88">
-                      <span className="table-text">855 </span>
+                      <span className="table-text">1085 </span>
                     </td>
                     <td width="95">
-                      <span className="table-text">235</span>
+                      <span className="table-text">300 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">770 </span>
+                      <span className="table-text">930 </span>
                     </td>
                     <td width="111">
-                      <span className="table-text">6.50</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">7.50R16 LT</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">14PR★</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">1500/1320</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">122/118</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">L</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">805 </span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">215</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">770 </span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">6.00</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="127">
-                      <span className="table-text">7.00R16 LT</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">14PR★</span>
-                    </td>
-                    <td width="143">
-                      <span className="table-text">1320/1180</span>
-                    </td>
-                    <td width="131">
-                      <span className="table-text">118/114</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">L</span>
-                    </td>
-                    <td width="88">
-                      <span className="table-text">775</span>
-                    </td>
-                    <td width="95">
-                      <span className="table-text">200</span>
-                    </td>
-                    <td width="72">
-                      <span className="table-text">770 </span>
-                    </td>
-                    <td width="111">
-                      <span className="table-text">5.50</span>
+                      <span className="table-text">9.00</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"RF02 Light Truck Tire"}
-                prevLink="/products/light-truck-tire/rf02-light"
-                nextText={"GA06"}
-                nextLink="/products/light-truck-tire/ga06-light"
+                prevText={
+                  "11R22.5 295/80R22.5 Mid-long Distance Truck Tire TBR"
+                }
+                prevLink="/products/roadone-tyre-demonstration/11r22-5-295-80r22-5"
+                nextText={
+                  "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
+                }
+                nextLink="/products/roadone-tyre-demonstration/china-factory-11-00r20-12-00r20-qa99"
               />
               <p className="productsTags">
-                Hot Tags: RA85 Light Truck Tire, China, suppliers,
-                manufacturers, factory, wholesale, high-quality
+                Hot Tags: china high quality qa19 off road truck tyre factory,
+                China, suppliers, manufacturers, factory, wholesale,
+                high-quality
               </p>
-              <DetailsRelatedProducts ids="55,28,34,52,2" />
+              <DetailsRelatedProducts ids="88,96,92,93,94,95" />
             </div>
           </div>
         </div>
@@ -279,4 +241,4 @@ const RA85Light = () => {
   );
 };
 
-export default RA85Light;
+export default ChinaHighQualityQA19;

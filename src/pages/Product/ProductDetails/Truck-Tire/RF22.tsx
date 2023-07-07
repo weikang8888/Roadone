@@ -192,7 +192,7 @@ const RF22 = () => {
                       <span className="table-text">215/75R17.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1750/1600 </span>

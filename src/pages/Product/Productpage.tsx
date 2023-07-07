@@ -396,7 +396,7 @@ const Productpage = () => {
             <div className="row mx-0 justify-content-between">
               {currentNews.map((product, index) => (
                 <div
-                  className="pro-bigbox d-flex align-items-center"
+                  className="pro-bigbox align-items-center"
                   key={index}>
                   <div className="bigboximg col-4 me-4">
                     <a href={product.products_url}>

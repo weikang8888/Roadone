@@ -27,7 +27,7 @@ const Homepage = () => {
         <div className="abouts-text wow bounceInRight">
           <h2 className="h2 animation-undefined">{t("homepage.title")}</h2>
           <p>{t("homepage.description")}</p>
-          <ButtonMain />
+          <ButtonMain href="#"/>
         </div>
       </section>
 
@@ -35,7 +35,7 @@ const Homepage = () => {
         <div className="abouts-text  wow bounceInLeft">
           <h2 className="h2 animation-undefined">{t("homepage.teamTitle")}</h2>
           <p>{t("homepage.teamDescription")}</p>
-          <ButtonMain />
+          <ButtonMain href="#"/>
         </div>
         <div className="abouts-imgs wow bounceInRight">
           <div className="abouts-fixed wow pulse" data-wow-delay=".6s"></div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import InnerBanner from "../../../../component/Banner/InnerBanner";
-import ProductBannerLight from "../../../../static/image/products/product-banner-light.webp";
+import ProductBanner from "../../../../static/image/products/product-banner.webp";
 import SubMenu from "../../../../component/SubMenu/SubMenu";
 import "../productdetails.css";
 import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/DetailsPreviousNext";
@@ -27,7 +27,7 @@ const R251400 = () => {
 
   return (
     <>
-      <InnerBanner bannerimage={ProductBannerLight} />
+      <InnerBanner bannerimage={ProductBanner} />
       <section>
         <div className="container container1">
           <SubMenu
@@ -176,7 +176,7 @@ const R251400 = () => {
                       <span className="table-text">8.25R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1800/1600</span>

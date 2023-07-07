@@ -183,7 +183,7 @@ const HF31TBR = () => {
                       <span className="table-text">11.00R20</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3350/3075</span>
@@ -212,7 +212,7 @@ const HF31TBR = () => {
                       <span className="table-text">12R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250</span>
@@ -241,7 +241,7 @@ const HF31TBR = () => {
                       <span className="table-text">315/80R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3750/3450</span>
@@ -270,7 +270,7 @@ const HF31TBR = () => {
                       <span className="table-text">315/80R22.5</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">4125/3750</span>

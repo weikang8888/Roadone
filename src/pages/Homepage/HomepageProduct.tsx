@@ -17,7 +17,7 @@ const hotProducts = [
     title: "16.00R25 ALL STEEL WIDE BODY DUMP TRUCK TIRE",
     description:
       "ROADONE 14.00R25 ， 16.00R25 RADIAL TIRES FOR WIDE BODY DUMP TRUCK SUIT FOR SOFT MINE AND HARD...",
-    link: "16-00r25-all-steel-wide-body-dump-truck-tire1.html",
+    link: "/products/radial-otr-tires/16-00r25",
   },
   {
     image: HotProductImage2,
@@ -25,7 +25,7 @@ const hotProducts = [
     title: "14.00R25 OTR TIRES",
     description:
       "14.00R25 RADIAL TIRES FOR OFF-THE-ROAD TRUCK SUIT FOR MANY KINDS OF MINES SUCH AS GOLD MINE...",
-    link: "14-00r25-otr-tires1.html",
+    link: "/products/radial-otr-tires/14-00r25",
   },
   {
     image: HotProductImage3,
@@ -33,7 +33,7 @@ const hotProducts = [
     title: "11R22.5 295/80R22.5 Mid-long Distance Truck Tire TBR",
     description:
       "Designed for mid distance, mid speed in national roads and provincial roads, suitable for all...",
-    link: "11r22-5-295-80r22-5-mid-long-distance-truck1.html",
+    link: "/products/roadone-tyre-demonstration/11r22-5-295-80r22-5",
   },
   {
     image: HotProductImage4,
@@ -41,7 +41,7 @@ const hotProducts = [
     title: "CHINA HIGH QUALITY QA19 OFF ROAD TRUCK TYRE FACTORY",
     description:
       "Specially designed for short distance, low speed driving in soft mine, low slope, extremely bad...",
-    link: "china-high-quality-qa19-off-road-truck-tyre1.html",
+    link: "/products/roadone-tyre-demonstration/china-hight-quality-qa19",
   },
   {
     image: HotProductImage5,
@@ -49,7 +49,7 @@ const hotProducts = [
     title: "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALI...",
     description:
       "Designed for short-distance, low-speed driving in soft mines, industrial and mining mixed-road...",
-    link: "china-factory-11-00r20-12-00r20-qa99-pure1.html",
+    link: "/products/roadone-tyre-demonstration/china-factory-11-00r20-12-00r20-qa99",
   },
   {
     image: HotProductImage6,
@@ -57,7 +57,7 @@ const hotProducts = [
     title: "RF02 Light Truck Tire",
     description:
       "Suitable for all positions Designed for mid-long distance, mid-high speed in national roads,...",
-    link: "123451.html",
+    link: "/products/light-truck-tire/rf02-light",
   },
   {
     image: HotProductImage7,
@@ -65,7 +65,7 @@ const hotProducts = [
     title: "RA85 Light Truck Tire",
     description:
       "Suitable for all positions Designed for mid-long distance, mid-high speed in highway, national...",
-    link: "ra851.html",
+    link: "/products/light-truck-tire/ra85-light",
   },
   {
     image: HotProductImage8,
@@ -73,7 +73,7 @@ const hotProducts = [
     title: "GA06",
     description:
       "Suitable for all positions Designed for mid-short distance, mid-low speed in national...",
-    link: "ga061.html",
+    link: "/products/light-truck-tire/ga06-light",
   },
 ];
 
@@ -98,7 +98,7 @@ const HomepageProduct = () => {
                   <a href={product.link}>{product.title}</a>
                 </div>
                 <p>{product.description}</p>
-                <ButtonMain href={product.link}/>
+                <ButtonMain href={product.link} />
               </li>
             ))}
           </ul>

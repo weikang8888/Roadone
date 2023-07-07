@@ -176,7 +176,7 @@ const RF02Light = () => {
                       <span className="table-text">8.25R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1800/1600</span>
@@ -205,7 +205,7 @@ const RF02Light = () => {
                       <span className="table-text">7.50R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">14PR</span>
+                      <span className="table-text">14PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">1500/1320</span>
@@ -234,7 +234,7 @@ const RF02Light = () => {
                       <span className="table-text">7.00R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">14PR</span>
+                      <span className="table-text">14PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">1320/1180</span>
@@ -263,7 +263,7 @@ const RF02Light = () => {
                       <span className="table-text">6.50R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">12PR</span>
+                      <span className="table-text">12PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">1060/925</span>

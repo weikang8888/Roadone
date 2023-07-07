@@ -203,7 +203,7 @@ const CA10City = () => {
                       <span className="table-text">275/70R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2800/2575 </span>
@@ -232,7 +232,7 @@ const CA10City = () => {
                       <span className="table-text">275/70R22.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">3000/2725 </span>

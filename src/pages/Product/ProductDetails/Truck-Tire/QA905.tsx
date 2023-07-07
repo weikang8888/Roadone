@@ -215,7 +215,7 @@ const QA905 = () => {
                       <span className="table-text">11.00R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>
@@ -244,7 +244,7 @@ const QA905 = () => {
                       <span className="table-text">12.00R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">4000/3650 </span>

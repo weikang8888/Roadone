@@ -210,7 +210,7 @@ const HF252 = () => {
                       <span className="table-text">245/70R19.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR </span>
+                      <span className="table-text">16PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2180/2060 </span>

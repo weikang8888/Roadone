@@ -213,7 +213,7 @@ const GD08 = () => {
                       <span className="table-text">235/75R17.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">2000/1850 </span>
@@ -242,7 +242,7 @@ const GD08 = () => {
                       <span className="table-text">235/75R17.5 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">2725/2575 </span>
@@ -271,7 +271,7 @@ const GD08 = () => {
                       <span className="table-text">9.00R20</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">16PR</span>
+                      <span className="table-text">16PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">2800/2650 </span>
@@ -300,7 +300,7 @@ const GD08 = () => {
                       <span className="table-text">10.00R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3250/3000 </span>
@@ -329,7 +329,7 @@ const GD08 = () => {
                       <span className="table-text">11.00R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">3550/3250 </span>
@@ -358,7 +358,7 @@ const GD08 = () => {
                       <span className="table-text">12.00R20 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">4000/3650 </span>
@@ -387,7 +387,7 @@ const GD08 = () => {
                       <span className="table-text">12.00R24 </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="143">
                       <span className="table-text">4500/4125 </span>

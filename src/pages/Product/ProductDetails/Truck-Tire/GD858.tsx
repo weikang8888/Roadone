@@ -207,7 +207,7 @@ const GD858 = () => {
                       <span className="table-text">12R22.5</span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107" style={{ wordBreak: "break-word" }}>
                       <span className="table-text">3550/3250 </span>
@@ -236,7 +236,7 @@ const GD858 = () => {
                       <span className="table-text">295/80R22.5 </span>
                     </td>
                     <td width="68">
-                      <span className="table-text">18PR</span>
+                      <span className="table-text">18PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">3550/3250 </span>
@@ -265,7 +265,7 @@ const GD858 = () => {
                       <span className="table-text">315/80R22.5 </span>
                     </td>
                     <td width="68">
-                      <span className="table-text">20PR</span>
+                      <span className="table-text">20PR★</span>
                     </td>
                     <td width="107">
                       <span className="table-text">4125/3750 </span>

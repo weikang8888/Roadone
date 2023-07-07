@@ -223,7 +223,7 @@ const GD08Light = () => {
                       <span className="table-text">8.25R16 LT</span>
                     </td>
                     <td width="72">
-                      <span className="table-text">18PR </span>
+                      <span className="table-text">18PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">2000/1800</span>
@@ -252,7 +252,7 @@ const GD08Light = () => {
                       <span className="table-text">7.50R16 LT </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">14PR </span>
+                      <span className="table-text">14PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1500/1320 </span>
@@ -281,7 +281,7 @@ const GD08Light = () => {
                       <span className="table-text">7.00R16 LT </span>
                     </td>
                     <td width="72">
-                      <span className="table-text">14PR </span>
+                      <span className="table-text">14PR★ </span>
                     </td>
                     <td width="143">
                       <span className="table-text">1320/1180 </span>
