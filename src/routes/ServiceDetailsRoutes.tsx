@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceDetails_19AUG21 from "../pages/Service/ServiceDetails/ServiceDetails_19AUG21";
+import ServiceDetails_23JUL22 from "../pages/Service/ServiceDetails/ServiceDetails_23JUL22";
 import ServiceDetails_21AUG20 from "../pages/Service/ServiceDetails/ServiceDetails_21AUG20";
 import ServiceDetails_20JUL20 from "../pages/Service/ServiceDetails/ServiceDetails_20JUL20";
 import ServiceDetails_01AUG18 from "../pages/Service/ServiceDetails/ServiceDetails_01AUG18";
@@ -13,12 +13,11 @@ import ServiceDetails_01AUG18_8 from "../pages/Service/ServiceDetails/ServiceDet
 import ServiceDetails_01AUG18_9 from "../pages/Service/ServiceDetails/ServiceDetails_01AUG18_9";
 import ServiceDetails_01AUG18_10 from "../pages/Service/ServiceDetails/ServiceDetails_01AUG18_10";
 import ServiceDetails_01AUG18_11 from "../pages/Service/ServiceDetails/ServiceDetails_01AUG18_11";
-import ServiceDetails_01AUG18_12 from "../pages/Service/ServiceDetails/ServiceDetails_01AUG18_12";
 
 const ServiceDetailsRoutes = [
   {
     path: "roadone-truck-tire-at-lybia-1200r24-heavy-load-tires",
-    component: ServiceDetails_19AUG21,
+    component: ServiceDetails_23JUL22,
   },
   {
     path: "henan-zhumadian-hixih-customer-12r22.5-18pr-h262-case",
@@ -66,11 +65,11 @@ const ServiceDetailsRoutes = [
   },
   {
     path: "problems-related-to-tyre-transposition",
-    component: ServiceDetails_01AUG18_11,
+    component: ServiceDetails_01AUG18_10,
   },
   {
     path: "production-flow-of-tyre",
-    component: ServiceDetails_01AUG18_12,
+    component: ServiceDetails_01AUG18_11,
   },
 ];
 

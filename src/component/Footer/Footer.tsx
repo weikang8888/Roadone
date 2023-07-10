@@ -48,8 +48,8 @@ const Footer = () => {
                   <p>
                     <span>White Bai</span>
                   </p>
-                  <p>TEL: +86-537-5174483</p>
-                  <p>MOBILE/WHATSAPP/WECHAT: 86-537-5174483</p>
+                  <p>TEL: +019-7909-609</p>
+                  <p>MOBILE/WHATSAPP/WECHAT: 019-7909-609</p>
                 </div>
                 <div style={contactInfoStyles}>
                   <p>{t("footer.companyName")}</p>

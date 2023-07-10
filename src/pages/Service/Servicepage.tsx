@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 import InnerBanner from "../../component/Banner/InnerBanner";
 import NewsBanner from "../../static/image/news/news-banner.webp";
@@ -7,6 +8,8 @@ import SubMenu from "../../component/SubMenu/SubMenu";
 import Bigbox from "../../component/Bigbox/Bigbox";
 
 const Servicepage = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [newsPerPage] = useState(20);
@@ -22,7 +25,7 @@ const Servicepage = () => {
         console.error("Error fetching data:", error);
       });
   }, []);
- 
+
   // Pagination
   const indexOfLastNews = currentPage * newsPerPage;
   const indexOfFirstNews = indexOfLastNews - newsPerPage;
@@ -41,8 +44,11 @@ const Servicepage = () => {
 
       <section>
         <div className="container">
-          <div className="ejfl">Service</div>
-          <SubMenu currentpage={"Service"} currentlink={"/services"} />
+          <div className="ejfl">{t("submenu.service")}</div>
+          <SubMenu
+            currentpage={t("submenu.service")}
+            currentlink={"/services"}
+          />
           <div className="main">
             <ul className="news_message clearfix">
               <div className="newslist">
@@ -52,8 +58,8 @@ const Servicepage = () => {
                     daymonth={item.daymonth}
                     year={item.year}
                     href={item.href}
-                    title={item.title}
-                    description={item.description}
+                    title={t(`service.title.${index}`)}
+                    description={t(`service.description.${index}`)}
                   />
                 ))}
               </div>

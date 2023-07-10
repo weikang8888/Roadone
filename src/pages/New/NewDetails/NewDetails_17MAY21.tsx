@@ -9,6 +9,7 @@ import NewDetailsImage7 from "./picture/nd7.webp";
 import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
 import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_19AUG21 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -432,11 +433,13 @@ const NewDetails_19AUG21 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
+                    prevText={"385/65R22.5 New Pattern HF281"}
+                    prevLink="/news/385-65r22-5-new-pattern-hf281"
                     nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
                   />
-                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
+                  <DetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />
+                  <DetailsRelatedProducts ids="0" />
                 </>
               )}
             </div>

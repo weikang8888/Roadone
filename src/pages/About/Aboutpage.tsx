@@ -560,7 +560,7 @@ const Aboutpage = () => {
                   </span>
                 </legend>
               </fieldset>
-              <p>
+              <p className="text-center">
                 <img src={MarketImage} alt="1607306900(1)" />
               </p>
               <p>

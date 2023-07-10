@@ -229,11 +229,11 @@ const NewDetails_19AUG21 = () => {
                   <DetailsButton />
                   <DetailsPreviousNext
                     prevText={"No informtaion"}
-                    nextLink="/"
+                    nextLink="/news/roadone-12-00r20-new-truck-tire-road-test"
                     nextText={"HD520 PATTERN ROAD TEST"}
                   />
                   <DetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />
-                  <DetailsRelatedProducts ids="1,2,3,4,5" />
+                  <DetailsRelatedProducts ids="66,88,36,39,92,48" />
                 </>
               )}
             </div>

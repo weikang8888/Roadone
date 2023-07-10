@@ -14,13 +14,13 @@ import ServiceDetailsImage12 from "./picture/sd12.webp";
 import ServiceDetailsImage13 from "./picture/sd13.webp";
 import ServiceDetailsImage14 from "./picture/sd14.webp";
 
-const ServiceDetails_20JUL20 = () => {
+const ServiceDetails_20JUL22 = () => {
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/services/services?ids=1")
+      .get("http://localhost:8080/api_roadone/services/services?ids=3")
       .then((response) => {
         setNewsItems(response.data);
       })
@@ -78,9 +78,12 @@ const ServiceDetails_20JUL20 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    prevText={
+                      "Henan Zhumadian Hixih customer 12r22.5 18PR H262 case"
+                    }
+                    prevLink="/services/henan-zhumadian-hixih-customer-12r22.5-18pr-h262-case"
+                    nextText={"Should the tires be rotated?"}
+                    nextLink="/services/should-the-tires-be-rotated"
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>
@@ -93,4 +96,4 @@ const ServiceDetails_20JUL20 = () => {
   );
 };
 
-export default ServiceDetails_20JUL20;
+export default ServiceDetails_20JUL22;

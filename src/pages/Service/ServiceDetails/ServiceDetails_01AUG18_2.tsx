@@ -69,9 +69,12 @@ const ServiceDetails_01AUG18_2 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    prevText={"Should the tires be rotated?"}
+                    prevLink="/services/should-the-tires-be-rotated"
+                    nextLink="/services/what-is-the-meaning-of-the-markings-on-the-sidewall-of-the-tyre"
+                    nextText={
+                      "What is the meaning of the markings on the sidewall of the tyre?"
+                    }
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

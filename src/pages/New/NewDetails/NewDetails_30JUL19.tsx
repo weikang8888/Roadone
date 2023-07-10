@@ -10,6 +10,7 @@ import NewDetailsImage54 from "./picture/nd54.jpg";
 import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
 import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_30JUL19 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -49,7 +50,6 @@ const NewDetails_30JUL19 = () => {
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
-
                   <div className="pinfo">
                     <p>
                       <img
@@ -70,7 +70,6 @@ const NewDetails_30JUL19 = () => {
                       />
                     </p>
                   </div>
-
                   <DetailsButton />
                   <DetailsPreviousNext
                     prevText={"No information"}
@@ -78,6 +77,7 @@ const NewDetails_30JUL19 = () => {
                     nextText={"295/80R22.5 HF21 Truck Tire Test"}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
+                  <DetailsRelatedProducts ids="66,88,36,39,92,48" />
                 </>
               )}
             </div>

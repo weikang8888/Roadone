@@ -107,8 +107,10 @@ const ServiceDetails_19AUG21 = () => {
                   <DetailsButton />
                   <DetailsPreviousNext
                     prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    nextText={
+                      "Henan Zhumadian Hixih customer 12r22.5 18PR H262 case"
+                    }
+                    nextLink="/services/henan-zhumadian-hixih-customer-12r22.5-18pr-h262-case"
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

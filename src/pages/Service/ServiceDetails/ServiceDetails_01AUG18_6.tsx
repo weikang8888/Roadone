@@ -71,9 +71,12 @@ const ServiceDetails_01AUG18_6 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    prevText={
+                      "All weather and winter tires: What's the difference?"
+                    }
+                    prevLink="/services/all-weather-ang-winter-tires"
+                    nextLink="/services/how-to-check-tire-pressure"
+                    nextText={"How to check tire pressure"}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

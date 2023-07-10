@@ -79,22 +79,22 @@ const Header = () => {
                     }`}>
                     <li id="HeadNewsCat1">
                       <Link to="/news/newproducts" title="New products">
-                        New products
+                        {t("header.new-products")}
                       </Link>
                     </li>
                     <li id="HeadNewsCat2">
                       <Link to="/news/tradefair" title="Trade Fair">
-                        Trade Fair
+                        {t("header.trade-fair")}
                       </Link>
                     </li>
                     <li id="HeadNewsCat3">
                       <Link to="/news/tyretest" title="TYRE TEST">
-                        TYRE TEST
+                        {t("header.tyre-test")}
                       </Link>
                     </li>
                     <li id="HeadNewsCat4">
                       <Link to="/news/companyupdate" title="Company update">
-                        Company update
+                        {t("header.company-update")}
                       </Link>
                     </li>
                   </ul>
@@ -109,7 +109,7 @@ const Header = () => {
                     }`}>
                     <li id="HeadIndustryCat1">
                       <Link to="/services/companynews" title="Company News">
-                        Company News
+                        {t("header.company-news")}
                       </Link>
                     </li>
                   </ul>
@@ -132,12 +132,12 @@ const Header = () => {
                     }`}>
                     <li>
                       <Link to="" onClick={changeToEnglish}>
-                        English
+                        {t("header.english")}
                       </Link>
                     </li>
                     <li>
                       <Link to="" onClick={changeToChinese}>
-                        Chinese
+                        {t("header.chinese")}
                       </Link>
                     </li>
                   </ul>

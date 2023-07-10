@@ -9,6 +9,7 @@ import NewDetailsImage19 from "./picture/nd19.webp";
 import DetailsButton from "../../../component/DetailsReused.tsx/DetailsButton";
 import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPreviousNext";
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
+import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_30NOV20 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -48,7 +49,6 @@ const NewDetails_30NOV20 = () => {
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
-
                   <div className="pinfo">
                     <p style={{ textAlign: "center" }}>
                       <img
@@ -68,14 +68,14 @@ const NewDetails_30NOV20 = () => {
                       />
                     </p>
                   </div>
-
                   <DetailsButton />
                   <DetailsPreviousNext
                     prevText={"No information"}
                     nextLink="/news/295-80r22-5-hf21-truck-tire-test"
                     nextText={"295/80R22.5 HF21 Truck Tire Test"}
                   />
-                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
+                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
+                  <DetailsRelatedProducts ids="66,88,36,39,92,48" />
                 </>
               )}
             </div>

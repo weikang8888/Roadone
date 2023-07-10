@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 import InnerBanner from "../../component/Banner/InnerBanner";
 import NewsBanner from "../../static/image/news/news-banner.webp";
@@ -7,6 +8,8 @@ import SubMenu from "../../component/SubMenu/SubMenu";
 import Bigbox from "../../component/Bigbox/Bigbox";
 
 const Newpage = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [newsPerPage] = useState(20);
@@ -99,8 +102,8 @@ const Newpage = () => {
                     daymonth={item.daymonth}
                     year={item.year}
                     href={item.href}
-                    title={item.title}
-                    description={item.description}
+                    title={t(`new.title.${indexOfFirstNews + index}`)}
+                    description={t(`new.description.${indexOfFirstNews + index}`)}
                   />
                 ))}
               </div>

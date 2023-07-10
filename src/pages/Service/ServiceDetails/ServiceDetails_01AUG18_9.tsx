@@ -127,9 +127,10 @@ const ServiceDetails_01AUG18_9 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    prevText={"When do I need to change the tyre?"}
+                    prevLink="/services/when-do-i-need-to-change-the-tyre"
+                    nextLink="/services/problems-related-to-tyre-transposition"
+                    nextText={"Problems related to tyre transposition"}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>
