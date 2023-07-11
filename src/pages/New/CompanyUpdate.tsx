@@ -8,6 +8,8 @@ import SubMenu from "../../component/SubMenu/SubMenu";
 import Bigbox from "../../component/Bigbox/Bigbox";
 
 const CompanyUpdate = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [newsPerPage] = useState(20);
@@ -42,7 +44,7 @@ const CompanyUpdate = () => {
 
       <section>
         <div className="container">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouspage="News"
             previouslink="/news"

@@ -11,6 +11,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20_7 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,76 +36,32 @@ const NewDetails_21AUG20_7 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.21")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
-                    <p>
-                      1. First, it is important to ensure that vehicles are
-                      parked in a flat position away from traffic.
-                    </p>
-                    <p>
-                      Tip: When the traffic flow is large, need to turn on
-                      emergency lights or double flash.
-                    </p>
-                    <p>
-                      2. Then, place the support material before and after the
-                      tyre, and will not be lifted up to prevent rolling,
-                      increase stability.
-                    </p>
-                    <p>
-                      3. Next, refer to the owner's manual for replacement tires
-                      and jacks.
-                    </p>
-                    <p>
-                      4. Now, refer to the owner's manual to ensure proper
-                      placement of the jack to prevent damage to the vehicle.
-                    </p>
-                    <p>
-                      5. Start the jack, while maintaining the ground pressure
-                      (not to lift all vehicles)
-                    </p>
-                    <p>
-                      6. Remove the wheel cover or center cover, exposing the
-                      hub nut.
-                    </p>
-                    <p>
-                      7. Unscrew the nut with the wrench along the
-                      counterclockwise direction.
-                    </p>
-                    <p>
-                      8. After ensuring the stability of the jack, lift the
-                      vehicle to a sufficient distance to facilitate the removal
-                      of the tyre.
-                    </p>
-                    <p>
-                      9. Put the spare tire on the wheel and place the hub nut
-                      back in position.
-                    </p>
-                    <p>
-                      10. Rotate the nut clockwise with the wrench. Tip: Make
-                      sure the nut is tightened, but not too hard.
-                    </p>
-                    <p>
-                      Otherwise, the vehicle may be detached from the
-                      jack.&nbsp;
-                    </p>
-                    <p>
-                      11. After driving a few kilometers, it is best to stop to
-                      check to make sure the nut is still fastened.
-                    </p>
-                    <p></p>
+                    <p>{t("new.newDetails01AUG18_7.content1")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content2")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content3")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content4")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content5")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content6")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content7")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content8")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content9")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content10")}</p>
+                    <p>{t("new.newDetails01AUG18_7.content11")}</p>
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext

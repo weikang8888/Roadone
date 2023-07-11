@@ -47,8 +47,8 @@ const Servicepage = () => {
           <div className="ejfl">{t("submenu.service")}</div>
           <SubMenu
             previouslink="/services"
-            previouspage="Service"
-            currentpage={"Company News"}
+            previouspage={t("submenu.service")}
+            currentpage={t("submenu.company-news")}
             currentlink={"/services/companynews"}
           />
           <div className="main">

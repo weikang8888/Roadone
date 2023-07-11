@@ -10,6 +10,8 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const QA09 = () => {
+    const { t } = useTranslation();
+
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
@@ -164,10 +166,10 @@ const QA09 = () => {
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">Size</span>
+                      <span className="table-text">{t("tableHeaders.size")}</span>
                     </td>
                     <td>
-                      <span className="table-text">Ply Rating</span>
+                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
                     </td>
                     <td>
                       <span className="table-text">

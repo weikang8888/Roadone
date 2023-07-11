@@ -16,6 +16,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_19AUG21 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -38,17 +40,17 @@ const NewDetails_19AUG21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.0")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
@@ -57,7 +59,7 @@ const NewDetails_19AUG21 = () => {
                       <span className="highlight">
                         <strong>
                           <span className="font-size-26">
-                            ROADONE&nbsp;385/65R22.5&nbsp; HF281 NEW RADIAL TIRE
+                            {t("new.newDetails19AUG21.content1")}
                           </span>
                         </strong>
                       </span>
@@ -71,7 +73,7 @@ const NewDetails_19AUG21 = () => {
                     </p>
                     <div>
                       <h4 className="production-intro">
-                        Production Introduction
+                        {t("new.newDetails19AUG21.content2")}
                         <span className="skew-line"></span>
                         <span className="skew-line-bt"></span>
                         <span className="circle"></span>
@@ -81,7 +83,7 @@ const NewDetails_19AUG21 = () => {
                       <span className="">
                         <strong>
                           <span className="font-size-26">
-                            Suitable for steer/load bearing positions
+                            {t("new.newDetails19AUG21.content3")}
                           </span>
                         </strong>
                       </span>
@@ -90,9 +92,7 @@ const NewDetails_19AUG21 = () => {
                       <span className="">
                         <strong>
                           <span className="font-size-26">
-                            385/65R22.5&nbsp; Designed for standard loading,
-                            long distance, high speed in high-way, national
-                            roads, suitable for steer and trailer positions.
+                            {t("new.newDetails19AUG21.content4")}
                           </span>
                         </strong>
                       </span>
@@ -104,39 +104,87 @@ const NewDetails_19AUG21 = () => {
                         </strong>
                       </span>
                     </p>
-                    <h4 className="specifications">Spercifications</h4>
+                    <h4 className="specifications">
+                      {t("new.newDetails19AUG21.content5")}
+                    </h4>
                     <p></p>
-                    <table className="spec-table">
+                    <table width="100%" className="table mt-3">
                       <tbody>
                         <tr className="firstRow">
-                          <td className="height-40">Size</td>
-                          <td>Ply Rating</td>
-                          <td>Load Index</td>
-                          <td>Speed Rating</td>
-                          <td>Ovrerall &nbsp; Diameter</td>
-                          <td>Section Width</td>
-                          <td>Max. load(kg)</td>
-                          <td>Dual&nbsp;Pressure(kPa)</td>
-                          <td>Single Pressure(kPa)</td>
-                          <td>Inflation Width</td>
-                        </tr>
-                        <tr className="secondRow">
-                          <td>Inflation Pressure</td>
-                          <td>Max. Load&nbsp;</td>
-                          <td>Dual&nbsp;Pressure(kPa)</td>
-                          <td>Single Pressure(kPa)</td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.size")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.plyRating")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.maxLoad")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.loadIndex")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.speedRating")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.overallDiameter")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.sectionWidth")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.standardInflationPressure")}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="table-text">
+                              {t("tableHeaders.standardRim")}
+                            </span>
+                          </td>
                         </tr>
                         <tr>
-                          <td className="height-40">385/65R22.5&nbsp;HF281</td>
-                          <td>18</td>
-                          <td>160</td>
-                          <td>J</td>
-                          <td>1072</td>
-                          <td>389</td>
-                          <td>4500</td>
-                          <td>875</td>
-                          <td>900</td>
-                          <td>279</td>
+                          <td width="115">
+                            <span className="table-text">385/65R22.5 </span>
+                          </td>
+                          <td width="68">
+                            <span className="table-text">20PR★</span>
+                          </td>
+                          <td width="107">
+                            <span className="table-text">4500</span>
+                          </td>
+                          <td width="115">
+                            <span className="table-text">160</span>
+                          </td>
+                          <td width="72">
+                            <span className="table-text">K</span>
+                          </td>
+                          <td width="84">
+                            <span className="table-text">1070.5</span>
+                          </td>
+                          <td width="88">
+                            <span className="table-text">376</span>
+                          </td>
+                          <td width="72">
+                            <span className="table-text">900</span>
+                          </td>
+                          <td width="72">
+                            <span className="table-text">11.75</span>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -147,28 +195,10 @@ const NewDetails_19AUG21 = () => {
                         </strong>
                       </span>
                     </p>
-                    <p>
-                      ●Optimized profile design, stone ejection treatment at the
-                      bottom groove,&nbsp; provide excellent anti-biasing
-                      performance and better stone ejection effect in different
-                      road conditions.
-                    </p>
-                    <p>
-                      ● The high-speed special super wearable tread recipe
-                      design ensures higher mileage in mixed road conditions
-                      such as high speed and national road.
-                    </p>
-                    <p>
-                      ●Special steel structure and specific 4 belt cap design,
-                      low heating recipe, optimized shoulder design, inhibiting
-                      deformed wear,ensure multiple retreading of tires.
-                    </p>
-                    <p>
-                      ●Environmental protection material formula,new pattern
-                      design and overall optimization of material distribution
-                      design technology, realize low rolling resistance while
-                      taking into account the wet and slippery performance.
-                    </p>
+                    <p>● {t("new.newDetails19AUG21.content6")}</p>
+                    <p>● {t("new.newDetails19AUG21.content7")}</p>
+                    <p>● {t("new.newDetails19AUG21.content8")}</p>
+                    <p>● {t("new.newDetails19AUG21.content9")}</p>
                     <div className="d-flex text-center my-2">
                       <div className="box">
                         <div>
@@ -178,7 +208,7 @@ const NewDetails_19AUG21 = () => {
                             alt="8808058bbffb8ec0b7df16d0127dd48.jpg"
                           />
                         </div>
-                        <p>Real Picture</p>
+                        <p> {t("new.newDetails19AUG21.content10")}</p>
                       </div>
                       <div className="box">
                         <div>
@@ -188,7 +218,7 @@ const NewDetails_19AUG21 = () => {
                             alt="7a81a7520d72fd01beae7fd8ad34983.jpg"
                           />
                         </div>
-                        <p>HF281 Pattern</p>
+                        <p> {t("new.newDetails19AUG21.content11")}</p>
                       </div>
                     </div>
                     <p>
@@ -203,7 +233,7 @@ const NewDetails_19AUG21 = () => {
                             alt="912ed31383c2a5e503a8a3f111b7d55.jpg"
                           />
                         </div>
-                        <p>Stock Picture</p>
+                        <p> {t("new.newDetails19AUG21.content12")}</p>
                       </div>
                       <div className="box">
                         <div>
@@ -213,7 +243,7 @@ const NewDetails_19AUG21 = () => {
                             alt="2678be515350a3e69d08554f432cf66.jpg"
                           />
                         </div>
-                        <p>Pattern Width</p>
+                        <p> {t("new.newDetails19AUG21.content13")}</p>
                       </div>
                       <div className="box">
                         <div>
@@ -223,7 +253,7 @@ const NewDetails_19AUG21 = () => {
                             alt="849d06771eaf892aae7c4f5e5b932c3.jpg"
                           />
                         </div>
-                        <p>Groove</p>
+                        <p> {t("new.newDetails19AUG21.content14")}</p>
                       </div>
                     </div>
                   </div>

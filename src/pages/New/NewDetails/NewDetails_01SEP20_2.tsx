@@ -15,6 +15,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_01SEP20_2 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -38,24 +40,24 @@ const NewDetails_01SEP20_2 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.9")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
-                    <p>Roadone M665A Heavy Duty 13R22.5 Tubeless Tire</p>
-                    <p>for Trailer, pulling steel bar, iron powder, 150 tons</p>
-                    <p>With steel ring, the life span is over one year!</p>
+                    <p> {t("new.newDetails01SEP20_2.content1")}</p>
+                    <p>{t("new.newDetails01SEP20_2.content2")}</p>
+                    <p>{t("new.newDetails01SEP20_2.content3")}</p>
 
                     <div style={{ display: "flex" }}>
                       <div style={{ flexBasis: "50%", paddingRight: "5px" }}>

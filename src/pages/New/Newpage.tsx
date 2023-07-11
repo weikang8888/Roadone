@@ -91,8 +91,8 @@ const Newpage = () => {
 
       <section>
         <div className="container">
-          <div className="ejfl">News</div>
-          <SubMenu currentpage={"News"} currentlink={"/news"} />
+          <div className="ejfl">{t("submenu.new")}</div>
+          <SubMenu currentpage={t("submenu.new")} currentlink={"/news"} />
           <div className="main">
             <ul className="news_message clearfix">
               <div className="newslist">
@@ -103,7 +103,9 @@ const Newpage = () => {
                     year={item.year}
                     href={item.href}
                     title={t(`new.title.${indexOfFirstNews + index}`)}
-                    description={t(`new.description.${indexOfFirstNews + index}`)}
+                    description={t(
+                      `new.description.${indexOfFirstNews + index}`
+                    )}
                   />
                 ))}
               </div>

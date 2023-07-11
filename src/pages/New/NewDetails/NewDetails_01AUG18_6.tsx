@@ -11,6 +11,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20_6 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,77 +36,30 @@ const NewDetails_21AUG20_6 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.20")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
-                    <p>
-                      Maintain proper tyre pressure. Proper tyre pressure helps
-                      you get the best tire performance, safety and fuel
-                      efficiency.
-                    </p>
-                    <p>
-                      Remember to check the tires regularly (at least once a
-                      month) using the appropriate tire gauges (under cold
-                      tires).
-                    </p>
-                    <p>
-                      Keep the tire pressure to the recommended level Vehicle
-                      signs or owner manuals provide a recommended level of tyre
-                      pressure.
-                    </p>
-                    <p>
-                      Maintaining proper tyre pressure is the most important way
-                      to prolong tyre life and durability. Insufficient tire
-                      pressure is the main cause of tyre failure, which may
-                      result in severe tyre rupture, component detachment or
-                      puncture.
-                    </p>
-                    <p>
-                      Insufficient tire pressure will reduce the load capacity
-                      of the tire, resulting in excessive bending of the side
-                      wall, increase rolling resistance, resulting in heat or
-                      mechanical damage. Excessive tire pressure will increase
-                      the tire hardness, resulting in driving discomfort,
-                      causing unnecessary vibration.
-                    </p>
-                    <p>
-                      Excessive tire pressure can also increase the risk of
-                      damage to the impact.
-                    </p>
-                    <p>
-                      Wheel speed must not be too fast Avoid turning the wheel
-                      too fast when the vehicle is caught in ice, mud or sand.
-                      This can lead to a sudden blowout, causing damage to the
-                      vehicle and/or causing serious bodily harm to you and the
-                      person in the side. Gently do the front and rear swing
-                      movement, let the vehicle out of trouble.
-                    </p>
-                    <p>
-                      Do not stand near or behind high-speed rotating tires, for
-                      example, when trying to push a vehicle out of trouble, or
-                      use a car to rotate a balancing device.
-                    </p>
-                    <p>
-                      Check tire Wear When the tread depth reaches 2/32 inches
-                      (0.16 centimeters), be sure to remove the tyre. All new
-                      tyres have a tread indicator, and when worn to the above
-                      level the smooth surface of the tread grooves will show
-                      the indicator strip. Most of the accidents in humid
-                      weather are caused by bare or near-bare tread patterns.
-                      Excessive wear is more likely to cause tyre wear.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_6.content1")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content2")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content3")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content4")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content5")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content6")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content7")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content8")}</p>
+                    <p>{t("new.newDetails01AUG18_6.content9")}</p>
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext

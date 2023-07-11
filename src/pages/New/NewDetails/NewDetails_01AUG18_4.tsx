@@ -11,6 +11,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20_4 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,94 +36,42 @@ const NewDetails_21AUG20_4 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.18")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
                     <p>
-                      <strong>Tyre wear and scratching&nbsp;</strong>
+                      <strong>{t("new.newDetails01AUG18_4.content1")}</strong>
                     </p>
+                    <p>{t("new.newDetails01AUG18_4.content2")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content3")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content4")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content5")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content6")}</p>
                     <p>
-                      The front wheel or rear wheel positioning is not allowed
-                      to cause wear speed or uneven. The front wheel drive or
-                      the vehicle with independent rear suspension needs
-                      four-wheel positioning, not two-wheel positioning.
+                      <strong> {t("new.newDetails01AUG18_4.content7")}</strong>
                     </p>
+                    <p>{t("new.newDetails01AUG18_4.content8")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content9")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content10")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content11")}</p>
                     <p>
-                      To extend the tyre life, it is recommended to follow the
-                      owner's manual instructions to check the positioning.
-                      Sometimes, irregular wear of tires can be corrected by
-                      rotating tires. Refer to the owner's manual or go to a
-                      nearby Goodyear retail store (insert a list of dealers to
-                      connect) to learn the correct way of rotation.
+                      <strong> {t("new.newDetails01AUG18_4.content12")}</strong>
                     </p>
-                    <p>
-                      If the tyres exhibit uneven wear, please allow the
-                      Goodyear Professional staff to perform the inspection and
-                      correct the positioning, dynamic balance, or other
-                      mechanical problems associated with the rotation. The
-                      tread directly affects the grip, so it is important to
-                      periodically visually check for signs of uneven wear.
-                      These signs may include projections, depressions or
-                      unusually smooth areas.
-                    </p>
-                    <p>
-                      "Tire intelligence", Rubber Manufacturers Association.
-                    </p>
-                    <p>
-                      Inspection of tyres can help detect puncture holes or
-                      other obvious signs of damage that need to be replaced.
-                    </p>
-                    <p>
-                      <strong>Repair</strong>
-                    </p>
-                    <p>
-                      It is important to know when to change tyres and when to
-                      change them.
-                    </p>
-                    <p>
-                      When leaking, should be removed to check the inside of the
-                      tyre.
-                    </p>
-                    <p>
-                      If only the tread is damaged, the majority of puncture
-                      holes, nail holes or other cuts not exceeding 1/4 inches
-                      (0.64 cm) can be repaired.
-                    </p>
-                    <p>
-                      Puncture holes in the sidewall or tread larger than 1/4
-                      inches (0.64 cm) shall not be repaired and shall not be
-                      repaired at the same time worn to a tread less than 1/16
-                      inches (0.16 cm).
-                    </p>
-                    <p>
-                      <strong>Dynamic balance and positioning</strong>
-                    </p>
-                    <p>
-                      Tyre dynamic balance and correct positioning of vehicle
-                      are very important to tire life and vehicle performance.
-                    </p>
-                    <p>
-                      Tyre imbalance can cause vibration, causing driver
-                      fatigue, premature tyre wear and unnecessary wear of the
-                      suspension system.
-                    </p>
-                    <p>
-                      Every time you install a tyre, you have to balance it.
-                      When shaking or shaking is first shown, balance is made
-                      and the tyres are balanced once a year.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_4.content13")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content14")}</p>
+                    <p>{t("new.newDetails01AUG18_4.content15")}</p>
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext

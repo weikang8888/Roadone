@@ -14,6 +14,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20_2 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -37,17 +39,17 @@ const NewDetails_21AUG20_2 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.11")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
@@ -60,13 +62,7 @@ const NewDetails_21AUG20_2 = () => {
                           color: "#333333",
                           background: "#F7F8FA",
                         }}>
-                        On December 21, 2019, Tongli Tire Co., LTD's annual
-                        dealer meeting 2020 with the theme of "achieving
-                        perfection and achieving success" was grandly opened in
-                        Jinggang Mountain, the holy land of the great
-                        revolution. Hixih group chairman Niu Teng, Tongli Tire
-                        Co., LTD's CEO Niu Fei, all department leaders and all
-                        the country’s top agents jointly attended the meeting.
+                        {t("new.newDetails21AUG20.content1")}
                       </span>
                     </p>
                     <p>
@@ -84,15 +80,7 @@ const NewDetails_21AUG20_2 = () => {
                           color: "#333333",
                           background: "#F7F8FA",
                         }}>
-                        Jinggangshan mountain is the source and birthplace of
-                        the New China revolution, as well as the blessed and
-                        precious place of the Chinese revolution. Starting from
-                        Jinggangshan, the Chinese revolution moved from one
-                        victory to another. The purpose of this meeting is to
-                        feel the spirit of the ancestors, to inspire the
-                        strength of endeavor, to promote Tongli Tire Co., LTD.
-                        toward a higher goal with the concept and spirit of
-                        "ACHIEVING PERFECTION AND ACHIEVING SUCCESS"!
+                        {t("new.newDetails21AUG20.content2")}
                       </span>
                     </p>
                     <p
@@ -106,21 +94,7 @@ const NewDetails_21AUG20_2 = () => {
                           color: "#333333",
                           background: "#F7F8FA",
                         }}>
-                        At present, we live in an era of unprecedented
-                        challenges, risks, and opportunities. In this context,
-                        the year 2019 is a very unusual and challenging year for
-                        the rubber tire industry. Although the current
-                        international and domestic situation is complex, the
-                        market is facing more changes, Tongli Tire will carry
-                        forward the more difficult the more development of the
-                        enterprise. In 2019, Tongli Tire has achieved strong
-                        market growth and carried out six strategies including{" "}
-                        <strong>
-                          brand serialization, high-end products, iterative
-                          development, technology leadership, lean production,
-                          and market internationalization
-                        </strong>
-                        .
+                        {t("new.newDetails21AUG20.content3")}
                       </span>
                     </p>
                     <p
@@ -152,22 +126,7 @@ const NewDetails_21AUG20_2 = () => {
                           color: "#333333",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        In 2020, Tongli Tire company will vigorously implement
-                        the lean production strategy, resolutely break business
-                        boundaries and communication barriers, focus on market
-                        development, quality improvement, product research and
-                        development, and minimize the coordination and mutual
-                        constraints between the market and production in the
-                        past. Fully implement the Tongli TMS manufacturing
-                        system with fine management as the core, and greatly
-                        improve the competitiveness of the enterprise in product
-                        R&amp;D, marketing, internal efficiency, and other
-                        aspects. Tongli Tire will rely on advanced business
-                        philosophy, strong enterprise strength, first-class
-                        production plants, excellent team, united all excellent
-                        agents sincere cooperation, hand in hand with each
-                        other, overcome difficulties and challenges, achieve
-                        greater development!
+                        {t("new.newDetails21AUG20.content4")}
                       </span>
                     </p>
                     <p>
@@ -195,9 +154,7 @@ const NewDetails_21AUG20_2 = () => {
                           fontFamily: "Times New Roman, serif",
                           color: "black",
                         }}>
-                        The conference also invited the world-famous table
-                        tennis champion Ms. Deng Yaping, to share wonderful
-                        stories of her life.
+                        {t("new.newDetails21AUG20.content5")}
                       </span>
                     </p>
                     <p>
@@ -208,11 +165,7 @@ const NewDetails_21AUG20_2 = () => {
                           color: "#333333",
                           background: "#F7F8FA",
                         }}>
-                        There is no end to the journey. Tongli Tire Co., LTD.
-                        All the staff work together with the dealers to unite,
-                        closely cooperate, forge ahead, jointly meet the
-                        challenges in the market, and jointly create a better
-                        tomorrow for Tongli Tire!
+                        {t("new.newDetails21AUG20.content6")}
                       </span>
                     </p>
                   </div>

@@ -15,7 +15,8 @@ import ServiceDetailsImage12 from "./picture/sd12.webp";
 import ServiceDetailsImage13 from "./picture/sd13.webp";
 import ServiceDetailsImage14 from "./picture/sd14.webp";
 
-const ServiceDetails_20JUL22 = () => {  const { t } = useTranslation();
+const ServiceDetails_20JUL22 = () => {
+  const { t } = useTranslation();
 
   const [newsItems, setNewsItems] = useState([]);
 
@@ -42,8 +43,8 @@ const ServiceDetails_20JUL22 = () => {  const { t } = useTranslation();
           <div className="ejfl">{t("submenu.service")}</div>
 
           <SubMenu
-            previouslink="/news"
-                      previouspage={t("submenu.new")}
+            previouslink="/services"
+            previouspage={t("submenu.service")}
             currentpage={t("submenu.content")}
           />
           <div className="main">

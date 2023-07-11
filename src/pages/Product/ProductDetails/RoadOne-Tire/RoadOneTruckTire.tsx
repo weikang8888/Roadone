@@ -14,6 +14,8 @@ import LightTruckTire from "../../../../static/image/products/light-truck-tire.w
 import CommercialTire from "../../../../static/image/products/commercial-tyre.webp";
 
 const RoadOneTruckTire = () => {
+    const { t } = useTranslation();
+
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {

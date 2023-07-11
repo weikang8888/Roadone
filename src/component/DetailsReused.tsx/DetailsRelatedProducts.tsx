@@ -3,14 +3,16 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 const DetailsRelatedNews = ({ ids }) => {
-  const [productItems, setproductItems] = useState([]);
+  const { t } = useTranslation();
+
+  const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
       .get(`http://localhost:8080/api_roadone/products/products?ids=${ids}`)
       .then((response) => {
-        setproductItems(response.data);
+        setProductItems(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);

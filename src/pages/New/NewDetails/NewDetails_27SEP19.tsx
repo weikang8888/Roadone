@@ -16,6 +16,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_27SEP19 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -39,17 +41,17 @@ const NewDetails_27SEP19 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.13")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
@@ -78,14 +80,7 @@ const NewDetails_27SEP19 = () => {
                           letterSpacing: "1px",
                           textAlign: "justify",
                         }}>
-                        On September 23, the RoadoneTire Distributor Conference
-                        was successfully held in Islamabad, Pakistan. The
-                        RoadoneTire Oversea sales Team and 200 local dealers
-                        gathered together to discuss the development plan. This
-                        conference is the first major overseas conference of
-                        RoadoneTire in 2019, and it is also an important measure
-                        for Roadone Tire to implement the localization marketing
-                        strategy.
+                        {t("new.newDetails27SEP19.content1")}
                       </span>
                     </p>
                     <p
@@ -141,19 +136,7 @@ const NewDetails_27SEP19 = () => {
                           fontSize: "14px",
                           letterSpacing: "1px",
                         }}>
-                        In recent years, RoadoneTire actively responded to the
-                        national “Belt and Road” initiative and
-                        the“China-Pakistan Economic Corridor” construction plan,
-                        continuously researchingand developing new products
-                        suitable for the local market in Pakistan,continuously
-                        improving the brand awareness of Roadone tires in
-                        Pakistan, andinjecting friendship into China-Pakistan
-                        friendship. At the same time, Roadoneis constantly
-                        accelerating the pace of globalization, and formulating
-                        overseasdevelopment strategies of localization,
-                        intercontinentalization, R&Dglobalization, and
-                        continuously fulfilling the corporate mission of
-                        “Creating RoadoneWorld Famous Brand”.
+                        {t("new.newDetails27SEP19.content2")}
                       </span>
                     </p>
                     <p
@@ -208,19 +191,7 @@ const NewDetails_27SEP19 = () => {
                           fontSize: "14px",
                           letterSpacing: "1px",
                         }}>
-                        In 2003, HIXIH Groupfounded the Roadone brand. In 2004,
-                        Roadone tires entered the domestic andforeign markets.
-                        In response to the current situation that the
-                        internationalbrands in China's truck and bus market are
-                        not satisfied with the local brands,and in the absence
-                        of technology in 2014, HIXIH Group invested in
-                        theestablishment of TONGLI tires with Roadone brand,
-                        through years of localizationand intensive cultivation,
-                        Roaodne tires withstood the test in Pakistan's toughroad
-                        conditions, and gradually won the confidence of end
-                        users. Roadone willcontinue to improve its old products
-                        and strive to become the first choice forPakistan
-                        replacement tires market！
+                        {t("new.newDetails27SEP19.content3")}
                       </span>
                     </p>
                     <p
@@ -289,19 +260,7 @@ const NewDetails_27SEP19 = () => {
                           backgroundClip: "initial",
                           color: "rgb(0, 0, 0)",
                         }}>
-                        Facing the complicated and severe domestic and
-                        international economic situation, HIXIH Group firmly
-                        adheres to the development policy of “two unwavering,
-                        two persistences and one goal”, and wins a series of
-                        tough battles, such as strong alliances, market
-                        development, and large-scale project construction with
-                        international vision, open thinking, and innovative
-                        measures. Achieving high-level and high-quality
-                        development and have created good performances that have
-                        risen to the challenge and risen against the trend,
-                        fully demonstrating the unique advantage that the more
-                        difficult the HIXIH Group face, the more stable HIXIH
-                        become, more development with more crisis.
+                        {t("new.newDetails27SEP19.content4")}
                       </span>
                     </p>
                     <p
@@ -365,16 +324,7 @@ const NewDetails_27SEP19 = () => {
                           backgroundOrigin: "initial",
                           backgroundClip: "initial",
                         }}>
-                        Taking this overseas conference as the starting point,
-                        Roadone will carry out more localized marketing
-                        activities, continuously improve its independent
-                        innovation capability and core competitiveness, and
-                        create a perfect quality system and international brand
-                        will be the first priority. Roadone will continue to
-                        provide customers with higher service quality, increase
-                        overseas market share, continuously improve the market
-                        sales system, develop local sales policies, and jointly
-                        improve the quality of Roadone brand services.
+                        {t("new.newDetails27SEP19.content5")}
                       </span>
                     </p>
                     <p
@@ -438,15 +388,7 @@ const NewDetails_27SEP19 = () => {
                           backgroundClip: "initial",
                           fontSize: "14px",
                         }}>
-                        Roadone Tire will be based on excellent tire quality,
-                        docking the global tire market and creating a more
-                        comprehensive and dense network of world tire markets.
-                        Efforts will be made to create a new engine for economic
-                        development and to create a new impetus for economic
-                        development, so that "Tire Intelligent Manufacturing"
-                        will be equated with "High-end Made in China" to create
-                        a new "high-end Made in China" business card that will
-                        never fade!
+                        {t("new.newDetails27SEP19.content6")}
                       </span>
                     </p>
                   </div>
@@ -455,7 +397,9 @@ const NewDetails_27SEP19 = () => {
                     prevText={"265/70r19.5 NEW TYRE"}
                     prevLink="/news/265-70r19-5-new-tyre"
                     nextLink="/news/roadone-attend-philauto-at-24th-to-26th-july-2019"
-                    nextText={"Road One Attend PHILAUTO At 24th To 26th , July , 2019"}
+                    nextText={
+                      "Road One Attend PHILAUTO At 24th To 26th , July , 2019"
+                    }
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

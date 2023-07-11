@@ -12,6 +12,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_20JAN21 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -35,24 +37,24 @@ const NewDetails_20JAN21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.4")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
                     <p>
                       <span className="font-size-26 pinfo-title">
-                        XCMG feedback award to Tongli Tire Co,. Ltd
+                        {t("new.newDetails20JAN21.content1")}
                       </span>
                     </p>
 
@@ -60,7 +62,7 @@ const NewDetails_20JAN21 = () => {
                       <strong>
                         <span
                           style={{ color: "rgb(0, 0, 0)", fontSize: "26px" }}>
-                          After the year of 2020 cooperation with XCMG,
+                          {t("new.newDetails20JAN21.content2")}
                         </span>
                       </strong>
                     </p>
@@ -68,8 +70,7 @@ const NewDetails_20JAN21 = () => {
                       <strong>
                         <span
                           style={{ color: "rgb(0, 0, 0)", fontSize: "26px" }}>
-                          Roadone truck tires has met the XCMG needs and
-                          continued great business relationship in 2020.
+                          {t("new.newDetails20JAN21.content3")}
                         </span>
                       </strong>
                     </p>

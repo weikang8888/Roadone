@@ -14,6 +14,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_11JAN21 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -37,39 +39,30 @@ const NewDetails_11JAN21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.5")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo font-UI">
                     <p>
                       <span className="font-size-26 pinfo-title">
-                        Strong alliance－Hixih & Continental Cooperation
+                        {t("new.newDetails11JAN21.content1")}
                       </span>
                     </p>
 
                     <p>
                       <span style={{ letterSpacing: "1px" }}>
-                        As the world’s largest manufacturer for high-strength
-                        conveyor belt steel wire ropes, Hixih Steel Wire Co.,
-                        Ltd. is the world’s largest supplier of ContiTech
-                        division, Continental group German, supplies more than
-                        150 thousand tons of wires to ContiTech factories in
-                        China, Australia, Brazil, the United States, Germany,
-                        South Africa, Serbia, and India, accounting for more
-                        than 60% of manufacturer capacity. With more than 61
-                        branches in 21 countries, ContiTech ranks number one in
-                        the manufacturers of non-tire rubber products.
+                        {t("new.newDetails11JAN21.content2")}
                       </span>
                     </p>
                     <p>
@@ -77,38 +70,15 @@ const NewDetails_11JAN21 = () => {
                     </p>
                     <p style={{ textAlign: "left" }}>
                       <span style={{ letterSpacing: "1px" }}>
-                        Over years, Hixih Steel Wire Co., Ltd. has cooperated
-                        closely with ContiTech to jointly develop new products
-                        of steel wire ropes for conveyor belts. 7×7, 7×19
-                        structure ultra-high strength, highly zinc Galvanized
-                        layer steel wire rope, 1×19+7×7 structure steel wire
-                        rope for conveyor belt, 6×7+9 structure steel wire rope
-                        for rubber crawler, 1×24W structure steel wire rope for
-                        petroleum hose, Products such as ST10000 thick-diameter
-                        steel wire rope for conveyor belts have passed
-                        ContiTech's stringent product certificate at one time.
-                        Up to 62 products have been certified by ContiTech.
+                        {t("new.newDetails11JAN21.content3")}
                       </span>
                     </p>
                     <p style={{ textAlign: "left" }}>
-                      <strong>Advanced Equipment</strong>
+                      <strong> {t("new.newDetails11JAN21.content4")}</strong>
                     </p>
                     <p style={{ textAlign: "left" }}>
                       <span style={{ letterSpacing: "1px" }}>
-                        Equipped with advanced production lines, FIB advanced
-                        heat treatment hot-dip galvanizing production lines,
-                        automatic temperature control system, self-regulation of
-                        the atmosphere in the austenitizing furnace, hot-dip
-                        galvanizing online monitoring system, nitrogen
-                        adjustment. Sorbitic rate exceeds 90%, and the strength
-                        and toughness of steel wire at the international leading
-                        level. The zinc layer precisely controlled and the
-                        excellent concentricity greatly enhanced the rubber
-                        adhesion. German automatic mold repair equipment, each
-                        processing size of accurately controlled, super high
-                        finish. German SKET imported double twisting strander,
-                        tube twister, automatic tension adjustment system, clean
-                        production, for complete stress relief.
+                        {t("new.newDetails11JAN21.content5")}
                       </span>
                     </p>
                     <p style={{ textAlign: "left" }}>
@@ -121,14 +91,7 @@ const NewDetails_11JAN21 = () => {
                           fontFamily: "宋体",
                           letterSpacing: "1px",
                         }}>
-                        High-precision instruments such as high-frequency
-                        infrared carbon and sulfur analyzer, German Zeiss
-                        metallographic microscope, rubber permeability testing
-                        machine, Instron tensile machine, steel wire rope
-                        fatigue testing machine, salt spray, damp heat aging
-                        testing machine, inductive coupled plasma emission
-                        spectrometer, etc., supporting the research and
-                        development of new technologies and new products.
+                        {t("new.newDetails11JAN21.content6")}
                       </span>
                     </p>
                     <p>

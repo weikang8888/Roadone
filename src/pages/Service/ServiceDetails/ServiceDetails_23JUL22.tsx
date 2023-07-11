@@ -42,8 +42,8 @@ const ServiceDetails_23JUL22 = () => {
         <div className="container container1">
           <div className="ejfl">{t("submenu.service")}</div>
           <SubMenu
-            previouslink="/news"
-            previouspage={t("submenu.new")}
+            previouslink="/services"
+            previouspage={t("submenu.service")}
             currentpage={t("submenu.content")}
           />
           <div className="main">

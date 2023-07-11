@@ -11,6 +11,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20_5 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,65 +36,28 @@ const NewDetails_21AUG20_5 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.19")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
-                    <p>
-                      The carrying capacity of the replacement tyre shall not be
-                      lower than the mating tyre
-                    </p>
-                    <p>
-                      The capacity of the replacement tyre must be equal to or
-                      greater than the value specified by the matching tyre
-                      manufacturer.
-                    </p>
-                    <p>
-                      Note: The European metric and the P metric used in
-                      Goodyear manufacture and/or sales shall not be
-                      interchangeable with other types of tyres unless the
-                      cross-section width, flat ratio and rim diameter are the
-                      same as Goodyear tires. Note: "Standard load" tires should
-                      not be replaced with "oversized" tires.
-                    </p>
-                    <p>
-                      If the matching tire is "oversized load" tires, it should
-                      also be replaced by the same size of the oversized truck
-                      tires. In addition, the following principles should be
-                      followed:
-                    </p>
-                    <p></p>
-                    <p>
-                      When two tyres are installed, the tires with the largest
-                      tread depth are installed on the rear axle. If radial or
-                      non radial tires must be installed on the same vehicle,
-                      the radial tyre is installed on the rear axle. Radial and
-                      non radial tyres shall not be mixed on the same shaft.
-                      When you need to install snow or all-weather tyres to
-                      improve vehicle performance, be sure to install the tires
-                      on all four wheels.
-                    </p>
-                    <p>
-                      It is not recommended to install a tire with different
-                      speed. Two tyres on the same shaft should have the same
-                      rated speed if the tires are installed at different speed.
-                      The tires with the lowest speed limit the speed of the
-                      vehicle. When you want to change the tire size, be sure to
-                      consult the dealer to understand the best rim width, and
-                      carefully check the distance between the vehicle and the
-                      tyre.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_5.content1")}</p>
+                    <p>{t("new.newDetails01AUG18_5.content2")}</p>
+                    <p>{t("new.newDetails01AUG18_5.content3")}</p>
+                    <p>{t("new.newDetails01AUG18_5.content4")}</p>
+                    <p>{t("new.newDetails01AUG18_5.content5")}</p>
+                    <p>{t("new.newDetails01AUG18_5.content6")}</p>
+                    <p>{t("new.newDetails01AUG18_5.content7")}</p>
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext

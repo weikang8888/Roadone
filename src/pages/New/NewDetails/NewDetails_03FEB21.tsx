@@ -15,6 +15,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_03FEB21 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -38,24 +40,24 @@ const NewDetails_03FEB21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.3")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
                     <p>
                       <span className="pinfo-title">
-                        295/80R22.5 HF21 truck tire test data
+                        {t("new.newDetails03FEB21.content1")}
                       </span>
                     </p>
                     <p
@@ -74,23 +76,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Truck
+                        {t("new.newDetails03FEB21.content2")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        1F+2D+3ST
+                        1F+2D+3ST{" "}
                       </span>
                     </p>
                     <p
@@ -109,23 +104,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Place
+                        {t("new.newDetails03FEB21.content3")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        Guangzhou
+                        {t("new.newDetails03FEB21.content30")}
                       </span>
                     </p>
                     <p
@@ -144,15 +132,7 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Road
-                      </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
+                        {t("new.newDetails03FEB21.content4")}
                       </span>
                     </p>
                     <p
@@ -170,23 +150,7 @@ const NewDetails_03FEB21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        &nbsp;&nbsp; 90% Highway
-                      </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        、
-                      </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "Arial",
-                          color: "black",
-                        }}>
-                        10% National road
+                        {t("new.newDetails03FEB21.content5")}
                       </span>
                     </p>
                     <p
@@ -205,23 +169,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Routine
+                        {t("new.newDetails03FEB21.content6")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        Yinchuan-Guangzhou 2300km
+                        {t("new.newDetails03FEB21.content7")}
                       </span>
                     </p>
                     <p
@@ -240,24 +197,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Speed
+                        {t("new.newDetails03FEB21.content8")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                          fontWeight: "bold",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        90km/h
+                        {t("new.newDetails03FEB21.content9")}
                       </span>
                     </p>
                     <p
@@ -276,23 +225,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Cargo
+                        {t("new.newDetails03FEB21.content10")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        Stocks
+                        {t("new.newDetails03FEB21.content11")}
                       </span>
                     </p>
                     <p
@@ -311,7 +253,7 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Mileage
+                        {t("new.newDetails03FEB21.content12")}
                       </span>
                       <span
                         style={{
@@ -319,7 +261,7 @@ const NewDetails_03FEB21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        : 163231km
+                        {t("new.newDetails03FEB21.content13")}
                       </span>
                     </p>
                     <p
@@ -338,23 +280,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Weight
+                        {t("new.newDetails03FEB21.content14")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        total 49 Tons
+                        {t("new.newDetails03FEB21.content15")}
                       </span>
                     </p>
                     <p
@@ -373,7 +308,7 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Rest groove
+                        {t("new.newDetails03FEB21.content16")}
                       </span>
                       <span
                         style={{
@@ -381,7 +316,7 @@ const NewDetails_03FEB21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        :10.3mm
+                        {t("new.newDetails03FEB21.content17")}
                       </span>
                     </p>
                     <p
@@ -400,41 +335,16 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        New
+                        {t("new.newDetails03FEB21.content18")}
                       </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "Arial",
-                          color: "black",
-                          fontWeight: "bold",
-                        }}>
-                        tyre
-                      </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "Arial",
-                          color: "black",
-                          fontWeight: "bold",
-                        }}>
-                        groove
-                      </span>
-                      <span
-                        style={{
-                          fontSize: 21,
-                          fontFamily: "宋体",
-                          color: "black",
-                        }}>
-                        ：
-                      </span>
+
                       <span
                         style={{
                           fontSize: 21,
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        16mm
+                        {t("new.newDetails03FEB21.content19")}
                       </span>
                     </p>
                     <p
@@ -453,7 +363,7 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Wear rate
+                        {t("new.newDetails03FEB21.content20")}
                       </span>
                       <span
                         style={{
@@ -461,7 +371,7 @@ const NewDetails_03FEB21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        : 35593km/mm
+                        {t("new.newDetails03FEB21.content21")}
                       </span>
                     </p>
                     <p
@@ -480,7 +390,7 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Estimate Mileage:
+                        {t("new.newDetails03FEB21.content22")}
                       </span>
                       <span
                         style={{
@@ -488,7 +398,7 @@ const NewDetails_03FEB21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        458192km
+                        {t("new.newDetails03FEB21.content23")}
                       </span>
                     </p>
                     <p
@@ -519,7 +429,7 @@ const NewDetails_03FEB21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Customer evaluation:
+                        {t("new.newDetails03FEB21.content24")}
                       </span>
                       <p
                         style={{
@@ -536,8 +446,7 @@ const NewDetails_03FEB21 = () => {
                             fontFamily: "Arial",
                             color: "black",
                           }}>
-                          This car is a special line between Yinchuan and
-                          Guangzhou.
+                          {t("new.newDetails03FEB21.content25")}
                         </span>
                       </p>
                       <p
@@ -555,10 +464,7 @@ const NewDetails_03FEB21 = () => {
                             fontFamily: "Arial",
                             color: "black",
                           }}>
-                          At present, the tires have been used for one year and
-                          two months, driving 160,000km, the estimated mileage
-                          is 460,000 km. Truck owners are very satisfied with
-                          the use of the HF21, wheel.
+                          {t("new.newDetails03FEB21.content26")}
                         </span>
                       </p>
                       <p
@@ -576,11 +482,7 @@ const NewDetails_03FEB21 = () => {
                             fontFamily: "Arial",
                             color: "black",
                           }}>
-                          Tire is very wear-resistant and anti-eccentric wear
-                          effect is good, and it is comfortable when mounted on
-                          the guide wheel. The truck owner purchased this tire
-                          many times and has introduced it to more of his
-                          friends.
+                          {t("new.newDetails03FEB21.content27")}
                         </span>
                       </p>
                       <p
@@ -608,19 +510,19 @@ const NewDetails_03FEB21 = () => {
                         <div>
                           <img src={NewDetailsImage8} />
                         </div>
-                        <p>Real Picture</p>
+                        <p> {t("new.newDetails03FEB21.content28")}</p>
                       </div>
                       <div className="box">
                         <div>
                           <img src={NewDetailsImage9} />
                         </div>
-                        <p>Real Picture</p>
+                        <p> {t("new.newDetails03FEB21.content28")}</p>
                       </div>
                       <div className="box">
                         <div>
                           <img src={NewDetailsImage10} />
                         </div>
-                        <p>HF281 Pattern</p>
+                        <p> {t("new.newDetails03FEB21.content29")}</p>
                       </div>
                     </div>
                   </div>

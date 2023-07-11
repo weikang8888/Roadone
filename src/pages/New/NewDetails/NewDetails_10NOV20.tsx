@@ -15,6 +15,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_20JAN21 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -38,24 +40,24 @@ const NewDetails_20JAN21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.7")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
                     <p>
                       <span className="font-size-26 pinfo-title font-Dengxian">
-                        SD01 Special Off-road Tyre Series
+                        {t("new.newDetails10NOV20.content1")}
                       </span>
                     </p>
 
@@ -74,7 +76,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Product performance Features:
+                        {t("new.newDetails10NOV20.content2")}
                       </span>
                     </p>
                     <p
@@ -92,7 +94,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        1. Off-road type, all wheel position
+                        {t("new.newDetails10NOV20.content3")}
                       </span>
                     </p>
                     <p
@@ -110,8 +112,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        2. Suitable for highway, off-road, desert, swamp, snow
-                        and other road conditions
+                        {t("new.newDetails10NOV20.content4")}
                       </span>
                     </p>
                     <p
@@ -129,9 +130,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        3. Special tread compound formula design, makes the tire
-                        has a stronger wear resistance, puncture resistance,
-                        harsh weather resistance.
+                        {t("new.newDetails10NOV20.content5")}
                       </span>
                     </p>
                     <p
@@ -149,8 +148,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        4. The wider belt layer design improves the low-pressure
-                        performance of the tire
+                        {t("new.newDetails10NOV20.content6")}
                       </span>
                     </p>
                     <p
@@ -168,10 +166,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        5. The shell can be directly installed as tubeless tire,
-                        which can effectively cooperate with the use of auto
-                        automatic charging and discharging system and inner
-                        support body.
+                        {t("new.newDetails10NOV20.content7")}
                       </span>
                     </p>
                     <p
@@ -189,9 +184,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        6. The optimized structure design enables the tire to
-                        have excellent high-speed performance and meet the
-                        requirements of high motor performance.
+                        {t("new.newDetails10NOV20.content8")}
                       </span>
                     </p>
                     <p
@@ -210,26 +203,7 @@ const NewDetails_20JAN21 = () => {
                           fontWeight: "bold",
                           fontStyle: "normal",
                         }}>
-                        Pattern{" "}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "32px",
-                          fontFamily: "Arial",
-                          color: "#333333",
-                          fontWeight: "bold",
-                        }}>
-                        Features{" "}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "32px",
-                          fontFamily: "Arial",
-                          color: "#333333",
-                          fontWeight: "bold",
-                          fontStyle: "normal",
-                        }}>
-                        :
+                        {t("new.newDetails10NOV20.content9")}
                       </span>
                     </p>
                     <p
@@ -247,8 +221,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        1. All-terrain off-road pattern designed for multi-road
-                        conditions
+                        {t("new.newDetails10NOV20.content10")}
                       </span>
                     </p>
                     <p
@@ -266,8 +239,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        2. Deepened pattern groove design improves the service
-                        life of the tire
+                        {t("new.newDetails10NOV20.content11")}
                       </span>
                     </p>
                     <p
@@ -285,8 +257,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        3. The large pattern block design makes the tire have
-                        stronger road grip and driving type
+                        {t("new.newDetails10NOV20.content12")}
                       </span>
                     </p>
                     <p
@@ -304,8 +275,7 @@ const NewDetails_20JAN21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        4. The widened pattern groove enables the tire to have
-                        excellent self-cleaning product parameters
+                        {t("new.newDetails10NOV20.content13")}
                       </span>
                     </p>
                     <p>

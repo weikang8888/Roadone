@@ -11,6 +11,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,42 +36,24 @@ const NewDetails_21AUG20 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.16")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
-                    <p>
-                      Improper tyre pressure can lead to a large number of
-                      problems-from uneven tires and accelerated wear to
-                      structural damage, or even a reduction in mileage per unit
-                      of petrol. Maintaining proper tyre pressure can increase
-                      mileage per unit of petrol and significantly save fuel
-                      cost.
-                    </p>
-                    <p>
-                      Check the tire pressure at least once a month or before a
-                      long trip. Goodyear recommends that you check the tyre
-                      pressure once a month or before a long trip.
-                    </p>
-                    <p>
-                      The tyre pressure should be adjusted to the car door sign
-                      or the user manual for the vehicle manufacturer's
-                      recommended values. Proper maintenance of vehicles and
-                      tyres is a useful investment because it translates into
-                      the best driving experience, dramatically saving costs and
-                      increasing mileage per unit of petrol.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_2.content1")}</p>
+                    <p>{t("new.newDetails01AUG18_2.content2")}</p>
+                    <p>{t("new.newDetails01AUG18_2.content3")}</p>
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext

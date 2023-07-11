@@ -10,6 +10,8 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const ChinaZigzag = () => {
+  const { t } = useTranslation();
+
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
@@ -158,23 +160,31 @@ const ChinaZigzag = () => {
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">Size</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Ply Rating</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Max. Load (Kg)(Single/Dual)
+                        {t("tableHeaders.size")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index (Single/Dual)
+                        {t("tableHeaders.plyRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">SpeedRating</span>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.loadIndex")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.speedRating")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">Overall Diameter (mm)</span>

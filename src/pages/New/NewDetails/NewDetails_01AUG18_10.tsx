@@ -11,6 +11,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_21AUG20_10 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -34,156 +36,110 @@ const NewDetails_21AUG20_10 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.24")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
                     <p>
-                      <strong>Cornering grip</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content1")}</strong>
                     </p>
-                    <p>Definition: Tyre adhesion when turning.&nbsp;</p>
-                    <p>When is it important?</p>
-                    <p>A: When driving on a curved road.</p>
+                    <p>{t("new.newDetails01AUG18_10.content2")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content3")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content4")}</p>
                     <p></p>
                     <p>
-                      <strong>Rolling resistance</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content6")}</strong>
                     </p>
-                    <p>Definition: Rolling capability of tyre surface.&nbsp;</p>
-                    <p>When is it important?</p>
-                    <p>A: When trying to reduce fuel consumption.</p>
+                    <p>{t("new.newDetails01AUG18_10.content7")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content8")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content9")}</p>
                     <p></p>
                     <p>
-                      <strong>Performance</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content11")}</strong>
                     </p>
-                    <p>
-                      Definition: A general term describing the braking,
-                      acceleration, handling and friction properties of
-                      automotive tyres.&nbsp;
-                    </p>
-                    <p>When is it important?&nbsp;</p>
-                    <p>A: any time.</p>
+                    <p>{t("new.newDetails01AUG18_10.content12")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content13")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content14")}</p>
                     <p></p>
                     <p>
-                      <strong>Manipulation of</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content16")}</strong>
                     </p>
-                    <p>
-                      Definition: Tyre steering and braking response
-                      capability.&nbsp;
-                    </p>
-                    <p>When is it important?&nbsp;</p>
-                    <p>A: any time.</p>
+                    <p>{t("new.newDetails01AUG18_10.content17")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content18")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content19")}</p>
                     <p></p>
                     <p>
-                      <strong>Skid Resistance</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content21")}</strong>
                     </p>
-                    <p>
-                      Definition: The ability of a tyre to splash water on a
-                      damp road and maintain grip.&nbsp;
-                    </p>
-                    <p>When is it important?</p>
-                    <p>A: On a rainy wet road when driving.</p>
+                    <p>{t("new.newDetails01AUG18_10.content22")}</p>
+                    <p> {t("new.newDetails01AUG18_10.content23")}</p>
+                    <p> {t("new.newDetails01AUG18_10.content24")}</p>
                     <p></p>
                     <p>
-                      <strong>Gas-deficient maintenance tires</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content26")}</strong>
                     </p>
-                    <p>
-                      Definition: A tyre that can drive a vehicle at a maximum
-                      distance of 80 kilometers at the highest speed of 80 km/h
-                      after being punctured or discouraged.&nbsp;
-                    </p>
-                    <p>When is it important?&nbsp;</p>
-                    <p>
-                      A: When the tyre is punctured or discouraged, it is
-                      necessary to continue driving to a safe place to replace
-                      the tyre.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_10.content27")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content28")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content29")}</p>
                     <p></p>
                     <p>
-                      <strong>Wet Land Grip</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content31")}</strong>
                     </p>
-                    <p>
-                      Definition: tyre adhesion and braking capability on wet
-                      pavement.&nbsp;
-                    </p>
-                    <p>What's important?</p>
-                    <p>
-                      A: When turning, stopping and overall control of a vehicle
-                      on a damp road.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_10.content32")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content33")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content34")}</p>
+
                     <p></p>
                     <p>
-                      <strong>Dry Ground grip</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content36")}</strong>
                     </p>
-                    <p>
-                      Definition: tyre adhesion and braking capability on dry
-                      pavement.&nbsp;
-                    </p>
-                    <p>What's important?&nbsp;</p>
-                    <p>
-                      A: When turning, stopping and overall control of a vehicle
-                      on a dry road surface.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_10.content37")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content38")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content39")}</p>
+
                     <p></p>
                     <p>
-                      <strong>Shu-Moderate</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content41")}</strong>
                     </p>
+                    <p>{t("new.newDetails01AUG18_10.content42")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content43")}</p>
+
                     <p>
-                      Definition: The ability of a tyre to absorb vibrations,
-                      bumps, or other road anomalies. When is it
-                      important?&nbsp;
+                      <strong>{t("new.newDetails01AUG18_10.content45")}</strong>
                     </p>
-                    <p>
-                      A: When you want to experience the vehicle, not the road
-                      bumps.
-                    </p>
-                    <p>
-                      <strong>Noise Definition</strong>
-                    </p>
-                    <p>
-                      Noise from tires can increase noise pollution in the
-                      surrounding environment.
-                    </p>
-                    <p>
-                      The internal noise of the lower tires, can make the
-                      vehicle inside more quiet.&nbsp;
-                    </p>
-                    <p>When is it important?&nbsp;</p>
-                    <p>
-                      A: When you want to make yourself and the people around
-                      you feel quiet during the driving process.
-                    </p>
+                    <p>{t("new.newDetails01AUG18_10.content46")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content47")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content48")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content49")}</p>
+
                     <p></p>
                     <p>
-                      <strong>Braking distance</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content51")}</strong>
                     </p>
-                    <p>
-                      Definition: The distance from the beginning of the brake
-                      to the complete stop.&nbsp;
-                    </p>
-                    <p>When is it important?&nbsp;</p>
-                    <p>A: When traveling on all roads.</p>
+                    <p>{t("new.newDetails01AUG18_10.content52")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content53")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content54")}</p>
+
                     <p></p>
                     <p>
-                      <strong>Mileage Definition</strong>
+                      <strong>{t("new.newDetails01AUG18_10.content56")}</strong>
                     </p>
-                    <p>An indicator of the service life of a tyre.</p>
-                    <p>
-                      "High mileage" tires generally have a longer life
-                      span.&nbsp;
-                    </p>
-                    <p>When is it important?</p>
-                    <p>A: any time.</p>
+                    <p>{t("new.newDetails01AUG18_10.content57")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content58")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content59")}</p>
+                    <p>{t("new.newDetails01AUG18_10.content60")}</p>
+
                     <p></p>
                   </div>
                   <DetailsButton />

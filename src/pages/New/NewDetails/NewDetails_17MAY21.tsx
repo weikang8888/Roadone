@@ -13,6 +13,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import DetailsRelatedProducts from "../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const NewDetails_19AUG21 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -36,24 +38,24 @@ const NewDetails_19AUG21 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">News</div>
+          <div className="ejfl">{t("submenu.new")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("new.title.1")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
                   <div className="pinfo">
                     <p>
                       <span className="font-size-26 pinfo-title">
-                        12.00R20 GD777 Yunnan Heavy Load Test
+                        {t("new.newDetails17MAY21.content23")}
                       </span>
                     </p>
                     <div
@@ -76,19 +78,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Truck Wheel
-                            </span>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "宋体" }}>
-                              ：
+                              {t("new.newDetails17MAY21.content1")}
                             </span>
                             <span
                               style={{
                                 fontSize: "21px",
-                                fontFamily: "微软雅黑",
-                                fontWeight: "bold",
+                                fontFamily: "Arial",
                               }}>
-                              &nbsp;2F+3D
+                              2F+3D
                             </span>
                           </p>
                         </li>
@@ -108,11 +105,7 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Wheel
-                            </span>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "宋体" }}>
-                              ：
+                              {t("new.newDetails17MAY21.content2")}
                             </span>
                             <span
                               style={{
@@ -121,11 +114,7 @@ const NewDetails_19AUG21 = () => {
                                 color: "red",
                                 fontWeight: "bold",
                               }}>
-                              ALL WHEEL
-                            </span>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              &nbsp;position
+                              {t("new.newDetails17MAY21.content3")}
                             </span>
                           </p>
                         </li>
@@ -145,32 +134,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Weight
+                              {t("new.newDetails17MAY21.content4")}
                             </span>
                             <span
-                              style={{ fontSize: "21px", fontFamily: "宋体" }}>
-                              ：&nbsp;
-                            </span>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              Cargo 100 Tons
-                            </span>
-                          </p>
-                        </li>
-                        <li>
-                          <p
-                            style={{
-                              marginTop: "0px",
-                              marginBottom: "0px",
-                              whiteSpace: "normal",
-                              direction: "ltr",
-                              unicodeBidi: "embed",
-                              verticalAlign: "baseline",
-                            }}>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              Total &lt; 117 tons
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              {t("new.newDetails17MAY21.content5")}
                             </span>
                           </p>
                         </li>
@@ -190,15 +161,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Road
+                              {t("new.newDetails17MAY21.content6")}
                             </span>
                             <span
-                              style={{ fontSize: "21px", fontFamily: "宋体" }}>
-                              ：
-                            </span>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              100% Provincial road,
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              {t("new.newDetails17MAY21.content7")}
                             </span>
                           </p>
                         </li>
@@ -218,11 +188,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Distance:&nbsp;
+                              {t("new.newDetails17MAY21.content8")}
                             </span>
                             <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              400km single distance
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              {t("new.newDetails17MAY21.content9")}
                             </span>
                           </p>
                         </li>
@@ -242,11 +215,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Pressure
+                              {t("new.newDetails17MAY21.content10")}
                             </span>
                             <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              :&nbsp; 13.5Bar
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              {t("new.newDetails17MAY21.content11")}
                             </span>
                           </p>
                         </li>
@@ -266,15 +242,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Place
+                              {t("new.newDetails17MAY21.content12")}
                             </span>
                             <span
-                              style={{ fontSize: "21px", fontFamily: "宋体" }}>
-                              ：
-                            </span>
-                            <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              Yunnan Province, South China
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              {t("new.newDetails17MAY21.content13")}
                             </span>
                           </p>
                         </li>
@@ -294,11 +269,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Rest groove
-                            </span>
+                              {t("new.newDetails17MAY21.content14")}
+                            </span>{" "}
                             <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              :12mm/14mm
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              12mm/14mm
                             </span>
                           </p>
                         </li>
@@ -318,11 +296,14 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              New&nbsp; groove
+                              {t("new.newDetails17MAY21.content15")}
                             </span>
                             <span
-                              style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              :24mm
+                              style={{
+                                fontSize: "21px",
+                                fontFamily: "Arial",
+                              }}>
+                              24mm
                             </span>
                           </p>
                         </li>
@@ -342,11 +323,11 @@ const NewDetails_19AUG21 = () => {
                                 fontFamily: "Arial",
                                 fontWeight: "bold",
                               }}>
-                              Installed:&nbsp;&nbsp;
+                              {t("new.newDetails17MAY21.content16")}
                             </span>
                             <span
                               style={{ fontSize: "21px", fontFamily: "Arial" }}>
-                              3 Months
+                              {t("new.newDetails17MAY21.content17")}
                             </span>
                           </p>
                         </li>
@@ -368,7 +349,7 @@ const NewDetails_19AUG21 = () => {
                           color: "black",
                           fontWeight: "bold",
                         }}>
-                        Evaluation :{" "}
+                        {t("new.newDetails17MAY21.content18")}
                       </span>
                     </p>
                     <p
@@ -386,9 +367,7 @@ const NewDetails_19AUG21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        This truck is mainly to transport coal, load weight is
-                        not steady, it means the higher requirement of the
-                        tire.&nbsp;{" "}
+                        {t("new.newDetails17MAY21.content19")}
                       </span>
                     </p>
                     <p
@@ -406,11 +385,7 @@ const NewDetails_19AUG21 = () => {
                           fontFamily: "Arial",
                           color: "black",
                         }}>
-                        The driver’s experience is that if the tires can use
-                        more than 6 months and not have issues in 4 months, it
-                        will be good.&nbsp;The GD777 is surely can work more
-                        than 6 months, the driver feels great, and the
-                        distributor feels well too.
+                        {t("new.newDetails17MAY21.content20")}
                       </span>
                     </p>
                     <div className="d-flex text-center my-2">
@@ -418,7 +393,7 @@ const NewDetails_19AUG21 = () => {
                         <div>
                           <img src={NewDetailsImage6} />
                         </div>
-                        <p>Real Picture</p>
+                        <p> {t("new.newDetails17MAY21.content21")}</p>
                       </div>
                       <div className="box">
                         <div>
@@ -427,7 +402,7 @@ const NewDetails_19AUG21 = () => {
                             style={{ width: "415px", height: "523px" }}
                           />
                         </div>
-                        <p>HF281 Pattern</p>
+                        <p> {t("new.newDetails17MAY21.content22")}</p>
                       </div>
                     </div>
                   </div>
