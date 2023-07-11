@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -136,11 +137,12 @@ const NewDetails_11JAN21 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    prevText={"XCMG Feedback Award To Tongli Tire Co,. Ltd"}
+                    prevLink="/news/xcmg-feedback-award-to-tongli-tire-co-ltd"
+                    nextLink="/news/hixih-steel-wire-rope-co-ltd"
+                    nextText={"HIXIH Steel Wire Rope Co,. Ltd"}
                   />
-                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
+                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />
                 </>
               )}

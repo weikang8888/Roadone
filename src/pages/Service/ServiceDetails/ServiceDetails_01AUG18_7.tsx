@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -8,6 +9,8 @@ import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPre
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const ServiceDetails_01AUG18_7 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -30,52 +33,31 @@ const ServiceDetails_01AUG18_7 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
+
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.9")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
 
                   <div className="pinfo">
                     <div className="mb-3">
-                      <p>
-                        1. Buy a tire gauge or use the tire pressure gauge of
-                        the tyre shop;&nbsp;
-                      </p>
-                      <p>
-                        2. The first priority is to check the tyre pressure in
-                        the morning or in the condition of the tire cooling.
-                      </p>
-                      <p>
-                        3. after the vehicle is driven, the temperature of the
-                        tyre will increase and affect the tire pressure value;
-                      </p>
-                      <p>
-                        4. Unscrew the valve cap and put the tire pressure gauge
-                        on the valve mouth, it is normal to hear a short hissing
-                        sound;
-                      </p>
-                      <p>
-                        5. Read the value of the pressure gauge and compare it
-                        with the proposed value of the vehicle (bar or PSI);
-                      </p>
-                      <p>
-                        6. Adjust the pressure, or inflate in the tire shop;
-                      </p>
-                      <p>
-                        7. Re-use the barometer to check the tyre pressure and
-                        check with the manufacturer's parameters; 8. Tighten the
-                        valve cap of each tyre
-                      </p>
+                      <p>{t("service.serviceDetails01AUG18_7.content1")}</p>
+                      <p>{t("service.serviceDetails01AUG18_7.content2")}</p>
+                      <p>{t("service.serviceDetails01AUG18_7.content3")}</p>
+                      <p>{t("service.serviceDetails01AUG18_7.content4")}</p>
+                      <p>{t("service.serviceDetails01AUG18_7.content5")}</p>
+                      <p>{t("service.serviceDetails01AUG18_7.content6")}</p>
+                      <p>{t("service.serviceDetails01AUG18_7.content7")}</p>
                     </div>
                   </div>
 

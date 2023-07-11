@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -8,6 +9,8 @@ import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPre
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const ServiceDetails_01AUG18_6 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -30,42 +33,31 @@ const ServiceDetails_01AUG18_6 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
+
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.8")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
 
                   <div className="pinfo">
                     <div className="mb-3">
-                      <p>
-                        1. Look for tires with excellent braking and control
-                        test results.
-                      </p>
+                      <p>{t("service.serviceDetails01AUG18_6.content1")}</p>
                     </div>
                     <div className="mb-3">
-                      <p>
-                        2. Tread wear, driving comfort, noise and rolling
-                        resistance and other factors help narrow the range of
-                        selection .
-                      </p>
+                      <p>{t("service.serviceDetails01AUG18_6.content2")}</p>
                     </div>
                     <div className="mb-3">
-                      <p>
-                        3. The choice of car tyres depends on your area of
-                        residence, weather and road conditions, as well as
-                        customer expectations of tyre performance and
-                        requirements for vehicles.
-                      </p>
+                      <p>{t("service.serviceDetails01AUG18_6.content3")}</p>
                     </div>
                   </div>
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import ProductBanner from "../../static/image/products/product-banner.webp";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
-import { useTranslation } from "react-i18next";
 
 const Productpage = () => {
   const { t } = useTranslation();

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -8,6 +9,8 @@ import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPre
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const ServiceDetails_01AUG18_3 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -30,51 +33,42 @@ const ServiceDetails_01AUG18_3 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
+
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.5")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
 
                   <div className="pinfo">
-                    <p>
-                      Find tyre size and other information according to the
-                      following figure:&nbsp;
-                    </p>
-                    <p>1. Tyre cross-section width (mm)</p>
-                    <p>2. Ratio of section height to section width (%)</p>
-                    <p>3. Tyre structure (r= meridian)</p>
-                    <p>4. Rim diameter (inches)</p>
-                    <p>5. Max load Capacity (load index)</p>
-                    <p>6. Rated speed</p>
-                    <p>7. Tyre without inner tire</p>
-                    <p>8. Tread Wear indicator Strip position</p>
-                    <p>9. ECE tyre recognition mark and number</p>
-                    <p>10. Winter mud and snow driving capacity</p>
-                    <p>11. Production date (week, year)</p>
-                    <p>12. Traffic compliance Symbol</p>
-                    <p>
-                      13. Ministry of communications manufacturer Code/li&gt;
-                    </p>
-                    <p>14. Origin</p>
-                    <p>15. Product Name</p>
-                    <p>
-                      16. Tyre structure Details (Ministry of Transportation)
-                    </p>
-                    <p>17. Load and pressure signs (Ministry of Transport)</p>
-                    <p>
-                      18. Tyre type (meridian) Logo (Quality level) required by
-                      U.S. Consumer information regulations
-                    </p>
+                    <p>{t("service.serviceDetails01AUG18_3.content1")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content2")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content3")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content4")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content5")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content6")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content7")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content8")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content9")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content10")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content11")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content12")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content13")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content14")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content15")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content16")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content17")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content18")}</p>
+                    <p>{t("service.serviceDetails01AUG18_3.content19")}</p>
                   </div>
 
                   <DetailsButton />

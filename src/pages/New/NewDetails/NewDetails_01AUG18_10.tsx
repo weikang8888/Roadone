@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -15,7 +16,7 @@ const NewDetails_21AUG20_10 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/news/news?ids=11")
+      .get("http://localhost:8080/api_roadone/news/news?ids=25")
       .then((response) => {
         setNewsItems(response.data);
       })
@@ -187,9 +188,10 @@ const NewDetails_21AUG20_10 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
-                    nextLink="/news/295-80r22-5-hf21-truck-tire-test"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    prevText={"Driving Skills In Winter"}
+                    prevLink="/news/driving-skills-in-winter"
+                    nextLink="/news/select-the-appropriate-tire"
+                    nextText={"Select The Appropriate Tires"}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

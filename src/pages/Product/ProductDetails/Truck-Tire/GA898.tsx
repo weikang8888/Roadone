@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 import InnerBanner from "../../../../component/Banner/InnerBanner";
 import ProductBanner2 from "../../../../static/image/products/product-banner-2.webp";

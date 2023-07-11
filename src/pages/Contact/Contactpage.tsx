@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import ContactBanner from "../../static/image/main/contact-banner.webp";
 import ContactHouse from "../../static/image/main/contact-house.png";
@@ -8,7 +9,43 @@ import "./contact.css";
 
 const Contactpage = () => {
   const { t } = useTranslation();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone_number: "",
+    subject: "",
+    message: "",
+    gridCheck: false,
+  });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("http://localhost:8080/api_roadone/contact/contact", formData)
+      .then((response) => {
+        console.log(response.data);
+        // Handle success response
+        setIsSuccess(true);
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle error response
+        setIsSuccess(false);
+        alert(
+          "There was an error submitting the form. Please try again later."
+        );
+      });
+  };
   return (
     <>
       <InnerBanner bannerimage={ContactBanner} />
@@ -48,11 +85,7 @@ const Contactpage = () => {
               <p className="text-wrap"></p>
               <p className="text-wrap">{t("contactpage.contactUsMessage")}</p>
               <div className="feedbackForm">
-                <form
-                  name="feedbackForm"
-                  action=""
-                  id="feedbackForm"
-                  method="post">
+                <form id="feedbackForm" onSubmit={handleSubmit}>
                   <table>
                     <tbody>
                       <tr>
@@ -64,8 +97,10 @@ const Contactpage = () => {
                         <td className="fput">
                           <input
                             id="SubmitName"
-                            name="SubmitName"
+                            name="name"
                             className="text"
+                            value={formData.name}
+                            onChange={handleChange}
                           />
                         </td>
                       </tr>
@@ -79,9 +114,11 @@ const Contactpage = () => {
                         <td>
                           <input
                             id="SubmitEmail"
-                            name="SubmitEmail"
+                            name="email"
                             className="text"
                             placeholder={t("contactpage.emailPlaceholder")}
+                            value={formData.email}
+                            onChange={handleChange}
                           />
                         </td>
                       </tr>
@@ -94,8 +131,10 @@ const Contactpage = () => {
                         <td>
                           <input
                             id="SubmitPhone"
-                            name="SubmitPhone"
+                            name="phone_number"
                             className="text"
+                            value={formData.phone_number}
+                            onChange={handleChange}
                           />
                         </td>
                       </tr>
@@ -122,8 +161,10 @@ const Contactpage = () => {
                         <td>
                           <input
                             id="SubmitTitle"
-                            name="SubmitTitle"
+                            name="subject"
                             className="text"
+                            value={formData.subject}
+                            onChange={handleChange}
                           />
                         </td>
                       </tr>
@@ -136,9 +177,11 @@ const Contactpage = () => {
                         </td>
                         <td>
                           <textarea
-                            name="SubmitContent"
+                            name="message"
                             id="SubmitContent"
                             className="atextarea"
+                            value={formData.message}
+                            onChange={handleChange}
                             placeholder={t(
                               "contactpage.contentPlaceholder"
                             )}></textarea>
@@ -159,6 +202,15 @@ const Contactpage = () => {
                           </div>
                         </td>
                       </tr>
+                      {isSuccess && (
+                        <tr>
+                          <td>
+                            <div className="success-message">
+                            {t("contactpage.successMessage")}
+                            </div>
+                          </td>
+                        </tr>
+                      )}
                     </tbody>
                   </table>
                 </form>

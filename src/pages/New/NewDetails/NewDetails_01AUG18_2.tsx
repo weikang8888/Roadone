@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -72,13 +73,14 @@ const NewDetails_21AUG20 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No information"}
+                    prevText={"Components Of A Tyre"}
+                    prevLink="/news/components-of-a-tyre"
                     nextText={
-                      "Henan Zhumadian Hixih customer 12r22.5 18PR H262 case"
+                      "How Do You Keep Your Best Driving Performance And Comfort Longer?"
                     }
-                    nextLink="/services/henan-zhumadian-hixih-customer-12r22.5-18pr-h262-case"
+                    nextLink="/news/how-do-you-keep-your-best-driving-performance-and-comfort-longer"
                   />
-                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
+                  <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />
                 </>
               )}

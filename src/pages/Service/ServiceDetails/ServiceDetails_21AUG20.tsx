@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -9,6 +10,8 @@ import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRela
 import ServiceDetailsImage7 from "./picture/sd7.webp";
 
 const ServiceDetails_21AUG20 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -31,17 +34,18 @@ const ServiceDetails_21AUG20 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
+
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.1")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
@@ -53,8 +57,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Chinese Henan Zhumadian Hixih customer 12r22.5 18PR H262
-                        case
+                        {t("service.serviceDetails21AUG20.content1")}
                       </span>
                     </p>
                     <p>
@@ -63,7 +66,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Model: 1F + 2D + 3T semitrailer
+                        {t("service.serviceDetails21AUG20.content2")}
                       </span>
                     </p>
                     <p>
@@ -72,7 +75,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Wheel position: guide wheel
+                        {t("service.serviceDetails21AUG20.content3")}
                       </span>
                     </p>
                     <p>
@@ -81,7 +84,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Goods: dangerous goods (acetic acid) standard load
+                        {t("service.serviceDetails21AUG20.content4")}
                       </span>
                     </p>
                     <p>
@@ -90,8 +93,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Road condition: few highways, more than 95% are national
-                        roads
+                        {t("service.serviceDetails21AUG20.content5")}
                       </span>
                     </p>
                     <p>
@@ -100,7 +102,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Transportation distance: about 7-800km, single way
+                        {t("service.serviceDetails21AUG20.content6")}
                       </span>
                     </p>
                     <p>
@@ -109,7 +111,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Air pressure: about 120 Bar
+                        {t("service.serviceDetails21AUG20.content7")}
                       </span>
                     </p>
                     <p>
@@ -118,7 +120,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Route: Zhumadian - Nanjing and Zhumadian - Nanchang
+                        {t("service.serviceDetails21AUG20.content8")}
                       </span>
                     </p>
                     <p>
@@ -127,7 +129,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Tire assembling date: July 19, 2019
+                        {t("service.serviceDetails21AUG20.content9")}
                       </span>
                     </p>
                     <p>
@@ -136,7 +138,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Tire inspection date: November 12, 2019
+                        {t("service.serviceDetails21AUG20.content10")}
                       </span>
                     </p>
                     <p>
@@ -145,8 +147,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Remaining pattern: average 16.0mm (original pattern
-                        18mm)
+                        {t("service.serviceDetails21AUG20.content11")}
                       </span>
                     </p>
                     <p>
@@ -155,8 +156,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Driving mileage: 47,617km (228,656km when loading, now
-                        276,273km)
+                        {t("service.serviceDetails21AUG20.content12")}
                       </span>
                     </p>
                     <p>
@@ -165,7 +165,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Unit wear: 23,809km / mm
+                        {t("service.serviceDetails21AUG20.content13")}
                       </span>
                     </p>
                     <p>
@@ -174,7 +174,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Expected driving: 380,000km
+                        {t("service.serviceDetails21AUG20.content14")}
                       </span>
                     </p>
                     <p>
@@ -183,7 +183,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Evaluation of the effect:
+                        {t("service.serviceDetails21AUG20.content15")}
                       </span>
                     </p>
                     <p>
@@ -192,22 +192,7 @@ const ServiceDetails_21AUG20 = () => {
                           fontSize: "15px",
                           fontFamily: "Times New Roman, serif",
                         }}>
-                        Vehicles are engaged in the transportation of dangerous
-                        goods. There are only a few high-speed roads in the
-                        whole national road. There are 100km mountain roads to
-                        Wuhan, which requires high comprehensive performance of
-                        tires. At present, Hixih H262F has been in use for 4
-                        months. The store owner personally checked the tires and
-                        tracked them. The tread pattern is even and flat without
-                        falling and gnawing, and there is no tire eating and
-                        eccentric wear. The driver and the retail store are very
-                        satisfied with the current use effect of Hixih tire. The
-                        drivers used to use Hercules in the last stage and
-                        complained very badly. Mr.Ye of the big retail store now
-                        sells 30 pcs Hixih tires every month. Through data
-                        tracking, he is confident and ready to report to the
-                        surrounding dangerous goods fleet promotes Hixih
-                        products.
+                        {t("service.serviceDetails21AUG20.content16")}
                       </span>
                     </p>
                     <p>

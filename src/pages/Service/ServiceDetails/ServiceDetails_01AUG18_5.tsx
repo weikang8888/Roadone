@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -8,6 +9,8 @@ import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPre
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const ServiceDetails_01AUG18_5 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -30,45 +33,31 @@ const ServiceDetails_01AUG18_5 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
+
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.7")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
 
                   <div className="pinfo">
                     <div className="mb-3">
-                      <p>
-                        ◆&nbsp;The key to good grip is friction, but this can be
-                        a tricky problem because the friction depends on the
-                        ambient temperature.&nbsp;
-                      </p>
+                      <p>◆ {t("service.serviceDetails01AUG18_5.content1")}</p>
                     </div>
                     <div className="mb-3">
-                      <p>
-                        ◆&nbsp;Winter tyres are designed to ensure that driving
-                        under low temperatures is still soft and smooth, so they
-                        can be adapted to all the tiny pits on icy pavements,
-                        resulting in better grip.&nbsp;
-                      </p>
+                      <p>◆ {t("service.serviceDetails01AUG18_5.content2")}</p>
                     </div>
                     <div className="mb-3">
-                      <p>
-                        ◆ All-weather tyres are designed to enhance the adhesion
-                        of wetlands and snow conditions, and their fine furrows
-                        also help to provide occlusal surfaces, lock the tread
-                        and ground, and improve the grip of the wet land of the
-                        tires.
-                      </p>
+                      <p>◆ {t("service.serviceDetails01AUG18_5.content3")}</p>
                     </div>
                   </div>
 

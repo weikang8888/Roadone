@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -13,7 +15,8 @@ import ServiceDetailsImage4 from "./picture/sd4.webp";
 import ServiceDetailsImage5 from "./picture/sd5.webp";
 import ServiceDetailsImage6 from "./picture/sd6.webp";
 
-const ServiceDetails_19AUG21 = () => {
+const ServiceDetails_23JUL22 = () => {
+  const { t } = useTranslation();
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -30,27 +33,27 @@ const ServiceDetails_19AUG21 = () => {
 
   // Assuming you want to render the first news item
   const newsItem = newsItems.length > 0 ? newsItems[0] : null;
+
   return (
     <>
       <InnerBanner bannerimage={NewsBanner} />
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.0")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
-
                   <div className="pinfo">
                     <p style={{ textAlign: "center" }}>
                       <img
@@ -103,7 +106,6 @@ const ServiceDetails_19AUG21 = () => {
                       />
                     </p>
                   </div>
-
                   <DetailsButton />
                   <DetailsPreviousNext
                     prevText={"No information"}
@@ -123,4 +125,4 @@ const ServiceDetails_19AUG21 = () => {
   );
 };
 
-export default ServiceDetails_19AUG21;
+export default ServiceDetails_23JUL22;

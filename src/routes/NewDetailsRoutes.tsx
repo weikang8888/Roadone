@@ -7,7 +7,7 @@ import NewDetails_11JAN21 from "../pages/New/NewDetails/NewDetails_11JAN21";
 import NewDetails_30DEC20 from "../pages/New/NewDetails/NewDetails_30DEC20";
 import NewDetails_30NOV20 from "../pages/New/NewDetails/NewDetails_30NOV20";
 import NewDetails_10NOV20 from "../pages/New/NewDetails/NewDetails_10NOV20";
-import NewDetails_01SEP20 from "../pages/New/NewDetails/NewDetails_01SEP20_2";
+import NewDetails_01SEP20 from "../pages/New/NewDetails/NewDetails_01SEP20";
 import NewDetails_01SEP20_2 from "../pages/New/NewDetails/NewDetails_01SEP20_2";
 import NewDetails_21AUG20 from "../pages/New/NewDetails/NewDetails_21AUG20";
 import NewDetails_21AUG20_2 from "../pages/New/NewDetails/NewDetails_21AUG20_2";
@@ -24,6 +24,7 @@ import NewDetails_01AUG18_7 from "../pages/New/NewDetails/NewDetails_01AUG18_7";
 import NewDetails_01AUG18_8 from "../pages/New/NewDetails/NewDetails_01AUG18_8";
 import NewDetails_01AUG18_9 from "../pages/New/NewDetails/NewDetails_01AUG18_9";
 import NewDetails_01AUG18_10 from "../pages/New/NewDetails/NewDetails_01AUG18_10";
+import NewDetails_01AUG18_11 from "../pages/New/NewDetails/NewDetails_01AUG18_11";
 
 const NewDetailsRoutes = [
   { path: "385-65r22-5-new-pattern-hf281", component: NewDetails_19AUG21 },
@@ -119,6 +120,10 @@ const NewDetailsRoutes = [
   {
     path: "tyre-performance-standard",
     component: NewDetails_01AUG18_10,
+  },
+  {
+    path: "select-the-appropriate-tire",
+    component: NewDetails_01AUG18_11,
   },
 ];
 

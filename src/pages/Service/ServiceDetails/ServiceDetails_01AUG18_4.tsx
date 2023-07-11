@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import InnerBanner from "../../../component/Banner/InnerBanner";
 import SubMenu from "../../../component/SubMenu/SubMenu";
 import NewsBanner from "../../../static/image/news/news-banner.webp";
@@ -8,6 +9,8 @@ import DetailsPreviousNext from "../../../component/DetailsReused.tsx/DetailsPre
 import DetailsRelatedNews from "../../../component/DetailsReused.tsx/DetailsRelatedNews";
 
 const ServiceDetails_01AUG18_4 = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -30,17 +33,18 @@ const ServiceDetails_01AUG18_4 = () => {
 
       <section>
         <div className="container container1">
-          <div className="ejfl">Service</div>
+          <div className="ejfl">{t("submenu.service")}</div>
+
           <SubMenu
             previouslink="/news"
-            previouspage="News"
-            currentpage={"Content"}
+            previouspage={t("submenu.new")}
+            currentpage={t("submenu.content")}
           />
           <div className="main">
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{newsItem.title}</div>
+                  <div className="tit">{t("service.title.6")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
@@ -48,41 +52,33 @@ const ServiceDetails_01AUG18_4 = () => {
                   <div className="pinfo">
                     <div className="mb-3">
                       <p>
-                        <strong>Check:&nbsp;</strong>
+                        <strong>
+                          {t("service.serviceDetails01AUG18_4.content1")}
+                        </strong>
                       </p>
                       <p>
-                        <strong>1.Tire pressure.</strong>
+                        <strong>
+                          {t("service.serviceDetails01AUG18_4.content2")}
+                        </strong>
                       </p>
-                      <p>
-                        Driving smoothly from tires. Check the tire pressure
-                        before you travel and check at least once a month.
-                      </p>
-                      <p>
-                        ※ Note: Be sure to adjust the tire pressure to the door
-                        sign or the user manual for the recommended value of the
-                        car in the cold tyre condition. The inflated pressure
-                        shall not exceed the maximum limit value of the tyre
-                        side wall markings.
-                      </p>
+                      <p>{t("service.serviceDetails01AUG18_4.content3")}</p>
+                      <p>{t("service.serviceDetails01AUG18_4.content4")}</p>
                     </div>
                     <div className="mb-3">
                       <p>
-                        <strong>2. air filter.</strong>
+                        <strong>
+                          {t("service.serviceDetails01AUG18_4.content5")}
+                        </strong>
                       </p>
-                      <p>
-                        Replacing a clogged air filter can increase mileage per
-                        unit of petrol, thereby saving fuel consumption.&nbsp;
-                      </p>
-                    </div>{" "}
+                      <p>{t("service.serviceDetails01AUG18_4.content6")}</p>
+                    </div>
                     <div className="mb-3">
                       <p>
-                        <strong>3. Spark plugs.</strong>
+                        <strong>
+                          {t("service.serviceDetails01AUG18_4.content7")}
+                        </strong>
                       </p>
-                      <p>
-                        Wear or dirty spark plugs can cause ignition failure and
-                        waste of fuel. 4. Fuel tank cover. Damage, loosening or
-                        loss of the tank cover can waste petrol.
-                      </p>
+                      <p>{t("service.serviceDetails01AUG18_4.content8")}</p>
                     </div>
                   </div>
 
