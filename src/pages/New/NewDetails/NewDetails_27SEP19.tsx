@@ -394,12 +394,10 @@ const NewDetails_27SEP19 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"265/70r19.5 NEW TYRE"}
+                    prevText={t("new.title.12")}
                     prevLink="/news/265-70r19-5-new-tyre"
                     nextLink="/news/roadone-attend-philauto-at-24th-to-26th-july-2019"
-                    nextText={
-                      "Road One Attend PHILAUTO At 24th To 26th , July , 2019"
-                    }
+                    nextText={t("new.title.14")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

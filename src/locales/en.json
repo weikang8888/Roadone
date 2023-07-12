@@ -62,7 +62,9 @@
     "copyRight": "Copyright © Tongli Tyre Co.,Ltd All Rights Reserved."
   },
   "other": {
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "relatedNews": "Related News",
+    "noInformation": "No Information"
   },
   "submenu": {
     "product": "Product",
@@ -496,130 +498,130 @@
       "The signal found Tread wear indication points: these hard rubber wear points are designed to appear when the tread of your tyre is about to be polished. If these wear indicators show up, you need to buy a new one.",
       "Change the position once per 10,000km-12,000km or every 6 months to ensure uniform tire wear The tyre transposition helps the uniform wear of all components. It even helps to prolong the life of the tyres and gain a bala",
       "The rubber in your tires mixes up to 30 ingredients, and the ratio of raw materials depends on the performance targets of the tyres."
-    ]
-  },
-  "serviceDetails21AUG20": {
-    "content1": "Chinese Henan Zhumadian Hixih customer 12r22.5 18PR H262 case",
-    "content2": "Model: 1F + 2D + 3T semitrailer",
-    "content3": "Wheel position: guide wheel",
-    "content4": "Goods: dangerous goods (acetic acid) standard load",
-    "content5": "Road condition: few highways, more than 95% are national roads",
-    "content6": "Transportation distance: about 7-800km, single way",
-    "content7": "Air pressure: about 120 Bar",
-    "content8": "Route: Zhumadian - Nanjing and Zhumadian - Nanchang",
-    "content9": "Tire assembling date: July 19, 2019",
-    "content10": "Tire inspection date: November 12, 2019",
-    "content11": "Remaining pattern: average 16.0mm (original pattern 18mm)",
-    "content12": "Driving mileage: 47,617km (228,656km when loading, now 276,273km)",
-    "content13": "Unit wear: 23,809km / mm",
-    "content14": "Expected driving: 380,000km",
-    "content15": "Evaluation of the effect:",
-    "content16": "Vehicles are engaged in the transportation of dangerous goods. There are only a few high-speed roads in the whole national road. There are 100km mountain roads to Wuhan, which requires high comprehensive performance of tires. At present, Hixih H262F has been in use for 4 months. The store owner personally checked the tires and tracked them. The tread pattern is even and flat without falling and gnawing, and there is no tire eating and eccentric wear. The driver and the retail store are very satisfied with the current use effect of Hixih tire. The drivers used to use Hercules in the last stage and complained very badly. Mr.Ye of the big retail store now sells 30 pcs Hixih tires every month. Through data tracking, he is confident and ready to report to the surrounding dangerous goods fleet promotes Hixih products."
-  },
-  "serviceDetails01AUG18": {
-    "content1": "Regular and proper rotation of tires can make the tire wear more evenly.",
-    "content2": "All all-weather tyres should be rotated in a `cross forward` manner, wherein the two tyres to the drive shaft should be crossed forward and the remaining two tires should be moved from the drive shaft to the free scroll shaft and mounted on the original side. This method ensures that all four tires have more uniform wear on the tread lines.",
-    "content3": "The only exception to this method is the use of `single Guide` tires, which should rotate around the same side.",
-    "content4": "If it is a four-wheel drive vehicle, we recommend that all two pairs of tyres be rotated to a new position on the drive shaft.",
-    "content5": "For conventional vehicles, the tyres should be rotated at least once every 10,000 kilometres, and four-wheel-drive vehicles should rotate once every 6,000 kilometres. Please consult the vehicle User manual for the manufacturer's rotation recommendations. The first rotation is the most important. When the tyre is rotated, the tire pressure must be adjusted to the recommended value of the vehicle manufacturer."
-  },
-  "serviceDetails01AUG18_2": {
-    "content1": "Of course I will. Here are some tips for prolonging tyre life:",
-    "content2": "1. Do not speed. High-speed driving can produce too much heat.These calories increase the wear speed of tires and reduce the durability of tyres.",
-    "content3": "2. Avoid turning too fast in corners and corner sections, or stop blows abruptly.",
-    "content4": "3. No traffic shall be made on the edge of the road, Lu Yan, pits or other obstacles."
-  },
-  "serviceDetails01AUG18_3": {
-    "content1": "Find tyre size and other information according to the following figure:",
-    "content2": "1. Tyre cross-section width (mm)",
-    "content3": "2. Ratio of section height to section width (%)",
-    "content4": "3. Tyre structure (r= meridian)",
-    "content5": "4. Rim diameter (inches)",
-    "content6": "5. Max load Capacity (load index)",
-    "content7": "6. Rated speed",
-    "content8": "7. Tyre without inner tire",
-    "content9": "8. Tread Wear indicator Strip position",
-    "content10": "9. ECE tyre recognition mark and number",
-    "content11": "10. Winter mud and snow driving capacity",
-    "content12": "11. Production date (week, year)",
-    "content13": "12. Traffic compliance Symbol",
-    "content14": "13. Ministry of communications manufacturer Code/li>",
-    "content15": "14. Origin",
-    "content16": "15. Product Name",
-    "content17": "16. Tyre structure Details (Ministry of Transportation)",
-    "content18": "17. Load and pressure signs (Ministry of Transport)",
-    "content19": "18. Tyre type (meridian) Logo (Quality level) required by U.S. Consumer information regulations"
-  },
-  "serviceDetails01AUG18_4": {
-    "content1": "Check:",
-    "content2": "1.Tire pressure.",
-    "content3": "Driving smoothly from tires. Check the tire pressure before you travel and check at least once a month.",
-    "content4": "※ Note: Be sure to adjust the tire pressure to the door sign or the user manual for the recommended value of the car in the cold tyre condition. The inflated pressure shall not exceed the maximum limit value of the tyre side wall markings.",
-    "content5": "2. air filter.",
-    "content6": "Replacing a clogged air filter can increase mileage per unit of petrol, thereby saving fuel consumption.",
-    "content7": "3. Spark plugs.",
-    "content8": "Wear or dirty spark plugs can cause ignition failure and waste of fuel. 4. Fuel tank cover. Damage, loosening or loss of the tank cover can waste petrol."
-  },
-  "serviceDetails01AUG18_5": {
-    "content1": "The key to good grip is friction, but this can be a tricky problem because the friction depends on the ambient temperature.",
-    "content2": "Winter tyres are designed to ensure that driving under low temperatures is still soft and smooth, so they can be adapted to all the tiny pits on icy pavements,resulting in better grip.",
-    "content3": "All-weather tyres are designed to enhance the adhesion of wetlands and snow conditions, and their fine furrows also help to provide occlusal surfaces, lock the tread and ground, and improve the grip of the wet land of the tires."
-  },
-  "serviceDetails01AUG18_6": {
-    "content1": "1. Look for tires with excellent braking and control test results.",
-    "content2": "2. Tread wear, driving comfort, noise and rolling resistance and other factors help narrow the range of selection.",
-    "content3": "3. The choice of car tyres depends on your area of residence, weather and road conditions, as well as customer expectations of tyre performance and requirements for vehicles."
-  },
-  "serviceDetails01AUG18_7": {
-    "content1": "1. Buy a tire gauge or use the tire pressure gauge of the tyre shop;",
-    "content2": "2. The first priority is to check the tyre pressure in the morning or in the condition of the tire cooling.",
-    "content3": "3. After the vehicle is driven, the temperature of the tyre will increase and affect the tire pressure value;",
-    "content4": "4. Unscrew the valve cap and put the tire pressure gauge on the valve mouth, it is normal to hear a short hissing sound;",
-    "content5": "5. Read the value of the pressure gauge and compare it with the proposed value of the vehicle (bar or PSI);",
-    "content6": "6. Adjust the pressure, or inflate in the tire shop;",
-    "content7": "7. Re-use the barometer to check the tyre pressure and check with the manufacturer's parameters; 8. Tighten the valve cap of each tyre"
-  },
-  "serviceDetails01AUG18_8": {
-    "content1": "Tyre replacement",
-    "content2": "Regular inspection and maintenance of your tires will help prolong their life, but all tires will eventually be polished. The service life of tyres is different. It depends on your driving habits, the climate of your place of residence and how you maintain your tyres.",
-    "content3": "All polished or damaged tyres will need to be replaced. Tyre wear: Even the best maintenance does not prevent the tread from being polished over time. Most tyres have a wear indication point. These indicators, usually 1.6mm high, are the minimum tread depth that indicates safe driving.",
-    "content4": "You should also check the tread uneven wear patterns to find other problems that may exist for your tires or vehicles. Obvious damage: Please check fetal side and tread for damage. If you find a small crack in the sidewall-also known as a crack-it means it's time to change the tyre. The sidewall is not very thick, and the damaged sidewall may cause the tyre to be unusable.",
-    "content5": "You also need to check the tread, tire shoulder and sidewall bulge, bubble, cut or rip, which is a clear signal that you need a new tyre, even if the tyre is not polished. When purchasing a tyre replacement, it is best to replace all four tyres at a time. If you only buy two, make sure they match the worn tires and make sure they are mounted in the rear axle of the car, which provides better traction and stability when you drive."
-  },
-  "serviceDetails01AUG18_9": {
-    "content1": "The signal found Tread wear indication points: these hard rubber wear points are designed to appear when the tread of your tyre is about to be polished. If these wear indicators show up, you need to buy a new one.",
-    "content2": "If you are unsure of their location, you can see the symbols associated with their location on the sidewall; Tire tread Wear: The minimum depth of tread residual pattern should be between 2-3mm. It's a good idea to buy a trench deep ruler that is not expensive to check the minimum tread pattern depth required by law.",
-    "content3": "Make sure that you also measure the depth of the outside and inside of the tread.",
-    "content4": "A small object is stuck in the tread: it is often seen that a small object is stuck in the tread, if it's stuck in a trench, be careful to take them out to avoid damaging the tires; if a dot looks like it's wearing rubber, like a nail, don't move it before it is delivered to the repair shop, which may cause the tyre to lose tyre pressure. Tire Lateral Wear: If you find that your tires have both sides of the tread pattern wear, you may need to fill the gas or check whether the leak. Tyre pressure will naturally decrease, but driving in a state of lack of gas will increase fuel consumption and increase the risk of accidents. Make sure the tire pressure is checked regularly.",
-    "content5": "If you only found a tire shoulder wear on the front wheel, it is possible that the snake is driving or turning too fast. Tread Center Excessive wear: If the tread center than two shoulder wear larger, may be inflated pressure, this will increase the risk of puncture.",
-    "content6": "Please refer to the requirements of the depot and use the barometer to release gas to the recommended tyre pressure value of the depot. Uneven wear of a single tyre: tread wear patterns will remind you of possible problems with the vehicle. If you find that the pattern pitch uneven wear, or bald spots, may need to do the wheel's dynamic balance or positioning.",
-    "content7": "Sometimes bald spot wear indicates shock absorber wear, please consult a professional to solve. Uneven wear on tyre marks: your tires will not be polished at the same speed. The front axle bears the engine and most of the steering work, so the tires on the front axle will be polished more quickly. If they are found to be faster than normal wear and tear, check the suspension system.",
-    "content8": "If the tyre on one side of the vehicle is more worn than the other side, it may be necessary to locate it. Tire edge serrated edge pattern wear: If you find that your tires have a predestined or feathery appearance along the edges, the possible cause is an unstable friction on the road. This may be a need for positioning."
-  },
-  "serviceDetails01AUG18_10": {
-    "content1": "Change the position once per 10,000km-12,000km or every 6 months to ensure uniform tire wear The tyre transposition helps the uniform wear of all components. It even helps to prolong the life of the tyres and gain a balanced control and traction. Regular tire transposition helps keep the vehicle running smoothly and smoothly.",
-    "content2": "It is also possible to change the tires when the oil is changed for the second time. Why do you want to change the position of the tyre? Tires in front of the vehicle usually wear faster than the rear. If you constantly change their position, this helps them to wear more evenly and achieve maximum tread life.",
-    "content3": "Remember that the tyre transposition does not solve the problem of wear caused by tire pressure discomfort. How often do I have to switch places? Each time you change the oil (approximately every 10,000-12,000km), you can change the tyre. If you often drive at high speeds, transport heavy weights, or travel long distances, this extra pressure means that you can switch places a little more frequently. If you find any uneven wear conditions, you need to change the position as soon as possible.",
-    "content4": "When you're driving on a flat road if they're buzzing, it's time to think about changing places. Can I make a replacement for my own tires? Since the proper installation of tyres is important, we recommend that you go to your agent or tire shop to be operated by a professional.",
-    "content5": "But it's also pretty easy to do it yourself, and it helps you understand how it works without any special tools, just a little time and space.",
-    "content6": "To get any advice from the manufacturer of the vehicle, check the owner's manual provided by the car factory.",
-    "content7": "It is recommended that you follow the pattern shown in the following figure for the tire transposition",
-    "content8": "Can be used only when all tyre specifications are the same (pattern a-d)",
-    "content9": "The front axle and rear axle of some vehicles are fitted with different specifications of tires and wheels, and in this case pattern E is recommended (if the tyres are installed without rotation direction). The arrow on the tread is observed at any time in the transposition of the tyre with the rotation direction of the tread pattern. These arrows indicate the rotation direction of the tires that must be carefully adhered to.",
-    "content10": "If these tyres are of the same specification, follow pattern a transposition. Using different specifications of the tires with directional requirements or the front axle and rear axle with different bias values the directional tyres of the wheel need to be dismantled tires, installed and rebalanced to carry out the correct transposition – often check your owner's manual to obtain any suggestions from the automaker."
-  },
-  "serviceDetails01AUG18_11": {
-    "content1": "1.Mixing",
-    "content2": "The rubber in your tires mixes up to 30 ingredients, and the ratio of raw materials depends on the performance targets of the tyres.",
-    "content3": "It is made up of various types of rubber, fillers, and other raw materials, which are mixed together in a giant blender called the Banbury Mixer to produce a black sticky rubber that will be used for calendering.",
-    "content4": "2. Rolling",
-    "content5": "After the rubber is cooled, it is sent to a special mixer, where the rubber is cut into strips that form the basic structure of the tyre.",
-    "content6": "At this stage, other parts of the tyre will be prepared, some of which will cover another type of rubber.",
-    "content7": "3. Molding",
-    "content8": "From inside to outside into the tyre itself. Fibre fabric, wire harness, bead, ply, tread and other components are placed in a tyre forming machine to ensure that each part is in its exact position.",
-    "content9": "The output looks somewhat like the final product, called the birth tire.",
-    "content10": "4. Sulphur",
-    "content11": "The raw tire is placed in a heated mold and is pressurized and cured for vulcanization, and all tyre parts are pressed together and given the final shape of the tyre, including its tread pattern and the manufacturer's sidewall markings."
+    ],
+    "serviceDetails21AUG20": {
+      "content1": "Chinese Henan Zhumadian Hixih customer 12r22.5 18PR H262 case",
+      "content2": "Model: 1F + 2D + 3T semitrailer",
+      "content3": "Wheel position: guide wheel",
+      "content4": "Goods: dangerous goods (acetic acid) standard load",
+      "content5": "Road condition: few highways, more than 95% are national roads",
+      "content6": "Transportation distance: about 7-800km, single way",
+      "content7": "Air pressure: about 120 Bar",
+      "content8": "Route: Zhumadian - Nanjing and Zhumadian - Nanchang",
+      "content9": "Tire assembling date: July 19, 2019",
+      "content10": "Tire inspection date: November 12, 2019",
+      "content11": "Remaining pattern: average 16.0mm (original pattern 18mm)",
+      "content12": "Driving mileage: 47,617km (228,656km when loading, now 276,273km)",
+      "content13": "Unit wear: 23,809km / mm",
+      "content14": "Expected driving: 380,000km",
+      "content15": "Evaluation of the effect:",
+      "content16": "Vehicles are engaged in the transportation of dangerous goods. There are only a few high-speed roads in the whole national road. There are 100km mountain roads to Wuhan, which requires high comprehensive performance of tires. At present, Hixih H262F has been in use for 4 months. The store owner personally checked the tires and tracked them. The tread pattern is even and flat without falling and gnawing, and there is no tire eating and eccentric wear. The driver and the retail store are very satisfied with the current use effect of Hixih tire. The drivers used to use Hercules in the last stage and complained very badly. Mr.Ye of the big retail store now sells 30 pcs Hixih tires every month. Through data tracking, he is confident and ready to report to the surrounding dangerous goods fleet promotes Hixih products."
+    },
+    "serviceDetails01AUG18": {
+      "content1": "Regular and proper rotation of tires can make the tire wear more evenly.",
+      "content2": "All all-weather tyres should be rotated in a `cross forward` manner, wherein the two tyres to the drive shaft should be crossed forward and the remaining two tires should be moved from the drive shaft to the free scroll shaft and mounted on the original side. This method ensures that all four tires have more uniform wear on the tread lines.",
+      "content3": "The only exception to this method is the use of `single Guide` tires, which should rotate around the same side.",
+      "content4": "If it is a four-wheel drive vehicle, we recommend that all two pairs of tyres be rotated to a new position on the drive shaft.",
+      "content5": "For conventional vehicles, the tyres should be rotated at least once every 10,000 kilometres, and four-wheel-drive vehicles should rotate once every 6,000 kilometres. Please consult the vehicle User manual for the manufacturer's rotation recommendations. The first rotation is the most important. When the tyre is rotated, the tire pressure must be adjusted to the recommended value of the vehicle manufacturer."
+    },
+    "serviceDetails01AUG18_2": {
+      "content1": "Of course I will. Here are some tips for prolonging tyre life:",
+      "content2": "1. Do not speed. High-speed driving can produce too much heat.These calories increase the wear speed of tires and reduce the durability of tyres.",
+      "content3": "2. Avoid turning too fast in corners and corner sections, or stop blows abruptly.",
+      "content4": "3. No traffic shall be made on the edge of the road, Lu Yan, pits or other obstacles."
+    },
+    "serviceDetails01AUG18_3": {
+      "content1": "Find tyre size and other information according to the following figure:",
+      "content2": "1. Tyre cross-section width (mm)",
+      "content3": "2. Ratio of section height to section width (%)",
+      "content4": "3. Tyre structure (r= meridian)",
+      "content5": "4. Rim diameter (inches)",
+      "content6": "5. Max load Capacity (load index)",
+      "content7": "6. Rated speed",
+      "content8": "7. Tyre without inner tire",
+      "content9": "8. Tread Wear indicator Strip position",
+      "content10": "9. ECE tyre recognition mark and number",
+      "content11": "10. Winter mud and snow driving capacity",
+      "content12": "11. Production date (week, year)",
+      "content13": "12. Traffic compliance Symbol",
+      "content14": "13. Ministry of communications manufacturer Code/li>",
+      "content15": "14. Origin",
+      "content16": "15. Product Name",
+      "content17": "16. Tyre structure Details (Ministry of Transportation)",
+      "content18": "17. Load and pressure signs (Ministry of Transport)",
+      "content19": "18. Tyre type (meridian) Logo (Quality level) required by U.S. Consumer information regulations"
+    },
+    "serviceDetails01AUG18_4": {
+      "content1": "Check:",
+      "content2": "1.Tire pressure.",
+      "content3": "Driving smoothly from tires. Check the tire pressure before you travel and check at least once a month.",
+      "content4": "※ Note: Be sure to adjust the tire pressure to the door sign or the user manual for the recommended value of the car in the cold tyre condition. The inflated pressure shall not exceed the maximum limit value of the tyre side wall markings.",
+      "content5": "2. air filter.",
+      "content6": "Replacing a clogged air filter can increase mileage per unit of petrol, thereby saving fuel consumption.",
+      "content7": "3. Spark plugs.",
+      "content8": "Wear or dirty spark plugs can cause ignition failure and waste of fuel. 4. Fuel tank cover. Damage, loosening or loss of the tank cover can waste petrol."
+    },
+    "serviceDetails01AUG18_5": {
+      "content1": "The key to good grip is friction, but this can be a tricky problem because the friction depends on the ambient temperature.",
+      "content2": "Winter tyres are designed to ensure that driving under low temperatures is still soft and smooth, so they can be adapted to all the tiny pits on icy pavements,resulting in better grip.",
+      "content3": "All-weather tyres are designed to enhance the adhesion of wetlands and snow conditions, and their fine furrows also help to provide occlusal surfaces, lock the tread and ground, and improve the grip of the wet land of the tires."
+    },
+    "serviceDetails01AUG18_6": {
+      "content1": "1. Look for tires with excellent braking and control test results.",
+      "content2": "2. Tread wear, driving comfort, noise and rolling resistance and other factors help narrow the range of selection.",
+      "content3": "3. The choice of car tyres depends on your area of residence, weather and road conditions, as well as customer expectations of tyre performance and requirements for vehicles."
+    },
+    "serviceDetails01AUG18_7": {
+      "content1": "1. Buy a tire gauge or use the tire pressure gauge of the tyre shop;",
+      "content2": "2. The first priority is to check the tyre pressure in the morning or in the condition of the tire cooling.",
+      "content3": "3. After the vehicle is driven, the temperature of the tyre will increase and affect the tire pressure value;",
+      "content4": "4. Unscrew the valve cap and put the tire pressure gauge on the valve mouth, it is normal to hear a short hissing sound;",
+      "content5": "5. Read the value of the pressure gauge and compare it with the proposed value of the vehicle (bar or PSI);",
+      "content6": "6. Adjust the pressure, or inflate in the tire shop;",
+      "content7": "7. Re-use the barometer to check the tyre pressure and check with the manufacturer's parameters; 8. Tighten the valve cap of each tyre"
+    },
+    "serviceDetails01AUG18_8": {
+      "content1": "Tyre replacement",
+      "content2": "Regular inspection and maintenance of your tires will help prolong their life, but all tires will eventually be polished. The service life of tyres is different. It depends on your driving habits, the climate of your place of residence and how you maintain your tyres.",
+      "content3": "All polished or damaged tyres will need to be replaced. Tyre wear: Even the best maintenance does not prevent the tread from being polished over time. Most tyres have a wear indication point. These indicators, usually 1.6mm high, are the minimum tread depth that indicates safe driving.",
+      "content4": "You should also check the tread uneven wear patterns to find other problems that may exist for your tires or vehicles. Obvious damage: Please check fetal side and tread for damage. If you find a small crack in the sidewall-also known as a crack-it means it's time to change the tyre. The sidewall is not very thick, and the damaged sidewall may cause the tyre to be unusable.",
+      "content5": "You also need to check the tread, tire shoulder and sidewall bulge, bubble, cut or rip, which is a clear signal that you need a new tyre, even if the tyre is not polished. When purchasing a tyre replacement, it is best to replace all four tyres at a time. If you only buy two, make sure they match the worn tires and make sure they are mounted in the rear axle of the car, which provides better traction and stability when you drive."
+    },
+    "serviceDetails01AUG18_9": {
+      "content1": "The signal found Tread wear indication points: these hard rubber wear points are designed to appear when the tread of your tyre is about to be polished. If these wear indicators show up, you need to buy a new one.",
+      "content2": "If you are unsure of their location, you can see the symbols associated with their location on the sidewall; Tire tread Wear: The minimum depth of tread residual pattern should be between 2-3mm. It's a good idea to buy a trench deep ruler that is not expensive to check the minimum tread pattern depth required by law.",
+      "content3": "Make sure that you also measure the depth of the outside and inside of the tread.",
+      "content4": "A small object is stuck in the tread: it is often seen that a small object is stuck in the tread, if it's stuck in a trench, be careful to take them out to avoid damaging the tires; if a dot looks like it's wearing rubber, like a nail, don't move it before it is delivered to the repair shop, which may cause the tyre to lose tyre pressure. Tire Lateral Wear: If you find that your tires have both sides of the tread pattern wear, you may need to fill the gas or check whether the leak. Tyre pressure will naturally decrease, but driving in a state of lack of gas will increase fuel consumption and increase the risk of accidents. Make sure the tire pressure is checked regularly.",
+      "content5": "If you only found a tire shoulder wear on the front wheel, it is possible that the snake is driving or turning too fast. Tread Center Excessive wear: If the tread center than two shoulder wear larger, may be inflated pressure, this will increase the risk of puncture.",
+      "content6": "Please refer to the requirements of the depot and use the barometer to release gas to the recommended tyre pressure value of the depot. Uneven wear of a single tyre: tread wear patterns will remind you of possible problems with the vehicle. If you find that the pattern pitch uneven wear, or bald spots, may need to do the wheel's dynamic balance or positioning.",
+      "content7": "Sometimes bald spot wear indicates shock absorber wear, please consult a professional to solve. Uneven wear on tyre marks: your tires will not be polished at the same speed. The front axle bears the engine and most of the steering work, so the tires on the front axle will be polished more quickly. If they are found to be faster than normal wear and tear, check the suspension system.",
+      "content8": "If the tyre on one side of the vehicle is more worn than the other side, it may be necessary to locate it. Tire edge serrated edge pattern wear: If you find that your tires have a predestined or feathery appearance along the edges, the possible cause is an unstable friction on the road. This may be a need for positioning."
+    },
+    "serviceDetails01AUG18_10": {
+      "content1": "Change the position once per 10,000km-12,000km or every 6 months to ensure uniform tire wear The tyre transposition helps the uniform wear of all components. It even helps to prolong the life of the tyres and gain a balanced control and traction. Regular tire transposition helps keep the vehicle running smoothly and smoothly.",
+      "content2": "It is also possible to change the tires when the oil is changed for the second time. Why do you want to change the position of the tyre? Tires in front of the vehicle usually wear faster than the rear. If you constantly change their position, this helps them to wear more evenly and achieve maximum tread life.",
+      "content3": "Remember that the tyre transposition does not solve the problem of wear caused by tire pressure discomfort. How often do I have to switch places? Each time you change the oil (approximately every 10,000-12,000km), you can change the tyre. If you often drive at high speeds, transport heavy weights, or travel long distances, this extra pressure means that you can switch places a little more frequently. If you find any uneven wear conditions, you need to change the position as soon as possible.",
+      "content4": "When you're driving on a flat road if they're buzzing, it's time to think about changing places. Can I make a replacement for my own tires? Since the proper installation of tyres is important, we recommend that you go to your agent or tire shop to be operated by a professional.",
+      "content5": "But it's also pretty easy to do it yourself, and it helps you understand how it works without any special tools, just a little time and space.",
+      "content6": "To get any advice from the manufacturer of the vehicle, check the owner's manual provided by the car factory.",
+      "content7": "It is recommended that you follow the pattern shown in the following figure for the tire transposition",
+      "content8": "Can be used only when all tyre specifications are the same (pattern a-d)",
+      "content9": "The front axle and rear axle of some vehicles are fitted with different specifications of tires and wheels, and in this case pattern E is recommended (if the tyres are installed without rotation direction). The arrow on the tread is observed at any time in the transposition of the tyre with the rotation direction of the tread pattern. These arrows indicate the rotation direction of the tires that must be carefully adhered to.",
+      "content10": "If these tyres are of the same specification, follow pattern a transposition. Using different specifications of the tires with directional requirements or the front axle and rear axle with different bias values the directional tyres of the wheel need to be dismantled tires, installed and rebalanced to carry out the correct transposition – often check your owner's manual to obtain any suggestions from the automaker."
+    },
+    "serviceDetails01AUG18_11": {
+      "content1": "1.Mixing",
+      "content2": "The rubber in your tires mixes up to 30 ingredients, and the ratio of raw materials depends on the performance targets of the tyres.",
+      "content3": "It is made up of various types of rubber, fillers, and other raw materials, which are mixed together in a giant blender called the Banbury Mixer to produce a black sticky rubber that will be used for calendering.",
+      "content4": "2. Rolling",
+      "content5": "After the rubber is cooled, it is sent to a special mixer, where the rubber is cut into strips that form the basic structure of the tyre.",
+      "content6": "At this stage, other parts of the tyre will be prepared, some of which will cover another type of rubber.",
+      "content7": "3. Molding",
+      "content8": "From inside to outside into the tyre itself. Fibre fabric, wire harness, bead, ply, tread and other components are placed in a tyre forming machine to ensure that each part is in its exact position.",
+      "content9": "The output looks somewhat like the final product, called the birth tire.",
+      "content10": "4. Sulphur",
+      "content11": "The raw tire is placed in a heated mold and is pressurized and cured for vulcanization, and all tyre parts are pressed together and given the final shape of the tyre, including its tread pattern and the manufacturer's sidewall markings."
+    } 
   },
 
   "tableHeaders": {

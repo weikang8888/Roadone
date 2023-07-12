@@ -206,11 +206,9 @@ const ServiceDetails_21AUG20 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "ROADONE Truck tire at Lybia 12.00R24 heavy load tires"
-                    }
+                    prevText={t("service.title.0")}
                     prevLink="/services/roadone-truck-tire-at-lybia-1200r24-heavy-load-tires"
-                    nextText={"ROADONE CAMBODIAN AGENT MEETING"}
+                    nextText={t("service.title.2")}
                     nextLink="/services/roadone-cambodian-agent-meeting"
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />

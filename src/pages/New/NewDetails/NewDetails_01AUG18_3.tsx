@@ -60,10 +60,10 @@ const NewDetails_21AUG20 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"Tyre Pressure: Why Is It Important?"}
+                    prevText={t("new.title.16")}
                     prevLink="/news/tyre-pressure-why-is-it-important"
                     nextLink="/news/inspection-and-repair-of-tyres"
-                    nextText={"Inspection And Repair Of Tyres"}
+                    nextText={t("new.title.18")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

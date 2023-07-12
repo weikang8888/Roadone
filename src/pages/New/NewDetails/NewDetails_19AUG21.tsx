@@ -259,9 +259,9 @@ const NewDetails_19AUG21 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"No informtaion"}
+                    prevText={t("other.noInformation")}
                     nextLink="/news/roadone-12-00r20-new-truck-tire-road-test"
-                    nextText={"HD520 PATTERN ROAD TEST"}
+                    nextText={t("new.title.1")}
                   />
                   <DetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

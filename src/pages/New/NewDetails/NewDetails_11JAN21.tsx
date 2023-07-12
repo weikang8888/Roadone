@@ -49,7 +49,7 @@ const NewDetails_11JAN21 = () => {
             <div className="newcon clearfix">
               {newsItem && (
                 <>
-                  <div className="tit">{t("new.title.5")}</div>
+                  <div className="tit">{t("new.title.4")}</div>
                   <div className="time">
                     - {newsItem.daymonth}, {newsItem.year} -
                   </div>
@@ -100,10 +100,10 @@ const NewDetails_11JAN21 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"XCMG Feedback Award To Tongli Tire Co,. Ltd"}
+                    prevText={t("new.title.3")}
                     prevLink="/news/xcmg-feedback-award-to-tongli-tire-co-ltd"
                     nextLink="/news/hixih-steel-wire-rope-co-ltd"
-                    nextText={"HIXIH Steel Wire Rope Co,. Ltd"}
+                    nextText={t("new.title.5")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

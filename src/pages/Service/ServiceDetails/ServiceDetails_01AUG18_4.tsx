@@ -84,14 +84,10 @@ const ServiceDetails_01AUG18_4 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "What is the meaning of the markings on the sidewall of the tyre?"
-                    }
+                    prevText={t("service.title.5")}
                     prevLink="/services/what-is-the-meaning-of-the-markings-on-the-sidewall-of-the-tyre"
                     nextLink="/services/all-weather-ang-winter-tires"
-                    nextText={
-                      "All weather and winter tires: What's the difference?"
-                    }
+                    nextText={t("service.title.7")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

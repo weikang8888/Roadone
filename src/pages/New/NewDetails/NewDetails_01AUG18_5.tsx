@@ -61,10 +61,10 @@ const NewDetails_21AUG20_5 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"Inspection And Repair Of Tyres"}
+                    prevText={t("new.title.18")}
                     prevLink="/news/inspection-and-repair-of-tyres"
                     nextLink="/news/tyre-maintenance-and-maintenance-guide"
-                    nextText={"Tyre Maintenance And Maintenance Guide"}
+                    nextText={t("new.title.20")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

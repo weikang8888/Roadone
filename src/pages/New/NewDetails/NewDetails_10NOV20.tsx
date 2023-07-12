@@ -314,12 +314,10 @@ const NewDetails_20JAN21 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"HD520 PATTERN ROAD TEST"}
+                    prevText={t("new.title.6")}
                     prevLink="/news/hd520-pattern-road-test"
                     nextLink="/news/roadone-becomes-good-supplier-of-the-china-famous-truck-company"
-                    nextText={
-                      "ROADONE Becomes Good Supplier Of The China Famous Truck Company"
-                    }
+                    nextText={t("new.title.8")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

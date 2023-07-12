@@ -63,12 +63,10 @@ const ServiceDetails_01AUG18_6 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "All weather and winter tires: What's the difference?"
-                    }
+                    prevText={t("service.title.7")}
                     prevLink="/services/all-weather-ang-winter-tires"
                     nextLink="/services/how-to-check-tire-pressure"
-                    nextText={"How to check tire pressure"}
+                    nextText={t("service.title.9")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

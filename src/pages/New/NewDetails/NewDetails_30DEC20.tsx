@@ -180,10 +180,10 @@ const NewDetails_30DEC20 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"Hixih & Continental Cooperation"}
+                    prevText={t("new.title.4")}
                     prevLink="/news/hixih-continental-cooperation"
                     nextLink="/news/hd520-pattern-road-test"
-                    nextText={"HD520 PATTERN ROAD TEST"}
+                    nextText={t("new.title.6")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

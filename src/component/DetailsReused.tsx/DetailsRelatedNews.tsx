@@ -3,6 +3,8 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 const DetailsRelatedNews = ({ ids }) => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
@@ -20,12 +22,12 @@ const DetailsRelatedNews = ({ ids }) => {
   return (
     <>
       <div className="rnews clearfix">
-        <h3>Related News</h3>
+        <h3>{t("other.relatedNews")}</h3>
         <ul>
           {newsItems.map((item, index) => (
             <li key={index}>
               <a href={item.href} target="_blank" rel="noopener noreferrer">
-                {item.title}
+                {t(`new.title.${index}`)}
               </a>
             </li>
           ))}

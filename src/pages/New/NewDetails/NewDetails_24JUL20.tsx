@@ -74,12 +74,10 @@ const NewDetails_24JUL20 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "ROADONE TYRE NATIONAL AGENT MEETING (Annual Celebration)"
-                    }
+                    prevText={t("new.title.11")}
                     prevLink="/news/roadone-tyre-national-agent-meeting"
                     nextLink="/news/roadone-tyre-in-pakistan-ceremony"
-                    nextText={"Roadone Tyre In Pakistan Ceremony"}
+                    nextText={t("new.title.13")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

@@ -82,11 +82,9 @@ const ServiceDetails_20JUL22 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "Henan Zhumadian Hixih customer 12r22.5 18PR H262 case"
-                    }
+                    prevText={t("service.title.1")}
                     prevLink="/services/henan-zhumadian-hixih-customer-12r22.5-18pr-h262-case"
-                    nextText={"Should the tires be rotated?"}
+                    nextText={t("service.title.3")}
                     nextLink="/services/should-the-tires-be-rotated"
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />

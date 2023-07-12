@@ -104,10 +104,10 @@ const NewDetails_01SEP20 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"14.00R20 Special Off-road Tyres"}
+                    prevText={t("new.title.7")}
                     prevLink="/news/14-00r20-special-off-road-tyres"
                     nextLink="/news/roadone-m665a-heavy-duty-13r22.5-test"
-                    nextText={"Roadone M665A Heavy Duty 13R22.5 Test"}
+                    nextText={t("new.title.9")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

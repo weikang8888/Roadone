@@ -409,9 +409,9 @@ const NewDetails_19AUG21 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"385/65R22.5 New Pattern HF281"}
+                    prevText={t("new.title.0")}
                     prevLink="/news/385-65r22-5-new-pattern-hf281"
-                    nextText={"295/80R22.5 HF21 Truck Tire Test"}
+                    nextText={t("new.title.2")}
                     nextLink="/news/295-80r22-5-hf21-truck-tire-test"
                   />
                   <DetailsRelatedNews ids="2,3,4,5,6,7,8,9,10,11" />

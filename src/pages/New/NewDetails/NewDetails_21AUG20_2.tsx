@@ -171,12 +171,10 @@ const NewDetails_21AUG20_2 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "Roadone Tire 2019 Cambodia Dealers Conference Successfully Held"
-                    }
+                    prevText={t("new.title.10")}
                     prevLink="/news/roadone-tire-2019-cambodia-dealers-conference-successfully-held"
                     nextLink="/news/265-70r19-5-new-tyre"
-                    nextText={"265/70r19.5 NEW TYRE"}
+                    nextText={t("new.title.12")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

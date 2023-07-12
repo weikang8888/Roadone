@@ -57,11 +57,9 @@ const NewDetails_21AUG20 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"Components Of A Tyre"}
+                    prevText={t("new.title.15")}
                     prevLink="/news/components-of-a-tyre"
-                    nextText={
-                      "How Do You Keep Your Best Driving Performance And Comfort Longer?"
-                    }
+                    nextText={t("new.title.17")}
                     nextLink="/news/how-do-you-keep-your-best-driving-performance-and-comfort-longer"
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />

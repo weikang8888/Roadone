@@ -73,12 +73,10 @@ const ServiceDetails_01AUG18_3 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"Does driving habits affect tyre life?"}
+                    prevText={t("service.title.4")}
                     prevLink="/services/does-driving-habits-affect-tyre-life"
                     nextLink="/services/check-the-vehicle-problems-before-the-long-journey"
-                    nextText={
-                      "Check the vehicle's problems before the long journey"
-                    }
+                    nextText={t("service.title.6")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

@@ -102,14 +102,10 @@ const NewDetails_01SEP20_2 = () => {
                   </div>
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={
-                      "ROADONE Becomes Good Supplier Of The China Famous Truck Company"
-                    }
+                    prevText={t("new.title.8")}
                     prevLink="/news/roadone-becomes-good-supplier-of-the-china-famous-truck-company"
                     nextLink="/news/roadone-tire-2019-cambodia-dealers-conference-successfully-held"
-                    nextText={
-                      "Roadone Tire 2019 Cambodia Dealers Conference Successfully Held"
-                    }
+                    nextText={t("new.title.10")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />{" "}
                   <DetailsRelatedProducts ids="66,88,36,39,92,48" />

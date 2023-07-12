@@ -74,10 +74,10 @@ const ServiceDetails_01AUG18_9 = () => {
 
                   <DetailsButton />
                   <DetailsPreviousNext
-                    prevText={"When do I need to change the tyre?"}
+                    prevText={t("service.title.10")}
                     prevLink="/services/when-do-i-need-to-change-the-tyre"
                     nextLink="/services/problems-related-to-tyre-transposition"
-                    nextText={"Problems related to tyre transposition"}
+                    nextText={t("service.title.12")}
                   />
                   <DetailsRelatedNews ids="1,3,4,5,6,7,8,9,10,11,12" />
                 </>

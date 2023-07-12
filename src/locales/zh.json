@@ -62,7 +62,9 @@
     "copyRight": "版权所有 © 唐力轮胎有限公司"
   },
   "other": {
-    "readMore": "了解更多"
+    "readMore": "了解更多",
+    "relatedNews": "相关新闻",
+    "noInformation": "无"
   },
   "submenu": {
     "product": "产品",
@@ -139,7 +141,7 @@
       "以下是一些标准术语及其对轮胎性能的影响，当您寻找新轮胎时通常会遇到。",
       "根据车型、驾驶风格和行驶道路的条件选择合适的轮胎。"
     ],
-    "newDetails19AUG210": {
+    "newDetails19AUG21": {
       "content1": "ROADONE 385/65R22.5 HF281 新型射线轮胎",
       "content2": "生产介绍",
       "content3": "适用于转向/载重位置",
