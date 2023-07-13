@@ -130,19 +130,14 @@ const Header = () => {
                     className={`submenu ${
                       isSubMenuOpen ? "display-block" : ""
                     }`}>
-                    <li>
-                      <Link to="" onClick={changeToEnglish}>
-                        {t("header.english")}
-                      </Link>
+                    <li onClick={changeToEnglish} className="laugage_cursor">
+                      <a> {t("header.english")}</a>
                     </li>
-                    <li>
-                      <Link to="" onClick={changeToChinese}>
-                        {t("header.chinese")}
-                      </Link>
+                    <li onClick={changeToChinese} className="laugage_cursor">
+                      <a>{t("header.chinese")}</a>
                     </li>
                   </ul>
                 </li>
-
                 <div className="clr"></div>
               </ul>
               <span className="fr nbtn" onClick={toggleMenu}>

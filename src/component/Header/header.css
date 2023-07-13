@@ -24,3 +24,7 @@
   padding: 0 1rem;
   height: auto;
 }
+
+.laugage_cursor {
+  cursor: pointer;
+}

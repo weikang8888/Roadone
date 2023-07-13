@@ -20,7 +20,7 @@ const DetailsRelatedNews = ({ ids }) => {
   }, [ids]);
   return (
     <>
-      <div className="ptit">Related Products</div>
+      <div className="ptit">{t("other.relatedProduct")}</div>
       <ul className="rollPro1">
         {productItems.map((item, index) => (
           <li key={index}>

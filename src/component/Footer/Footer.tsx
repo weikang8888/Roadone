@@ -105,27 +105,27 @@ const Footer = () => {
             <ul className="links clearfix">
               <li id="li_Menu101_about-us">
                 <a href="/about" className="inmenu">
-                  {t("footer.tyreFactory")}
+                  {t("header.about")}
                 </a>
               </li>
               <li id="li_Menu101_products">
                 <a href="/products" className="inmenu">
-                  {t("footer.product")}
+                  {t("submenu.product")}
                 </a>
               </li>
               <li id="li_Menu101_newslist-1">
                 <a href="/news" className="inmenu">
-                  {t("footer.news")}
+                  {t("submenu.new")}
                 </a>
               </li>
               <li id="li_Menu101_Info">
                 <a href="/service" className="inmenu">
-                  {t("footer.service")}
+                  {t("submenu.service")}
                 </a>
               </li>
               <li id="li_Menu101_contact-us">
                 <a href="/contact" className="inmenu">
-                  {t("footer.contactUs")}
+                  {t("header.contact")}
                 </a>
               </li>
             </ul>
