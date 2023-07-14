@@ -36,7 +36,7 @@ const RF02Light = () => {
           <SubMenu
             currentpage={"Light Truck Tire"}
             previouslink="/products"
-            previouspage="Product"
+            previouspage={t("submenu.product")}
           />
           <div className="main">
             <div className="row">
@@ -52,12 +52,12 @@ const RF02Light = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.1")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.1")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -129,48 +129,48 @@ const RF02Light = () => {
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>
@@ -293,7 +293,7 @@ const RF02Light = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"No Information"}
+                prevText={t("other.noInformation")}
                 nextText={"RA85 Light Truck Tire"}
                 nextLink="/products/light-truck-tire/ra85-light"
               />

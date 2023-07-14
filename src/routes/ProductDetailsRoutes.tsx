@@ -96,7 +96,7 @@ const NewDetailsRoutes = [
   { path: "truck-tire/highway-truck-tire/hf21", component: HF21 },
   { path: "truck-tire/highway-truck-tire/hf82", component: HF82 },
   { path: "truck-tire/highway-truck-tire/hf01", component: HF01 },
-  { path: "truck-tire/highway-truck-tire/hf82", component: HF31TBR },
+  { path: "truck-tire/highway-truck-tire/hf31-tbr", component: HF31TBR },
 
   { path: "truck-tire/mine-truck-tire/qa99", component: QA99 },
   { path: "truck-tire/mine-truck-tire/qa09", component: QA09 },

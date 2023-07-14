@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const GD708 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const GD708 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="High End Heavy Loading Tyre"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.high-end-heavy-loading-tyre")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const GD708 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.50")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.50")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,11 +97,9 @@ const GD708 = () => {
                     }}>
                     &gt;
                   </span>
-                  Strong driving, heat-dissipating type, shoulder rip-proof
-                  reinforced connecting ribs, groove bottom stone ejection,
-                  puncture resistance block design, providing strong driving
-                  performance, effectively preventing cracks, lumps, and
-                  inhibiting deformed wear.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions31"
+                  )}
                 </span>
               </p>
               <p>
@@ -115,8 +113,9 @@ const GD708 = () => {
                     }}>
                     &gt;
                   </span>
-                  High wear-resistant tread formula design and widened tread
-                  pattern design ensure longer service life of the product.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions28"
+                  )}
                 </span>
               </p>
               <p>
@@ -130,9 +129,9 @@ const GD708 = () => {
                     }}>
                     &gt;
                   </span>
-                  Extremely low heating recipe effectively reduces the quality
-                  risk of shoulder explosion, chipping, groove splitting and
-                  crown removal under overload and overspeed conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions47"
+                  )}
                 </span>
               </p>{" "}
               <p>
@@ -146,10 +145,9 @@ const GD708 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced steel wire structure and special design of
-                  explosion-proof cap belt can effectively ensure the heavy
-                  load-bearing performance of cap,and improve the anti-stab
-                  performance of tire in complex road conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions25"
+                  )}
                 </span>
               </p>{" "}
               <p>
@@ -163,25 +161,29 @@ const GD708 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre bead adopts III+
-                  generation heavy load tech,improves the fatigue and shear
-                  resistance of tyre bead under ultra-high and heavy load
-                  conditions,reduce quality risks of the bead seperation, crack
-                  or explosion.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions44"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -190,21 +192,32 @@ const GD708 = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>
                   <tr>
@@ -297,7 +310,7 @@ const GD708 = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"No Information"}
+                prevText={t("other.noInformation")}
                 nextText={"GD858"}
                 nextLink="/products/truck-tire/high-end-heavy-loading-tyres/gd858"
               />

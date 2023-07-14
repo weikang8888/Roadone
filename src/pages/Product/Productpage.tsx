@@ -27,7 +27,6 @@ const Productpage = () => {
     currentProduct === Math.ceil(products.length / newsPerProduct);
 
   const [menuState, setMenuState] = useState({
-    previousPage: t("submenu.product"),
     currentPage: "",
     typePage: "",
   });
@@ -57,8 +56,6 @@ const Productpage = () => {
 
     setMenuState((prevState) => ({
       ...prevState,
-      previousLink: "/products",
-      previousPage: previousPage,
       currentPage: currentPage !== previousPage ? currentPage : "",
       typePage: previousPage !== currentPage ? null : typePage,
     }));
@@ -112,8 +109,6 @@ const Productpage = () => {
 
     setMenuState((prevState) => ({
       ...prevState,
-      previousLink: "/products",
-      previousPage: t("submenu.product"),
       currentPage: currentPage,
     }));
 
@@ -149,9 +144,7 @@ const Productpage = () => {
 
     setMenuState((prevState) => ({
       ...prevState,
-      previousLink: "/products",
-      previousPage: t("submenu.product"),
-      typePage: typePage,
+      typePage: t(typePage),
     }));
 
     const pageToTruckTireTypeMap = {
@@ -160,10 +153,10 @@ const Productpage = () => {
       [t("submenu.mid-short-distance-heavy-load")]:
         "mid-short-distance-heavy-load",
       [t("submenu.long-haul-wearable-tyre")]: "long-haul-wearable-tyre",
-      [t("submenu.high-end-off-read-tyre")]: "high-end-off-read-tyre",
+      [t("submenu.high-end-off-road-tyre")]: "high-end-off-road-tyre",
       [t("submenu.high-end-heavy-loading-tyre")]: "high-end-heavy-loading-tyre",
       [t("submenu.high-end-wearable-tyre")]: "high-end-wearable-tyre",
-      [t("submenu.12r22-5-qa919")]: "12r22-5-qa919",
+      "12R22.5 QA919": "12R22.5 QA919",
     };
     if (pageToTruckTireTypeMap.hasOwnProperty(typePage)) {
       const truckTireType = pageToTruckTireTypeMap[typePage];
@@ -247,10 +240,11 @@ const Productpage = () => {
       <section>
         <div className="container">
           <div className="ejfl">{t("product.productCategories")}</div>
+
           <SubMenu
-            previouspage={menuState.previousPage}
-            currentpage={menuState.currentPage}
-            typepage={menuState.typePage}
+            previouspage={t("submenu.product")}
+            currentpage={t(menuState.currentPage)}
+            typepage={t(menuState.typePage)}
             onSubMenuClick={handleSubMenuClick}
             className="pointer"
           />
@@ -262,9 +256,7 @@ const Productpage = () => {
               <div className="pro-list"></div>
 
               <div className="proIntro">
-                We're professional 12r22.5 qa919 manufacturers and suppliers in
-                China, providing bulk products for sale. Welcome to wholesale
-                high-quality 12r22.5 qa919 in stock here from our factory.
+              {t("product.12r22.5")}
               </div>
             </div>
             <div
@@ -327,9 +319,7 @@ const Productpage = () => {
                       t("submenu.quarry-buidling-sites")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/mine-truck-tire/">
-                    {t("submenu.quarry-buidling-sites")}
-                  </a>
+                  <a>{t("submenu.quarry-buidling-sites")}</a>
                 </li>
                 <li
                   onClick={(event) =>
@@ -338,9 +328,7 @@ const Productpage = () => {
                       t("submenu.mid-long-distance-wearable")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/long-distance-standard-load-truck-tire/">
-                    {t("submenu.mid-long-distance-wearable")}
-                  </a>
+                  <a>{t("submenu.mid-long-distance-wearable")}</a>
                 </li>
                 <li
                   onClick={(event) =>
@@ -349,9 +337,7 @@ const Productpage = () => {
                       t("submenu.mid-short-distance-heavy-load")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/medium-and-short-distance-hybrid-truck-tires/">
-                    {t("submenu.mid-short-distance-heavy-load")}
-                  </a>
+                  <a>{t("submenu.mid-short-distance-heavy-load")}</a>
                 </li>
                 <li
                   onClick={(event) =>
@@ -360,9 +346,7 @@ const Productpage = () => {
                       t("submenu.long-haul-wearable-tyre")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/highway-truck-tire/">
-                    {t("submenu.long-haul-wearable-tyre")}
-                  </a>
+                  <a>{t("submenu.long-haul-wearable-tyre")}</a>
                 </li>
                 <li
                   onClick={(event) =>
@@ -371,9 +355,7 @@ const Productpage = () => {
                       t("submenu.high-end-off-road-tyre")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-off-road-tyre/">
-                    {t("submenu.high-end-off-road-tyre")}
-                  </a>
+                  <a>{t("submenu.high-end-off-road-tyre")}</a>
                 </li>
                 <li
                   onClick={(event) =>
@@ -382,9 +364,7 @@ const Productpage = () => {
                       t("submenu.high-end-heavy-loading-tyre")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-heavy-loading-tyres/">
-                    {t("submenu.high-end-heavy-loading-tyre")}
-                  </a>
+                  <a>{t("submenu.high-end-heavy-loading-tyre")}</a>
                 </li>
                 <li
                   onClick={(event) =>
@@ -393,17 +373,13 @@ const Productpage = () => {
                       t("submenu.high-end-wearable-tyre")
                     )
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/high-end-wearable-tyre/">
-                    {t("submenu.high-end-wearable-tyre")}
-                  </a>
+                  <a>{t("submenu.high-end-wearable-tyre")}</a>
                 </li>
                 <li
                   onClick={(event) =>
                     handleTruckTireTypeClick(event, "12R22.5 QA919")
                   }>
-                  <a href="https://www.roadone-hixih.com/truck-tire/12r22-5-qa919/">
-                    12R22.5 QA919
-                  </a>
+                  <a>12R22.5 QA919</a>
                 </li>
               </ul>
             </div>

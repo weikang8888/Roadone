@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const GA98 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const GA98 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-Short distance Heavy Load"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.mid-short-distance-heavy-load")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const GA98 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.32")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.32")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,12 +97,9 @@ const GA98 = () => {
                     }}>
                     &gt;
                   </span>
-                  Optimized horizontal and vertical patterns and the strong
-                  bottom groove strengthen the connecting ribs in the
-                  longitudinal direction, and puncture resistance and
-                  stone-ejection grooves are designed and treated to effectively
-                  prevent the cracks, the lumps, and the deformation of the
-                  deformed wear.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions35"
+                  )}
                 </span>
               </p>
               <p>
@@ -116,11 +113,9 @@ const GA98 = () => {
                     }}>
                     &gt;
                   </span>
-                  Specific tread for mid-short distance transport and low
-                  heating recipe, high wear resistance, low heating, tear
-                  resistance and block resistance,effectively reduces the
-                  quality risk of shoulder explosion, chipping, groove splitting
-                  and crown removal.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions30"
+                  )}
                 </span>
               </p>
               <p>
@@ -134,9 +129,9 @@ const GA98 = () => {
                     }}>
                     &gt;
                   </span>
-                  0°structure explosion proof cap design, effectively improve
-                  the cap loading capacity, enhancing the puncture resistance
-                  and explosion proof perforamce under complex conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions29"
+                  )}
                 </span>
               </p>{" "}
               <p>
@@ -150,23 +145,29 @@ const GA98 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre bead adopts heavy
-                  load tech,improves the fatigue and shear resistance ,reduce
-                  quality risks of the tyre bead open, crack or explosion.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions5"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -175,21 +176,32 @@ const GA98 = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>
                   <tr>

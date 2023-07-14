@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const RF22 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,11 +34,10 @@ const RF22 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-long Distance Wearable"
-          />
+            previouspage={t("submenu.product")}
+ typepage={t("submenu.mid-long-distance-wearable")}          />
           <div className="main">
             <div className="row">
               {productItem && (
@@ -53,12 +52,12 @@ const RF22 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.13")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.13")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,9 +96,9 @@ const RF22 = () => {
                     }}>
                     &gt;
                   </span>
-                  Optimized profile design, special fine pattern treatment,
-                  improve the grip of slippery road, safe, comfortable and fuel
-                  saving.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions13"
+                  )}
                 </span>
               </p>
               <p>
@@ -113,8 +112,9 @@ const RF22 = () => {
                     }}>
                     &gt;
                   </span>
-                  High-speed specific wearable tread design, ensure higher
-                  mileage.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions22"
+                  )}
                 </span>
               </p>
               <p>
@@ -128,65 +128,68 @@ const RF22 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced cap specific 4 belt cap design, low heating recipe,
-                  optimised shoulder desigh, inhibiting reduce the rolling
-                  resistance of driving,environmental protection,suitable for
-                  multiple retreading of tires.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions18"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>

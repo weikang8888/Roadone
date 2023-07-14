@@ -34,10 +34,10 @@ const RA325 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="HIGH END WEARABLE TYRE"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.high-end-wearable-tyre")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const RA325 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.64")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.64")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,9 +97,9 @@ const RA325 = () => {
                     }}>
                     &gt;
                   </span>
-                  Optimize the design of pattern block structure and special
-                  pattern steel sheet, provide strong driving performance and
-                  grip, effectively restrain the abnormal wear.
+  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions50"
+                  )}
                 </span>
               </p>
               <p>
@@ -113,9 +113,9 @@ const RA325 = () => {
                     }}>
                     &gt;
                   </span>
-                  Widened driving surface, deepened tread depth, special super
-                  wear-resistant tread formula for high-way drive, ensuring
-                  higher mileage.
+            {t(
+                    "product.productDetaildescriptions.productDetaildescriptions51"
+                  )}
                 </span>
               </p>
               <p>
@@ -129,10 +129,9 @@ const RA325 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced cap structure and specific 4 belt cap design, low
-                  heating recipe, optimised shoulder desigh, inhibiting deformed
-                  wear and reducing the quality risk as shoulder cap explosion,
-                  cap off etc.
+                 {t(
+                    "product.productDetaildescriptions.productDetaildescriptions52"
+                  )}
                 </span>
               </p>{" "}
               <p>
@@ -146,10 +145,9 @@ const RA325 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre bead adopts heavy
-                  load tech,improves the fatigue and shear resistance ,reduce
-                  quality risks of the bead seperation, crack or
-                  explosion,ensure multiple retreading of tires.
+               {t(
+                    "product.productDetaildescriptions.productDetaildescriptions53"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
@@ -163,48 +161,48 @@ const RA325 = () => {
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>

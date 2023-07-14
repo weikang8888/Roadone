@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const RD202HighEnd = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const RD202HighEnd = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-long Distance Wearable"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.mid-long-distance-wearable")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const RD202HighEnd = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.25")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.25")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -90,87 +90,121 @@ const RD202HighEnd = () => {
               </div>
               <p>
                 <span className="table-text">
-                  ●Optimized profile design, unique longitudinal pattern,
-                  providing excellent anti-biasing adaptability for different
-                  wheel positions and different road conditions.
+                  {" "}
+                  <span
+                    style={{
+                      fontFamily: "calibri",
+                      color: "rgb(229, 51, 51)",
+                    }}>
+                    &gt;
+                  </span>
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions13"
+                  )}
                 </span>
               </p>{" "}
               <p>
                 <span className="table-text">
-                  ●High-speed specific wearable tread recipe, to ensure higher
-                  mileage in highway, national roads, provincial roads and other
-                  mixed road conditions.
+                  {" "}
+                  <span
+                    style={{
+                      fontFamily: "calibri",
+                      color: "rgb(229, 51, 51)",
+                    }}>
+                    &gt;
+                  </span>
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions22"
+                  )}
                 </span>
               </p>{" "}
               <p>
                 <span className="table-text">
-                  ●Reinforced cap structure and specific 4 belt cap design, low
-                  heat generation recipe, optimised shoulder desigh, inhibiting
-                  deformed wear and reducing the quality risk as should cap
-                  explosion, cap off etc.
+                  {" "}
+                  <span
+                    style={{
+                      fontFamily: "calibri",
+                      color: "rgb(229, 51, 51)",
+                    }}>
+                    &gt;
+                  </span>
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions18"
+                  )}
                 </span>
               </p>{" "}
               <p>
                 <span className="table-text">
-                  ●Reinforced carcass and bead structure,Improve the toe fatigue
-                  fracture resistance, reduce the quality risk of the toe
-                  opening, cracking, explosion, etc., and providing multiple
-                  retreading.
+                  {" "}
+                  <span
+                    style={{
+                      fontFamily: "calibri",
+                      color: "rgb(229, 51, 51)",
+                    }}>
+                    &gt;
+                  </span>
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions5"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>

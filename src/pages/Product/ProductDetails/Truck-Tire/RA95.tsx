@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const RA95 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,11 +34,10 @@ const RA95 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-long Distance Wearable"
-          />
+            previouspage={t("submenu.product")}
+ typepage={t("submenu.mid-long-distance-wearable")}          />
           <div className="main">
             <div className="row">
               {productItem && (
@@ -53,12 +52,12 @@ const RA95 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.9")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.9")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,9 +96,9 @@ const RA95 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced bead with nylon and strong carcass design for sizes
-                  with ★ , 0 degree structure on shoulder, providing high
-                  quality and performance under heavy load conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions5"
+                  )}
                 </span>
               </p>
               <p>
@@ -113,8 +112,9 @@ const RA95 = () => {
                     }}>
                     &gt;
                   </span>
-                  Low heat generation tread recipe, open shoulder design,
-                  reducing shoulder separation effectively.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions7"
+                  )}
                 </span>
               </p>
               <p>
@@ -128,63 +128,68 @@ const RA95 = () => {
                     }}>
                     &gt;
                   </span>
-                  Optimized cap profile, durable tread formula, providing
-                  excellent sevice mileage on paved roads, cost-effective.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions10"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>
@@ -251,8 +256,8 @@ const RA95 = () => {
               <DetailsPreviousNext
                 prevText={"RF02"}
                 prevLink="/products/truck-tire/long-distance-standard-load-truck-tire/rf02"
-                nextText={"RD95"}
-                nextLink="/products/truck-tire/long-distance-standard-load-truck-tire/rd95"
+                nextText={"RD25"}
+                nextLink="/products/truck-tire/long-distance-standard-load-truck-tire/rd25"
               />
               <p className="productsTags">
                 Hot Tags: RA95, China, suppliers, manufacturers, factory,

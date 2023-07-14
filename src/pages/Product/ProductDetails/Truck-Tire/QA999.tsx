@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const QA999 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const QA999 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="HIGH END OFF-ROAD TYRE"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.high-end-off-road-tyre")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const QA999 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.48")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.48")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,11 +97,9 @@ const QA999 = () => {
                     }}>
                     &gt;
                   </span>
-                  Optimize the contour, groove bottom anti stabbing stone relief
-                  platform, widen the driving surface, deepen the pattern groove
-                  and large pattern design, enhance the adaptability of the
-                  product in the industrial and mining and other non paved
-                  roads, and ensure the longer service life of the product.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions45"
+                  )}
                 </span>
               </p>
               <p>
@@ -115,8 +113,9 @@ const QA999 = () => {
                     }}>
                     &gt;
                   </span>
-                  Extra thick sidewall and thickened groove bottom design
-                  enhancing impact and puncture resistance on unpaved road.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions46"
+                  )}
                 </span>
               </p>
               <p>
@@ -130,10 +129,9 @@ const QA999 = () => {
                     }}>
                     &gt;
                   </span>
-                  0°structure cap,reinforced carcass and bead structure,
-                  specific heavy loading technology enhancing impact,
-                  puncture,pressure and load resistance under heavy load
-                  conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions29"
+                  )}
                 </span>
               </p>
               <p>
@@ -147,9 +145,9 @@ const QA999 = () => {
                     }}>
                     &gt;
                   </span>
-                  Extremely low heating tread recipe,provides better perofrmance
-                  of anti-tear、low heating,reducing shoulder/crown separation
-                  effectively on paved road driving fast.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions47"
+                  )}
                 </span>
               </p>
 
@@ -157,14 +155,20 @@ const QA999 = () => {
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -173,21 +177,32 @@ const QA999 = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>
                   <tr>

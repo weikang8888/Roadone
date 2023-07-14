@@ -40,7 +40,7 @@ const A12_00R24TruckTire = () => {
           <SubMenu
             currentpage={"ROADONE TYRE DEMONSTRATION"}
             previouslink="/products"
-            previouspage="Product"
+            previouspage={t("submenu.product")}
           />
           <div className="main">
             <div className="row">
@@ -56,12 +56,12 @@ const A12_00R24TruckTire = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.1")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.1")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>

@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const GD58 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const GD58 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-Short distance Heavy Load"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.mid-short-distance-heavy-load")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const GD58 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.34")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.34")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,8 +97,9 @@ const GD58 = () => {
                     }}>
                     &gt;
                   </span>
-                  Sturdy shoulder block pattern and optimized lateral groove
-                  design for powerful drive and braking performance.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions37"
+                  )}
                 </span>
               </p>
               <p>
@@ -112,11 +113,9 @@ const GD58 = () => {
                     }}>
                     &gt;
                   </span>
-                  Widening and deepening the tread pattern design effectively
-                  suppresses the abnormal wear of the tire and ensures a longer
-                  service life. Low heat-generating tread recipe and
-                  heat-dissipating shoulder pattern design, effectively reducing
-                  the risk of shoulder quality under heavy load.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions17"
+                  )}
                 </span>
               </p>
               <p>
@@ -130,11 +129,9 @@ const GD58 = () => {
                     }}>
                     &gt;
                   </span>
-                  Specific tread for mid-short distance transport and low
-                  heating recipe, high wear resistance, low heating, tear
-                  resistance and block resistance,effectively reduces the
-                  quality risk of shoulder explosion, chipping, groove splitting
-                  and crown removal.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions30"
+                  )}
                 </span>
               </p>{" "}
               <p>
@@ -148,25 +145,29 @@ const GD58 = () => {
                     }}>
                     &gt;
                   </span>
-                  Ply with "*" products' super structure of crown and design
-                  technology of special explosion-proof crown belt, effectively
-                  improve the cap loading capacity, enhancing the puncture
-                  resistance and explosion proof perforamce under complex
-                  conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions38"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -175,21 +176,32 @@ const GD58 = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>
                   <tr>
@@ -313,9 +325,7 @@ const GD58 = () => {
               <DetailsPreviousNext
                 prevText={"GA06"}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga06"
-                nextText={
-                  "GA36 Neumáticos Para Camiones "
-                }
+                nextText={"GA36 Neumáticos Para Camiones "}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36-neumaticos"
               />
               <p className="productsTags">

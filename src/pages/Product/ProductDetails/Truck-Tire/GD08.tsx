@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const GD08 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const GD08 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-Short distance Heavy Load"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.mid-short-distance-heavy-load")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const GD08 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.28")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.28")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,10 +97,9 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Strong drive, heat-dissipation, shoulder rip-proof
-                  reinforcement joints provide strong driving performance,
-                  effectively prevent cracking, smashing, and suppress deformed
-                  wear.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions31"
+                  )}
                 </span>
               </p>
               <p>
@@ -114,11 +113,9 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Specific tread for mid-short distance transport and low
-                  heating recipe, high wear resistance, low heating, tear
-                  resistance and block resistance,effectively reduces the
-                  quality risk of shoulder explosion, chipping, groove splitting
-                  and crown removal.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions30"
+                  )}
                 </span>
               </p>
               <p>
@@ -132,10 +129,9 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Tube-in products 0°structure explosion proof cap design,
-                  effectively improve the cap loading capacity, enhancing the
-                  puncture resistance and explosion proof perforamce under
-                  complex conditions.{" "}
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions29"
+                  )}
                 </span>
               </p>
               <p>
@@ -149,9 +145,9 @@ const GD08 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre bead adopts heavy
-                  load tech,improves the fatigue and shear resistance ,reduce
-                  quality risks of the tyre bead open, crack or explosion.{" "}
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions5"
+                  )}
                 </span>
               </p>
 
@@ -159,55 +155,59 @@ const GD08 = () => {
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>
@@ -299,7 +299,7 @@ const GD08 = () => {
                     </td>
                   </tr>
                   <tr>
-                    <td width="127" >
+                    <td width="127">
                       <span className="table-text">10.00R20 </span>
                     </td>
                     <td width="72">
@@ -328,7 +328,7 @@ const GD08 = () => {
                     </td>
                   </tr>
                   <tr>
-                    <td width="127" >
+                    <td width="127">
                       <span className="table-text">11.00R20 </span>
                     </td>
                     <td width="72">
@@ -357,7 +357,7 @@ const GD08 = () => {
                     </td>
                   </tr>{" "}
                   <tr>
-                    <td width="127" >
+                    <td width="127">
                       <span className="table-text">12.00R20 </span>
                     </td>
                     <td width="72">
@@ -386,7 +386,7 @@ const GD08 = () => {
                     </td>
                   </tr>
                   <tr>
-                    <td width="127" >
+                    <td width="127">
                       <span className="table-text">12.00R24 </span>
                     </td>
                     <td width="72">
@@ -418,7 +418,7 @@ const GD08 = () => {
               </table>
 
               <DetailsPreviousNext
-                prevText={"No Information"}
+                prevText={t("other.noInformation")}
                 nextText={"GA36"}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36"
               />

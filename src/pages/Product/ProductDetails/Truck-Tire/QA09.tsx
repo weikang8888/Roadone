@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const QA09 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const QA09 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Quarry & Building Sites"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.quarry-buidling-sites")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const QA09 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.6")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.6")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,9 +97,9 @@ const QA09 = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead design, 0 degree structure on
-                  shoulder, providing high quality and performance under heavy
-                  load conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions5"
+                  )}
                 </span>
               </p>
               <p>
@@ -113,8 +113,9 @@ const QA09 = () => {
                     }}>
                     &gt;
                   </span>
-                  Extra thick sidewall design, enhancing cut and impact
-                  resistance.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions6"
+                  )}
                 </span>
               </p>
               <p>
@@ -128,8 +129,9 @@ const QA09 = () => {
                     }}>
                     &gt;
                   </span>
-                  Low heat generation tread recipe, wider shoulder pattern
-                  design, reducing shoulder separation effectively.{" "}
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions7"
+                  )}
                 </span>
               </p>
               <p>
@@ -143,8 +145,9 @@ const QA09 = () => {
                     }}>
                     &gt;
                   </span>
-                  Thickened groove bottom design, enhancing puncture resistance
-                  on unpaved road.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions8"
+                  )}
                 </span>
               </p>{" "}
               <p>
@@ -158,63 +161,68 @@ const QA09 = () => {
                     }}>
                     &gt;
                   </span>
-                  Lateral grooves with wide angles design, increasing driving
-                  power and self-cleaning abilities.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions9"
+                  )}
                 </span>
               </p>
               <table width="100%" className="table mt-3">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Max. Load (Kg)
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.maxLoadKg")}
                         <br />
-                        (Single/Dual)
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Load Index <br />
-                        (Single/Dual)
+                        {t("tableHeaders.loadIndex")} <br />
+                        {t("tableHeaders.singleDual")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Speed
+                        {t("tableHeaders.speed")}
                         <br />
-                        Rating
+                        {t("tableHeaders.rating")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Overall Diameter <br />
-                        (mm)
+                        {t("tableHeaders.overallDiameter")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Section Width <br />
-                        (mm)
+                        {t("tableHeaders.sectionWidth")} <br />
+                        {t("tableHeaders.mm")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Inflation Pressure
+                        {t("tableHeaders.standardInflationPressure")}
                         <br />
-                        (kPa)
+                        {t("tableHeaders.kpa")}
                       </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        Standard Rim
+                        {t("tableHeaders.standardRim")}
                         <br />
-                        (inch)
+                        {t("tableHeaders.inch")}
                       </span>
                     </td>
                   </tr>

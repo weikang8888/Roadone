@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const GA36 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const GA36 = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-Short distance Heavy Load"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.mid-short-distance-heavy-load")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const GA36 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.29")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.29")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,8 +97,9 @@ const GA36 = () => {
                     }}>
                     &gt;
                   </span>
-                  The unique pattern design of the folding line guarantees good
-                  driving performance and anti-biasing performance.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions32"
+                  )}
                 </span>
               </p>
               <p>
@@ -112,9 +113,9 @@ const GA36 = () => {
                     }}>
                     &gt;
                   </span>
-                  Low heating tread recipe and heat-dissipating shoulder pattern
-                  design, effectively reducing the risk of shoulder quality
-                  under heavy load.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions33"
+                  )}
                 </span>
               </p>
               <p>
@@ -128,8 +129,9 @@ const GA36 = () => {
                     }}>
                     &gt;
                   </span>
-                  Super high strength steel wire structure can effectively
-                  guarantee the bearing capacity of the product.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions25"
+                  )}
                 </span>
               </p>
 
@@ -137,14 +139,20 @@ const GA36 = () => {
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -153,21 +161,32 @@ const GA36 = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>
                   <tr>

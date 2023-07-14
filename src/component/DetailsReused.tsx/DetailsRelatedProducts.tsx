@@ -22,20 +22,23 @@ const DetailsRelatedNews = ({ ids }) => {
     <>
       <div className="ptit">{t("other.relatedProduct")}</div>
       <ul className="rollPro1">
-        {productItems.map((item, index) => (
-          <li key={index}>
-            <div className="pbox">
-              <a href={item.products_url}>
-                <img
-                  src={require(`../../static/picture/${item.products_image}`)}
-                />
-              </a>
-            </div>
-            <p>
-              <a href="">{item.products_name}</a>
-            </p>
-          </li>
-        ))}
+        {productItems.map((item, index) => {
+          const translationIndex = parseInt(item.id, 10);
+          return (
+            <li key={index}>
+              <div className="pbox">
+                <a href={item.products_url}>
+                  <img
+                    src={require(`../../static/picture/${item.products_image}`)}
+                  />
+                </a>
+              </div>
+              <p>
+                <a href=""> {t(`product.title.${translationIndex}`)}</a>
+              </p>
+            </li>
+          );
+        })}
       </ul>
     </>
   );

@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const GA665HighEnd = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const GA665HighEnd = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Mid-Short distance Heavy Load"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.mid-short-distance-heavy-load")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const GA665HighEnd = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.37")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.37")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,10 +97,9 @@ const GA665HighEnd = () => {
                     }}>
                     &gt;
                   </span>
-                  Unique three-line longitudinal groove, widened tread pattern
-                  and variable angle profile contour design, anti-cracking,
-                  anti-grooving, puncture resistance, anti-smashing block,
-                  inhibiting deformed grinding.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions23"
+                  )}
                 </span>
               </p>
               <p>
@@ -114,10 +113,9 @@ const GA665HighEnd = () => {
                     }}>
                     &gt;
                   </span>
-                  Specific tread for short distance transport and low heat
-                  generation recipe effectively reduces the quality risk of
-                  shoulder explosion, chipping, groove splitting and crown
-                  removal under overload and overspeed conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions30"
+                  )}
                 </span>
               </p>
               <p>
@@ -131,10 +129,9 @@ const GA665HighEnd = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced steel wire structure and special design technology
-                  of tube-in generation explosion-proof cap belt can effectively
-                  improve the heavy load-bearing performance of cap,and ensure
-                  the anti-stab performance of tire in complex road conditions.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions25"
+                  )}{" "}
                 </span>
               </p>
               <p>
@@ -148,11 +145,9 @@ const GA665HighEnd = () => {
                     }}>
                     &gt;
                   </span>
-                  Reinforced carcass and bead structure,tyre toe adopts tube-in
-                  III generation heavy load tech,improves the fatigue and shear
-                  resistance of tyre toe under ultra-high and heavy load
-                  conditions,reduce quality risks of the tyre toe open, crack or
-                  explosion.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions5"
+                  )}
                 </span>
               </p>
 
@@ -160,14 +155,20 @@ const GA665HighEnd = () => {
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -176,21 +177,32 @@ const GA665HighEnd = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>{" "}
                   <tr>

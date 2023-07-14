@@ -10,7 +10,7 @@ import DetailsPreviousNext from "../../../../component/DetailsReused.tsx/Details
 import DetailsRelatedProducts from "../../../../component/DetailsReused.tsx/DetailsRelatedProducts";
 
 const HF31TBR = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -34,10 +34,10 @@ const HF31TBR = () => {
       <section>
         <div className="container container1">
           <SubMenu
-            currentpage={"Truck Tire"}
+            currentpage={t("submenu.truck-tire")}
             previouslink="/products"
-            previouspage="Product"
-            typepage="Long Haul Wearable Tyre"
+            previouspage={t("submenu.product")}
+            typepage={t("submenu.long-haul-wearable-tyre")}
           />
           <div className="main">
             <div className="row">
@@ -53,12 +53,12 @@ const HF31TBR = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{productItem.products_name}</h1>
+                    <h1 className="pd-title">{t("product.title.44")}</h1>
                     <div className="pcon_info">
-                      <p>{productItem.products_description}</p>
+                      <p>{t("product.description.44")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
-                      Send Inquiry
+                      {t("other.sendInquiry")}
                     </a>
                   </div>
                 </>
@@ -97,8 +97,9 @@ const HF31TBR = () => {
                     }}>
                     &gt;
                   </span>
-                  Designed for long-distance transportation on smooth and
-                  straight highway
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions1"
+                  )}
                 </span>
               </p>
               <p>
@@ -112,8 +113,9 @@ const HF31TBR = () => {
                     }}>
                     &gt;
                   </span>
-                  Special tread compound and four-layer belts design, enhancing
-                  wear resistance, providing longer mileage.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions2"
+                  )}
                 </span>
               </p>
               <p>
@@ -127,7 +129,9 @@ const HF31TBR = () => {
                     }}>
                     &gt;
                   </span>
-                  Stone ejection design,reducing groove cracking.
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions40"
+                  )}{" "}
                 </span>
               </p>{" "}
               <p>
@@ -141,21 +145,29 @@ const HF31TBR = () => {
                     }}>
                     &gt;
                   </span>
-                  Special shouler design, avoiding irregular wear.{" "}
+                  {t(
+                    "product.productDetaildescriptions.productDetaildescriptions41"
+                  )}{" "}
                 </span>
               </p>
               <table width="100%" className="table">
                 <tbody>
                   <tr className="firstRow">
                     <td>
-                      <span className="table-text">{t("tableHeaders.size")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">{t("tableHeaders.plyRating")}</span>
+                      <span className="table-text">
+                        {t("tableHeaders.size")}
+                      </span>
                     </td>
                     <td>
                       <span className="table-text">
-                        <span className="table-text">{t("tableHeaders.maxLoad")}</span>
+                        {t("tableHeaders.plyRating")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        <span className="table-text">
+                          {t("tableHeaders.maxLoad")}
+                        </span>
                       </span>
                     </td>
                     <td>
@@ -164,21 +176,32 @@ const HF31TBR = () => {
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">{t("tableHeaders.speedRating")}</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Overall Diameter (mm)</span>
-                    </td>
-                    <td>
-                      <span className="table-text">Section Width (mm)</span>
-                    </td>
-                    <td>
                       <span className="table-text">
-                        Standard Inflation Pressure(kPa)
+                        {t("tableHeaders.speedRating")}
                       </span>
                     </td>
                     <td>
-                      <span className="table-text">Standard Rim(inch)</span>
+                      <span className="table-text">
+                        {t("tableHeaders.overallDiameter")}{" "}
+                        {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.sectionWidth")} {t("tableHeaders.mm")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardInflationPressure")}
+                        {t("tableHeaders.kpa")}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="table-text">
+                        {t("tableHeaders.standardRim")}
+                        {t("tableHeaders.inch")}
+                      </span>
                     </td>
                   </tr>
                   <tr>
