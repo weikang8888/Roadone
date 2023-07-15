@@ -67,7 +67,7 @@ const Footer = () => {
                         src={FTTYRE1}
                         width="50"
                         height="50"
-                        alt="Truck Tire"
+                        alt="Truck Tyre"
                       />
                     </a>
                   </dt>
@@ -85,7 +85,7 @@ const Footer = () => {
                         src={FTTYRE2}
                         width="50"
                         height="50"
-                        alt="Bus Tire"
+                        alt="Bus Tyre"
                       />
                     </a>
                   </dt>

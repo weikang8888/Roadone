@@ -48,13 +48,13 @@ const Header = () => {
                   </NavLink>
                   {/* <ul className="submenu nav0 ">
                     <li className="side_nav1" id="HeadProCat1">
-                      <Link to="">Truck Tire</Link>
+                      <Link to="">Truck Tyre</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat2">
-                      <Link to="">Bus Tire</Link>
+                      <Link to="">Bus Tyre</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat3">
-                      <Link to="">Light Truck Tire</Link>
+                      <Link to="">Light Truck Tyre</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat4">
                       <Link to="">RADIAL OTR TIRES</Link>
