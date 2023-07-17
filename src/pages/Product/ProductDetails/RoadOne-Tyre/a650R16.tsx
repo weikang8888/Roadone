@@ -14,7 +14,7 @@ import LightTruckTire from "../../../../static/image/products/light-truck-tire.w
 import CommercialTire from "../../../../static/image/products/commercial-tyre.webp";
 
 const A650R16 = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [productItems, setProductItems] = useState([]);
 
@@ -56,9 +56,9 @@ const A650R16 = () => {
                     </div>
                   </div>
                   <div className="col-7">
-                    <h1 className="pd-title">{t("product.title.1")}</h1>
+                    <h1 className="pd-title">{t("product.title.89")}</h1>
                     <div className="pcon_info">
-                      <p>{t("product.description.1")}</p>
+                      <p>{t("product.description.89")}</p>
                     </div>
                     <a href="#F1" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
@@ -95,48 +95,31 @@ const A650R16 = () => {
                 <p>
                   <strong>
                     <span className="fs-3">
-                        {t(
-                      "product.productDetaildescriptions.truckTireIndroduction"
-                    )}
+                      {t(
+                        "product.productDetaildescriptions.truckTireIndroduction"
+                      )}
                     </span>
                   </strong>
                 </p>
                 <p style={{ textIndent: "32px" }}>
                   <span>
-                    Roadone truck tyre is a new high-performance commercial tyre
-                    product launched by Hixih Rubber Industry Group. It relies
-                    on Hixih Group's 30-year development experience and 15-year
-                    technical accumulation of strong cooperation with the
-                    world's top tyre giants to build a high-end tyre brand with
-                    global competitiveness.
+                    {t(
+                      "product.productDetaildescriptions.productDetaildescriptions79"
+                    )}
                   </span>
                 </p>
                 <p style={{ textIndent: "32px" }}>
                   <span>
-                    Hixih Group has a world top class rubber radial tyre R&amp;D
-                    center, leading tyre production technology and special
-                    customized high-end equipment, which ensures the excellent
-                    performance of Hixih tyre with high load, high mileage, high
-                    driving force and low wear, low emission and low rolling
-                    resistance. Unique formula, structure and tread design,
-                    reduce fuel consumption and carbon dioxide emissions during
-                    driving, improve driving comfort and safety under complex
-                    road conditions, the product has outstanding advantages of
-                    green, safe and durable, renewable.
+                    {t(
+                      "product.productDetaildescriptions.productDetaildescriptions80"
+                    )}
                   </span>
                 </p>
                 <p style={{ textIndent: "32px" }}>
                   <span>
-                    Facing the rapid development of China's local automobile
-                    industry and the deepening reform of supply side structure,
-                    Hixih Group upholds the spirit of "craftsman", unswervingly
-                    develops its own industry, builds its own national brand,
-                    provides international high-end class tyres to the market,
-                    breaks the long-term monopoly of middle and high-end tyre
-                    market ruled by foreign brands, and takes the lead to be the{" "}
-                  </span>
-                  <span>
-                    world famous tyre brand of China’s truck tyre industry!
+                    {t(
+                      "product.productDetaildescriptions.productDetaildescriptions81"
+                    )}
                   </span>
                 </p>
               </div>
@@ -144,107 +127,97 @@ const A650R16 = () => {
                 <p>
                   <strong>
                     <span className="fs-3">
-                      History of Roadone Truck tyre Factory{" "}
+                      {t(
+                        "product.productDetaildescriptions.truckTireFactoryTitle"
+                      )}
                     </span>
                   </strong>
                 </p>
                 <p>
                   <span>
-                    1989.07 - Yanzhou Huaxi Rubber Belt Factory founded, entered
-                    the field of conveyor belt production
+                    {t("product.productDetaildescriptions.truckTireFactory1")}
                   </span>
                 </p>
                 <p>
                   <span>
-                    2003.07 - Roadone Tyre Co.,Ltd started, entered the field of
-                    tyre production{" "}
-                  </span>
-                </p>
-                <p>
-                  <span>
-                    2005.08 - Establishment of a Joint Venture with Pirelli
-                    Company of Italy
+                    {t("product.productDetaildescriptions.truckTireFactory2")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2007.11 - Establishment of Shandong Aneng Conveyor Belt
-                    Rubber Co., Ltd. Jointly with Goodyear Engineering Rubber
-                    Group
+                    {t("product.productDetaildescriptions.truckTireFactory3")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2009.03 - Establish Hixih Investment Company in Shanghai and
-                    enter the field of capital operation
+                    {t("product.productDetaildescriptions.truckTireFactory4")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2010.08 - Hixih Real Estate Co., Ltd. was established. It is
-                    estimated that more than 10,000 housing units have been
-                    built and the building area exceeds 2 million square meters.
+                    {t("product.productDetaildescriptions.truckTireFactory5")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2011.06 - Purchased of Yanzhou Jiuyi Hospital and Entry into
-                    Medical and Health Field
+                    {t("product.productDetaildescriptions.truckTireFactory6")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2013.06 - Holding the share of Yanzhou People's Hospital
+                    {t("product.productDetaildescriptions.truckTireFactory7")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2015.02 - German Continental Group purchased conveyor belt
-                    business, Shandong Aneng Conveyor Belt Rubber Co., Ltd.
-                    renamed Kangditake Engineering Rubber Co., Ltd.
+                    {t("product.productDetaildescriptions.truckTireFactory8")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2015.03 - Belgium Bekaert Group purchased steel cord
-                    business, Huayi Cord Co., Ltd. renamed Bekaert (Jining)
-                    Steel Cord Co., Ltd.
+                    {t("product.productDetaildescriptions.truckTireFactory9")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2015.06 - TONGLI TYRE CO.,LTD (Roadone) is put into
-                    production to provide high-grade products for China and
-                    international markets
+                    {t("product.productDetaildescriptions.truckTireFactory10")}
                   </span>
                 </p>{" "}
                 <p>
                   <span>
-                    2018.01 - Jining Shenzhou Tyre Co., Ltd. officially put into
-                    production
+                    {t("product.productDetaildescriptions.truckTireFactory11")}
+                  </span>
+                </p>{" "}
+                <p>
+                  <span>
+                    {t("product.productDetaildescriptions.truckTireFactory12")}
                   </span>
                 </p>
               </div>
               <div className="my-3">
                 <p>
                   <strong>
-                    <span className="fs-3">Road Conditions of Truck Tyre:</span>
+                    <span className="fs-3">
+                      {t(
+                        "product.productDetaildescriptions.truckTireConditions"
+                      )}
+                    </span>
                   </strong>
                 </p>
                 <p>
-                  <span>Highway Truck Tyre </span>
+                  <span>{t("submenu.highway-truck-tire")} </span>
                 </p>
                 <p>
-                  <span>Mid- short distance Truck Tyre </span>
+                  <span>{t("submenu.mid-short-distance-heavy-load")} </span>
                 </p>
                 <p>
-                  <span>Mine Truck Tyre</span>
+                  <span>{t("submenu.mine-truck-tire")}</span>
                 </p>
                 <p>
-                  <span>Light Truck Tyre</span>
+                  <span>{t("submenu.light-truck-tire")}</span>
                 </p>
                 <p>
-                  <span>Heavy-Loading Truck Tyre</span>
+                  <span>{t("submenu.high-end-heavy-loading-tyre")}</span>
                 </p>
               </div>
               <div className="d-flex align-center">
@@ -258,7 +231,7 @@ const A650R16 = () => {
                     <img src={TruckTire} />
                   </div>
                   <p>
-                    <span>Truck Tyre</span>
+                    <span>{t("submenu.truck-tire")}</span>
                   </p>
                 </div>
                 <div
@@ -271,7 +244,7 @@ const A650R16 = () => {
                     <img src={BusTire} />
                   </div>
                   <p>
-                    <span>Bus Tyre</span>
+                    <span>{t("submenu.bus-tire")}</span>
                   </p>
                 </div>
                 <div
@@ -284,7 +257,7 @@ const A650R16 = () => {
                     <img src={LightTruckTire} />
                   </div>
                   <p>
-                    <span>Light Truck tire</span>
+                    <span>{t("submenu.light-truck-tire")}</span>
                   </p>
                 </div>
                 <div
@@ -297,53 +270,59 @@ const A650R16 = () => {
                     <img src={CommercialTire} />
                   </div>
                   <p>
-                    <span>Commercial Tyre</span>
+                    <span>{t("submenu.commercial-tire")}</span>
                   </p>
                 </div>
-              </div>{" "}
+              </div>
               <div className="my-3">
                 <p>
                   <strong>
-                    <span className="fs-3">Productions Included :</span>
+                    <span className="fs-3">
+                      {t(
+                        "product.productDetaildescriptions.productionsIncluded"
+                      )}
+                    </span>
                   </strong>
                 </p>
                 <p>
-                  <span>Truck Tyre / Truck Tyre</span>
+                  <span>{t("submenu.truck-tire")}</span>
                 </p>
                 <p>
-                  <span>Light Truck tyre / Light Truck tire</span>
+                  <span>{t("submenu.light-truck-tire")}</span>
                 </p>
                 <p>
-                  <span>Bus Tyre / Bus Tyre</span>
+                  <span>{t("submenu.bus-tire")}</span>
                 </p>
                 <p>
-                  <span>Commercial Tyre / Commercial Tyre</span>
+                  <span>{t("submenu.commercial-tire")}</span>
                 </p>
                 <p>
-                  <span>Radial Tyre / Radial Tyre&nbsp;</span>
+                  <span>{t("submenu.radial-otr-tire")}</span>
                 </p>
               </div>
               <div className="my-3">
                 <p>
                   <strong>
-                    <span className="fs-3">                      {t("product.productDetaildescriptions.truckTireSize")}
-</span>
+                    <span className="fs-3">
+                      {" "}
+                      {t("product.productDetaildescriptions.truckTireSize")}
+                    </span>
                   </strong>
                 </p>
                 <p>
-                  <span>6.50R16LT Truck Tyre</span>
+                  <span>6.50R16LT {t("submenu.truck-tire")}</span>
                 </p>
                 <p>
-                  <span>7.00R16LT Truck Tyre</span>
+                  <span>7.00R16LT {t("submenu.truck-tire")}</span>
                 </p>
                 <p>
-                  <span>7.50R16LT Truck Tyre</span>
+                  <span>7.50R16LT {t("submenu.truck-tire")}</span>
                 </p>
                 <p>
-                  <span>8.25R16LT Truck Tyre</span>
+                  <span>8.25R16LT {t("submenu.truck-tire")}</span>
                 </p>
                 <p>
-                  <span>8.25R20 Truck Tyre</span>
+                  <span>8.25R20 {t("submenu.truck-tire")}</span>
                 </p>
               </div>
               <DetailsPreviousNext
