@@ -12,6 +12,7 @@
 }
 @media only screen and (max-width: 970px) {
   .menu {
+    display: none;
     flex-direction: column;
     text-align: center;
     background-color: black;

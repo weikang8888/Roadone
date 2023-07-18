@@ -1472,6 +1472,12 @@ li.tick {
 .inner-banner {
   height: 100vh;
 }
+
+@media screen and (max-width: 960px) {
+  .inner-banner {
+    height: 40vh;
+  }
+}
 .inner-banner img {
   max-width: 100%;
   width: 100%;
