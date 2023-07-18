@@ -30,7 +30,7 @@ const SubContact = () => {
         <ul className="wmkc-list">
           <li className="wmkc-email">
             <a
-              href=""
+              href="mailto:roadone@hixih.com.cn"
               target="_blank"
               title="mailto:roadone@hixih.com.cn"
               id="F9">
@@ -39,13 +39,13 @@ const SubContact = () => {
             </a>
           </li>
           <li className="wmkc-whatsapp">
-            <a href="" target="_blank" title="WhatsApp:8615764288507" id="F8">
+            <a href="https://api.whatsapp.com/send?phone=60197909609" target="_blank" title="whatsapp" id="F8">
               <i className="wmkc-icon"></i>
               <p>WhatsApp</p>
             </a>
           </li>
           <li className="wmkc-wechat">
-            <a href="" title="Wechat:8615764288507" id="F8">
+            <a href="" title="wechat" id="F8">
               <i className="wmkc-icon"></i>
               <p>Wechat</p>
             </a>

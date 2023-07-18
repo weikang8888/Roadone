@@ -10,7 +10,9 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
+  const toggleSubMenu = () => {
+    setSubMenuOpen(!isSubMenuOpen);
+  };
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -25,24 +27,21 @@ const Header = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="container1 clearfix top d-flex">
-          <div className="pull-left logo">
-            <Link to="/">
-              <img src={Logo} alt="Tongli Tyre Co.,Ltd" />
-            </Link>
-          </div>
-          <div id="nav-menu">
-            <div id="nav">
-              <ul
-                className={`menu nav_en site_363820 ${
-                  isMenuOpen ? "d-block" : ""
-                }`}>
-                <li id="liHome">
+        <div className="container1 clearfix top">
+          <div className="row align-items-center justify-content-between">
+            <div id="Logo">
+              <Link to="/">
+                <img src={Logo} alt="Tongli Tyre Co.,Ltd" />
+              </Link>
+            </div>
+            <div>
+              <ul className="menu">
+                <li>
                   <NavLink to="/" className="inmenu">
                     {t("header.home")}
                   </NavLink>
                 </li>
-                <li id="liproducts">
+                <li>
                   <NavLink to="/products" className="inmenu">
                     {t("header.product")}
                   </NavLink>
@@ -64,19 +63,16 @@ const Header = () => {
                     </li>
                   </ul> */}
                 </li>
-                <li id="liabout-us">
+                <li>
                   <NavLink to="/about" className="inmenu">
                     {t("header.about")}
                   </NavLink>
                 </li>
-                <li id="linewslist-1">
+                <li id="linewslist">
                   <NavLink to="/news" className="inmenu">
                     {t("header.news")}
                   </NavLink>
-                  <ul
-                    className={`submenu ${
-                      isSubMenuOpen ? "display-block" : ""
-                    }`}>
+                  <ul className={`submenu ${isSubMenuOpen ? "d-block" : ""}`}>
                     <li id="HeadNewsCat1">
                       <Link to="/news/newproducts" title="New products">
                         {t("header.new-products")}
@@ -103,10 +99,7 @@ const Header = () => {
                   <NavLink to="/services" className="inmenu">
                     {t("header.service")}
                   </NavLink>
-                  <ul
-                    className={`submenu ${
-                      isSubMenuOpen ? "display-block" : ""
-                    }`}>
+                  <ul className={`submenu ${isSubMenuOpen ? "d-block" : ""}`}>
                     <li id="HeadIndustryCat1">
                       <Link to="/services/companynews" title="Company News">
                         {t("header.company-news")}
@@ -114,7 +107,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-                <li id="licontact-us">
+                <li>
                   <NavLink to="/contact" className="inmenu">
                     {t("header.contact")}
                   </NavLink>
@@ -126,10 +119,7 @@ const Header = () => {
                 </li> */}
                 <li id="liInfo">
                   <a className="inmenu"> {t("header.language")} </a>
-                  <ul
-                    className={`submenu ${
-                      isSubMenuOpen ? "display-block" : ""
-                    }`}>
+                  <ul className={`submenu ${isSubMenuOpen ? "d-block" : ""}`}>
                     <li onClick={changeToEnglish} className="laugage_cursor">
                       <a> {t("header.english")}</a>
                     </li>
@@ -138,12 +128,11 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-                <div className="clr"></div>
               </ul>
-              <span className="fr nbtn" onClick={toggleMenu}>
-                Menu
-              </span>
             </div>
+            <span className="fr nbtn" onClick={toggleMenu}>
+              Menu
+            </span>
           </div>
         </div>
       </nav>
