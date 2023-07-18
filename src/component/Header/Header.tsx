@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { a, a } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./header.css";
 import Logo from "../../static/image/main/logo.png";
@@ -27,9 +27,9 @@ const Header = () => {
       <nav className="navbar">
         <div className="container1 clearfix top d-flex">
           <div className="pull-left logo">
-            <a href="/">
+            <Link to="/">
               <img src={Logo} alt="Tongli Tyre Co.,Ltd" />
-            </a>
+            </Link>
           </div>
           <div id="nav-menu">
             <div id="nav">
@@ -38,91 +38,91 @@ const Header = () => {
                   isMenuOpen ? "d-block" : ""
                 }`}>
                 <li id="liHome">
-                  <a href="/" className="inmenu">
+                  <NavLink to="/" className="inmenu">
                     {t("header.home")}
-                  </a>
+                  </NavLink>
                 </li>
                 <li id="liproducts">
-                  <a href="/products" className="inmenu">
+                  <NavLink to="/products" className="inmenu">
                     {t("header.product")}
-                  </a>
+                  </NavLink>
                   {/* <ul className="submenu nav0 ">
                     <li className="side_nav1" id="HeadProCat1">
-                      <a href="">Truck Tyre</a>
+                      <Link to="">Truck Tyre</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat2">
-                      <a href="">Bus Tyre</a>
+                      <Link to="">Bus Tyre</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat3">
-                      <a href="">Light Truck Tyre</a>
+                      <Link to="">Light Truck Tyre</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat4">
-                      <a href="">RADIAL OTR TIRES</a>
+                      <Link to="">RADIAL OTR TIRES</Link>
                     </li>
                     <li className="side_nav1" id="HeadProCat5">
-                      <a href="">ROADONE TYRE DEMONSTRATION</a>
+                      <Link to="">ROADONE TYRE DEMONSTRATION</Link>
                     </li>
                   </ul> */}
                 </li>
                 <li id="liabout-us">
-                  <a href="/about" className="inmenu">
+                  <NavLink to="/about" className="inmenu">
                     {t("header.about")}
-                  </a>
+                  </NavLink>
                 </li>
                 <li id="linewslist-1">
-                  <a href="/news" className="inmenu">
+                  <NavLink to="/news" className="inmenu">
                     {t("header.news")}
-                  </a>
+                  </NavLink>
                   <ul
                     className={`submenu ${
                       isSubMenuOpen ? "display-block" : ""
                     }`}>
                     <li id="HeadNewsCat1">
-                      <a href="/news/newproducts" title="New products">
+                      <Link to="/news/newproducts" title="New products">
                         {t("header.new-products")}
-                      </a>
+                      </Link>
                     </li>
                     <li id="HeadNewsCat2">
-                      <a href="/news/tradefair" title="Trade Fair">
+                      <Link to="/news/tradefair" title="Trade Fair">
                         {t("header.trade-fair")}
-                      </a>
+                      </Link>
                     </li>
                     <li id="HeadNewsCat3">
-                      <a href="/news/tyretest" title="TYRE TEST">
+                      <Link to="/news/tyretest" title="TYRE TEST">
                         {t("header.tyre-test")}
-                      </a>
+                      </Link>
                     </li>
                     <li id="HeadNewsCat4">
-                      <a href="/news/companyupdate" title="Company update">
+                      <Link to="/news/companyupdate" title="Company update">
                         {t("header.company-update")}
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li id="liInfo">
-                  <a href="/services" className="inmenu">
+                  <NavLink to="/services" className="inmenu">
                     {t("header.service")}
-                  </a>
+                  </NavLink>
                   <ul
                     className={`submenu ${
                       isSubMenuOpen ? "display-block" : ""
                     }`}>
                     <li id="HeadIndustryCat1">
-                      <a href="/services/companynews" title="Company News">
+                      <Link to="/services/companynews" title="Company News">
                         {t("header.company-news")}
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li id="licontact-us">
-                  <a href="/contact" className="inmenu">
+                  <NavLink to="/contact" className="inmenu">
                     {t("header.contact")}
-                  </a>
+                  </NavLink>
                 </li>
                 {/* <li id="lidownload">
-                  <a href="/download" className="inmenu">
+                  <NavLink to="/download" className="inmenu">
                     {t("header.download")}
-                  </a>
+                  </NavLink>
                 </li> */}
                 <li id="liInfo">
                   <a className="inmenu"> {t("header.language")} </a>
@@ -141,6 +141,7 @@ const Header = () => {
                 <div className="clr"></div>
               </ul>
               <span className="fr nbtn" onClick={toggleMenu}>
+                Menu
               </span>
             </div>
           </div>
