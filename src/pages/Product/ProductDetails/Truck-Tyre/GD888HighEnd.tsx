@@ -17,7 +17,7 @@ const GD888HighEnd = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?ids=58")
+      .get("https://backend.roadone.com.my/products/products.php?ids=58")
       .then((response) => {
         setProductItems(response.data);
       })

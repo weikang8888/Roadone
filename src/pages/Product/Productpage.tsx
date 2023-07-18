@@ -41,7 +41,7 @@ const Productpage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api_roadone/products/products")
+      .get("https://backend.roadone.com.my/products/products.php")
       .then((response) => {
         setProducts(response.data);
       })
@@ -62,7 +62,7 @@ const Productpage = () => {
 
     if (previousPage && !currentPage) {
       axios
-        .get("http://localhost:8080/api_roadone/products/products")
+        .get("https://backend.roadone.com.my/products/products.php")
         .then((response) => {
           console.log(response.data);
           setProducts(response.data);
@@ -79,7 +79,7 @@ const Productpage = () => {
       const productsType = pageToProductsTypeMap[currentPage];
 
       axios
-        .get("http://localhost:8080/api_roadone/products/products")
+        .get("https://backend.roadone.com.my/products/products.php")
         .then((response) => {
           if (currentPage === t("submenu.truck-tire")) {
             setShowFirstSubMenu(false);
@@ -116,7 +116,7 @@ const Productpage = () => {
       const productsType = pageToProductsTypeMap[currentPage];
 
       axios
-        .get("http://localhost:8080/api_roadone/products/products")
+        .get("https://backend.roadone.com.my/products/products.php")
         .then((response) => {
           const filteredProducts = response.data.filter(
             (product) => product.products_type === productsType
@@ -161,7 +161,7 @@ const Productpage = () => {
     if (pageToTruckTireTypeMap.hasOwnProperty(typePage)) {
       const truckTireType = pageToTruckTireTypeMap[typePage];
       axios
-        .get("http://localhost:8080/api_roadone/products/products")
+        .get("https://backend.roadone.com.my/products/products.php")
         .then((response) => {
           const filteredProducts = response.data.filter(
             (product) => product.products_truck_tire_type === truckTireType
