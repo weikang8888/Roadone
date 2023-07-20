@@ -42,7 +42,9 @@ const Servicepage = () => {
   return (
     <>
       <Helmet>
-        <title>Services - Tongli Tyre Co.,Ltd</title>
+        <title>
+          {t("header.service")} - {t("homepage.title")}
+        </title>{" "}
       </Helmet>
       <InnerBanner bannerimage={NewsBanner} />
 

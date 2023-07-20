@@ -57,7 +57,7 @@ const HF262 = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.61")}</p>
                     </div>
-                    <a href="#F1" rel="nofollow" className="p_more mmv">
+   <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>

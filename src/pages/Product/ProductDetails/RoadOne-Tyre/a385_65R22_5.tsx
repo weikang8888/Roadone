@@ -60,7 +60,7 @@ const A385_65R22_5 = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.88")}</p>
                     </div>
-                    <a href="#F1" rel="nofollow" className="p_more mmv">
+   <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>

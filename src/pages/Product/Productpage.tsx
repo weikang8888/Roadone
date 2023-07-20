@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import ProductBanner from "../../static/image/products/product-banner.webp";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
@@ -235,7 +236,11 @@ const Productpage = () => {
 
   return (
     <>
-      {" "}
+      <Helmet>
+        <title>
+          {t("header.product")} - {t("homepage.title")}
+        </title>
+      </Helmet>
       <InnerBanner bannerimage={ProductBanner} />
       <section>
         <div className="container">
@@ -255,9 +260,7 @@ const Productpage = () => {
               <div className="pro-body">QA919</div>
               <div className="pro-list"></div>
 
-              <div className="proIntro">
-              {t("product.12r22.5")}
-              </div>
+              <div className="proIntro">{t("product.12r22.5")}</div>
             </div>
             <div
               className="prosubmenu clearfix"

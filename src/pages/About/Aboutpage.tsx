@@ -37,7 +37,9 @@ const Aboutpage = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Tongli Tyre Co.,Ltd</title>
+        <title>
+          {t("header.about")} - {t("homepage.title")}
+        </title>{" "}
       </Helmet>
       <InnerBanner bannerimage={AboutBanner} />
 

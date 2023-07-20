@@ -1,6 +1,7 @@
 {
   "header": {
     "home": "首页",
+    "roadone": "ROADONE",
     "product": "产品",
     "about": "通力轮胎厂",
     "news": "新闻",
@@ -17,7 +18,7 @@
     "chinese": "中文"
   },
   "homepage": {
-    "title": "唐力轮胎有限公司",
+    "title": "通力轮胎有限公司",
     "description": "ROADONE于2003年由Hixih集团注册，经过与世界顶级集团超过10年的成功合作后再次隆重推出。我们可以为您提供国际高端品质，适用于各种道路条件并满足不同的市场需求。",
     "teamTitle": "设计团队",
     "teamDescription": "位于山东省济宁市兖州区的海西橡胶工业集团是中国最繁荣的经济地区之一。该集团成立于1989年，是一个国际化、多元化和创新的企业集团，占地20万平方米。员工总数超过10,000人。",
@@ -124,9 +125,9 @@
     "bus-tire": "巴士轮胎",
     "light-truck-tire": "轻型卡车轮胎",
     "radial-otr-tire": "工程子午线轮胎",
-    "commercial-tire":"商业轮胎",
-    "highway-truck-tire":"高速公路卡车轮胎",
-    "mine-truck-tire":"矿用卡车轮胎",
+    "commercial-tire": "商业轮胎",
+    "highway-truck-tire": "高速公路卡车轮胎",
+    "mine-truck-tire": "矿用卡车轮胎",
     "roadone-tyre-demonstration": "ROADONE 轮胎演示",
     "quarry-buidling-sites": "采石场和建筑工地",
     "mid-long-distance-wearable": "中远距离穿戴",

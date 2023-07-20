@@ -89,7 +89,9 @@ const Newpage = () => {
   return (
     <>
       <Helmet>
-        <title>News - Tongli Tyre Co.,Ltd</title>
+        <title>
+          {t("header.news")} - {t("homepage.title")}
+        </title>
       </Helmet>
       <InnerBanner bannerimage={NewsBanner} />
 

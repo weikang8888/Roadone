@@ -51,7 +51,9 @@ const Contactpage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Tongli Tyre Co.,Ltd</title>
+        <title>
+          {t("header.contact")} - {t("homepage.title")}
+        </title>
       </Helmet>
       <InnerBanner bannerimage={ContactBanner} />
 
