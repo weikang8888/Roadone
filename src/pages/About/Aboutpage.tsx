@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
@@ -35,6 +36,9 @@ const Aboutpage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About Us - Tongli Tyre Co.,Ltd</title>
+      </Helmet>
       <InnerBanner bannerimage={AboutBanner} />
 
       <section>

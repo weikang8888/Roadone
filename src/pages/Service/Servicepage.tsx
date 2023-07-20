@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 import InnerBanner from "../../component/Banner/InnerBanner";
 import NewsBanner from "../../static/image/news/news-banner.webp";
@@ -40,6 +41,9 @@ const Servicepage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Services - Tongli Tyre Co.,Ltd</title>
+      </Helmet>
       <InnerBanner bannerimage={NewsBanner} />
 
       <section>

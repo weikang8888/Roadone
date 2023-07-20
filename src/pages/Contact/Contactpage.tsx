@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import { Helmet } from "react-helmet";
+
 import InnerBanner from "../../component/Banner/InnerBanner";
 import ContactBanner from "../../static/image/main/contact-banner.webp";
 import ContactHouse from "../../static/image/main/contact-house.png";
@@ -31,7 +33,7 @@ const Contactpage = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8080/api_roadone/contact/contact", formData)
+      .post("https://backend.roadone.com.my/contact/contact.php", formData)
       .then((response) => {
         console.log(response.data);
         // Handle success response
@@ -48,6 +50,9 @@ const Contactpage = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Contact Us - Tongli Tyre Co.,Ltd</title>
+      </Helmet>
       <InnerBanner bannerimage={ContactBanner} />
 
       <section>
@@ -206,7 +211,7 @@ const Contactpage = () => {
                         <tr>
                           <td>
                             <div className="success-message">
-                            {t("contactpage.successMessage")}
+                              {t("contactpage.successMessage")}
                             </div>
                           </td>
                         </tr>

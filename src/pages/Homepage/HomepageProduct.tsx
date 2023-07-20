@@ -31,7 +31,7 @@ const HomepageProduct = () => {
               const translationIndex = parseInt(product.id, 10);
               return (
                 <li key={index}>
-                  <a href={product.products_url} className="pic">
+                  <a href={product.products_url} className="pic pic-padding">
                     <img
                       src={require(`../../static/picture/${product.products_image}`)}
                       width="300"
