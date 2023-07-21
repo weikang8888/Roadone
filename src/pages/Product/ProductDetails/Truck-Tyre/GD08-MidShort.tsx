@@ -17,7 +17,7 @@ const GD08_MidShort = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=36")
+      .get("https://backend.roadone.com.my/products/products?ids=36")
       .then((response) => {
         setProductItems(response.data);
       })

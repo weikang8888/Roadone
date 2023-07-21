@@ -18,7 +18,7 @@ const Newpage = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/news/news.php")
+      .get("https://backend.roadone.com.my/news/news")
       .then((response) => {
         setNewsItems(response.data);
       })

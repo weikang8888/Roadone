@@ -18,7 +18,7 @@ const Servicepage = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/services/services.php")
+      .get("https://backend.roadone.com.my/services/services")
       .then((response) => {
         setNewsItems(response.data);
       })

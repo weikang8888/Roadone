@@ -17,7 +17,7 @@ const QA999Light = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=79")
+      .get("https://backend.roadone.com.my/products/products?ids=79")
       .then((response) => {
         setProductItems(response.data);
       })

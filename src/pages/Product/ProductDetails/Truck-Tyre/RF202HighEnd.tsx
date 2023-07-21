@@ -17,7 +17,7 @@ const RD202HighEnd = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=25")
+      .get("https://backend.roadone.com.my/products/products?ids=25")
       .then((response) => {
         setProductItems(response.data);
       })

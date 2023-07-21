@@ -21,7 +21,7 @@ const A315_80R22_5 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=92")
+      .get("https://backend.roadone.com.my/products/products?ids=92")
       .then((response) => {
         setProductItems(response.data);
       })

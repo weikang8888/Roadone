@@ -17,7 +17,7 @@ const GD800Light = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=76")
+      .get("https://backend.roadone.com.my/products/products?ids=76")
       .then((response) => {
         setProductItems(response.data);
       })

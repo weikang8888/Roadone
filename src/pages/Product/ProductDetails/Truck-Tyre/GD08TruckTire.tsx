@@ -17,7 +17,7 @@ const GD08TruckTire = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=38")
+      .get("https://backend.roadone.com.my/products/products?ids=38")
       .then((response) => {
         setProductItems(response.data);
       })

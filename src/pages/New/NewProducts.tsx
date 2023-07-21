@@ -17,7 +17,7 @@ const NewProducts = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/news/news.php?ids=1,7,8,10,13")
+      .get("https://backend.roadone.com.my/news/news?ids=1,7,8,10,13")
       .then((response) => {
         setNewsItems(response.data);
       })

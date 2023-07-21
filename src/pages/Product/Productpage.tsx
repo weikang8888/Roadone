@@ -7,7 +7,8 @@ import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
 
 const Productpage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language); // Step 1: State variable for current language
   const [showFirstSubMenu, setShowFirstSubMenu] = useState(true);
   const [showSecondSubMenu, setShowSecondSubMenu] = useState(false);
   const [showQA919, setShowQA919] = useState(false);
@@ -32,6 +33,28 @@ const Productpage = () => {
     typePage: "",
   });
 
+  useEffect(() => {
+    // Step 2: Update currentPage and typePage when the language changes
+    if (i18n.language !== currentLanguage) {
+      setCurrentLanguage(i18n.language);
+      setShowFirstSubMenu(true);
+      setCurrentPage(1); // Reset the current page to 1 when language changes
+      setMenuState({
+        currentPage: "",
+        typePage: "",
+      });
+      // Fetch the initial products data based on the default language
+      axios
+        .get("https://backend.roadone.com.my/products/products")
+        .then((response) => {
+          setProducts(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }
+  }, [i18n.language, currentLanguage]);
+
   const pageToProductsTypeMap = {
     [t("submenu.truck-tire")]: "truck-tire",
     [t("submenu.bus-tire")]: "bus-tire",
@@ -42,7 +65,7 @@ const Productpage = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend.roadone.com.my/products/products.php")
+      .get("https://backend.roadone.com.my/products/products")
       .then((response) => {
         setProducts(response.data);
       })
@@ -63,9 +86,9 @@ const Productpage = () => {
 
     if (previousPage && !currentPage) {
       axios
-        .get("https://backend.roadone.com.my/products/products.php")
+        .get("https://backend.roadone.com.my/products/products")
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
           setProducts(response.data);
         })
         .catch((error) => {
@@ -80,7 +103,7 @@ const Productpage = () => {
       const productsType = pageToProductsTypeMap[currentPage];
 
       axios
-        .get("https://backend.roadone.com.my/products/products.php")
+        .get("https://backend.roadone.com.my/products/products")
         .then((response) => {
           if (currentPage === t("submenu.truck-tire")) {
             setShowFirstSubMenu(false);
@@ -117,13 +140,13 @@ const Productpage = () => {
       const productsType = pageToProductsTypeMap[currentPage];
 
       axios
-        .get("https://backend.roadone.com.my/products/products.php")
+        .get("https://backend.roadone.com.my/products/products")
         .then((response) => {
           const filteredProducts = response.data.filter(
             (product) => product.products_type === productsType
           );
           setProducts(filteredProducts);
-          console.log("filteredProducts:", filteredProducts);
+          // console.log("filteredProducts:", filteredProducts);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -145,7 +168,7 @@ const Productpage = () => {
 
     setMenuState((prevState) => ({
       ...prevState,
-      typePage: t(typePage),
+      typePage: typePage,
     }));
 
     const pageToTruckTireTypeMap = {
@@ -162,7 +185,7 @@ const Productpage = () => {
     if (pageToTruckTireTypeMap.hasOwnProperty(typePage)) {
       const truckTireType = pageToTruckTireTypeMap[typePage];
       axios
-        .get("https://backend.roadone.com.my/products/products.php")
+        .get("https://backend.roadone.com.my/products/products")
         .then((response) => {
           const filteredProducts = response.data.filter(
             (product) => product.products_truck_tire_type === truckTireType
@@ -245,11 +268,10 @@ const Productpage = () => {
       <section>
         <div className="container">
           <div className="ejfl">{t("product.productCategories")}</div>
-
           <SubMenu
             previouspage={t("submenu.product")}
-            currentpage={t(menuState.currentPage)}
-            typepage={t(menuState.typePage)}
+            currentpage={menuState.currentPage}
+            typepage={menuState.typePage}
             onSubMenuClick={handleSubMenuClick}
             className="pointer"
           />

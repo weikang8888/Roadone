@@ -12,7 +12,7 @@ const HomepageProduct = () => {
   useEffect(() => {
     axios
       .get(
-        "https://backend.roadone.com.my/products/products.php?ids=82,83,84,85,86,4,69,70"
+        "https://backend.roadone.com.my/products/products?ids=82,83,84,85,86,4,69,70"
       )
       .then((response) => {
         setProducts(response.data);

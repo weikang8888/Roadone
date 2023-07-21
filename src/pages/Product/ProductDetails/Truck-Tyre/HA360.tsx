@@ -17,7 +17,7 @@ const HA360 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=66")
+      .get("https://backend.roadone.com.my/products/products?ids=66")
       .then((response) => {
         setProductItems(response.data);
       })

@@ -17,7 +17,7 @@ const HF31TBR = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=44")
+      .get("https://backend.roadone.com.my/products/products?ids=44")
       .then((response) => {
         setProductItems(response.data);
       })

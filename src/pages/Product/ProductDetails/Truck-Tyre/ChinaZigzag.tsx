@@ -17,7 +17,7 @@ const ChinaZigzag = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=39")
+      .get("https://backend.roadone.com.my/products/products?ids=39")
       .then((response) => {
         setProductItems(response.data);
       })

@@ -21,7 +21,7 @@ const RoadCommercialTire = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=96")
+      .get("https://backend.roadone.com.my/products/products?ids=96")
       .then((response) => {
         setProductItems(response.data);
       })

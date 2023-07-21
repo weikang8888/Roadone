@@ -10,7 +10,7 @@ const DetailsRelatedNews = ({ ids }) => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get(`https://backend.roadone.com.my/products/products.php?ids=${ids}`)
+      .get(`https://backend.roadone.com.my/products/products?ids=${ids}`)
       .then((response) => {
         setProductItems(response.data);
       })

@@ -21,7 +21,7 @@ const A11R22_5TruckTire = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=97")
+      .get("https://backend.roadone.com.my/products/products?ids=97")
       .then((response) => {
         setProductItems(response.data);
       })

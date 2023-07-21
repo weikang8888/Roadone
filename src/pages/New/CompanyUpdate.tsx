@@ -17,7 +17,7 @@ const CompanyUpdate = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/news/news.php?ids=4,5,6")
+      .get("https://backend.roadone.com.my/news/news?ids=4,5,6")
       .then((response) => {
         setNewsItems(response.data);
       })

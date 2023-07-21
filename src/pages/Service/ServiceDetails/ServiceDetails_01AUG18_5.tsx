@@ -16,7 +16,7 @@ const ServiceDetails_01AUG18_5 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/services/services.php?ids=8")
+      .get("https://backend.roadone.com.my/services/services?ids=8")
       .then((response) => {
         setNewsItems(response.data);
       })

@@ -17,7 +17,7 @@ const HF21 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=2")
+      .get("https://backend.roadone.com.my/products/products?ids=2")
       .then((response) => {
         setProductItems(response.data);
       })

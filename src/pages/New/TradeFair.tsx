@@ -17,7 +17,7 @@ const TradeFair = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/news/news.php?ids=11,12")
+      .get("https://backend.roadone.com.my/news/news?ids=11,12")
       .then((response) => {
         setNewsItems(response.data);
       })

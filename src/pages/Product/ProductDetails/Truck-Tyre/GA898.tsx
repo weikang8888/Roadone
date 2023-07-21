@@ -17,7 +17,7 @@ const GA898 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=57")
+      .get("https://backend.roadone.com.my/products/products?ids=57")
       .then((response) => {
         setProductItems(response.data);
       })

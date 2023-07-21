@@ -21,7 +21,7 @@ const NewDetails_30JUL19 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/news/news.php?ids=15")
+      .get("https://backend.roadone.com.my/news/news?ids=15")
       .then((response) => {
         setNewsItems(response.data);
       })

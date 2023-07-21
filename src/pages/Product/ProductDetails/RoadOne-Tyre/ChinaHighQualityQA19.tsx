@@ -17,7 +17,7 @@ const ChinaHighQualityQA19 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=85")
+      .get("https://backend.roadone.com.my/products/products?ids=85")
       .then((response) => {
         setProductItems(response.data);
       })

@@ -17,7 +17,7 @@ const RD05 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=20")
+      .get("https://backend.roadone.com.my/products/products?ids=20")
       .then((response) => {
         setProductItems(response.data);
       })

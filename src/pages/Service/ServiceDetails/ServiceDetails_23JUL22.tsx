@@ -22,7 +22,7 @@ const ServiceDetails_23JUL22 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/services/services.php?ids=1")
+      .get("https://backend.roadone.com.my/services/services?ids=1")
       .then((response) => {
         setNewsItems(response.data);
       })

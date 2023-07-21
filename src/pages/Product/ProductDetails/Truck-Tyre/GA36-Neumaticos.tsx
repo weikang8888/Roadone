@@ -17,7 +17,7 @@ const GA36_Neumaticos = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("https://backend.roadone.com.my/products/products.php?ids=35")
+      .get("https://backend.roadone.com.my/products/products?ids=35")
       .then((response) => {
         setProductItems(response.data);
       })
