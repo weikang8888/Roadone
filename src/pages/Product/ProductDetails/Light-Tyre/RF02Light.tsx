@@ -299,7 +299,7 @@ const RF02Light = () => {
               </table>
               <DetailsPreviousNext
                 prevText={t("other.noInformation")}
-                nextText={"RA85 Light Truck Tyre"}
+                nextText={t('product.title.69')}
                 nextLink="/products/light-truck-tire/ra85-light"
               />
               <p className="productsTags">

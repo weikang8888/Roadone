@@ -60,7 +60,7 @@ const A14_00R20 = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.99")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -335,14 +335,14 @@ const A14_00R20 = () => {
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={"12.00R24 Truck Tyre"}
+                prevText={t("product.title.98")}
                 prevLink="/products/roadone-tyre-demonstration/12-00r24"
-                nextText={"Mine Truck Tyre"}
+                nextText={t("product.title.100")}
                 nextLink="/products/roadone-tyre-demonstration/mine-truck-tire"
               />
               <p className="productsTags">
-                Hot Tags: 14.00R20 Military {t("submenu.truck-tire")}, China, suppliers,
-                manufacturers, factory, wholesale, high-quality
+                Hot Tags: 14.00R20 Military {t("submenu.truck-tire")}, China,
+                suppliers, manufacturers, factory, wholesale, high-quality
               </p>
               <DetailsRelatedProducts ids="92,93,98,95,96,97" />
             </div>

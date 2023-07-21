@@ -353,9 +353,9 @@ const A385_65R22_5 = () => {
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={"12R22.5 Tubeless Truck Tyre"}
+                prevText={t('product.title.87')}
                 prevLink="/products/roadone-tyre-demonstration/12r22-5-tubeless"
-                nextText={"6.50R16 Light Truck Tyre"}
+                nextText={t('product.title.89')}
                 nextLink="/products/roadone-tyre-demonstration/6-50r16-light"
               />
               <p className="productsTags">

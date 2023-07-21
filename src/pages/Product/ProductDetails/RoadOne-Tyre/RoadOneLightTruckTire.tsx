@@ -60,7 +60,7 @@ const RoadOneLightTruckTire = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.94")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -395,9 +395,9 @@ const RoadOneLightTruckTire = () => {
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={"Truck Tyre"}
+                prevText={t("product.title.93")}
                 prevLink="/products/roadone-tyre-demonstration/truck-tire"
-                nextText={"Bus Tyre"}
+                nextText={t("product.title.95")}
                 nextLink="/products/roadone-tyre-demonstration/bus-tire"
               />
               <p className="productsTags">

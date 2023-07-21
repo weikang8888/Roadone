@@ -57,7 +57,7 @@ const GA898 = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.57")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -283,7 +283,7 @@ const GA898 = () => {
               <DetailsPreviousNext
                 prevText={"RA695"}
                 prevLink="/products/truck-tire/high-end-heavy-loading-tyres/ra695"
-                nextText={"GD888 Brand High End Tyre"}
+                nextText={t("product.title.58")}
                 nextLink="/products/truck-tire/high-end-heavy-loading-tyres/gd888-high-end"
               />
               <p className="productsTags">

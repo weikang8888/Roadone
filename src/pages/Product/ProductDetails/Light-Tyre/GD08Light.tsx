@@ -56,7 +56,7 @@ const GD08Light = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.77")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -317,9 +317,9 @@ const GD08Light = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"GD800 Light Truck Tyre"}
+                prevText={t("product.title.76")}
                 prevLink="/products/light-truck-tire/gd800-light"
-                nextText={"QA39 Light Truck Tyre"}
+                nextText={t("product.title.78")}
                 nextLink="/products/light-truck-tire/qa39-light"
               />
               <p className="productsTags">

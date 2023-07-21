@@ -60,7 +60,7 @@ const A315_80R22_5 = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.92")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -353,9 +353,9 @@ const A315_80R22_5 = () => {
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={"425/65R22.5 Tubeless Truck Tyre"}
+                prevText={t("product.title.90")}
                 prevLink="/products/roadone-tyre-demonstration/425-65r22-5-tubeless"
-                nextText={"Truck Tyre"}
+                nextText={t("product.title.93")}
                 nextLink="/products/roadone-tyre-demonstration/truck-tire"
               />
               <p className="productsTags">

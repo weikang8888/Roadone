@@ -337,11 +337,9 @@ const A12R22_5 = () => {
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={
-                  "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                }
+                prevText={t('product.title.86')}
                 prevLink="China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                nextText={"385/65R22.5 Truck Tyre"}
+                nextText={t('product.title.88')}
                 nextLink="/products/roadone-tyre-demonstration/385-65R22-5"
               />
               <p className="productsTags">

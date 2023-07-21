@@ -259,7 +259,7 @@ const QA999Light = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"QA39 Light Truck Tyre"}
+                prevText={t('product.title.78')}
                 prevLink="/products/light-truck-tire/qa39-light"
                 nextText={"No Information"}
               />

@@ -344,7 +344,7 @@ const A11R22_5 = () => {
               </table>
               <DetailsPreviousNext
                 prevText={t("other.noInformation")}
-                nextText={"CHINA HIGH QUALITY QA19 OFF ROAD TRUCK TYRE FACTORY"}
+                nextText={t('product.title.85')}
                 nextLink="/products/roadone-tyre-demonstration/china-hight-quality-qa19"
               />
               <p className="productsTags">

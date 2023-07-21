@@ -242,7 +242,7 @@ const RD202HighEnd = () => {
               <DetailsPreviousNext
                 prevText={"RD15L"}
                 prevLink="/products/truck-tire/long-distance-standard-load-truck-tire/rd15L"
-                nextText={"HF201 High End Wearable Tyre"}
+                nextText={t('product.title.26')}
                 nextLink="/products/truck-tire/long-distance-standard-load-truck-tire/hf201-high-end"
               />
               <p className="productsTags">

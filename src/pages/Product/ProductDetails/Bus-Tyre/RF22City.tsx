@@ -284,7 +284,7 @@ const RF22City = () => {
               </table>
               <DetailsPreviousNext
                 prevText={t("other.noInformation")}
-                nextText={"HF21 City-City Bus Tyre"}
+                nextText={t('product.title.67')}
                 nextLink="/products/bus-tire/hf21-city-bus"
               />
               <p className="productsTags">

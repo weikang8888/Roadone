@@ -57,7 +57,7 @@ const GD08_MidShort = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.36")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -469,9 +469,9 @@ const GD08_MidShort = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"GA36 Neumáticos Para Camiones "}
+                prevText={t("product.title.35")}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36-neumaticos"
-                nextText={"GA665 High End Heavy Load Tyre"}
+                nextText={t("product.title.37")}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga665-high-end"
               />
               <p className="productsTags">

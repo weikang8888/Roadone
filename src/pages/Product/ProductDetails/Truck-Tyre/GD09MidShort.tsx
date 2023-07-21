@@ -57,7 +57,7 @@ const GD09MidShort = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.40")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -266,7 +266,7 @@ const GD09MidShort = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"China Zigzag Tyre"}
+                prevText={t("product.title.39")}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga98-china-zigzag"
                 nextText={"No Information"}
               />

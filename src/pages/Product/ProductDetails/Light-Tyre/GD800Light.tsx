@@ -261,7 +261,7 @@ const GD800Light = () => {
               <DetailsPreviousNext
                 prevText={"QA999"}
                 prevLink="/products/light-truck-tire/qa999"
-                nextText={"GD08 Light Truck Tyre"}
+                nextText={t('product.title.77')}
                 nextLink="/products/light-truck-tire/gd08-light"
               />
               <p className="productsTags">

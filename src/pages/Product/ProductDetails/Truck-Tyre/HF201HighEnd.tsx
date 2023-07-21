@@ -240,7 +240,7 @@ const HF201HighEnd = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"RF202 High End Wearable Tyre"}
+                prevText={t('product.title.25')}
                 prevLink="/products/truck-tire/long-distance-standard-load-truck-tire/rf202-high-end"
                 nextText={"No Information"}
               />

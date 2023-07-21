@@ -270,8 +270,8 @@ const CA10City = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"RF22 City-City Bus Tyre"}
-                prevLink="/products/bus-tire/rf22-city"
+                prevText={t("product.title.67")}
+                prevLink="/products/bus-tire/hf21-city-bus"
                 nextText={t("other.noInformation")}
               />
               <p className="productsTags">

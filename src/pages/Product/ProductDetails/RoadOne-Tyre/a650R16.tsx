@@ -60,7 +60,7 @@ const A650R16 = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.89")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -326,9 +326,9 @@ const A650R16 = () => {
                 </p>
               </div>
               <DetailsPreviousNext
-                prevText={"385/65R22.5 Truck Tyre"}
+                prevText={t("product.title.88")}
                 prevLink="/products/roadone-tyre-demonstration/385-65R22-5"
-                nextText={"425/65R22.5 Tubeless Truck Tyre"}
+                nextText={t("product.title.90")}
                 nextLink="/products/roadone-tyre-demonstration/425-65r22-5-tubeless"
               />
               <p className="productsTags">

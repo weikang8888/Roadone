@@ -57,7 +57,7 @@ const GA36_Neumaticos = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.35")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -442,9 +442,7 @@ const GA36_Neumaticos = () => {
               <DetailsPreviousNext
                 prevText={"GD58"}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/gd58"
-                nextText={
-                  "315/80R22.5、12.00R24 GD08 Mid-short Distance TRUCK TIRE"
-                }
+                nextText={t("product.title.36")}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08-mid-short"
               />
               <p className="productsTags">

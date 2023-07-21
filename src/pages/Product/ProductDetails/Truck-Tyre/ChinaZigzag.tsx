@@ -57,7 +57,7 @@ const ChinaZigzag = () => {
                     <div className="pcon_info">
                       <p>{t("product.description.39")}</p>
                     </div>
-   <a href="/contact" rel="nofollow" className="p_more mmv">
+                    <a href="/contact" rel="nofollow" className="p_more mmv">
                       {t("other.sendInquiry")}
                     </a>
                   </div>
@@ -295,9 +295,9 @@ const ChinaZigzag = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"GD08 Truck Tyre"}
+                prevText={t("product.title.38")}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08-truck-tire"
-                nextText={"GD09 Middle End Mid-short Distance Heavy Load Tyre"}
+                nextText={t("product.title.40")}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga09-mid-short"
               />
               <p className="productsTags">

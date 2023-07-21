@@ -261,7 +261,7 @@ const QA999 = () => {
               <DetailsPreviousNext
                 prevText={"QA39"}
                 prevLink="/products/light-truck-tire/qa39"
-                nextText={"GD800 Light Truck Tyre"}
+                nextText={t('product.title.76')}
                 nextLink="/products/light-truck-tire/gd800-light"
               />
               <p className="productsTags">

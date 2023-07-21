@@ -206,7 +206,7 @@ const R251400 = () => {
                 </tbody>
               </table> */}
               <DetailsPreviousNext
-                prevText={"16.00R25 ALL STEEL WIDE BODY DUMP TRUCK TIRE"}
+                prevText={t('product.title.82')}
                 prevLink="/products/radial-otr-tires/16-00r25"
                 nextText={"No Information"}
               />

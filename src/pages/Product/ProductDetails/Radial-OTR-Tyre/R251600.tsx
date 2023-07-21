@@ -224,7 +224,7 @@ const R251600 = () => {
               </table> */}
               <DetailsPreviousNext
                 prevText={t("other.noInformation")}
-                nextText={"14.00R25 OTR TIRES"}
+                nextText={t('product.title.83')}
                 nextLink="/products/radial-otr-tires/14-00r25"
               />
               <p className="productsTags">

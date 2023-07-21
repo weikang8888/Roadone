@@ -325,7 +325,7 @@ const GD58 = () => {
               <DetailsPreviousNext
                 prevText={"GA06"}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga06"
-                nextText={"GA36 Neumáticos Para Camiones "}
+                nextText={t('product.title.35')}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga36-neumaticos"
               />
               <p className="productsTags">

@@ -227,13 +227,9 @@ const ChinaHighQualityQA19 = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={
-                  "11R22.5 295/80R22.5 Mid-long Distance Truck Tyre TBR"
-                }
+                prevText={t('product.title.84')}
                 prevLink="/products/roadone-tyre-demonstration/11r22-5-295-80r22-5"
-                nextText={
-                  "China Factory 11.00R20、12.00R20 QA99 PURE MINE HIGH QUALITY TYRE"
-                }
+                nextText={t('product.title.86')}
                 nextLink="/products/roadone-tyre-demonstration/china-factory-11-00r20-12-00r20-qa99"
               />
               <p className="productsTags">

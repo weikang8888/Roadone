@@ -283,9 +283,9 @@ const HF21City = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"RF22 City-City Bus Tyre"}
+                prevText={t('product.title.2')}
                 prevLink="/products/bus-tire/rf22-city"
-                nextText={"CA10 Inter-City Bus Tyre"}
+                nextText={t('product.title.68')}
                 nextLink="/products/bus-tire/ca10-inter-city"
               />
               <p className="productsTags">

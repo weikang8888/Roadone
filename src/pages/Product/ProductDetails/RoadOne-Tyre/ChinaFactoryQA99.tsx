@@ -256,9 +256,9 @@ const ChinaFactoryQA99 = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"CHINA HIGH QUALITY QA19 OFF ROAD TRUCK TYRE FACTORY"}
+                prevText={t('product.title.85')}
                 prevLink="/products/roadone-tyre-demonstration/china-hight-quality-qa19"
-                nextText={"12R22.5 Tubeless Truck Tyre"}
+                nextText={t('product.title.87')}
                 nextLink="/products/roadone-tyre-demonstration/12r22-5-tubeless"
               />
               <p className="productsTags">

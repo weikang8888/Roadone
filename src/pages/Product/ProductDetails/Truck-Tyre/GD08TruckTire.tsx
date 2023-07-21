@@ -440,9 +440,9 @@ const GD08TruckTire = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"GA665 High End Heavy Load Tyre"}
+                prevText={t('product.title.37')}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga665-high-end"
-                nextText={"China Zigzag Tyre"}
+                nextText={t('product.title.39')}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/ga98-china-zigzag"
               />
               <p className="productsTags">

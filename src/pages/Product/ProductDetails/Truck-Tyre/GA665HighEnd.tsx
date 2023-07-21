@@ -237,9 +237,9 @@ const GA665HighEnd = () => {
                 </tbody>
               </table>
               <DetailsPreviousNext
-                prevText={"GD08 Mid-short Distance"}
+                prevText={t('product.title.36')}
                 prevLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08-mid-short"
-                nextText={"GD08 Truck Tyre"}
+                nextText={t('product.title.38')}
                 nextLink="/products/truck-tire/medium-and-short-distance-hybrid-truck-tires/gd08-truck-tire"
               />
               <p className="productsTags">
