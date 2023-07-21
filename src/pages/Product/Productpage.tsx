@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import ProductBanner from "../../static/image/products/product-banner.webp";
 import InnerBanner from "../../component/Banner/InnerBanner";
 import SubMenu from "../../component/SubMenu/SubMenu";
+import LoadSpinner from "../../component/Loader/LoadSpinner";
 
 const Productpage = () => {
   const { t, i18n } = useTranslation();
@@ -15,6 +16,7 @@ const Productpage = () => {
   const [products, setProducts] = useState([]);
   const [currentProduct, setCurrentPage] = useState(1);
   const [newsPerProduct] = useState(12);
+  const [loading, setLoading] = useState(true); // State to manage loading status
 
   const indexOfLastNews = currentProduct * newsPerProduct;
   const indexOfFirstNews = indexOfLastNews - newsPerProduct;
@@ -64,18 +66,23 @@ const Productpage = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
+
     axios
       .get("https://backend.roadone.com.my/products/products")
       .then((response) => {
+        setLoading(false); // Set loading to false when data is fetched
         setProducts(response.data);
       })
       .catch((error) => {
+        setLoading(false); // Set loading to false when data is fetched
         console.error("Error fetching data:", error);
       });
   }, []);
 
   const handleSubMenuClick = (event, previousPage, currentPage, typePage) => {
     event.preventDefault();
+    setLoading(true);
     setCurrentPage(1); // Reset the current page to 1 when a filter is applied
 
     setMenuState((prevState) => ({
@@ -90,9 +97,11 @@ const Productpage = () => {
         .then((response) => {
           // console.log(response.data);
           setProducts(response.data);
+          setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
+          setLoading(false);
         });
 
       setShowFirstSubMenu(true);
@@ -120,15 +129,19 @@ const Productpage = () => {
           );
           setProducts(filteredProducts);
           console.log("filteredProducts:", filteredProducts);
+          setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
+          setLoading(false);
         });
     }
   };
 
   const handleProductTypeClick = (event, currentPage) => {
     event.preventDefault();
+    setLoading(true);
+
     setCurrentPage(1); // Reset the current page to 1 when a filter is applied
 
     setMenuState((prevState) => ({
@@ -147,9 +160,11 @@ const Productpage = () => {
           );
           setProducts(filteredProducts);
           // console.log("filteredProducts:", filteredProducts);
+          setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
+          setLoading(false);
         });
 
       if (currentPage === t("submenu.truck-tire")) {
@@ -164,6 +179,8 @@ const Productpage = () => {
 
   const handleTruckTireTypeClick = (event, typePage) => {
     event.preventDefault();
+    setLoading(true);
+
     setCurrentPage(1); // Reset the current page to 1 when a filter is applied
 
     setMenuState((prevState) => ({
@@ -191,9 +208,11 @@ const Productpage = () => {
             (product) => product.products_truck_tire_type === truckTireType
           );
           setProducts(filteredProducts);
+          setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
+          setLoading(false);
         });
 
       if (typePage) {
@@ -408,37 +427,39 @@ const Productpage = () => {
                 </li>
               </ul>
             </div>
-            <div className="row mx-0 justify-content-between">
-              {currentNews.map((product, index) => {
-                const translationIndex = parseInt(product.id, 10);
-
-                return (
-                  <div
-                    className="pro-bigbox align-items-center"
-                    key={product.id}>
-                    <div className="bigboximg col-4 me-4">
-                      <a href={product.products_url}>
-                        <img
-                          src={require(`../../static/picture/${product.products_image}`)}
-                        />
-                      </a>
-                    </div>
-                    <div className="bigboxword col-6">
-                      <a href={product.products_url}>
-                        <h3>{t(`product.title.${translationIndex}`)}</h3>
-                      </a>
-                      <p>{t(`product.description.${translationIndex}`)}</p>
-                      <div className="bigboxmore">
-                        <a href={product.products_url} rel="nofollow">
-                          {t("other.readMore")}
+            {loading ? (
+              <LoadSpinner />
+            ) : (
+              <div className="row mx-0 justify-content-between">
+                {currentNews.map((product, index) => {
+                  const translationIndex = parseInt(product.id, 10);
+                  return (
+                    <div
+                      className="pro-bigbox align-items-center"
+                      key={product.id}>
+                      <div className="bigboximg col-4 me-4">
+                        <a href={product.products_url}>
+                          <img
+                            src={require(`../../static/picture/${product.products_image}`)}
+                          />
                         </a>
                       </div>
+                      <div className="bigboxword col-6">
+                        <a href={product.products_url}>
+                          <h3>{t(`product.title.${translationIndex}`)}</h3>
+                        </a>
+                        <p>{t(`product.description.${translationIndex}`)}</p>
+                        <div className="bigboxmore">
+                          <a href={product.products_url} rel="nofollow">
+                            {t("other.readMore")}
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-
+                  );
+                })}
+              </div>
+            )}
             {renderPageNumbers()}
           </div>
         </div>

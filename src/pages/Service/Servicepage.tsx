@@ -7,6 +7,7 @@ import InnerBanner from "../../component/Banner/InnerBanner";
 import NewsBanner from "../../static/image/news/news-banner.webp";
 import SubMenu from "../../component/SubMenu/SubMenu";
 import Bigbox from "../../component/Bigbox/Bigbox";
+import LoadSpinner from "../../component/Loader/LoadSpinner";
 
 const Servicepage = () => {
   const { t } = useTranslation();
@@ -14,15 +15,18 @@ const Servicepage = () => {
   const [newsItems, setNewsItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [newsPerPage] = useState(20);
+  const [loading, setLoading] = useState(true); // State to manage loading status
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
       .get("https://backend.roadone.com.my/services/services")
       .then((response) => {
+        setLoading(false);
         setNewsItems(response.data);
       })
       .catch((error) => {
+        setLoading(false);
         console.error("Error fetching data:", error);
       });
   }, []);
@@ -58,6 +62,7 @@ const Servicepage = () => {
           <div className="main">
             <ul className="news_message clearfix">
               <div className="newslist">
+                {loading && <LoadSpinner />}
                 {currentNews.map((item, index) => (
                   <Bigbox
                     key={index}

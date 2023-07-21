@@ -30,7 +30,7 @@
 }
 
 .image-container {
-  width: 49%;
+  width: 100%;
   border: 1px solid #eee;
   box-sizing: border-box;
   padding: 5px;
@@ -39,8 +39,7 @@
 
 .image {
   max-width: 100%;
-  width: 913px;
-  height: 624px;
+  width: 100%;
 }
 
 .border-top {
@@ -108,12 +107,22 @@
   border: 1px solid #eee;
 }
 
+@media screen and (max-width: 440px) {
+  .event-container {
+    display: block;
+  }
+  .flex-container {
+    display: block;
+  }
+  .image-container-2{
+    display: block!important;
+  }
+}
 .event-image {
   margin-right: 15px;
   max-width: 100%;
   display: block;
-  width: 509px;
-  height: 356px;
+  width: 100%;
 }
 
 .event-title {
@@ -197,16 +206,10 @@
 }
 
 .content-image {
-  width: 990px;
-  height: 702px;
+  width: 100%;
 }
-.flex-container {
-  display: flex;
-  text-align: center;
-}
-
 .flex-item {
-  width: 32%;
+  width: 100%;
   border: 1px solid #eee;
   box-sizing: border-box;
   padding: 5px;
@@ -248,7 +251,7 @@
 }
 
 .image-item {
-  width: 32%;
+  width: 100%;
   border: 1px solid #eee;
   box-sizing: border-box;
   padding: 5px;
@@ -256,7 +259,7 @@
 }
 
 .production-item {
-  width: 23.5%;
+  width: 100%;
   border: 1px solid #eee;
   box-sizing: border-box;
   padding: 5px;
@@ -264,7 +267,7 @@
 }
 
 .innovation-item {
-  width: 49%;
+  width: 100%;
   border: 1px solid #eee;
   box-sizing: border-box;
   padding: 5px;
@@ -273,8 +276,7 @@
 
 .image-item img {
   max-width: 100%;
-  width: 592px;
-  height: 509px;
+  width: 100%;
 }
 
 .image-item p {

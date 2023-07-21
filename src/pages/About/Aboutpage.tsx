@@ -254,7 +254,7 @@ const Aboutpage = () => {
                   {t("aboutpage.industrialParkContent1")}
                 </span>
               </p>
-              <p className="content-center">
+              <p className="content-center my-3">
                 <img
                   src={IndustrialImage1}
                   title="(1)"
@@ -272,7 +272,7 @@ const Aboutpage = () => {
                   {t("aboutpage.industrialParkContent3")}
                 </span>
               </p>
-              <p className="content-center">
+              <p className="content-center my-3">
                 <img
                   src={IndustrialImage2}
                   title="1.png"
@@ -280,12 +280,7 @@ const Aboutpage = () => {
                   className="content-image"
                 />
               </p>
-              <p className="content-paragraph">
-                <br />
-              </p>
-              <p className="content-paragraph">
-                <br />
-              </p>
+
               <fieldset className="section-fieldset">
                 <legend className="section-legend center">
                   <span className="section-legend-text">
