@@ -1,0 +1,23 @@
+.banner .swiper-pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+}
+
+.banner .swiper-pagination-bullet {
+  display: inline-block !important;
+  background: url(../../static/assets/image/banner_p.png) no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  cursor: pointer !important;
+  background-size: 50% !important;
+}
+.banner .swiper-pagination-bullet-active {
+  display: inline-block !important;
+  background: url(../../static/assets/image/banner_a.png) no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  background-size: 50% !important;
+}
