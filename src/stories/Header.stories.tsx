@@ -10,7 +10,7 @@ export default {
 
 const Template: Story<typeof Header> = (args) => (
   <BrowserRouter>
-    <Header />;
+    <Header logo={""} logoClassName={""} logoDivClassName={""} />;
   </BrowserRouter>
 );
 

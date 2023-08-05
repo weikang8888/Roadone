@@ -1,82 +1,90 @@
 import React from "react";
-import Logo from "../../static/assets/main/logo.png";
+import { NavLink } from "react-router-dom";
 
-const Header = () => {
+interface HeaderOption {
+  logo: string;
+  logoDivClassName: string;
+  logoClassName: string;
+}
+
+const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
   return (
     <>
       <div className="nav clearfix">
-        <div className="nav_left fl">
-          <a href="">
-            <img src={Logo} className="in_logo" title="Roadone" />
-          </a>
+        <div className={logoDivClassName}>
+          <NavLink to="">
+            <img src={logo} className={logoClassName} title="Roadone" />
+          </NavLink>
         </div>
         <div className="nav_box fr">
           <div className="nav_d1 clearfix">
             <p className="nav_d1_box fr">
-              <a href="http://www.tltyre.com/index.php">中文</a>
-              <a href="">English</a>
-              <a href="http://kr.tltyre.com">한국어</a>
-              <a href="http://www.hixih.com.cn" target="_blank">
+              <NavLink to="">中文</NavLink>
+              <NavLink to="">English</NavLink>
+              <NavLink to="">한국어</NavLink>
+              <NavLink to="" target="_blank">
                 HIXIH Group
-              </a>
+              </NavLink>
             </p>
           </div>
           <div className="nav_main in_nav_main">
             <ul className="clearfix">
               <li>
-                <a href="" className="a1 current" id="nav0">
+                <NavLink to="/" className="a1 current" id="nav0">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="news.html" className="a1" id="nav1">
+                <NavLink to="/news" className="a1" id="nav1">
                   News
-                </a>
+                </NavLink>
                 <div className="lb" style={{ display: "none" }}></div>
               </li>
               <li>
-                <a href="product.html" className="a1" id="nav2">
+                <NavLink to="product.html" className="a1" id="nav2">
                   Product
-                </a>
+                </NavLink>
                 <div className="lb" style={{ display: "none" }}>
-                  <a href="truck-tyres.html">Truck Tyres</a>
-                  <a href="light-truck-series.html">Light Truck Tyres</a>
-                  <a href="bus-tyres.html">Bus Tyres</a>
+                  <NavLink to="truck-tyres.html">Truck Tyres</NavLink>
+                  <NavLink to="light-truck-series.html">
+                    Light Truck Tyres
+                  </NavLink>
+                  <NavLink to="bus-tyres.html">Bus Tyres</NavLink>
                 </div>
               </li>
               <li>
-                <a href="marketing.html" className="a1" id="nav3">
+                <NavLink to="marketing.html" className="a1" id="nav3">
                   Marketing
-                </a>
+                </NavLink>
                 <div className="lb" style={{ display: "none" }}></div>
               </li>
               <li>
-                <a href="service.html" className="a1" id="nav4">
+                <NavLink to="service.html" className="a1" id="nav4">
                   Service
-                </a>
+                </NavLink>
                 <div className="lb" style={{ display: "none" }}>
-                  <a href="tyre-className.html">Tyre className</a>
-                  <a href="guestbook.html">Guestbook</a>
-                  <a href="download.html">Download</a>
+                  <NavLink to="tyre-className.html">Tyre className</NavLink>
+                  <NavLink to="guestbook.html">Guestbook</NavLink>
+                  <NavLink to="download.html">Download</NavLink>
                 </div>
               </li>
               <li>
-                <a href="recruit.html" className="a1" id="nav5">
+                <NavLink to="recruit.html" className="a1" id="nav5">
                   Recruitment
-                </a>
+                </NavLink>
                 <div className="lb" style={{ display: "none" }}>
-                  <a href="social.html">Social Recruitment</a>
-                  <a href="Campus.html">Campus Recruitment</a>
+                  <NavLink to="social.html">Social Recruitment</NavLink>
+                  <NavLink to="Campus.html">Campus Recruitment</NavLink>
                 </div>
               </li>
               <li>
-                <a href="about.html" className="a1" id="nav6">
+                <NavLink to="about.html" className="a1" id="nav6">
                   About Us
-                </a>
+                </NavLink>
                 <div className="lb" style={{ display: "none" }}>
-                  <a href="roadone.html">About Roadone</a>
-                  <a href="social-responsibility.html">CSR</a>
-                  <a href="contact.html">Contact Us</a>
+                  <NavLink to="roadone.html">About Roadone</NavLink>
+                  <NavLink to="social-responsibility.html">CSR</NavLink>
+                  <NavLink to="contact.html">Contact Us</NavLink>
                 </div>
               </li>
             </ul>

@@ -378,7 +378,7 @@ s, i, em {
 	color: #de0529;
 	transition: none;
 }
-.nav .nav_box .nav_main ul li a.current {
+.nav .nav_box .nav_main ul li a.active {
 	color: #de0529;
 	border-bottom: 3px solid #de0529;
 }
