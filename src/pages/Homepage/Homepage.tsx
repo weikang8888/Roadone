@@ -130,7 +130,7 @@ const Homepage = () => {
               ))}
             </ul>
             <div className="more">
-              <a href="news.html">MORE </a>
+              <a href="news.html">MORE {">"}</a>
             </div>
           </div>
         </div>

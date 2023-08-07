@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Service, useServiceContext } from "../../provider/ServiceContent";
 
 interface HeaderOption {
   logo: string;
@@ -8,6 +9,16 @@ interface HeaderOption {
 }
 
 const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
+  const { setActiveService } = useServiceContext();
+
+  const handleServiceClick = (service: Service) => {
+    setActiveService(service);
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevent the default link behavior
+    // Add any additional logic you want when the NavLink is clicked but disabled
+  };
   return (
     <>
       <div className="nav clearfix">
@@ -38,13 +49,12 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                 <NavLink to="/news" className="a1" id="nav1">
                   News
                 </NavLink>
-                <div className="lb" style={{ display: "none" }}></div>
               </li>
               <li>
                 <NavLink to="product.html" className="a1" id="nav2">
                   Product
                 </NavLink>
-                <div className="lb" style={{ display: "none" }}>
+                <div className="lb product-submenu">
                   <NavLink to="truck-tyres.html">Truck Tyres</NavLink>
                   <NavLink to="light-truck-series.html">
                     Light Truck Tyres
@@ -53,38 +63,48 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                 </div>
               </li>
               <li>
-                <NavLink to="marketing.html" className="a1" id="nav3">
-                  Marketing
-                </NavLink>
-                <div className="lb" style={{ display: "none" }}></div>
-              </li>
-              <li>
-                <NavLink to="service.html" className="a1" id="nav4">
+                <NavLink
+                  to="/services"
+                  className="a1"
+                  id="nav4"
+                  onClick={handleClick}>
                   Service
                 </NavLink>
-                <div className="lb" style={{ display: "none" }}>
-                  <NavLink to="tyre-className.html">Tyre className</NavLink>
-                  <NavLink to="guestbook.html">Guestbook</NavLink>
-                  <NavLink to="download.html">Download</NavLink>
+                <div className="lb service-submenu">
+                  <Link
+                    to="/services/tyreclassName"
+                    onClick={() => handleServiceClick("tyre")}>
+                    Tyre className
+                  </Link>
+                  <Link
+                    to="/services/guestbook"
+                    onClick={() => handleServiceClick("guestbook")}>
+                    Guestbook
+                  </Link>
+                  <Link
+                    to="/services/download"
+                    onClick={() => handleServiceClick("download")}>
+                    Download
+                  </Link>
                 </div>
               </li>
               <li>
-                <NavLink to="recruit.html" className="a1" id="nav5">
+                <NavLink to="/recruitment" className="a1" id="nav5">
                   Recruitment
                 </NavLink>
-                <div className="lb" style={{ display: "none" }}>
-                  <NavLink to="social.html">Social Recruitment</NavLink>
-                  <NavLink to="Campus.html">Campus Recruitment</NavLink>
+                <div className="lb recruitment-submenu">
+                  <Link to="social.html">Social Recruitment</Link>
+                  <Link to="Campus.html">Campus Recruitment</Link>
                 </div>
               </li>
               <li>
-                <NavLink to="about.html" className="a1" id="nav6">
+                <NavLink to="/about" className="a1" id="nav6">
                   About Us
                 </NavLink>
-                <div className="lb" style={{ display: "none" }}>
-                  <NavLink to="roadone.html">About Roadone</NavLink>
-                  <NavLink to="social-responsibility.html">CSR</NavLink>
-                  <NavLink to="contact.html">Contact Us</NavLink>
+                <div className="lb aboutus-submenu">
+                  <Link to="roadone.html">About Roadone</Link>
+                  <Link to="social-responsibility.html">CSR</Link>
+                  <Link to="contact.html">Contact Us</Link>
                 </div>
               </li>
             </ul>
