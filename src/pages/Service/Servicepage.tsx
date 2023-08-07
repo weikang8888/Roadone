@@ -1,19 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Header from "../../component/Header/Header";
-import { NavLink } from "react-router-dom";
 import LogoOther from "../../static/assets/main/cd_logo.png";
-import ServiceForm from "./ServiceForm";
+
 import ServiceTyreClass from "./ServiceTyreClass";
-import ServiceDownload from "./ServiceDownload";
-import { useServiceContext } from "../../provider/ServiceContent";
 
 const Servicepage = () => {
-  const { activeService, setActiveService } = useServiceContext();
-
-  const handleTabClick = (service) => {
-    setActiveService(service);
-  };
-
   return (
     <>
       <div className="banner cd fuwu">
@@ -30,33 +23,21 @@ const Servicepage = () => {
         <div className="zx_box">
           <div className="zx_list fuwu_list">
             <ul className="clearfix">
-              <li onClick={() => handleTabClick("tyre")}>
-                <NavLink
-                  to="/services/tyreclassName"
-                  className={activeService === "tyre" ? "zx_on" : ""}>
+              <li>
+                <Link to="/services/tyre-class" className="zx_on">
                   Tyre className
-                </NavLink>
+                </Link>
               </li>
-              <li onClick={() => handleTabClick("guestbook")}>
-                <NavLink
-                  to="/services/guestbook"
-                  className={activeService === "guestbook" ? "zx_on" : ""}>
-                  Guestbook
-                </NavLink>
+              <li>
+                <Link to="/services/guestbook">Guestbook</Link>
               </li>
-              <li onClick={() => handleTabClick("download")}>
-                <NavLink
-                  to="/services/download"
-                  className={activeService === "download" ? "zx_on" : ""}>
-                  Download
-                </NavLink>
+              <li>
+                <Link to="/services/download">Download</Link>
               </li>
             </ul>
-            {activeService === "tyre" && <ServiceTyreClass />}
-            {activeService === "download" && <ServiceDownload />}
+            <ServiceTyreClass showHeader={false} showMenu={false} />
           </div>
         </div>
-        {activeService === "guestbook" && <ServiceForm />}
       </div>
     </>
   );

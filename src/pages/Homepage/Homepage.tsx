@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Swipper from "../../component/Swiper/Swiper";
+import Swipper from "../../component/Swiper/Swipper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
@@ -13,6 +13,12 @@ import Logo from "../../static/assets/main/logo.png";
 import IndexProtop from "../../static/assets/picture/index_pro_top.jpg";
 import Tyre02 from "../../static/assets/picture/type_02.jpg";
 import Tyre06 from "../../static/assets/picture/type_06.jpg";
+import SwiperTopImage1 from "../../static/assets/image/banner_1.jpg";
+import SwiperTopImage2 from "../../static/assets/image/banner_2.jpg";
+import SwiperTopImage3 from "../../static/assets/image/banner_3.jpg";
+import SwiperTopImage4 from "../../static/assets/image/banner_4.jpg";
+import SwiperTopImage5 from "../../static/assets/image/banner_5.jpg";
+
 import SwiperImage1 from "../../static/assets/picture/index_pro_1.jpg";
 import SwiperImage2 from "../../static/assets/picture/index_pro_2.jpg";
 import SwiperImage3 from "../../static/assets/picture/index_pro_3.jpg";
@@ -30,6 +36,14 @@ const Homepage = () => {
     { image: SwiperImage3 },
     { image: SwiperImage4 },
   ];
+
+  const swiperTopSlides = [
+    { image: SwiperTopImage1, link: "products1.html" },
+    { image: SwiperTopImage2, link: "products1.html" },
+    { image: SwiperTopImage3, link: "products1.html" },
+    { image: SwiperTopImage4, link: "products1.html" },
+    { image: SwiperTopImage5, link: "products1.html" },
+  ];
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
@@ -45,7 +59,10 @@ const Homepage = () => {
     <>
       <div className="banner">
         <div className="banner_box">
-          <Swipper />
+          <Swipper
+            swiperImage={swiperTopSlides.map((slide) => slide.image)}
+            imageClassName={"banner5"}
+          />
           <Header
             logo={Logo}
             logoClassName={"in_logo"}

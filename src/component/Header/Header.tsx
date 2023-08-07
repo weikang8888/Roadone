@@ -9,16 +9,6 @@ interface HeaderOption {
 }
 
 const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
-  const { setActiveService } = useServiceContext();
-
-  const handleServiceClick = (service: Service) => {
-    setActiveService(service);
-  };
-
-  const handleClick = (event) => {
-    event.preventDefault(); // Prevent the default link behavior
-    // Add any additional logic you want when the NavLink is clicked but disabled
-  };
   return (
     <>
       <div className="nav clearfix">
@@ -63,29 +53,13 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                 </div>
               </li>
               <li>
-                <NavLink
-                  to="/services"
-                  className="a1"
-                  id="nav4"
-                  onClick={handleClick}>
+                <NavLink to="/services" className="a1" id="nav4">
                   Service
                 </NavLink>
                 <div className="lb service-submenu">
-                  <Link
-                    to="/services/tyreclassName"
-                    onClick={() => handleServiceClick("tyre")}>
-                    Tyre className
-                  </Link>
-                  <Link
-                    to="/services/guestbook"
-                    onClick={() => handleServiceClick("guestbook")}>
-                    Guestbook
-                  </Link>
-                  <Link
-                    to="/services/download"
-                    onClick={() => handleServiceClick("download")}>
-                    Download
-                  </Link>
+                  <Link to="/services/tyre-class">Tyre className</Link>
+                  <Link to="/services/guestbook">Guestbook</Link>
+                  <Link to="/services/download">Download</Link>
                 </div>
               </li>
               <li>
@@ -93,8 +67,8 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   Recruitment
                 </NavLink>
                 <div className="lb recruitment-submenu">
-                  <Link to="social.html">Social Recruitment</Link>
-                  <Link to="Campus.html">Campus Recruitment</Link>
+                  <Link to="/recruitment/social">Social Recruitment</Link>
+                  <Link to="/recruitment/campus">Campus Recruitment</Link>
                 </div>
               </li>
               <li>
@@ -102,9 +76,9 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   About Us
                 </NavLink>
                 <div className="lb aboutus-submenu">
-                  <Link to="roadone.html">About Roadone</Link>
-                  <Link to="social-responsibility.html">CSR</Link>
-                  <Link to="contact.html">Contact Us</Link>
+                  <Link to="/about/roadone">About Roadone</Link>
+                  <Link to="/about/social-responsibility">CSR</Link>
+                  <Link to="/about/contact">Contact Us</Link>
                 </div>
               </li>
             </ul>
