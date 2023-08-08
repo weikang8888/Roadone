@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <div>
         {" "}
-        <div className="foot_top">
+        <div className="container foot_top">
           <div className="foot_top_box clearfix">
             <div className="foot_top1 fl">
               <div className="xl_hd">
@@ -134,7 +134,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="foot">
+        <div className="container foot">
           <div className="foot_box clearfix">
             <div className="fl foot_txt">
               Copyright &copy; 2003-2021&nbsp; Tongli Tyre Co., Ltd. All Rights

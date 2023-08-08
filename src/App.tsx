@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./static/css/style.css";
+import "./static/css/bootstrap.min.css";
 import Homepage from "./pages/Homepage/Homepage";
 import Newpage from "./pages/New/Newpage";
 import Footer from "./component/Footer/Footer";
@@ -41,10 +42,13 @@ const App = () => {
         />
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/about/roadone" element={<AboutRoadone />} />
-        <Route path="/about/social-responsibility" element={<SocialResponsibility />} />
+        <Route
+          path="/about/social-responsibility"
+          element={<SocialResponsibility />}
+        />
         <Route path="/about/contact" element={<ContactUs />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };
