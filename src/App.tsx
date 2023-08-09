@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./static/css/bootstrap.min.css";
 import "./static/css/style.css";
+import "./static/css/responsive.css";
 import Homepage from "./pages/Homepage/Homepage";
 import Newpage from "./pages/New/Newpage";
 import Footer from "./component/Footer/Footer";
@@ -16,8 +17,27 @@ import Aboutpage from "./pages/About/Aboutpage";
 import AboutRoadone from "./pages/About/AboutRoadone";
 import SocialResponsibility from "./pages/About/SocialResponsibility";
 import ContactUs from "./pages/About/ContactUs";
+import FooterMobile from "./component/Footer/FooterMobile";
 
 const App = () => {
+  const [showFooterMobile, setShowFooterMobile] = useState(false);
+
+  const handleWindowResize = () => {
+    setShowFooterMobile(window.innerWidth <= 990);
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleWindowResize);
+
+    // Initial check for window width
+    handleWindowResize();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
   return (
     <Router>
       <Routes>
@@ -49,7 +69,7 @@ const App = () => {
         />
         <Route path="/about/contact" element={<ContactUs />} />
       </Routes>
-      {/* <Footer /> */}
+      {showFooterMobile ? <FooterMobile /> : <Footer />}
     </Router>
   );
 };

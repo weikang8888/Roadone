@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: #de0529;
+}
+.header .header_box {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.header .xiala {
+  margin-top: 12px;
+  width: 41px;
+  height: 19px;
+  position: relative;
+  z-index: 20;
+}
+.header .logo {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.header .logo img {
+  margin-top: 10px;
+  height: 30px;
+}

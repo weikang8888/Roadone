@@ -50,7 +50,6 @@ input[type="submit"] {
 }
 img {
   border: 0;
-  width: 100%;
 }
 
 a {
@@ -689,13 +688,15 @@ li:hover .lb {
   transition: all 0.3s;
   transform: scale(1.1);
 }
-.foot {
-  color: #fff;
-  letter-spacing: 0.5px;
-  width: 1360px;
-  background: #000;
-  margin: 0 auto;
-  padding: 20px 0;
+@media (min-width: 990px) {
+  .foot {
+    color: #fff;
+    letter-spacing: 0.5px;
+    width: 1360px;
+    background: #000;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
 }
 .foot .foot_txt {
   font-size: 14px;
