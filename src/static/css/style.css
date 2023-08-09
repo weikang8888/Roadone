@@ -10,7 +10,6 @@ html {
   font-family: "Roboto", Microsoft Yahei, Verdana, Tahoma, Arial;
   color: #666;
   font-size: 14px;
-  min-width: 1360px;
 }
 /*----------------------- Public -------------------------*/
 .clearfix:before,
@@ -51,6 +50,7 @@ input[type="submit"] {
 }
 img {
   border: 0;
+  width: 100%;
 }
 
 a {
@@ -229,6 +229,7 @@ em {
   width: 1360px;
   height: auto;
   margin: 0 auto;
+  padding: 0 !important;
   position: relative;
 }
 .banner .banner_box {
@@ -319,13 +320,11 @@ em {
   margin-left: 30px;
 }
 .nav .nav_box {
-  width: 835px;
-  height: 150px;
   position: relative;
 }
 .nav .nav_box .nav_d1 {
   float: right;
-  width: 340px;
+  margin-bottom: 55px;
   height: 30px;
   background: #de0529;
   line-height: 10px;
@@ -349,17 +348,9 @@ em {
   color: #ff9;
 }
 .nav .nav_box .nav_main {
-  width: 835px;
-  height: 46px;
-  position: absolute;
-  bottom: 16px;
+  width: 100%;
 }
-.nav .nav_box .in_nav_main {
-  width: 835px;
-  height: 46px;
-  position: absolute;
-  bottom: 16px;
-}
+
 .nav .nav_box .nav_main ul {
   width: 100%;
   background: rgba(255, 255, 255, 0.89);
@@ -367,6 +358,9 @@ em {
   line-height: 46px;
   position: relative;
   padding: 0 20px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .nav .nav_box .nav_main ul li {
   float: left;
@@ -391,13 +385,6 @@ em {
 .nav .nav_box .nav_main ul li a.active {
   color: #de0529;
   border-bottom: 3px solid #de0529;
-}
-.xiala {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  position: absolute;
 }
 
 .lb {
@@ -425,37 +412,27 @@ li:hover .lb {
   margin-top: 42px;
 }
 .cp {
-  width: 1360px;
   margin: 30px auto 0;
   overflow: hidden;
 }
+
 .cp .cp_rt .cp_rt1 {
   position: relative;
-  height: 269px;
 }
 .cp .cp_lt img {
-  width: 660px;
-  height: 528px;
+  width: 100%;
 }
-.cp .cp_rt {
-  width: 680px;
-  height: auto;
+.cp_rt_l {
+  margin-left: 20px;
 }
 .cp .cp_rt img {
   width: 350px;
   height: 258px;
 }
 .cp .cp_rt .cp_rt_r {
-  width: 310px;
-  position: absolute;
-  top: 5px;
-  right: 0;
+  margin-left: 20px;
 }
 .cp .cp_rt .cp_rt_r1 {
-  width: 310px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 .cp .cp_rt .cp_rt_r .cp_rt2 {
   font-size: 26px;
@@ -485,7 +462,6 @@ li:hover .lb {
   margin-top: 20px;
 }
 .cp2 .cp2_lt {
-  width: 680px;
   padding-right: 50px;
   margin-top: 0;
 }
@@ -537,8 +513,6 @@ li:hover .lb {
   color: #de0529;
 }
 .cp2 .cp2_rt {
-  width: 680px;
-  height: 469px;
 }
 .cp2 .swiper-container {
   height: 469px !important;
@@ -571,7 +545,7 @@ li:hover .lb {
   position: relative;
   margin: 0 auto;
   background: url("../assets/image/cp4_bg.jpg") no-repeat;
-  width: 1360px;
+  width: 100%;
   height: 221px;
 }
 .cp4 .cp4_box {
