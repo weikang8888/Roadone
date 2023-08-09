@@ -135,7 +135,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="container foot">
-          <div className="foot_box clearfix">
+          <div className="foot_box clearfix px-3">
             <div className="fl foot_txt">
               Copyright &copy; 2003-2021&nbsp; Tongli Tyre Co., Ltd. All Rights
               Reserved.

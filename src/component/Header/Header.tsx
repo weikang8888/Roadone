@@ -24,8 +24,7 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
               <p className="nav_d1_box fr">
                 <NavLink to="">中文</NavLink>
                 <NavLink to="">English</NavLink>
-                <NavLink to="">한국어</NavLink>
-                <NavLink to="" target="_blank">
+                <NavLink to="http://www.hixih.com.cn/" target="_blank">
                   HIXIH Group
                 </NavLink>
               </p>
@@ -55,11 +54,15 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   </div>
                 </li>
                 <li>
-                  <NavLink to="/services" className="a1" id="nav4">
+                  <NavLink
+                    to="/services"
+                    className="a1"
+                    id="nav4"
+                    onClick={(e) => e.preventDefault()}>
                     Service
                   </NavLink>
                   <div className="lb service-submenu">
-                    <Link to="/services/tyre-class">Tyre className</Link>
+                    <Link to="/services/tyre-class">Tyre Class</Link>
                     <Link to="/services/guestbook">Guestbook</Link>
                     <Link to="/services/download">Download</Link>
                   </div>
@@ -74,7 +77,11 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   </div>
                 </li>
                 <li>
-                  <NavLink to="/about" className="a1" id="nav6">
+                  <NavLink
+                    to="/about"
+                    className="a1"
+                    id="nav6"
+                    onClick={(e) => e.preventDefault()}>
                     About Us
                   </NavLink>
                   <div className="lb aboutus-submenu">

@@ -1,6 +1,8 @@
-.foot {
-  background: #efefef;
-  padding-bottom: 10px;
+@media (max-width: 990px) {
+  .foot {
+    background: #efefef;
+    padding-bottom: 10px;
+  }
 }
 .sfq {
   width: 100%;

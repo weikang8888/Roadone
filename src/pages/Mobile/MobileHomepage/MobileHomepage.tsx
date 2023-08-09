@@ -18,11 +18,12 @@ import SwiperImage2 from "../../../static/assets/picture/index_pro_2.jpg";
 import SwiperImage3 from "../../../static/assets/picture/index_pro_3.jpg";
 import SwiperImage4 from "../../../static/assets/picture/index_pro_4.jpg";
 import BotImage from "../../../static/assets/m/index_botimg.jpg";
-import FooterMobile from "../../../component/Footer/FooterMobile";
+import Header_m from "../../../component/Header/Header_m";
+import Swipper_m from "../../../component/Swiper/Swipper_m";
 
 SwiperCore.use([Navigation, Pagination]);
 
-const MobileBanner = () => {
+const MobileHomepage = () => {
   const [newsItems, setNewsItems] = useState([]);
 
   const swiperTopSlides = [
@@ -51,23 +52,12 @@ const MobileBanner = () => {
   }, []);
   return (
     <>
-      <div className="banner">
-        <div className="banner_box">
-          <Swiper
-            pagination={{ clickable: true }}
-            loop={true}
-            className="swiper-container"
-            id="banner">
-            {swiperTopSlides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <a>
-                  <img src={slide.image} />
-                </a>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
+      <Header_m />
+      <Swipper_m
+        swiperImage={swiperTopSlides.map((slide) => slide.image)}
+        paginationTF={true}
+        loopTF={true}
+      />
 
       <div className="in_main">
         <div className="in_main_box">
@@ -153,4 +143,4 @@ const MobileBanner = () => {
   );
 };
 
-export default MobileBanner;
+export default MobileHomepage;

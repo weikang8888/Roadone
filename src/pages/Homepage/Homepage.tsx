@@ -24,7 +24,7 @@ import SwiperImage2 from "../../static/assets/picture/index_pro_2.jpg";
 import SwiperImage3 from "../../static/assets/picture/index_pro_3.jpg";
 import SwiperImage4 from "../../static/assets/picture/index_pro_4.jpg";
 import BotImage from "../../static/assets/picture/index_botimg.jpg";
-import Header_m from "../../component/Header/Header_m";
+import MobileHomepage from "../Mobile/MobileHomepage/MobileHomepage";
 
 AOS.init();
 SwiperCore.use([Navigation, Pagination]);
@@ -72,7 +72,7 @@ const Homepage = () => {
   return (
     <>
       {windowWidth <= 990 ? (
-        <Header_m />
+        <MobileHomepage />
       ) : (
         <>
           <div className="container banner">

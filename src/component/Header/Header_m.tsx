@@ -3,7 +3,6 @@ import React from "react";
 import LogoMobile from "../../static/assets/m/logo.png";
 import MenuMobile from "../../static/assets/m/menu.png";
 import "./header_m.css";
-import MobileBanner from "../../pages/Mobile/MobileHomepage/MobileHomepage";
 
 const Header_m = () => {
   return (
@@ -53,8 +52,6 @@ const Header_m = () => {
           </div>
         </div>
       </div>
-
-      <MobileBanner />
     </>
   );
 };
