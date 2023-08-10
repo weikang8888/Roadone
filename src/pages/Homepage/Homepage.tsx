@@ -6,7 +6,6 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import Header from "../../component/Header/Header";
-import "./homepage.css";
 import axios from "axios";
 
 import Logo from "../../static/assets/main/logo.png";

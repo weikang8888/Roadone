@@ -766,27 +766,30 @@ li:hover .lb {
   background: inherit;
 }
 .cd_main {
-  width: 1360px;
   margin: 0 auto;
   height: auto;
   margin-top: 30px;
+  display: flex;
+  padding: 0;
 }
 .cd_main .cd_lt {
-  width: 200px;
+  width: 100%;
   height: auto;
   text-align: center;
 }
-.cd_main .cd_lt ul li a {
-  font-family: "HelveticaNeue-Condensed";
-  font-weight: 400;
-  color: #333;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  display: block;
-  border: 1px solid #c9cacb;
-  margin-bottom: 15px;
-  height: 47px;
-  line-height: 47px;
+@media (min-width: 990px) {
+  .cd_main .cd_lt ul li a {
+    font-family: "HelveticaNeue-Condensed";
+    font-weight: 400;
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    display: block;
+    border: 1px solid #c9cacb;
+    margin-bottom: 15px;
+    height: 47px;
+    line-height: 47px;
+  }
 }
 .cd_main .cd_lt ul li a:hover {
   color: #fff;
@@ -799,12 +802,13 @@ li:hover .lb {
 }
 .cd_main .cd_rt,
 .cd_main .tabs1 {
-  width: 1140px;
+  width: 100%;
+}
+.cd_main .cd_rt .cp_fl .typebox {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.cd_main .cd_rt .cp_fl .typebox {
-  height: 62px;
-}
 .cd_main .cd_rt .cp_fl .typebox > ul > li {
   float: left;
   width: 220px;
@@ -814,9 +818,7 @@ li:hover .lb {
   border: 1px solid #c9cacb;
   margin: 0 10px 10px 0;
 }
-.cd_main .cd_rt .cp_fl .typebox > ul > li:nth-child(5n) {
-  margin: 0 0 10px 0;
-}
+
 .cd_main .cd_rt .cp_fl .typebox > ul > li > a {
   font-family: "HelveticaNeue-Condensed";
   display: block;
@@ -875,34 +877,36 @@ li:hover .lb {
 .tabs2 {
   margin-bottom: 70px;
 }
-.tabs2 .ct_img {
-  margin-bottom: 40px;
-}
-.tabs2 .ct_img img {
-  width: 1140px;
+
+.ct_img img {
+  width: 100%;
   height: 108px;
 }
 .ct_list {
-  width: 1140px;
+  width: 100%;
   min-height: 500px;
 }
 .ct_list ul {
-  width: 1140px;
+  width: 100%;
   height: auto;
 }
 .ct_list ul li {
   border-bottom: 1px solid #9b9a9a;
   padding-top: 50px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 .ct_list .ct_d1 {
-  width: 900px;
+  width: 100%;
 }
 .ct_list .ct_d1 .cp_intro {
   margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 .ct_list .ct_d1 .cp_intro .cp_tit {
-  width: 290px;
+  width: 100%;
 }
 .ct_list .ct_d1 .cp_intro .cp_tit em {
   font-family: "SerpentineSansICG";
@@ -931,9 +935,13 @@ li:hover .lb {
   line-height: 1;
 }
 .ct_list .ct_d1 .cp_ms {
-  width: 550px;
+  width: 100%;
   line-height: 1.8;
   margin-left: 30px;
+}
+.ct_list .ct_d1 .ct_do {
+  display: flex;
+  justify-content: space-between;
 }
 .ct_list .ct_d1 .cp_img2 {
   margin: 10px 0;
@@ -964,16 +972,21 @@ li:hover .lb {
 .ct_list .ct_d1 .cp_img3 .ct_img_c2 {
   width: 125px;
 }
-.ct_list .ct_d2 {
-  width: 180px;
-  height: 220px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+@media (min-width: 990px) {
+  .ct_list .ct_d2 {
+    width: 180px;
+    height: 220px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .typebox_m {
+    display: none;
+  }
 }
 .ct_list .ct_d2 img {
-  width: 180px;
+  width: 100%;
   height: auto;
 }
 .ct_img .swiper-container {

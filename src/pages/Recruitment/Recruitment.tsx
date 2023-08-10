@@ -10,7 +10,6 @@ import InsideImage2 from "../../static/assets/image/inside_tlt_2.jpg";
 import InsideImage3 from "../../static/assets/image/inside_tlt_3.jpg";
 import SocialRecruitment from "./SocialRecruitment";
 import CampusRecruit from "./CampusRecruitment";
-import "./recruitment.css";
 
 const Recruitment = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

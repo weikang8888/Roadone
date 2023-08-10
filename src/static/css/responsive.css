@@ -126,4 +126,86 @@
   .tb_frist_t5 {
     display: none;
   }
+  .cd_lt ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cd_lt ul li {
+    width: 100%;
+  }
+  .cd_main {
+    display: block;
+  }
+  .cd_lt ul li a {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    border: 1px solid #b5b5b6;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  .typebox {
+    display: none;
+  }
+  .ct_list .ct_d1 .cp_img3 {
+    display: none;
+  }
+  .ct_list ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ct_list ul li {
+    display: block;
+    width: 50%;
+    border-bottom: 1px dotted #999;
+    border-right: 1px dotted #999;
+    padding: 6% 5% 0;
+  }
+  .ct_list .ct_d1 .cp_intro {
+    display: block;
+    margin: 0;
+  }
+  .ct_list .ct_d1 .ct_do {
+    display: block;
+  }
+  .ct_list .ct_d1 .cp_intro .cp_tit em {
+    font-size: 16px;
+  }
+  .ct_list .ct_d1 .cp_intro .cp_tit span {
+    font-size: 32px;
+  }
+  .ct_list .ct_d1 .cp_ms {
+    margin: 5% 0 0;
+    overflow: hidden;
+    max-height: 56px;
+  }
+  .ct_list .ct_d1 .cp_ms div {
+    color: #777;
+    font-size: 13px;
+    padding-right: 40px;
+    line-height: 1.5;
+  }
+  .ct_list .ct_d1 .cp_img2 {
+    margin: 0;
+  }
+
+  .ct_list .col-lg-9 {
+    height: 190px;
+  }
+  .ct_list .col-lg-2 {
+    height: 170px;
+    overflow: hidden;
+  }
+  .typebox_m {
+    background: url(../assets//m//cp_bg3.png) no-repeat;
+    width: 100%;
+    height: 50px;
+    background-size: 100%;
+    margin: 10px auto 0;
+    padding: 15px 10px 0;
+    display: block;
+  }
+  .cp_fl .swiper-wrapper {
+    text-align: center;
+  }
 }

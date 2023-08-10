@@ -42,7 +42,7 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="product.html" className="a1" id="nav2">
+                  <NavLink to="/products" className="a1" id="nav2">
                     Product
                   </NavLink>
                   <div className="lb product-submenu">

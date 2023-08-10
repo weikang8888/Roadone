@@ -16,6 +16,7 @@ import AboutRoadone from "./pages/About/AboutRoadone";
 import SocialResponsibility from "./pages/About/SocialResponsibility";
 import ContactUs from "./pages/About/ContactUs";
 import FooterMobile from "./component/Footer/FooterMobile";
+import Productpage from "./pages/Product/Productpage";
 
 const App = () => {
   const [showFooterMobile, setShowFooterMobile] = useState(false);
@@ -45,6 +46,8 @@ const App = () => {
         <Route path="/services/tyre-class" element={<ServiceTyreClass />} />
         <Route path="/services/guestbook" element={<ServiceForm />} />
         <Route path="/services/download" element={<ServiceDownload />} />
+        
+        <Route path="/products" element={<Productpage />} />
 
         <Route path="/recruitment" element={<Recruitment />} />
         <Route
