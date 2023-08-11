@@ -790,6 +790,10 @@ li:hover .lb {
     height: 47px;
     line-height: 47px;
   }
+  .cd_main .cd_rt .cp_fl .typebox {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .cd_main .cd_lt ul li a:hover {
   color: #fff;
@@ -803,10 +807,6 @@ li:hover .lb {
 .cd_main .cd_rt,
 .cd_main .tabs1 {
   width: 100%;
-}
-.cd_main .cd_rt .cp_fl .typebox {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .cd_main .cd_rt .cp_fl .typebox > ul > li {
@@ -1626,6 +1626,15 @@ li:hover .lb {
   font-size: 16px;
   line-height: 28px;
   margin-top: 20px;
+  display: flex;
+}
+.n_xq_up .prev {
+  border-right: 3px solid #898686;
+}
+
+.n_xq_up .prev,
+.n_xq_up .next {
+  padding: 0px 15px;
 }
 .n_xq_up a:hover {
   color: #e60012;
@@ -2003,13 +2012,16 @@ li:hover .lb {
   overflow: hidden;
   margin: 0 auto;
 }
-/* .kt .cont img {
- width: expression(this.width > 1200? 1200: true) !important;
-	max-width: 1200px !important;
-	height: auto !important;
-	overflow: hidden;
-	margin: 15px auto;
-} */
+.kt .cont img {
+  width: 90%;
+  height: auto !important;
+  overflow: hidden;
+  margin: 15px auto;
+}
+
+.kt .cont .new3 {
+  width: 40%;
+}
 
 .kt_up {
   position: absolute;
@@ -2703,6 +2715,9 @@ li:hover .lb {
   margin-top: 20px;
   padding: 10px;
   font-size: 16px;
+}
+.disabled {
+  color: #5957576b;
 }
 @media screen and (min-width: 1360px) and (max-width: 1440px) {
   .yd .yd_box {

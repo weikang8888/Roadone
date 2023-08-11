@@ -15,6 +15,8 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import Header_m from "../../component/Header/Header_m";
 import Swipper_m from "../../component/Swiper/Swipper_m";
 import axios from "axios";
+import HF252 from "./TruckTyre/HighEndWearable/HF252";
+import HF231 from "./TruckTyre/HighEndWearable/HF231";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -22,7 +24,10 @@ const Productpage = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(""); // State to track selected category
   const [selectedTruckCategory, setSelectedTruckCategory] = useState(""); // State to track selected category
+  const [selectedBusCategory, setSelectedBusCategory] = useState(""); // State to track selected category
   const [filteredProducts, setFilteredProducts] = useState([]); // State to store filtered products
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [clickedProductId, setClickedProductId] = useState(null);
 
   const swiperTopSlides = [
     { image: ProductImage1 },
@@ -37,11 +42,36 @@ const Productpage = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    setSelectedTruckCategory("");
+    setClickedProductId("");
+    setSelectedBusCategory("");
   };
-  const handleTruckCategoryClick = (category) => {
-    setSelectedTruckCategory(category);
+
+  const handleTruckCategoryClick = (truckCategory) => {
+    setSelectedTruckCategory(truckCategory);
+    setClickedProductId("");
   };
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleBusCategoryClick = (busCategory) => {
+    setSelectedBusCategory(busCategory);
+    setClickedProductId("");
+  };
+
+  const handleShowSpecifyProduct = (
+    productId,
+    category,
+    truckCategory,
+    busCategory
+  ) => {
+    if (clickedProductId === productId) {
+      setClickedProductId(null);
+    } else {
+      setClickedProductId(productId);
+      setSelectedCategory(category);
+      setSelectedTruckCategory(truckCategory);
+      setSelectedBusCategory(busCategory);
+    }
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -53,7 +83,6 @@ const Productpage = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
@@ -65,18 +94,50 @@ const Productpage = () => {
         console.error("Error fetching data:", error);
       });
   }, []);
-
   useEffect(() => {
-    // Filter products based on the selected category
     if (selectedCategory === "") {
       setFilteredProducts(productsItems);
+    } else if (selectedCategory === "truck") {
+      if (selectedTruckCategory === "") {
+        const truckFiltered = productsItems.filter(
+          (product) => product.products_type === "truck"
+        );
+        setFilteredProducts(truckFiltered);
+      } else {
+        const filtered = productsItems.filter(
+          (product) => product.products_truck_type === selectedTruckCategory
+        );
+        setFilteredProducts(filtered);
+      }
+    } else if (selectedCategory === "bus") {
+      if (selectedBusCategory === "") {
+        const busFiltered = productsItems.filter(
+          (product) => product.products_type === "bus"
+        );
+        setFilteredProducts(busFiltered);
+      } else {
+        const filtered = productsItems.filter(
+          (product) => product.products_bus_type === selectedBusCategory
+        );
+        setFilteredProducts(filtered);
+      }
     } else {
       const filtered = productsItems.filter(
         (product) => product.products_type === selectedCategory
       );
       setFilteredProducts(filtered);
     }
-  }, [selectedCategory, productsItems]);
+  }, [
+    selectedCategory,
+    selectedTruckCategory,
+    selectedBusCategory,
+    productsItems,
+  ]);
+  const componentMap = {
+    1: HF252,
+    2: HF231,
+  };
+
   return (
     <>
       {windowWidth <= 990 ? (
@@ -110,32 +171,24 @@ const Productpage = () => {
         <div className="col-lg-2">
           <div className="cd_lt fl">
             <ul>
-              <li>
-                <a
-                  href="#"
-                  onClick={() => handleCategoryClick("truck")}
-                  className={` ${selectedCategory === "truck" ? "cd_fl" : ""}`}>
-                  Truck Tyres
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onClick={() => handleCategoryClick("light-truck")}
-                  className={` ${
-                    selectedCategory === "light-truck" ? "cd_fl" : ""
-                  }`}>
-                  Light Truck Tyres
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onClick={() => handleCategoryClick("bus")}
-                  className={`${selectedCategory === "bus" ? "cd_fl" : ""}`}>
-                  Bus Tyres
-                </a>
-              </li>
+              {[
+                { id: "truck", label: "Truck Tyres" },
+                { id: "light-truck", label: "Light Truck Tyres" },
+                { id: "bus", label: "Bus Tyres" },
+              ].map((category) => (
+                <li key={category.id}>
+                  <a
+                    href="#"
+                    onClick={() => {
+                      handleCategoryClick(category.id);
+                    }}
+                    className={` ${
+                      selectedCategory === category.id ? "cd_fl" : ""
+                    }`}>
+                    {category.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -146,100 +199,53 @@ const Productpage = () => {
                 <div className="typebox">
                   {selectedCategory === "truck" && (
                     <ul className="clearfix">
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("long-haul-wearable")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "long-haul-wearable"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          Long Haul Wearable Tyres
-                        </a>
-                      </li>
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("middle-long-distance")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "middle-long-distance"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          Middle & Long Distance
-                        </a>
-                      </li>
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("middle-short-distance")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "middle-short-distance"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          Middle & Short Distance
-                        </a>
-                      </li>
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("quarry-building-site")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "quarry-building-site"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          Quarry & Building Sites
-                        </a>
-                      </li>
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("high-end-off-road")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "high-end-off-road"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          High End Off-road Tyres
-                        </a>
-                      </li>
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("high-end-heavy-loading")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "high-end-heavy-loading"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          High End Heavy Loading Tyres
-                        </a>
-                      </li>
-                      <li
-                        onClick={() =>
-                          handleTruckCategoryClick("high-end-wearable")
-                        }>
-                        <a
-                          className={` ${
-                            selectedTruckCategory === "high-end-wearable"
-                              ? "cpfl2"
-                              : ""
-                          }`}>
-                          HIGH END WEARABLE TYRE
-                        </a>
-                      </li>
+                      {[
+                        {
+                          id: "long-haul-wearable",
+                          label: "Long Haul Wearable Tyres",
+                        },
+                        {
+                          id: "middle-long-distance",
+                          label: "Middle & Long Distance",
+                        },
+                        {
+                          id: "middle-short-distance",
+                          label: "Middle & Short Distance",
+                        },
+                        {
+                          id: "quarry-building-site",
+                          label: "Quarry & Building Sites",
+                        },
+                        {
+                          id: "high-end-off-road",
+                          label: "High End Off-road Tyres",
+                        },
+                        {
+                          id: "high-end-heavy-loading",
+                          label: "High End Heavy Loading Tyres",
+                        },
+                        {
+                          id: "high-end-wearable",
+                          label: "HIGH END WEARABLE TYRE",
+                        },
+                      ].map((subcategory) => (
+                        <li
+                          key={subcategory.id}
+                          onClick={() =>
+                            handleTruckCategoryClick(subcategory.id)
+                          }>
+                          <a
+                            className={` ${
+                              selectedTruckCategory === subcategory.id
+                                ? "cpfl2"
+                                : ""
+                            }`}>
+                            {subcategory.label}
+                          </a>
+                        </li>
+                      ))}
                     </ul>
                   )}
-
                   {selectedCategory === "light-truck" && (
                     <div className="ct_img">
                       <img
@@ -249,18 +255,31 @@ const Productpage = () => {
                       />
                     </div>
                   )}
-
                   {selectedCategory === "bus" && (
                     <ul className="category-content clearfix">
-                      <li>
-                        <a href="truck-tyres.html">Inter-city Bus</a>
-                      </li>
-                      <li>
-                        <a href="light-truck-series.html">City-City Bus </a>
-                      </li>{" "}
+                      {[
+                        { id: "inter-city", label: "Inter-city Bus" },
+                        { id: "city-bus", label: "City-city Bus" },
+                      ].map((subcategory) => (
+                        <li
+                          key={subcategory.id}
+                          onClick={() =>
+                            handleBusCategoryClick(subcategory.id)
+                          }>
+                          <a
+                            className={` ${
+                              selectedBusCategory === subcategory.id
+                                ? "cpfl2"
+                                : ""
+                            }`}>
+                            {subcategory.label}
+                          </a>
+                        </li>
+                      ))}
                     </ul>
                   )}
                 </div>
+
                 <div className="typebox_m">
                   <Swiper
                     loop={true}
@@ -291,86 +310,98 @@ const Productpage = () => {
                     </SwiperSlide>
                   </Swiper>
                 </div>
+
                 <div className="tabs2">
-                  <div className="ct_list">
-                    <ul>
-                      {filteredProducts.map((products, index) => (
-                        <li className="clearfix" key={index}>
-                          <div className="col-lg-9">
-                            <div className="ct_d1 fl clearfix">
-                              <div className="cp_intro clearfix">
-                                <a href="HF252.html" title="HF252">
+                  {!clickedProductId && (
+                    <div className="ct_list">
+                      <ul>
+                        {filteredProducts.map((products, index) => (
+                          <li className="clearfix" key={index}>
+                            <div className="col-lg-9">
+                              <div className="ct_d1 fl clearfix">
+                                <div className="cp_intro clearfix">
+                                  <a
+                                    onClick={() =>
+                                      handleShowSpecifyProduct(
+                                        products.id,
+                                        products.products_type,
+                                        products.products_truck_type,
+                                        products.products_bus_type
+                                      )
+                                    }>
+                                    <div
+                                      className="cp_tit fl"
+                                      data-aos="zoom-in-right"
+                                      data-aos-easing="ease-out-back"
+                                      data-aos-duration="1000">
+                                      <em>TYRE MODEL-</em>
+                                      <span>{products.products_name}</span>
+                                      <i></i>
+                                    </div>
+                                  </a>
                                   <div
-                                    className="cp_tit fl"
-                                    data-aos="zoom-in-right"
+                                    className="fl cp_ms"
+                                    data-aos="zoom-in-left"
                                     data-aos-easing="ease-out-back"
                                     data-aos-duration="1000">
-                                    <em>TYRE MODEL-</em>
-                                    <span>{products.products_name}</span>
-                                    <i></i>
+                                    <div>{products.products_description}</div>
                                   </div>
-                                </a>
-                                <div
-                                  className="fl cp_ms"
-                                  data-aos="zoom-in-left"
-                                  data-aos-easing="ease-out-back"
-                                  data-aos-duration="1000">
-                                  <div>{products.products_description}</div>
                                 </div>
-                              </div>
-                              <div className="ct_do">
-                                <div
-                                  className="cp_img3"
-                                  data-aos="zoom-in-left"
-                                  data-aos-easing="ease-out-back"
-                                  data-aos-duration="1000">
-                                  <img
-                                    className="ct_img_c1"
-                                    src={require(`../../static/assets/picture/${products.products_lorry_image}`)}
-                                    title="HF252"
-                                  />
-                                </div>
-                                <div
-                                  className="cp_img2"
-                                  data-aos="zoom-in-left"
-                                  data-aos-easing="ease-out-back"
-                                  data-aos-duration="1000">
-                                  <a href="HF252.html">
-                                    View details
-                                    <span>{">"}</span>
-                                  </a>
+                                <div className="ct_do">
+                                  <div
+                                    className="cp_img3"
+                                    data-aos="zoom-in-left"
+                                    data-aos-easing="ease-out-back"
+                                    data-aos-duration="1000">
+                                    <img
+                                      className="ct_img_c1"
+                                      src={require(`../../static/assets/picture/${products.products_lorry_image}`)}
+                                    />
+                                  </div>
+                                  <div
+                                    className="cp_img2"
+                                    data-aos="zoom-in-left"
+                                    data-aos-easing="ease-out-back"
+                                    data-aos-duration="1000">
+                                    <a
+                                      onClick={() =>
+                                        handleShowSpecifyProduct(
+                                          products.id,
+                                          products.products_type,
+                                          products.products_truck_type,
+                                          products.products_bus_type
+                                        )
+                                      }>
+                                      View details
+                                      <span>{">"}</span>
+                                    </a>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="col-lg-2">
-                            <div
-                              className="ct_d2"
-                              data-aos="slide-up"
-                              data-aos-easing="ease-out-back"
-                              data-aos-duration="1000">
-                              <img
-                                src={require(`../../static/assets/picture/${products.products_image}`)}
-                                title="HF252"
-                              />
+                            <div className="col-lg-2">
+                              <div
+                                className="ct_d2"
+                                data-aos="slide-up"
+                                data-aos-easing="ease-out-back"
+                                data-aos-duration="1000">
+                                <img
+                                  src={require(`../../static/assets/picture/${products.products_image}`)}
+                                  title="HF252"
+                                />
+                              </div>
                             </div>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  {/* <div aos="zoom-in-left" id="pages">
-                <a className="prev"><<</a>
-                <a className="active">1</a>
-                <a href="list-21.html">2</a>
-                <a href="list-31.html">3</a>
-                <a href="list-41.html">4</a>
-                <a href="list-51.html">5</a>
-                <a href="list-61.html">6</a>
-                <a href="list-7.html">7</a>
-                <a href="list-21.html" className="next">></a>
-                <a href="list-7.html" className="next">>></a>
-              </div> */}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {clickedProductId && componentMap[clickedProductId] && (
+                    <React.Fragment key={`component-${clickedProductId}`}>
+                      {React.createElement(componentMap[clickedProductId])}
+                    </React.Fragment>
+                  )}
                 </div>
               </div>
             </div>
