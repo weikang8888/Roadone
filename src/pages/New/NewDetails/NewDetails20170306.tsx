@@ -106,12 +106,12 @@ const NewDetails20170306 = () => {
           </div>
           <NewPreNext
             nextTitle={
-              "New Product: Roadone New RD05: Fuel-efficient, High Speed, Standard Load Series"
-            }
-            nextUrl="/news/2017/0110_710"
-            prevUrl={"/news/2018/0622_712"}
-            prevTitle={
               "ROADONE Tire `sailing` in Qingdao Port, HIXIH Group and Qingdao Port International Logistic"
+            }
+            nextUrl="/news/2018/0622_712"
+            prevUrl={"/news/2017/0110_710"}
+            prevTitle={
+              "New Product: Roadone New RD05: Fuel-efficient, High Speed, Standard Load Series"
             }
           />
         </div>

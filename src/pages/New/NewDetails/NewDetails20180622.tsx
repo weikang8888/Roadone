@@ -141,12 +141,12 @@ const NewDetails20180622 = () => {
           </div>
           <NewPreNext
             nextTitle={
-              "Roadone Passed ISO/TS 16949 Certification, and Get OE Permit of International Automobile Industry"
-            }
-            nextUrl="/news/2017/0306_711"
-            prevUrl={"/news/2018/0820_713"}
-            prevTitle={
               "Explosion scene | ROADONE debut at the SHANGHAI Tire Show, showing the national brand charm!"
+            }
+            nextUrl="/news/2018/0820_713"
+            prevUrl={"/news/2017/0306_711"}
+            prevTitle={
+              "Roadone Passed ISO/TS 16949 Certification, and Get OE Permit of International Automobile Industry"
             }
           />
         </div>

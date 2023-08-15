@@ -59,11 +59,11 @@ const NewDetails20170110 = () => {
             ))}
           </div>
           <NewPreNext
-            nextTitle={"None"}
-            prevUrl={"/news/2017/0306_711"}
-            prevTitle={
+            nextTitle={
               "Roadone Passed ISO/TS 16949 Certification, and Get OE Permit of International Automobile Industry"
             }
+            nextUrl={"/news/2017/0306_711"}
+            prevTitle={"None"}
           />
         </div>
       </div>

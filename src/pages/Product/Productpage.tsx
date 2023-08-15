@@ -27,6 +27,12 @@ const Productpage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]); // State to store filtered products
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [clickedProductId, setClickedProductId] = useState(null);
+  const [filteredPaginatedProducts, setFilteredPaginatedProducts] = useState(
+    []
+  );
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showPagination, setShowPagination] = useState(true);
+  const itemsPerPage = 10;
 
   const swiperTopSlides = [
     { image: ProductImage1 },
@@ -44,15 +50,21 @@ const Productpage = () => {
     setSelectedTruckCategory("");
     setClickedProductId("");
     setSelectedBusCategory("");
+    setCurrentPage(1);
+    setShowPagination(true);
   };
 
   const handleTruckCategoryClick = (truckCategory) => {
     setSelectedTruckCategory(truckCategory);
     setClickedProductId("");
+    setCurrentPage(1);
+    setShowPagination(true);
   };
   const handleBusCategoryClick = (busCategory) => {
     setSelectedBusCategory(busCategory);
     setClickedProductId("");
+    setCurrentPage(1);
+    setShowPagination(true);
   };
 
   const handleShowSpecifyProduct = (
@@ -63,11 +75,13 @@ const Productpage = () => {
   ) => {
     if (clickedProductId === productId) {
       setClickedProductId(null);
+      setShowPagination(true); // Show pagination when hiding the product details
     } else {
       setClickedProductId(productId);
       setSelectedCategory(category);
       setSelectedTruckCategory(truckCategory);
       setSelectedBusCategory(busCategory);
+      setShowPagination(false); // Hide pagination when showing the product details
     }
   };
 
@@ -94,44 +108,41 @@ const Productpage = () => {
       });
   }, []);
   useEffect(() => {
-    if (selectedCategory === "") {
-      setFilteredProducts(productsItems);
-    } else if (selectedCategory === "truck") {
-      if (selectedTruckCategory === "") {
-        const truckFiltered = productsItems.filter(
-          (product) => product.products_type === "truck"
-        );
-        setFilteredProducts(truckFiltered);
-      } else {
-        const filtered = productsItems.filter(
-          (product) => product.products_truck_type === selectedTruckCategory
-        );
-        setFilteredProducts(filtered);
-      }
+    let filtered = productsItems;
+
+    if (selectedCategory === "truck") {
+      filtered = selectedTruckCategory
+        ? productsItems.filter(
+            (product) => product.products_truck_type === selectedTruckCategory
+          )
+        : productsItems.filter((product) => product.products_type === "truck");
     } else if (selectedCategory === "bus") {
-      if (selectedBusCategory === "") {
-        const busFiltered = productsItems.filter(
-          (product) => product.products_type === "bus"
-        );
-        setFilteredProducts(busFiltered);
-      } else {
-        const filtered = productsItems.filter(
-          (product) => product.products_bus_type === selectedBusCategory
-        );
-        setFilteredProducts(filtered);
-      }
-    } else {
-      const filtered = productsItems.filter(
+      filtered = selectedBusCategory
+        ? productsItems.filter(
+            (product) => product.products_bus_type === selectedBusCategory
+          )
+        : productsItems.filter((product) => product.products_type === "bus");
+    } else if (selectedCategory !== "") {
+      filtered = productsItems.filter(
         (product) => product.products_type === selectedCategory
       );
-      setFilteredProducts(filtered);
     }
+
+    setFilteredProducts(filtered);
   }, [
     selectedCategory,
     selectedTruckCategory,
     selectedBusCategory,
     productsItems,
   ]);
+
+  useEffect(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+    setFilteredPaginatedProducts(paginatedProducts);
+  }, [filteredProducts, currentPage]);
+
   const componentMap = {
     1: HF252,
     2: HF231,
@@ -373,7 +384,7 @@ const Productpage = () => {
                     {!clickedProductId && (
                       <div className="ct_list">
                         <ul>
-                          {filteredProducts.map((products, index) => (
+                          {filteredPaginatedProducts.map((products, index) => (
                             <li className="clearfix" key={index}>
                               <div className="col-lg-9">
                                 <div className="ct_d1 fl clearfix">
@@ -452,6 +463,61 @@ const Productpage = () => {
                             </li>
                           ))}
                         </ul>
+                      </div>
+                    )}
+
+                    {showPagination && (
+                      <div className="pagination" id="pages">
+                        {currentPage > 1 && (
+                          <a
+                            className="first"
+                            onClick={() => setCurrentPage(1)}>
+                            {"<<"}
+                          </a>
+                        )}
+                        {currentPage > 1 && (
+                          <a
+                            className="prev"
+                            onClick={() => setCurrentPage(currentPage - 1)}>
+                            {"<"}
+                          </a>
+                        )}
+                        {Array.from({
+                          length: Math.ceil(
+                            filteredProducts.length / itemsPerPage
+                          ),
+                        }).map((_, index) => (
+                          <a
+                            key={index}
+                            className={
+                              currentPage === index + 1 ? "active" : ""
+                            }
+                            onClick={() => setCurrentPage(index + 1)}>
+                            {index + 1}
+                          </a>
+                        ))}
+                        {currentPage <
+                          Math.ceil(filteredProducts.length / itemsPerPage) && (
+                          <a
+                            className="next"
+                            onClick={() => setCurrentPage(currentPage + 1)}>
+                            {">"}
+                          </a>
+                        )}
+                        {currentPage <
+                          Math.ceil(filteredProducts.length / itemsPerPage) && (
+                          <a
+                            className="last"
+                            onClick={() =>
+                              setCurrentPage(
+                                Math.ceil(
+                                  filteredProducts.length / itemsPerPage
+                                )
+                              )
+                            }>
+                            {">>"}
+                          </a>
+                        )}
                       </div>
                     )}
                   </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
+import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 
 const HF252 = () => {
   const [productsItems, setProductsItems] = useState([]);
@@ -19,6 +20,12 @@ const HF252 = () => {
     email: true,
     address: true,
   };
+
+  const specificProductIds = [1, 2];
+  const specificProducts = productsItems.filter((product) =>
+    specificProductIds.includes(product.id)
+  );
+
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
@@ -159,6 +166,13 @@ const HF252 = () => {
               fieldVisibility={fieldVisibility}
             />
           )}
+        </div>
+
+        <div className="zj">
+          <div className="zj_hd">Recommendation</div>
+          <div className="zj_box">
+            <SwipperProduct products={specificProducts} />
+          </div>
         </div>
       </div>
     </>
