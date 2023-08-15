@@ -1,9 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import AdvanceButton from "../../../../component/Button/AdvanceButton";
+import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 
 const HF252 = () => {
   const [productsItems, setProductsItems] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  const fieldVisibility = {
+    fullName: true,
+    telephone: true,
+    email: true,
+    address: true,
+  };
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
@@ -25,14 +40,16 @@ const HF252 = () => {
                 <em>TYRE MODEL-</em>
                 <span>{products.products_name}</span>
               </div>
-              <div className="ct_xq2" data-aos="zoom-in">
-                <div>{products.products_description}</div>
-              </div>
-              <div className="ct_xq3" data-aos="zoom-in">
-                <img
-                  className="ct_xq3_img1"
-                  src={require(`../../../../static/assets/picture/${products.products_lorry_image}`)}
-                />
+              <div className="ct_xqq">
+                <div className="ct_xq2" data-aos="zoom-in">
+                  <div>{products.products_description}</div>
+                </div>
+                <div className="ct_xq3" data-aos="zoom-in">
+                  <img
+                    className="ct_xq3_img1"
+                    src={require(`../../../../static/assets/picture/${products.products_lorry_image}`)}
+                  />
+                </div>
               </div>
             </div>
             <div className="ct_xq_rt fr" data-aos="zoom-in">
@@ -130,9 +147,18 @@ const HF252 = () => {
             </table>
             <p></p>
           </div>
-        </div>
-        <div className="ct_xq_d4 clearfix">
-          <a className="fr yuyue">Advance</a>
+          <AdvanceButton
+            advanceButtonText={"Advance"}
+            advanceButtonClass={"ct_xq_d4 "}
+            handleOpenModal={handleOpenModal}
+          />
+
+          {isModalOpen && (
+            <ModalRoadone
+              clodeModal={handleCloseModal}
+              fieldVisibility={fieldVisibility}
+            />
+          )}
         </div>
       </div>
     </>

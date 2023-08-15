@@ -45,20 +45,16 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   <NavLink to="/products" className="a1" id="nav2">
                     Product
                   </NavLink>
-                  <div className="lb product-submenu">
-                    <NavLink to="truck-tyres.html">Truck Tyres</NavLink>
-                    <NavLink to="light-truck-series.html">
+                  {/* <div className="lb product-submenu">
+                    <Link to="/products#truck-tyres">Truck Tyres</Link>
+                    <Link to="/products#light-truck-tyres">
                       Light Truck Tyres
-                    </NavLink>
-                    <NavLink to="bus-tyres.html">Bus Tyres</NavLink>
-                  </div>
+                    </Link>
+                    <Link to="/products#bus-tyres">Bus Tyres</Link>
+                  </div> */}
                 </li>
                 <li>
-                  <NavLink
-                    to="/services"
-                    className="a1"
-                    id="nav4"
-                    onClick={(e) => e.preventDefault()}>
+                  <NavLink to="/services/tyre-class" className="a1" id="nav4">
                     Service
                   </NavLink>
                   <div className="lb service-submenu">
@@ -77,11 +73,7 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
                   </div>
                 </li>
                 <li>
-                  <NavLink
-                    to="/about"
-                    className="a1"
-                    id="nav6"
-                    onClick={(e) => e.preventDefault()}>
+                  <NavLink to="/about/roadone" className="a1" id="nav6">
                     About Us
                   </NavLink>
                   <div className="lb aboutus-submenu">

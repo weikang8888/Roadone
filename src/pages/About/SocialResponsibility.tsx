@@ -36,6 +36,7 @@ const SocialResponsibility = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   const swiperTopSlides = [
     { image: InsideImage1 },
     { image: InsideImage2 },

@@ -17,7 +17,6 @@ import Swipper_m from "../../component/Swiper/Swipper_m";
 import axios from "axios";
 import HF252 from "./TruckTyre/HighEndWearable/HF252";
 import HF231 from "./TruckTyre/HighEndWearable/HF231";
-
 SwiperCore.use([Navigation, Pagination]);
 
 const Productpage = () => {
@@ -167,202 +166,218 @@ const Productpage = () => {
         </div>
       )}
 
-      <div className="container cd_main clearfix">
-        <div className="col-lg-2">
-          <div className="cd_lt fl">
-            <ul>
-              {[
-                { id: "truck", label: "Truck Tyres" },
-                { id: "light-truck", label: "Light Truck Tyres" },
-                { id: "bus", label: "Bus Tyres" },
-              ].map((category) => (
-                <li key={category.id}>
-                  <a
-                    href="#"
-                    onClick={() => {
-                      handleCategoryClick(category.id);
-                    }}
-                    className={` ${
-                      selectedCategory === category.id ? "cd_fl" : ""
-                    }`}>
-                    {category.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+      <div className="container">
+        <div className="cd_main clearfix">
+          <div className="col-lg-2">
+            <div className="cd_lt fl">
+              <ul>
+                {[
+                  { id: "truck", label: "Truck Tyres" },
+                  { id: "light-truck", label: "Light Truck Tyres" },
+                  { id: "bus", label: "Bus Tyres" },
+                ].map((category) => (
+                  <li key={category.id}>
+                    <a
+                      onClick={() => {
+                        handleCategoryClick(category.id);
+                      }}
+                      className={` ${
+                        selectedCategory === category.id ? "cd_fl" : ""
+                      }`}>
+                      {category.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="col-lg-10 ps-4">
-          <div className="tabs1 fr">
-            <div className="cd_rt">
-              <div className="cp_fl cp_fl2">
-                <div className="typebox">
-                  {selectedCategory === "truck" && (
-                    <ul className="clearfix">
-                      {[
-                        {
-                          id: "long-haul-wearable",
-                          label: "Long Haul Wearable Tyres",
-                        },
-                        {
-                          id: "middle-long-distance",
-                          label: "Middle & Long Distance",
-                        },
-                        {
-                          id: "middle-short-distance",
-                          label: "Middle & Short Distance",
-                        },
-                        {
-                          id: "quarry-building-site",
-                          label: "Quarry & Building Sites",
-                        },
-                        {
-                          id: "high-end-off-road",
-                          label: "High End Off-road Tyres",
-                        },
-                        {
-                          id: "high-end-heavy-loading",
-                          label: "High End Heavy Loading Tyres",
-                        },
-                        {
-                          id: "high-end-wearable",
-                          label: "HIGH END WEARABLE TYRE",
-                        },
-                      ].map((subcategory) => (
-                        <li
-                          key={subcategory.id}
-                          onClick={() =>
-                            handleTruckCategoryClick(subcategory.id)
-                          }>
-                          <a
-                            className={` ${
-                              selectedTruckCategory === subcategory.id
-                                ? "cpfl2"
-                                : ""
-                            }`}>
-                            {subcategory.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  {selectedCategory === "light-truck" && (
-                    <div className="ct_img">
-                      <img
-                        src={Type28}
-                        title="Light Truck Tyres"
-                        alt="Light Truck Tyres"
-                      />
-                    </div>
-                  )}
-                  {selectedCategory === "bus" && (
-                    <ul className="category-content clearfix">
-                      {[
-                        { id: "inter-city", label: "Inter-city Bus" },
-                        { id: "city-bus", label: "City-city Bus" },
-                      ].map((subcategory) => (
-                        <li
-                          key={subcategory.id}
-                          onClick={() =>
-                            handleBusCategoryClick(subcategory.id)
-                          }>
-                          <a
-                            className={` ${
-                              selectedBusCategory === subcategory.id
-                                ? "cpfl2"
-                                : ""
-                            }`}>
-                            {subcategory.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
+          <div className="col-lg-10 ps-4">
+            <div className="tabs1 fr">
+              <div className="cd_rt">
+                <div className="cp_fl cp_fl2">
+                  <div className="typebox">
+                    {selectedCategory === "truck" && (
+                      <ul className="clearfix">
+                        {[
+                          {
+                            id: "long-haul-wearable",
+                            label: "Long Haul Wearable Tyres",
+                          },
+                          {
+                            id: "middle-long-distance",
+                            label: "Middle & Long Distance",
+                          },
+                          {
+                            id: "middle-short-distance",
+                            label: "Middle & Short Distance",
+                          },
+                          {
+                            id: "quarry-building-site",
+                            label: "Quarry & Building Sites",
+                          },
+                          {
+                            id: "high-end-off-road",
+                            label: "High End Off-road Tyres",
+                          },
+                          {
+                            id: "high-end-heavy-loading",
+                            label: "High End Heavy Loading Tyres",
+                          },
+                          {
+                            id: "high-end-wearable",
+                            label: "HIGH END WEARABLE TYRE",
+                          },
+                        ].map((subcategory) => (
+                          <li
+                            key={subcategory.id}
+                            onClick={() =>
+                              handleTruckCategoryClick(subcategory.id)
+                            }>
+                            <a
+                              className={` ${
+                                selectedTruckCategory === subcategory.id
+                                  ? "cpfl2"
+                                  : ""
+                              }`}>
+                              {subcategory.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {selectedCategory === "light-truck" && (
+                      <div className="ct_img">
+                        <img
+                          src={Type28}
+                          title="Light Truck Tyres"
+                          alt="Light Truck Tyres"
+                        />
+                      </div>
+                    )}
+                    {selectedCategory === "bus" && (
+                      <ul className="category-content clearfix">
+                        {[
+                          { id: "inter-city", label: "Inter-city Bus" },
+                          { id: "city-bus", label: "City-city Bus" },
+                        ].map((subcategory) => (
+                          <li
+                            key={subcategory.id}
+                            onClick={() =>
+                              handleBusCategoryClick(subcategory.id)
+                            }>
+                            <a
+                              className={` ${
+                                selectedBusCategory === subcategory.id
+                                  ? "cpfl2"
+                                  : ""
+                              }`}>
+                              {subcategory.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
 
-                <div className="typebox_m">
-                  <Swiper
-                    loop={true}
-                    slidesPerView={3}
-                    spaceBetween={30}
-                    className="swiper-container"
-                    id="banner">
-                    <SwiperSlide>
-                      <a href="">Long Haul Wearable Tyres</a>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <a href="">Middle & Long Distance</a>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <a href="">Middle & Short Distance</a>
-                    </SwiperSlide>{" "}
-                    <SwiperSlide>
-                      <a href="">Quarry & Building Sites</a>
-                    </SwiperSlide>{" "}
-                    <SwiperSlide>
-                      <a href="">High End Off-road Tyres</a>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <a href="">High End Heavy Loading Tyres</a>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <a href="">HIGH END WEARABLE TYRE</a>
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
+                  <div className="typebox_m">
+                    {selectedCategory === "truck" && (
+                      <Swiper
+                        loop={true}
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        className="swiper-container"
+                        id="banner">
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("long-haul-wearable")
+                            }>
+                            Long Haul Wearable Tyres
+                          </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("middle-long-distance")
+                            }>
+                            Middle & Long Distance
+                          </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("middle-short-distance")
+                            }>
+                            Middle & Short Distance
+                          </a>
+                        </SwiperSlide>{" "}
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("quarry-building-site")
+                            }>
+                            Quarry & Building Sites
+                          </a>
+                        </SwiperSlide>{" "}
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("high-end-off-road")
+                            }>
+                            High End Off-road Tyres
+                          </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("high-end-heavy-loading")
+                            }>
+                            High End Heavy Loading Tyres
+                          </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleTruckCategoryClick("high-end-wearable")
+                            }>
+                            HIGH END WEARABLE TYRE
+                          </a>
+                        </SwiperSlide>
+                      </Swiper>
+                    )}
+                    {selectedCategory === "bus" && (
+                      <Swiper
+                        loop={true}
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        className="swiper-container"
+                        id="banner">
+                        <SwiperSlide>
+                          <a
+                            onClick={() =>
+                              handleBusCategoryClick("inter-city")
+                            }>
+                            Inter-city Bus
+                          </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <a onClick={() => handleBusCategoryClick("city-bus")}>
+                            City-city Bus{" "}
+                          </a>
+                        </SwiperSlide>
+                      </Swiper>
+                    )}
+                  </div>
 
-                <div className="tabs2">
-                  {!clickedProductId && (
-                    <div className="ct_list">
-                      <ul>
-                        {filteredProducts.map((products, index) => (
-                          <li className="clearfix" key={index}>
-                            <div className="col-lg-9">
-                              <div className="ct_d1 fl clearfix">
-                                <div className="cp_intro clearfix">
-                                  <a
-                                    onClick={() =>
-                                      handleShowSpecifyProduct(
-                                        products.id,
-                                        products.products_type,
-                                        products.products_truck_type,
-                                        products.products_bus_type
-                                      )
-                                    }>
-                                    <div
-                                      className="cp_tit fl"
-                                      data-aos="zoom-in-right"
-                                      data-aos-easing="ease-out-back"
-                                      data-aos-duration="1000">
-                                      <em>TYRE MODEL-</em>
-                                      <span>{products.products_name}</span>
-                                      <i></i>
-                                    </div>
-                                  </a>
-                                  <div
-                                    className="fl cp_ms"
-                                    data-aos="zoom-in-left"
-                                    data-aos-easing="ease-out-back"
-                                    data-aos-duration="1000">
-                                    <div>{products.products_description}</div>
-                                  </div>
-                                </div>
-                                <div className="ct_do">
-                                  <div
-                                    className="cp_img3"
-                                    data-aos="zoom-in-left"
-                                    data-aos-easing="ease-out-back"
-                                    data-aos-duration="1000">
-                                    <img
-                                      className="ct_img_c1"
-                                      src={require(`../../static/assets/picture/${products.products_lorry_image}`)}
-                                    />
-                                  </div>
-                                  <div
-                                    className="cp_img2"
-                                    data-aos="zoom-in-left"
-                                    data-aos-easing="ease-out-back"
-                                    data-aos-duration="1000">
+                  <div className="tabs2">
+                    {!clickedProductId && (
+                      <div className="ct_list">
+                        <ul>
+                          {filteredProducts.map((products, index) => (
+                            <li className="clearfix" key={index}>
+                              <div className="col-lg-9">
+                                <div className="ct_d1 fl clearfix">
+                                  <div className="cp_intro clearfix">
                                     <a
                                       onClick={() =>
                                         handleShowSpecifyProduct(
@@ -372,41 +387,84 @@ const Productpage = () => {
                                           products.products_bus_type
                                         )
                                       }>
-                                      View details
-                                      <span>{">"}</span>
+                                      <div
+                                        className="cp_tit fl"
+                                        data-aos="zoom-in-right"
+                                        data-aos-easing="ease-out-back"
+                                        data-aos-duration="1000">
+                                        <em>TYRE MODEL-</em>
+                                        <span>{products.products_name}</span>
+                                        <i></i>
+                                      </div>
                                     </a>
+                                    <div
+                                      className="fl cp_ms"
+                                      data-aos="zoom-in-left"
+                                      data-aos-easing="ease-out-back"
+                                      data-aos-duration="1000">
+                                      <div>{products.products_description}</div>
+                                    </div>
+                                  </div>
+                                  <div className="ct_do">
+                                    <div
+                                      className="cp_img3"
+                                      data-aos="zoom-in-left"
+                                      data-aos-easing="ease-out-back"
+                                      data-aos-duration="1000">
+                                      <img
+                                        className="ct_img_c1"
+                                        src={require(`../../static/assets/picture/${products.products_lorry_image}`)}
+                                      />
+                                    </div>
+                                    <div
+                                      className="cp_img2"
+                                      data-aos="zoom-in-left"
+                                      data-aos-easing="ease-out-back"
+                                      data-aos-duration="1000">
+                                      <a
+                                        onClick={() =>
+                                          handleShowSpecifyProduct(
+                                            products.id,
+                                            products.products_type,
+                                            products.products_truck_type,
+                                            products.products_bus_type
+                                          )
+                                        }>
+                                        View details
+                                        <span>{">"}</span>
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                            <div className="col-lg-2">
-                              <div
-                                className="ct_d2"
-                                data-aos="slide-up"
-                                data-aos-easing="ease-out-back"
-                                data-aos-duration="1000">
-                                <img
-                                  src={require(`../../static/assets/picture/${products.products_image}`)}
-                                  title="HF252"
-                                />
+                              <div className="col-lg-2">
+                                <div
+                                  className="ct_d2"
+                                  data-aos="slide-up"
+                                  data-aos-easing="ease-out-back"
+                                  data-aos-duration="1000">
+                                  <img
+                                    src={require(`../../static/assets/picture/${products.products_image}`)}
+                                    title="HF252"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {clickedProductId && componentMap[clickedProductId] && (
-                    <React.Fragment key={`component-${clickedProductId}`}>
-                      {React.createElement(componentMap[clickedProductId])}
-                    </React.Fragment>
-                  )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {clickedProductId && componentMap[clickedProductId] && (
+          <React.Fragment key={`component-${clickedProductId}`}>
+            {React.createElement(componentMap[clickedProductId])}
+          </React.Fragment>
+        )}
       </div>
     </>
   );

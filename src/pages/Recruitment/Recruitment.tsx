@@ -62,11 +62,9 @@ const Recruitment = () => {
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list">
-            <div className="tabs3">
-              <SocialRecruitment showHeader={false} />
+            <SocialRecruitment showHeader={false} />
 
-              <CampusRecruit showHeader={false} />
-            </div>
+            <CampusRecruit showHeader={false} />
           </div>
         </div>
       </div>

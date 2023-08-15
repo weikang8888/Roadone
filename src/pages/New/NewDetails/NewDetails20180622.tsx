@@ -5,6 +5,8 @@ import NewsSource from "../../../static/assets/picture/news_source.png";
 import NewDetailsImage1 from "../../../static/assets/picture/1IZ0K15-1.jpg";
 import NewDetailsImage2 from "../../../static/assets/picture/1IZ02961-2.jpg";
 import NewDetailsImage3 from "../../../static/assets/picture/1IZ04F5-3.jpg";
+import NewHeader from "../NewHeader";
+import NewPreNext from "./NewPrevNext";
 
 const NewDetails20180622 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -23,6 +25,8 @@ const NewDetails20180622 = () => {
 
   return (
     <>
+      {" "}
+      <NewHeader />
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list newsbox">
@@ -135,6 +139,16 @@ const NewDetails20180622 = () => {
               </div>
             ))}
           </div>
+          <NewPreNext
+            nextTitle={
+              "Roadone Passed ISO/TS 16949 Certification, and Get OE Permit of International Automobile Industry"
+            }
+            nextUrl="/news/2017/0306_711"
+            prevUrl={"/news/2018/0820_713"}
+            prevTitle={
+              "Explosion scene | ROADONE debut at the SHANGHAI Tire Show, showing the national brand charm!"
+            }
+          />
         </div>
       </div>
     </>

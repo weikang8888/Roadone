@@ -10,11 +10,26 @@ import RecruitmentSocialImage1 from "../../static/assets/picture/recruit_social.
 import Recruitmentbanner from "../../static/assets/m/inside_tlt_1.jpg";
 import Header_m from "../../component/Header/Header_m";
 import Swipper_m from "../../component/Swiper/Swipper_m";
+import AdvanceButton from "../../component/Button/AdvanceButton";
+import ModalRoadone from "../../component/Modal/ModalRoadone";
 
 const SocialRecruitment = ({ showHeader }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [{ image: Recruitmentbanner }];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  const fieldVisibility = {
+    fullName: true,
+    jobTitle: true,
+    contactInformation: true,
+    attachment: true,
+  };
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -26,6 +41,7 @@ const SocialRecruitment = ({ showHeader }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   const swiperTopSlides = [
     { image: InsideImage1 },
     { image: InsideImage2 },
@@ -307,11 +323,18 @@ const SocialRecruitment = ({ showHeader }) => {
                       </li>
                     </ul>
                   </div>
-                  <div className="n_sq clearfix">
-                    <a className="fr tj" id="tj1" href="javascript:;">
-                      Submit Resume
-                    </a>
-                  </div>
+                  <AdvanceButton
+                    advanceButtonText={"Submit Resume"}
+                    advanceButtonClass={"n_sq "}
+                    handleOpenModal={handleOpenModal}
+                  />
+
+                  {isModalOpen && (
+                    <ModalRoadone
+                      clodeModal={handleCloseModal}
+                      fieldVisibility={fieldVisibility}
+                    />
+                  )}
                 </div>
               </div>
             </div>

@@ -4,9 +4,10 @@ import "aos/dist/aos.css";
 import Swipper from "../../component/Swiper/Swipper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import Header from "../../component/Header/Header";
 import axios from "axios";
+import "./homepage.css";
 
 import Logo from "../../static/assets/main/logo.png";
 import IndexProtop from "../../static/assets/picture/index_pro_top.jpg";
@@ -26,7 +27,7 @@ import BotImage from "../../static/assets/picture/index_botimg.jpg";
 import MobileHomepage from "../Mobile/MobileHomepage/MobileHomepage";
 
 AOS.init();
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Homepage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -68,6 +69,7 @@ const Homepage = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <>
       {windowWidth <= 990 ? (
@@ -182,6 +184,7 @@ const Homepage = () => {
                   <Swiper
                     pagination={{ clickable: true }}
                     loop={true}
+                    autoplay={{ delay: 3000 }}
                     className="swiper-container"
                     id="banner">
                     {swiperSlides.map((slide, index) => (

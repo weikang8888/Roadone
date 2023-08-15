@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import Header from "../../component/Header/Header";
-import LogoOther from "../../static/assets/main/cd_logo.png";
 import SubmitImage from "../../static/assets/picture/submit.png";
 import { Link } from "react-router-dom";
-import Header_m from "../../component/Header/Header_m";
-import Swipper_m from "../../component/Swiper/Swipper_m";
-import Servicebanner from "../../static/assets/m/fw_banner.jpg";
 import TopButton_m from "../../component/Button/TopButton_m";
 import TopButton from "../../component/Button/TopButton";
+import ServiceHeader from "./ServiceHeader";
 
 const ServiceForm = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const swiperTopSlides = [{ image: Servicebanner }];
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,29 +20,11 @@ const ServiceForm = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <>
-      {" "}
-      {windowWidth <= 990 ? (
-        <>
-          <Header_m />
-          <Swipper_m
-            swiperImage={swiperTopSlides.map((slide) => slide.image)}
-            paginationTF={false}
-            loopTF={false}
-          />
-        </>
-      ) : (
-        <div className="container banner cd fuwu">
-          <div className="banner_box cd_banner2">
-            <Header
-              logo={LogoOther}
-              logoClassName={""}
-              logoDivClassName={"nav_left nav_left1 fl"}
-            />
-          </div>
-        </div>
-      )}
+      <ServiceHeader />
+
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list fuwu_list">
@@ -197,12 +174,11 @@ const ServiceForm = () => {
                 <img
                   alt="Click to change"
                   id="vdimgck"
-                  src="static/picture/vdimgck.php"
                   style={{ cursor: "pointer" }}
                 />
                 &nbsp;
                 <span>
-                  <a href="javascript:void(0)">Click to change</a>
+                  <a>Click to change</a>
                 </span>
               </div>
             </div>

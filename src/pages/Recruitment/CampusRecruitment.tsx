@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Header from "../../component/Header/Header";
 import LogoOther from "../../static/assets/main/cd_logo.png";
 import Swipper from "../../component/Swiper/Swipper";
-
 import InsideImage1 from "../../static/assets/image/inside_tlt_1.jpg";
 import InsideImage2 from "../../static/assets/image/inside_tlt_2.jpg";
 import InsideImage3 from "../../static/assets/image/inside_tlt_3.jpg";
@@ -12,11 +11,26 @@ import Recruitmentbanner from "../../static/assets/m/inside_tlt_1.jpg";
 import Header_m from "../../component/Header/Header_m";
 import Swipper_m from "../../component/Swiper/Swipper_m";
 import TopButton_m from "../../component/Button/TopButton_m";
+import AdvanceButton from "../../component/Button/AdvanceButton";
+import ModalRoadone from "../../component/Modal/ModalRoadone";
 
 const CampusRecruit = ({ showHeader }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [{ image: Recruitmentbanner }];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  const fieldVisibility = {
+    fullName: true,
+    jobTitle: true,
+    contactInformation: true,
+    attachment: true,
+  };
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -28,6 +42,7 @@ const CampusRecruit = ({ showHeader }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   const swiperTopSlides = [
     { image: InsideImage1 },
     { image: InsideImage2 },
@@ -201,11 +216,18 @@ const CampusRecruit = ({ showHeader }) => {
                       </li>
                     </ul>
                   </div>
-                  <div className="n_sq clearfix">
-                    <a className="fr tj" id="tj2" href="javascript:;">
-                      Submit Resume
-                    </a>
-                  </div>
+                  <AdvanceButton
+                    advanceButtonText={"Submit Resume"}
+                    advanceButtonClass={"n_sq "}
+                    handleOpenModal={handleOpenModal}
+                  />
+
+                  {isModalOpen && (
+                    <ModalRoadone
+                      clodeModal={handleCloseModal}
+                      fieldVisibility={fieldVisibility}
+                    />
+                  )}
                 </div>
               </div>
             </div>

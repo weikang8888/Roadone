@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NewsDateIcon from "../../../static/assets/picture/news_date.png";
 import NewsSource from "../../../static/assets/picture/news_source.png";
+import NewHeader from "../NewHeader";
+import NewPreNext from "./NewPrevNext";
 
 const NewDetails20170110 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -20,6 +22,8 @@ const NewDetails20170110 = () => {
 
   return (
     <>
+      {" "}
+      <NewHeader />
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list newsbox">
@@ -54,6 +58,13 @@ const NewDetails20170110 = () => {
               </div>
             ))}
           </div>
+          <NewPreNext
+            nextTitle={"None"}
+            prevUrl={"/news/2017/0306_711"}
+            prevTitle={
+              "Roadone Passed ISO/TS 16949 Certification, and Get OE Permit of International Automobile Industry"
+            }
+          />
         </div>
       </div>
     </>

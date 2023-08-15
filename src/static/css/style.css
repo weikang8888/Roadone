@@ -225,7 +225,7 @@ em {
 }
 /**************************index*****************************/
 .banner {
-  width: 1360px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   padding: 0 !important;
@@ -726,7 +726,7 @@ li:hover .lb {
 }
 /*******************二级菜单页面*********************/
 .cd {
-  width: 1360px;
+  width: 100%;
   margin: 0 auto;
 }
 .cd .cd_box {
@@ -874,9 +874,6 @@ li:hover .lb {
   background: #de0529;
   border: 1px solid #de0529;
 }
-.tabs2 {
-  margin-bottom: 70px;
-}
 
 .ct_img img {
   width: 100%;
@@ -984,6 +981,18 @@ li:hover .lb {
   .typebox_m {
     display: none;
   }
+  .layui-layer-wrap {
+    display: flex;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq2 div {
+    padding-right: 100px;
+  }
+  .tabs2 {
+    margin-bottom: 70px;
+  }
+  .ct_xq {
+    border-top: 2px solid #d1d2d4;
+  }
 }
 .ct_list .ct_d2 img {
   width: 100%;
@@ -997,14 +1006,14 @@ li:hover .lb {
   width: 100%;
   height: auto;
   padding-top: 60px;
-  border-top: 2px solid #d1d2d4;
 }
 .ct_xq .ct_xq_d1 {
   width: 100%;
+  display: flex;
   border-bottom: 2px solid #57585a;
 }
 .ct_xq .ct_xq_d1 .ct_xq_lt {
-  width: 65%;
+  width: 100%;
 }
 .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq1 {
   width: 100%;
@@ -1110,6 +1119,7 @@ li:hover .lb {
   line-height: 35px;
   border-radius: 5px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .ct_xq_d4 a:hover {
   background: #f90828;
@@ -1215,9 +1225,135 @@ li:hover .lb {
   width: 20px;
 }
 /*********** Order **********/
+.layui-layer {
+  border-radius: 2px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+}
+.layui-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.layui-layer-content {
+  position: relative;
+}
+.layer-animation {
+  -webkit-animation-name: layer-rollIn;
+  animation-name: layer-rollIn;
+}
+.layui-layer-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0px;
+  z-index: 1100;
+}
+.layui-layer-ico {
+  background: url(../../static/assets/picture/icon.png) no-repeat;
+}
+.layui-layer-setwin {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 0;
+  line-height: initial;
+}
+
+.layui-layer-setwin a {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  font-size: 12px;
+  _overflow: hidden;
+}
+
+.layui-layer-setwin .layui-layer-min cite {
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+  background-color: #2e2d3c;
+  cursor: pointer;
+}
+
+.layui-layer-setwin .layui-layer-min:hover cite {
+  background-color: #2d93ca;
+}
+
+.layui-layer-setwin .layui-layer-max {
+  background-position: -32px -40px;
+}
+
+.layui-layer-setwin .layui-layer-max:hover {
+  background-position: -16px -40px;
+}
+
+.layui-layer-setwin .layui-layer-maxmin {
+  background-position: -65px -40px;
+}
+
+.layui-layer-setwin .layui-layer-maxmin:hover {
+  background-position: -49px -40px;
+}
+
+.layui-layer-setwin .layui-layer-close1 {
+  background-position: 1px -40px;
+  cursor: pointer;
+}
+
+.layui-layer-setwin .layui-layer-close1:hover {
+  opacity: 0.7;
+}
+
+.layui-layer-setwin .layui-layer-close2 {
+  position: absolute;
+  right: -20px;
+  top: -30px;
+  width: 30px;
+  height: 30px;
+  margin-left: 0;
+  background-position: -149px -31px;
+  cursor: pointer;
+}
+
+.layui-layer-setwin .layui-layer-close2:hover {
+  background-position: -180px -31px;
+}
+@keyframes layer-rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    -ms-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+  }
+}
 .yy {
   background: url("../assets/image/yy_bg.jpg") no-repeat;
-  width: 1360px;
+  width: 100%;
   height: 576px;
   margin: 0 auto;
   z-index: 111;
@@ -1230,7 +1366,7 @@ li:hover .lb {
   display: block;
 }
 .yy .yy_right {
-  width: 1260px;
+  width: 100%;
   height: auto;
 }
 .yy .yy_right .yy_logo img {
@@ -1238,9 +1374,12 @@ li:hover .lb {
   margin-right: 50px;
   margin-top: 40px;
 }
+.yy .yy_right .yy_f form {
+  display: flex;
+}
 .yy .yy_right .yy_f input {
   background: #efeff0;
-  width: 550px;
+  width: 100%;
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
@@ -1276,10 +1415,11 @@ li:hover .lb {
 }
 .yy .yy_right .yy_f .yy_f_rt {
   position: relative;
+  padding-right: 50px;
 }
 .yy .yy_right .yy_f .yy_f_rt textarea {
   font-family: "Open Sans", Microsoft Yahei, Verdana, Tahoma, Arial;
-  width: 550px;
+  width: 100%;
   height: 290px;
   background: #efeff0;
   border-radius: 5px;
@@ -1619,6 +1759,8 @@ li:hover .lb {
 .n_xq_s .n_xq_fx img {
   vertical-align: -3px;
   margin-left: 10px;
+  width:20px;
+  height:20px;
 }
 /*.n_xq_s .n_xq_fx img:hover{transform: rotate(360deg);-webkit-transform: rotate(360deg);-o-transform: rotate(360deg);-ms-transform: rotate(360deg);-moz-transform: rotate(360deg); transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s;-o-transition: all 0.3s;}*/
 .n_xq_up {
@@ -1628,14 +1770,7 @@ li:hover .lb {
   margin-top: 20px;
   display: flex;
 }
-.n_xq_up .prev {
-  border-right: 3px solid #898686;
-}
 
-.n_xq_up .prev,
-.n_xq_up .next {
-  padding: 0px 15px;
-}
 .n_xq_up a:hover {
   color: #e60012;
 }
@@ -1823,6 +1958,7 @@ li:hover .lb {
   margin-bottom: 10px;
   margin-top: 50px;
   border-top: 1px solid #dad8d8;
+  cursor: pointer;
 }
 .n_sq a {
   font-size: 16px;
@@ -2716,8 +2852,10 @@ li:hover .lb {
   padding: 10px;
   font-size: 16px;
 }
+
 .disabled {
   color: #5957576b;
+  cursor: default !important;
 }
 @media screen and (min-width: 1360px) and (max-width: 1440px) {
   .yd .yd_box {

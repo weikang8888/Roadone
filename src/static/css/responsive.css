@@ -5,12 +5,45 @@
 }
 
 @media (max-width: 990px) {
+  .header .xiala1 {
+    width: 100%;
+    margin: auto;
+    background: #1e1e1e;
+    position: fixed;
+    height: 100%;
+    z-index: 11111;
+  }
+  .header .xiala1 ul {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .header .xiala1 ul li a {
+    color: #fff;
+    font-size: 1.3em;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    border-bottom: 1px solid #7c7c7c;
+  }
+  .header .xiala1 .xiala1_f {
+    height: 20rem;
+    margin-top: 20px;
+  }
+  .header .xiala1 .xiala1_f a {
+    color: #fff;
+    letter-spacing: 0.6px;
+    display: inline-block;
+    border-right: 1px solid #fff;
+    padding: 0 9px 0 6px;
+  }
   .swiper-pagination {
     position: absolute;
     z-index: 20;
     bottom: 0;
     width: 100%;
-    padding-right: 50px;
     text-align: right;
   }
 
@@ -205,6 +238,9 @@
     padding: 15px 10px 0;
     display: block;
   }
+  .typebox_m a {
+    cursor: pointer;
+  }
   .cp_fl .swiper-wrapper {
     text-align: center;
   }
@@ -233,5 +269,19 @@
     text-align: center;
     padding-bottom: 4%;
     border-bottom: 1px dashed #777;
+  }
+  .ct_xq .ct_xq_d1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_rt img {
+    margin-right: 0;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xqq {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .kt .kt_d5 {
+    margin: 0;
   }
 }

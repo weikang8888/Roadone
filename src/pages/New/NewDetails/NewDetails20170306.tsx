@@ -3,6 +3,8 @@ import axios from "axios";
 import NewsDateIcon from "../../../static/assets/picture/news_date.png";
 import NewsSource from "../../../static/assets/picture/news_source.png";
 import NewDetailsImage1 from "../../../static/assets/picture/1I3232432-1.jpg";
+import NewHeader from "../NewHeader";
+import NewPreNext from "./NewPrevNext";
 
 const NewDetails20170306 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -21,6 +23,8 @@ const NewDetails20170306 = () => {
 
   return (
     <>
+      {" "}
+      <NewHeader />
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list newsbox">
@@ -100,6 +104,16 @@ const NewDetails20170306 = () => {
               </div>
             ))}
           </div>
+          <NewPreNext
+            nextTitle={
+              "New Product: Roadone New RD05: Fuel-efficient, High Speed, Standard Load Series"
+            }
+            nextUrl="/news/2017/0110_710"
+            prevUrl={"/news/2018/0622_712"}
+            prevTitle={
+              "ROADONE Tire `sailing` in Qingdao Port, HIXIH Group and Qingdao Port International Logistic"
+            }
+          />
         </div>
       </div>
     </>

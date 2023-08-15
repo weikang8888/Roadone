@@ -1,56 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { SlideDown } from "react-slidedown";
+import "react-slidedown/lib/slidedown.css";
 
 import LogoMobile from "../../static/assets/m/logo.png";
 import MenuMobile from "../../static/assets/m/menu.png";
+import CloseMenuMobile from "../../static/assets/m/menu_on.png";
 import "./header_m.css";
 
 const Header_m = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuClose, setMenuClose] = useState("closed");
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+
+    if (menuOpen) {
+      document.body.style.overflow = "auto"; // Enable scrolling
+    } else {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    }
+  };
+
   return (
     <>
       <div className="header clearfix">
         <div className="header_box">
-          <div className="xiala fl">
-            <img src={MenuMobile} />
+          <div
+            className="xiala fl"
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+              toggleMenu();
+              setMenuClose(menuClose === "closed" ? "open" : "closed");
+            }}>
+            <img
+              src={menuClose === "closed" ? MenuMobile : CloseMenuMobile}
+              alt="Menu"
+            />
           </div>
           <div className="logo">
-            <a href="">
+            <NavLink to="/">
               <img src={LogoMobile} title="Roadone" />
-            </a>
+            </NavLink>
           </div>
         </div>
-        <div className="xiala1" style={{ display: "none" }}>
+        <SlideDown className="xiala1" closed={!menuOpen}>
           <ul>
             <li>
-              <a href="">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="list-1.html">News</a>
+              <NavLink to="/news">News</NavLink>
             </li>
             <li>
-              <a href="list-2.html">Product</a>
+              <NavLink to="/products">Product</NavLink>
             </li>
             <li>
-              <a href="list-6.html">Marketing</a>
+              <NavLink to="/services">Service</NavLink>
             </li>
             <li>
-              <a href="list-7.html">Service</a>
+              <NavLink to="/recruitment">Recruitment</NavLink>
             </li>
             <li>
-              <a href="list-14.html">Recruitment</a>
-            </li>
-            <li>
-              <a href="list-8.html">About Us</a>
+              <NavLink to="/about/roadone">About Us</NavLink>
             </li>
           </ul>
           <div className="xiala1_f">
-            <a href="http://www.tltyre.com/m/index.php">中文</a>
-            <a href="">English</a>
-            <a href="http://kr.tltyre.com/m">한국어</a>
-            <a href="http://www.hixih.com.cn" target="_blank">
+            <NavLink to="">中文</NavLink>
+            <NavLink to="">English</NavLink>
+            <NavLink to="" target="_blank">
               HIXIH Group
-            </a>
+            </NavLink>
           </div>
-        </div>
+        </SlideDown>
       </div>
     </>
   );

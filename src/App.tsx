@@ -17,6 +17,15 @@ import SocialResponsibility from "./pages/About/SocialResponsibility";
 import ContactUs from "./pages/About/ContactUs";
 import FooterMobile from "./component/Footer/FooterMobile";
 import Productpage from "./pages/Product/Productpage";
+import Header from "./component/Header/Header";
+import NewDetails20180820 from "./pages/New/NewDetails/NewDetails20180820";
+import NewDetails20180622 from "./pages/New/NewDetails/NewDetails20180622";
+import NewDetails20170306 from "./pages/New/NewDetails/NewDetails20170306";
+import NewDetails20170110 from "./pages/New/NewDetails/NewDetails20170110";
+import TyreFunction from "./pages/Service/ServiceDetails/TyreFunction";
+import TyreMarketing from "./pages/Service/ServiceDetails/TyreMarketing";
+import TyreSpecification from "./pages/Service/ServiceDetails/TyreSpecification";
+import TyreStorage from "./pages/Service/ServiceDetails/TyreStorage";
 
 const App = () => {
   const [showFooterMobile, setShowFooterMobile] = useState(false);
@@ -41,14 +50,33 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-
         <Route path="/news" element={<Newpage />} />
+        <Route path="/news/2018/0820_713" element={<NewDetails20180820 />} />
+        <Route path="/news/2018/0622_712" element={<NewDetails20180622 />} />
+        <Route path="/news/2017/0306_711" element={<NewDetails20170306 />} />
+        <Route path="/news/2017/0110_710" element={<NewDetails20170110 />} />
+
         <Route path="/services/tyre-class" element={<ServiceTyreClass />} />
+        <Route
+          path="/services/tyre-class/tyre-function-and-structure"
+          element={<TyreFunction />}
+        />
+        <Route
+          path="/services/tyre-class/tyre-marketing"
+          element={<TyreMarketing />}
+        />
+        <Route
+          path="/services/tyre-class/tyre-specification"
+          element={<TyreSpecification />}
+        />
+        <Route
+          path="/services/tyre-class/tyre-storage"
+          element={<TyreStorage />}
+        />
+
         <Route path="/services/guestbook" element={<ServiceForm />} />
         <Route path="/services/download" element={<ServiceDownload />} />
-        
         <Route path="/products" element={<Productpage />} />
-
         <Route path="/recruitment" element={<Recruitment />} />
         <Route
           path="/recruitment/social"

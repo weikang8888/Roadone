@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "./mobilehomepage.css";
 import axios from "axios";
 
@@ -21,7 +21,7 @@ import BotImage from "../../../static/assets/m/index_botimg.jpg";
 import Header_m from "../../../component/Header/Header_m";
 import Swipper_m from "../../../component/Swiper/Swipper_m";
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const MobileHomepage = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -92,6 +92,7 @@ const MobileHomepage = () => {
           <Swiper
             pagination={{ clickable: true }}
             loop={true}
+            autoplay={{ delay: 3000 }}
             className="swiper-container"
             id="banner">
             {swiperSlides.map((slide, index) => (
@@ -106,7 +107,7 @@ const MobileHomepage = () => {
         <div className="i_hd i_hd1">News</div>
         <div className="i_new">
           {newsItems.map((news, index) => (
-            <ul>
+            <ul key={index}>
               <li key={index}>
                 <a href={news.news_url}>
                   <div className="i_new_bt">{news.news_title}</div>

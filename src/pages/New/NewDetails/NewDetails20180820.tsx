@@ -13,6 +13,8 @@ import NewDetailsImage9 from "../../../static/assets/picture/1J44S3Y-9.jpg";
 import NewDetailsImage10 from "../../../static/assets/picture/1J44Q443-10.jpg";
 import NewDetailsImage11 from "../../../static/assets/picture/1J44VW1-11.jpg";
 import NewDetailsImage12 from "../../../static/assets/picture/1J44W400-12.jpg";
+import NewHeader from "../NewHeader";
+import NewPreNext from "./NewPrevNext";
 
 const NewDetails20180820 = () => {
   const [newsItems, setNewsItems] = useState([]);
@@ -31,6 +33,8 @@ const NewDetails20180820 = () => {
 
   return (
     <>
+      {" "}
+      <NewHeader />
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list newsbox">
@@ -218,6 +222,14 @@ const NewDetails20180820 = () => {
               </div>
             ))}
           </div>
+          <NewPreNext
+            nextTitle={"None"}
+            nextUrl=""
+            prevUrl={"/news/2018/0622_712"}
+            prevTitle={
+              "ROADONE Tire `sailing` in Qingdao Port, HIXIH Group and Qingdao Port International Logistics to achieve strategic cooperation"
+            }
+          />
         </div>
       </div>
     </>

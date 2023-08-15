@@ -39,6 +39,7 @@ const ContactUs = () => {
     { image: InsideImage2 },
     { image: InsideImage3 },
   ];
+
   return (
     <>
       {windowWidth <= 990 ? (

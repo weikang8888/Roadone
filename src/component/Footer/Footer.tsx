@@ -4,6 +4,7 @@ import QRcode from "../../static/assets/picture/qrcode.jpg";
 import Wechat from "../../static/assets/picture/weixin.png";
 import Weibo from "../../static/assets/picture/weibo.png";
 import Qzone from "../../static/assets/picture/qzone.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,101 +15,91 @@ const Footer = () => {
           <div className="foot_top_box clearfix">
             <div className="foot_top1 fl">
               <div className="xl_hd">
-                <a href="product.html">Product</a>
+                <NavLink to="/products">Product</NavLink>
               </div>
               <ul className="firstrow">
                 <li className="kc">
-                  <a href="truck-tyres.html">Truck Tyres</a>
+                  <NavLink to="/products">Truck Tyres</NavLink>
                 </li>
 
                 <li>
-                  <a href="long-haul-highway.html">Long Haul Wearable Tyres</a>
+                  <NavLink to="/products">Long Haul Wearable Tyres</NavLink>
                 </li>
                 <li>
-                  <a href="middle-long-distance.html">Middle & Long Distance</a>
+                  <NavLink to="/products">Middle & Long Distance</NavLink>
                 </li>
                 <li>
-                  <a href="middle-short-distance.html">
-                    Middle & Short Distance
-                  </a>
+                  <NavLink to="/products">Middle & Short Distance</NavLink>
                 </li>
                 <li>
-                  <a href="quarry-building-sites.html">
-                    Quarry & Building Sites
-                  </a>
+                  <NavLink to="/products">Quarry & Building Sites</NavLink>
                 </li>
                 <li>
-                  <a href="high-end-off-road-tyres.html">
-                    High End Off-road Tyres
-                  </a>
+                  <NavLink to="/products"> High End Off-road Tyres</NavLink>
                 </li>
                 <li>
-                  <a href="high-end-heavy-loading-tyres.html">
-                    High End Heavy Loading Tyres
-                  </a>
+                  <NavLink to="/products">High End Heavy Loading Tyres</NavLink>
                 </li>
                 <li>
-                  <a href="high-end-wearable-tyres.html">
-                    HIGH END WEARABLE TYRE
-                  </a>
+                  <NavLink to="/products">HIGH END WEARABLE TYRE</NavLink>
                 </li>
               </ul>
               <ul className="firstrow">
                 <li className="kc">
-                  <a href="bus-tyres.html">Bus Tyres</a>
+                  <NavLink to="/products">Bus Tyres</NavLink>
                 </li>
 
                 <li>
-                  <a href="inter-city-bus.html">Inter-city Bus</a>
+                  <NavLink to="/products">Inter-city Bus</NavLink>
                 </li>
                 <li>
-                  <a href="city-bus.html">City-City Bus</a>
+                  <NavLink to="/products">City-City Bus</NavLink>
                 </li>
                 <li className="kc"></li>
               </ul>
             </div>
             <div className="foot_top1 fl">
               <div className="xl_hd">
-                <a href="service.html">Service</a>
+                <NavLink to="/services">Service</NavLink>
               </div>
               <ul>
                 <li>
-                  <a href="tyre-className.html">Tyre className</a>
+                  <Link to="/services/tyre-class">Tyre className</Link>
                 </li>
                 <li>
-                  <a href="guestbook.html">Guestbook</a>
+                  <Link to="/services/guestbook">Guestbook</Link>
                 </li>
                 <li>
-                  <a href="download.html">Download</a>
+                  <Link to="/services/download">Download</Link>
                 </li>
               </ul>
             </div>
             <div className="foot_top1 fl">
               <div className="xl_hd">
-                <a href="recruit.html">Recruitment</a>
+                <NavLink to="/recruiment">Recruitment</NavLink>
               </div>
               <ul>
                 <li>
-                  <a href="social.html">Social Recruitment</a>
+                  <Link to="/recruiment/social">Social Recruitment</Link>
                 </li>
                 <li>
-                  <a href="Campus.html">Campus Recruitment</a>
+                  <Link to="/recruiment/campus">Campus Recruitment</Link>
                 </li>
               </ul>
             </div>
             <div className="foot_top1 fl">
               <div className="xl_hd">
-                <a href="about.html">About Us</a>
+                <NavLink to="/about/roadone">About Us</NavLink>
               </div>
               <ul>
                 <li>
-                  <a href="roadone.html">About Roadone</a>
+                  <Link to="/about/roadone">About Roadone</Link>
                 </li>
                 <li>
-                  <a href="social-responsibility.html">CSR</a>
+                  <Link to="/about/social-responsibility">CSR</Link>
                 </li>
                 <li>
-                  <a href="contact.html">Contact Us</a>
+                  <Link to="/about/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
