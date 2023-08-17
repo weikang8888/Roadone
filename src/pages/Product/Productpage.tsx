@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../component/Header/Header";
-import Swipper from "../../component/Swiper/Swipper";
-import LogoOther from "../../static/assets/main/cd_logo.png";
-import ProductImage1 from "../../static/assets/image/inside_pro_1.jpg";
-import ProductImage2 from "../../static/assets/image/inside_pro_2.jpg";
-import ProductImage3 from "../../static/assets/image/inside_pro_3.jpg";
-import ProductMobileImage1 from "../../static/assets/m/inside_pro_1.jpg";
-import ProductMobileImage2 from "../../static/assets/m/inside_pro_2.jpg";
-import ProductMobileImage3 from "../../static/assets/m/inside_pro_3.jpg";
 import Type28 from "../../static/assets/picture/type_28.jpg";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
-import Header_m from "../../component/Header/Header_m";
-import Swipper_m from "../../component/Swiper/Swipper_m";
 import axios from "axios";
-import HF252 from "./TruckTyre/HighEndWearable/HF252";
-import HF231 from "./TruckTyre/HighEndWearable/HF231";
+import ProductHeader from "./ProductHeader";
 SwiperCore.use([Navigation, Pagination]);
 
 const Productpage = () => {
@@ -25,8 +13,6 @@ const Productpage = () => {
   const [selectedTruckCategory, setSelectedTruckCategory] = useState(""); // State to track selected category
   const [selectedBusCategory, setSelectedBusCategory] = useState(""); // State to track selected category
   const [filteredProducts, setFilteredProducts] = useState([]); // State to store filtered products
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [clickedProductId, setClickedProductId] = useState(null);
   const [filteredPaginatedProducts, setFilteredPaginatedProducts] = useState(
     []
   );
@@ -34,21 +20,9 @@ const Productpage = () => {
   const [showPagination, setShowPagination] = useState(true);
   const itemsPerPage = 10;
 
-  const swiperTopSlides = [
-    { image: ProductImage1 },
-    { image: ProductImage2 },
-    { image: ProductImage3 },
-  ];
-  const swiperTopMobileSlides = [
-    { image: ProductMobileImage1 },
-    { image: ProductMobileImage2 },
-    { image: ProductMobileImage3 },
-  ];
-
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     setSelectedTruckCategory("");
-    setClickedProductId("");
     setSelectedBusCategory("");
     setCurrentPage(1);
     setShowPagination(true);
@@ -56,13 +30,11 @@ const Productpage = () => {
 
   const handleTruckCategoryClick = (truckCategory) => {
     setSelectedTruckCategory(truckCategory);
-    setClickedProductId("");
     setCurrentPage(1);
     setShowPagination(true);
   };
   const handleBusCategoryClick = (busCategory) => {
     setSelectedBusCategory(busCategory);
-    setClickedProductId("");
     setCurrentPage(1);
     setShowPagination(true);
   };
@@ -73,11 +45,9 @@ const Productpage = () => {
     truckCategory,
     busCategory
   ) => {
-    if (clickedProductId === productId) {
-      setClickedProductId(null);
+    if (productId) {
       setShowPagination(true); // Show pagination when hiding the product details
     } else {
-      setClickedProductId(productId);
       setSelectedCategory(category);
       setSelectedTruckCategory(truckCategory);
       setSelectedBusCategory(busCategory);
@@ -85,17 +55,6 @@ const Productpage = () => {
     }
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
@@ -143,40 +102,9 @@ const Productpage = () => {
     setFilteredPaginatedProducts(paginatedProducts);
   }, [filteredProducts, currentPage]);
 
-  const componentMap = {
-    1: HF252,
-    2: HF231,
-  };
-
   return (
     <>
-      {windowWidth <= 990 ? (
-        <>
-          <Header_m />
-          <Swipper_m
-            swiperImage={swiperTopMobileSlides.map((slide) => slide.image)}
-            paginationTF={false}
-            loopTF={true}
-          />
-        </>
-      ) : (
-        <div className="container banner cd">
-          <div className="banner_box cd_box">
-            <div className="banner_box cd_box">
-              <Swipper
-                swiperImage={swiperTopSlides.map((slide) => slide.image)}
-                imageClassName={"cd_banner2"}
-              />
-            </div>
-            <Header
-              logo={LogoOther}
-              logoClassName={""}
-              logoDivClassName={"nav_left nav_left1 fl"}
-            />
-          </div>
-        </div>
-      )}
-
+      <ProductHeader />
       <div className="container">
         <div className="cd_main clearfix">
           <div className="col-lg-2">
@@ -381,15 +309,59 @@ const Productpage = () => {
                   </div>
 
                   <div className="tabs2">
-                    {!clickedProductId && (
-                      <div className="ct_list">
-                        <ul>
-                          {filteredPaginatedProducts.map((products, index) => (
-                            <li className="clearfix" key={index}>
-                              <div className="col-lg-9">
-                                <div className="ct_d1 fl clearfix">
-                                  <div className="cp_intro clearfix">
+                    <div className="ct_list">
+                      <ul>
+                        {filteredPaginatedProducts.map((products, index) => (
+                          <li className="clearfix" key={index}>
+                            <div className="col-lg-9">
+                              <div className="ct_d1 fl clearfix">
+                                <div className="cp_intro clearfix">
+                                  <a className="col-lg-4"
+                                    href={products.products_url}
+                                    onClick={() =>
+                                      handleShowSpecifyProduct(
+                                        products.id,
+                                        products.products_type,
+                                        products.products_truck_type,
+                                        products.products_bus_type
+                                      )
+                                    }>
+                                    <div
+                                      className="cp_tit fl"
+                                      data-aos="zoom-in-right"
+                                      data-aos-easing="ease-out-back"
+                                      data-aos-duration="1000">
+                                      <em>TYRE MODEL-</em>
+                                      <span>{products.products_name}</span>
+                                      <i></i>
+                                    </div>
+                                  </a>
+                                  <div
+                                    className="fl cp_ms col-lg-6"
+                                    data-aos="zoom-in-left"
+                                    data-aos-easing="ease-out-back"
+                                    data-aos-duration="1000">
+                                    <div>{products.products_description}</div>
+                                  </div>
+                                </div>
+                                <div className="ct_do">
+                                  <div
+                                    className="cp_img3"
+                                    data-aos="zoom-in-left"
+                                    data-aos-easing="ease-out-back"
+                                    data-aos-duration="1000">
+                                    <img
+                                      className="ct_img_c1"
+                                      src={require(`../../static/assets/picture/${products.products_lorry_image}`)}
+                                    />
+                                  </div>
+                                  <div
+                                    className="cp_img2"
+                                    data-aos="zoom-in-left"
+                                    data-aos-easing="ease-out-back"
+                                    data-aos-duration="1000">
                                     <a
+                                      href={products.products_url}
                                       onClick={() =>
                                         handleShowSpecifyProduct(
                                           products.id,
@@ -398,73 +370,29 @@ const Productpage = () => {
                                           products.products_bus_type
                                         )
                                       }>
-                                      <div
-                                        className="cp_tit fl"
-                                        data-aos="zoom-in-right"
-                                        data-aos-easing="ease-out-back"
-                                        data-aos-duration="1000">
-                                        <em>TYRE MODEL-</em>
-                                        <span>{products.products_name}</span>
-                                        <i></i>
-                                      </div>
+                                      View details
+                                      <span>{">"}</span>
                                     </a>
-                                    <div
-                                      className="fl cp_ms"
-                                      data-aos="zoom-in-left"
-                                      data-aos-easing="ease-out-back"
-                                      data-aos-duration="1000">
-                                      <div>{products.products_description}</div>
-                                    </div>
-                                  </div>
-                                  <div className="ct_do">
-                                    <div
-                                      className="cp_img3"
-                                      data-aos="zoom-in-left"
-                                      data-aos-easing="ease-out-back"
-                                      data-aos-duration="1000">
-                                      <img
-                                        className="ct_img_c1"
-                                        src={require(`../../static/assets/picture/${products.products_lorry_image}`)}
-                                      />
-                                    </div>
-                                    <div
-                                      className="cp_img2"
-                                      data-aos="zoom-in-left"
-                                      data-aos-easing="ease-out-back"
-                                      data-aos-duration="1000">
-                                      <a
-                                        onClick={() =>
-                                          handleShowSpecifyProduct(
-                                            products.id,
-                                            products.products_type,
-                                            products.products_truck_type,
-                                            products.products_bus_type
-                                          )
-                                        }>
-                                        View details
-                                        <span>{">"}</span>
-                                      </a>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
-                              <div className="col-lg-2">
-                                <div
-                                  className="ct_d2"
-                                  data-aos="slide-up"
-                                  data-aos-easing="ease-out-back"
-                                  data-aos-duration="1000">
-                                  <img
-                                    src={require(`../../static/assets/picture/${products.products_image}`)}
-                                    title="HF252"
-                                  />
-                                </div>
+                            </div>
+                            <div className="col-lg-2">
+                              <div
+                                className="ct_d2"
+                                data-aos="slide-up"
+                                data-aos-easing="ease-out-back"
+                                data-aos-duration="1000">
+                                <img
+                                  src={require(`../../static/assets/picture/${products.products_image}`)}
+                                  title="HF252"
+                                />
                               </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
                     {showPagination && (
                       <div className="pagination" id="pages">
@@ -526,11 +454,6 @@ const Productpage = () => {
             </div>
           </div>
         </div>
-        {clickedProductId && componentMap[clickedProductId] && (
-          <React.Fragment key={`component-${clickedProductId}`}>
-            {React.createElement(componentMap[clickedProductId])}
-          </React.Fragment>
-        )}
       </div>
     </>
   );

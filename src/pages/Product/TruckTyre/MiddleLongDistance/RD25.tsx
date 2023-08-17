@@ -6,7 +6,7 @@ import ProductHeader from "../../ProductHeader";
 import { NavLink } from "react-router-dom";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 
-const HF252 = () => {
+const RD25 = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const HF252 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=1")
+      .get("http://localhost:8080/api_roadone/products/products?id=37")
       .then((response) => {
         setProductsItems(response.data);
       })
@@ -51,7 +51,7 @@ const HF252 = () => {
                 </li>
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    HIGH END WEARABLE TYRE
+                    Middle & Long Distance
                   </NavLink>
                 </li>
               </ul>
@@ -105,28 +105,22 @@ const HF252 = () => {
                     data-aos-easing="ease-out-back">
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      The new optimized contour design, the angle traction
-                      pattern groove wall design and the unique pattern steel
-                      sheet structure provide good traction performance and
-                      excellent grip performance.
+                      The special single-direction block design provides
+                      superior driving force and wet grip, safe, durable and
+                      powerful.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super wearable tread formula design ensures higher
-                      mileage.
+                      Widened and deepened driving surface,optimized profile
+                      design,special super wear-resistant tread formula for
+                      high-speed drive, ensure higher mileage in mixed road
+                      conditions such as high-way and national road.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      New environment protection series formula system design,
-                      lightweight material distribution design, lower rolling
-                      resistance, excellent oil saving performance.
-                    </p>
-                    <p style={{ whiteSpace: "normal" }}>
-                      <span>&gt;</span>
-                      Super strong flexible steel wire structure ensures the
-                      good load-bearing safety performance of the tire under the
-                      light weight and low rolling resistance design conditions,
-                      and realizes multiple retreading.
+                      Special cap structure and specific 4 belt cap design, low
+                      heating recipe, optimised shoulder desigh, inhibiting
+                      deformed wear,ensure multiple retreading of tires.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <br />
@@ -174,17 +168,50 @@ const HF252 = () => {
                           </td>
                         </tr>
                         <tr>
-                          <td width="101" style={{ wordBreak: "break-all" }}>
-                            245/70R19.5
+                          <td width="133">11R22.5</td>
+                          <td width="72">16PR</td>
+                          <td width="143">3000/2725</td>
+                          <td width="121">146/143</td>
+                          <td width="72">L</td>
+                          <td width="88">1066</td>
+                          <td width="92">279</td>
+                          <td width="72">830</td>
+                          <td width="96">8.25</td>
+                        </tr>
+                        <tr>
+                          <td>11R22.5</td>
+                          <td>18PR</td>
+                          <td width="143">3250/3000</td>
+                          <td width="121">149/146</td>
+                          <td width="72">L</td>
+                          <td width="88">1066</td>
+                          <td width="92">279</td>
+                          <td width="72">930</td>
+                          <td width="96">8.25</td>
+                        </tr>
+                        <tr>
+                          <td width="133">12R22.5</td>
+                          <td width="72">18PR</td>
+                          <td width="143">3550/3250</td>
+                          <td width="121">152/149</td>
+                          <td width="72">L</td>
+                          <td width="88">1092</td>
+                          <td width="92">300</td>
+                          <td width="72">930</td>
+                          <td width="96">9.00</td>
+                        </tr>
+                        <tr>
+                          <td width="133" style={{ wordBreak: "break-all" }}>
+                            315/80R22.5
                           </td>
-                          <td width="56">16PR</td>
-                          <td width="88">2180/2060</td>
-                          <td width="107">135/133</td>
-                          <td width="65">M</td>
-                          <td width="74">839</td>
-                          <td width="66">248</td>
-                          <td width="68">830</td>
-                          <td width="67">7.50</td>
+                          <td width="72">20PR</td>
+                          <td width="143">4125/3750</td>
+                          <td width="121">157/154</td>
+                          <td width="72">K</td>
+                          <td width="88">1094</td>
+                          <td width="92">312</td>
+                          <td width="72">900</td>
+                          <td width="96">9.00</td>
                         </tr>
                       </tbody>
                     </table>
@@ -204,7 +231,7 @@ const HF252 = () => {
                   )}
                 </div>
 
-                <SwipperProduct ids={[1, 2, 3,4,5,6,7,8,9]} />
+                <SwipperProduct ids={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
               </div>
             </div>
           </div>
@@ -214,4 +241,4 @@ const HF252 = () => {
   );
 };
 
-export default HF252;
+export default RD25;

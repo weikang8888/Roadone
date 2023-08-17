@@ -6,7 +6,7 @@ import ProductHeader from "../../ProductHeader";
 import { NavLink } from "react-router-dom";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 
-const HF252 = () => {
+const QA999 = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const HF252 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=1")
+      .get("http://localhost:8080/api_roadone/products/products?id=21")
       .then((response) => {
         setProductsItems(response.data);
       })
@@ -51,7 +51,7 @@ const HF252 = () => {
                 </li>
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    HIGH END WEARABLE TYRE
+                    High End Off-road Tyres
                   </NavLink>
                 </li>
               </ul>
@@ -105,28 +105,31 @@ const HF252 = () => {
                     data-aos-easing="ease-out-back">
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      The new optimized contour design, the angle traction
-                      pattern groove wall design and the unique pattern steel
-                      sheet structure provide good traction performance and
-                      excellent grip performance.
+                      Optimize the contour, groove bottom anti stabbing stone
+                      relief platform, widen the driving surface, deepen the
+                      pattern groove and large pattern design, enhance the
+                      adaptability of the product in the industrial and mining
+                      and other non paved roads, and ensure the longer service
+                      life of the product.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super wearable tread formula design ensures higher
-                      mileage.
+                      Extra thick sidewall and thickened groove bottom design
+                      enhancing impact and puncture resistance on unpaved road.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      New environment protection series formula system design,
-                      lightweight material distribution design, lower rolling
-                      resistance, excellent oil saving performance.
+                      0°structure cap,reinforced carcass and bead structure,
+                      specific heavy loading technology enhancing impact,
+                      puncture,pressure and load resistance under heavy load
+                      conditions.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super strong flexible steel wire structure ensures the
-                      good load-bearing safety performance of the tire under the
-                      light weight and low rolling resistance design conditions,
-                      and realizes multiple retreading.
+                      Extremely low heating tread recipe,provides better
+                      perofrmance of anti-tear、low heating,reducing
+                      shoulder/crown separation effectively on paved road
+                      driving fast.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <br />
@@ -174,17 +177,63 @@ const HF252 = () => {
                           </td>
                         </tr>
                         <tr>
-                          <td width="101" style={{ wordBreak: "break-all" }}>
-                            245/70R19.5
+                          <td width="54" style={{ wordBreak: "break-all" }}>
+                            8.25R20
                           </td>
-                          <td width="56">16PR</td>
-                          <td width="88">2180/2060</td>
-                          <td width="107">135/133</td>
-                          <td width="65">M</td>
-                          <td width="74">839</td>
-                          <td width="66">248</td>
-                          <td width="68">830</td>
-                          <td width="67">7.50</td>
+                          <td width="54">16PR</td>
+                          <td width="54">2430/2300</td>
+                          <td width="54">139/137</td>
+                          <td width="54">F</td>
+                          <td width="54">982</td>
+                          <td width="54">236</td>
+                          <td width="54">930</td>
+                          <td width="54">6.5</td>
+                        </tr>
+                        <tr>
+                          <td width="54">9.00R20</td>
+                          <td width="54">16PR</td>
+                          <td width="54">2800/2650</td>
+                          <td width="54">144/142</td>
+                          <td width="54">F</td>
+                          <td width="54">1028</td>
+                          <td width="54">259</td>
+                          <td width="54">900</td>
+                          <td width="54">7.0</td>
+                        </tr>
+                        <tr>
+                          <td width="54">10.00R20</td>
+                          <td width="54">18PR*</td>
+                          <td width="54">3250/3000</td>
+                          <td width="54">149/146</td>
+                          <td width="54">F</td>
+                          <td width="54">1063</td>
+                          <td width="54">278</td>
+                          <td width="54">930</td>
+                          <td width="54">7.5</td>
+                        </tr>
+                        <tr>
+                          <td width="54">11.00R20</td>
+                          <td width="54">18PR**</td>
+                          <td width="54">3550/3250</td>
+                          <td width="54">152/149</td>
+                          <td width="54">F</td>
+                          <td width="54">1105</td>
+                          <td width="54">293</td>
+                          <td width="54">930</td>
+                          <td width="54">8.0</td>
+                        </tr>
+                        <tr>
+                          <td width="54" style={{ wordBreak: "break-all" }}>
+                            12.00R20
+                          </td>
+                          <td width="54">20PR**</td>
+                          <td width="54">4000/3650</td>
+                          <td width="54">156/153</td>
+                          <td width="54">F</td>
+                          <td width="54">1140</td>
+                          <td width="54">315</td>
+                          <td width="54">900</td>
+                          <td width="54">8.5</td>
                         </tr>
                       </tbody>
                     </table>
@@ -204,7 +253,7 @@ const HF252 = () => {
                   )}
                 </div>
 
-                <SwipperProduct ids={[1, 2, 3,4,5,6,7,8,9]} />
+                <SwipperProduct ids={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
               </div>
             </div>
           </div>
@@ -214,4 +263,4 @@ const HF252 = () => {
   );
 };
 
-export default HF252;
+export default QA999;

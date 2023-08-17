@@ -6,7 +6,7 @@ import ProductHeader from "../../ProductHeader";
 import { NavLink } from "react-router-dom";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 
-const HF252 = () => {
+const RF22Bus = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const HF252 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=1")
+      .get("http://localhost:8080/api_roadone/products/products?id=4")
       .then((response) => {
         setProductsItems(response.data);
       })
@@ -46,12 +46,12 @@ const HF252 = () => {
               <ul className="clearfix">
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    Truck Tyres
+                    Bus Tyres
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    HIGH END WEARABLE TYRE
+                    Inter-city Bus
                   </NavLink>
                 </li>
               </ul>
@@ -105,28 +105,21 @@ const HF252 = () => {
                     data-aos-easing="ease-out-back">
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      The new optimized contour design, the angle traction
-                      pattern groove wall design and the unique pattern steel
-                      sheet structure provide good traction performance and
-                      excellent grip performance.
+                      Optimized profile design, special fine pattern treatment,
+                      improve the grip of slippery road, safe, comfortable and
+                      fuel saving.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super wearable tread formula design ensures higher
-                      mileage.
+                      High-speed specific wearable tread design for bus, ensure
+                      higher mileage.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      New environment protection series formula system design,
-                      lightweight material distribution design, lower rolling
-                      resistance, excellent oil saving performance.
-                    </p>
-                    <p style={{ whiteSpace: "normal" }}>
-                      <span>&gt;</span>
-                      Super strong flexible steel wire structure ensures the
-                      good load-bearing safety performance of the tire under the
-                      light weight and low rolling resistance design conditions,
-                      and realizes multiple retreading.
+                      Reinforced cap specific 4 belt cap design, low heat
+                      generation recipe, optimised shoulder desigh, inhibiting
+                      reduce the rolling resistance of driving,environmental
+                      protection,suitable for multiple retreading of tires.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <br />
@@ -174,17 +167,39 @@ const HF252 = () => {
                           </td>
                         </tr>
                         <tr>
-                          <td width="101" style={{ wordBreak: "break-all" }}>
-                            245/70R19.5
+                          <td width="115">9R22.5</td>
+                          <td width="72">14PR</td>
+                          <td width="107">2240/2120</td>
+                          <td width="143">136/134</td>
+                          <td width="72">L</td>
+                          <td width="95">972</td>
+                          <td width="89">229</td>
+                          <td width="72">830</td>
+                          <td width="72">6.75</td>
+                        </tr>
+                        <tr>
+                          <td width="115">10R22.5</td>
+                          <td width="72">16PR</td>
+                          <td width="107">2800/2650</td>
+                          <td width="143">144/142</td>
+                          <td width="72">L</td>
+                          <td width="95">1018</td>
+                          <td width="89">254</td>
+                          <td width="72">900</td>
+                          <td width="72">7.50</td>
+                        </tr>
+                        <tr>
+                          <td width="115" style={{ wordBreak: "break-all" }}>
+                            215/75R17.5
                           </td>
-                          <td width="56">16PR</td>
-                          <td width="88">2180/2060</td>
-                          <td width="107">135/133</td>
-                          <td width="65">M</td>
-                          <td width="74">839</td>
-                          <td width="66">248</td>
-                          <td width="68">830</td>
-                          <td width="67">7.50</td>
+                          <td width="72">16PR</td>
+                          <td width="107">1750/1600</td>
+                          <td width="143">127/124</td>
+                          <td width="72">K</td>
+                          <td width="95">773</td>
+                          <td width="89">215</td>
+                          <td width="72">830</td>
+                          <td width="72">6.00</td>
                         </tr>
                       </tbody>
                     </table>
@@ -204,7 +219,7 @@ const HF252 = () => {
                   )}
                 </div>
 
-                <SwipperProduct ids={[1, 2, 3,4,5,6,7,8,9]} />
+                <SwipperProduct ids={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
               </div>
             </div>
           </div>
@@ -214,4 +229,4 @@ const HF252 = () => {
   );
 };
 
-export default HF252;
+export default RF22Bus;

@@ -932,7 +932,6 @@ li:hover .lb {
   line-height: 1;
 }
 .ct_list .ct_d1 .cp_ms {
-  width: 100%;
   line-height: 1.8;
   margin-left: 30px;
 }
@@ -1076,6 +1075,7 @@ li:hover .lb {
 .ct_xq_d2 .ct_xq_4 span {
   display: inline-block;
   width: 25px;
+  color: #e53333;
 }
 .ct_xq_d2 .ct_xq_4 span img {
   width: 10px;
@@ -1127,7 +1127,7 @@ li:hover .lb {
 }
 .zj {
   position: relative;
-  width: 1360px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   margin-bottom: 70px;
@@ -1147,16 +1147,18 @@ li:hover .lb {
   height: 250px;
   padding-top: 40px;
 }
+.zj ul{
+  display: flex;
+  justify-content: space-between;
+}
 .zj ul li {
-  width: 412px;
-  float: left;
-  margin: 0px 20px;
+  display: flex;
 }
 .zj ul li .zj_lt img {
   width: 180px;
 }
 .zj ul li .zj_rt .zj_rt_d1 em {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   font-style: italic;
   color: #858585;

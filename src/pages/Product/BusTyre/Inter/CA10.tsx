@@ -6,7 +6,7 @@ import ProductHeader from "../../ProductHeader";
 import { NavLink } from "react-router-dom";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 
-const HF252 = () => {
+const CA10 = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const HF252 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=1")
+      .get("http://localhost:8080/api_roadone/products/products?id=61")
       .then((response) => {
         setProductsItems(response.data);
       })
@@ -46,12 +46,12 @@ const HF252 = () => {
               <ul className="clearfix">
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    Truck Tyres
+                    Bus Tyres
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    HIGH END WEARABLE TYRE
+                    Inter-city Bus
                   </NavLink>
                 </li>
               </ul>
@@ -105,28 +105,24 @@ const HF252 = () => {
                     data-aos-easing="ease-out-back">
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      The new optimized contour design, the angle traction
-                      pattern groove wall design and the unique pattern steel
-                      sheet structure provide good traction performance and
-                      excellent grip performance.
+                      The specific bus pattern design ensures a strong wet grip
+                      and ensures excellent braking performance.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super wearable tread formula design ensures higher
-                      mileage.
+                      Specific steel sheet fine grain design ensures uniform
+                      wear of the cap under frequent brakes.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      New environment protection series formula system design,
-                      lightweight material distribution design, lower rolling
-                      resistance, excellent oil saving performance.
+                      The thickened sidewall and scratch-resistant to prevent
+                      premature damage to the tire by scratching the sidewall.F
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super strong flexible steel wire structure ensures the
-                      good load-bearing safety performance of the tire under the
-                      light weight and low rolling resistance design conditions,
-                      and realizes multiple retreading.
+                      The special reinforcement design of the bead ensures the
+                      braking and bead bearing and aging performance of the
+                      brakes.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <br />
@@ -174,17 +170,50 @@ const HF252 = () => {
                           </td>
                         </tr>
                         <tr>
-                          <td width="101" style={{ wordBreak: "break-all" }}>
-                            245/70R19.5
+                          <td width="115">275/70R22.5</td>
+                          <td width="72">16PR</td>
+                          <td width="107">2800/2575</td>
+                          <td width="143">144/141</td>
+                          <td width="72">J</td>
+                          <td width="95">970</td>
+                          <td width="89">276</td>
+                          <td width="72">830</td>
+                          <td width="72">8.25</td>
+                        </tr>
+                        <tr>
+                          <td width="115">275/70R22.5</td>
+                          <td width="72">18PR</td>
+                          <td width="107">3000/2725</td>
+                          <td width="143">146/143</td>
+                          <td width="72">J</td>
+                          <td width="95">970</td>
+                          <td width="89">276</td>
+                          <td width="72">900</td>
+                          <td width="72">8.25</td>
+                        </tr>
+                        <tr>
+                          <td width="115">11R22.5</td>
+                          <td width="72">16PR</td>
+                          <td width="107">3000/2725</td>
+                          <td width="143">146/143</td>
+                          <td width="72">J</td>
+                          <td width="95">1058</td>
+                          <td width="89">276</td>
+                          <td width="72">830</td>
+                          <td width="72">8.25</td>
+                        </tr>
+                        <tr>
+                          <td width="115" style={{ wordBreak: "break-all" }}>
+                            11R22.5
                           </td>
-                          <td width="56">16PR</td>
-                          <td width="88">2180/2060</td>
-                          <td width="107">135/133</td>
-                          <td width="65">M</td>
-                          <td width="74">839</td>
-                          <td width="66">248</td>
-                          <td width="68">830</td>
-                          <td width="67">7.50</td>
+                          <td width="72">18PR</td>
+                          <td width="107">3250/3000</td>
+                          <td width="143">149/146</td>
+                          <td width="72">J</td>
+                          <td width="95">1058</td>
+                          <td width="89">276</td>
+                          <td width="72">930</td>
+                          <td width="72">8.25</td>
                         </tr>
                       </tbody>
                     </table>
@@ -204,7 +233,7 @@ const HF252 = () => {
                   )}
                 </div>
 
-                <SwipperProduct ids={[1, 2, 3,4,5,6,7,8,9]} />
+                <SwipperProduct ids={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
               </div>
             </div>
           </div>
@@ -214,4 +243,4 @@ const HF252 = () => {
   );
 };
 
-export default HF252;
+export default CA10;

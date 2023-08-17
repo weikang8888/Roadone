@@ -6,7 +6,7 @@ import ProductHeader from "../../ProductHeader";
 import { NavLink } from "react-router-dom";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 
-const HF252 = () => {
+const GD800 = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const HF252 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=1")
+      .get("http://localhost:8080/api_roadone/products/products?id=16")
       .then((response) => {
         setProductsItems(response.data);
       })
@@ -51,7 +51,7 @@ const HF252 = () => {
                 </li>
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    HIGH END WEARABLE TYRE
+                    High End Heavy Loading Tyres
                   </NavLink>
                 </li>
               </ul>
@@ -105,28 +105,37 @@ const HF252 = () => {
                     data-aos-easing="ease-out-back">
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      The new optimized contour design, the angle traction
-                      pattern groove wall design and the unique pattern steel
-                      sheet structure provide good traction performance and
-                      excellent grip performance.
+                      Optimized profile design, unique horizontal and vertical
+                      blocks, puncture resistance bottom design and stone
+                      ejection design suppresses the abnormal wear and provide
+                      strong drive and braking performance.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super wearable tread formula design ensures higher
-                      mileage.
+                      Wearable tread recipe and widening and deepening the tread
+                      pattern design effectively ensures a longer service life.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      New environment protection series formula system design,
-                      lightweight material distribution design, lower rolling
-                      resistance, excellent oil saving performance.
+                      Extremely low heating recipe effectively reduces the
+                      quality risk of shoulder explosion, chipping, groove
+                      splitting and crown removal under overload and overspeed
+                      conditions.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super strong flexible steel wire structure ensures the
-                      good load-bearing safety performance of the tire under the
-                      light weight and low rolling resistance design conditions,
-                      and realizes multiple retreading.
+                      Reinforced steel wire structure and special design of
+                      explosion-proof cap belt can effectively ensure the heavy
+                      load-bearing performance of cap,and improve the anti-stab
+                      performance of tire in complex road conditions.
+                    </p>{" "}
+                    <p style={{ whiteSpace: "normal" }}>
+                      <span>&gt;</span>
+                      Reinforced carcass and bead structure,tyre bead adopts
+                      heavy load tech,improves the fatigue and shear resistance
+                      of tyre bead under ultra-high and heavy load
+                      conditions,reduce quality risks of the bead seperation,
+                      crack or explosion.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <br />
@@ -174,17 +183,41 @@ const HF252 = () => {
                           </td>
                         </tr>
                         <tr>
-                          <td width="101" style={{ wordBreak: "break-all" }}>
-                            245/70R19.5
+                          <td width="54" style={{ wordBreak: "break-all" }}>
+                            8.25R20
                           </td>
-                          <td width="56">16PR</td>
-                          <td width="88">2180/2060</td>
-                          <td width="107">135/133</td>
-                          <td width="65">M</td>
-                          <td width="74">839</td>
-                          <td width="66">248</td>
-                          <td width="68">830</td>
-                          <td width="67">7.50</td>
+                          <td width="54">16PR</td>
+                          <td width="54">2430/2300</td>
+                          <td width="54">139/137</td>
+                          <td width="54">J</td>
+                          <td width="54">978</td>
+                          <td width="54">236</td>
+                          <td width="54">930</td>
+                          <td width="54">6.5</td>
+                        </tr>
+                        <tr>
+                          <td width="54">9.00R20</td>
+                          <td width="54">16PR</td>
+                          <td width="54">2800/2650</td>
+                          <td width="54">144/142</td>
+                          <td width="54">J</td>
+                          <td width="54">1024</td>
+                          <td width="54">259</td>
+                          <td width="54">900</td>
+                          <td width="54">7.0</td>
+                        </tr>
+                        <tr>
+                          <td width="54" style={{ wordBreak: "break-all" }}>
+                            10.00R20
+                          </td>
+                          <td width="54">18PR*</td>
+                          <td width="54">3250/3000</td>
+                          <td width="54">149/146</td>
+                          <td width="54">J</td>
+                          <td width="54">1058</td>
+                          <td width="54">278</td>
+                          <td width="54">930</td>
+                          <td width="54">7.5</td>
                         </tr>
                       </tbody>
                     </table>
@@ -204,7 +237,7 @@ const HF252 = () => {
                   )}
                 </div>
 
-                <SwipperProduct ids={[1, 2, 3,4,5,6,7,8,9]} />
+                <SwipperProduct ids={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
               </div>
             </div>
           </div>
@@ -214,4 +247,4 @@ const HF252 = () => {
   );
 };
 
-export default HF252;
+export default GD800;

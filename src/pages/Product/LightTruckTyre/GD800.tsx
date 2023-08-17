@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import AdvanceButton from "../../../../component/Button/AdvanceButton";
-import ModalRoadone from "../../../../component/Modal/ModalRoadone";
-import ProductHeader from "../../ProductHeader";
+import AdvanceButton from "../../../component/Button/AdvanceButton";
+import ModalRoadone from "../../../component/Modal/ModalRoadone";
+import ProductHeader from "../ProductHeader";
 import { NavLink } from "react-router-dom";
-import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
+import SwipperProduct from "../../../component/Swiper/SwipperProduct";
 
-const HF252 = () => {
+const GD800Light = () => {
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const HF252 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=1")
+      .get("http://localhost:8080/api_roadone/products/products?id=55")
       .then((response) => {
         setProductsItems(response.data);
       })
@@ -46,12 +46,7 @@ const HF252 = () => {
               <ul className="clearfix">
                 <li>
                   <NavLink to="/products" className={"cpfl2"}>
-                    Truck Tyres
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/products" className={"cpfl2"}>
-                    HIGH END WEARABLE TYRE
+                    Light Truck Tyres
                   </NavLink>
                 </li>
               </ul>
@@ -80,7 +75,7 @@ const HF252 = () => {
                           data-aos-easing="ease-out-back">
                           <img
                             className="ct_xq3_img1"
-                            src={require(`../../../../static/assets/picture/${products.products_lorry_image}`)}
+                            src={require(`../../../static/assets/picture/${products.products_lorry_image}`)}
                           />
                         </div>
                       </div>
@@ -91,7 +86,7 @@ const HF252 = () => {
                       data-aos-duration="1000"
                       data-aos-easing="ease-out-back">
                       <img
-                        src={require(`../../../../static/assets/picture/${products.products_image}`)}
+                        src={require(`../../../static/assets/picture/${products.products_image}`)}
                       />
                     </div>
                   </div>
@@ -105,28 +100,28 @@ const HF252 = () => {
                     data-aos-easing="ease-out-back">
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      The new optimized contour design, the angle traction
-                      pattern groove wall design and the unique pattern steel
-                      sheet structure provide good traction performance and
-                      excellent grip performance.
+                      Optimized profile design, unique horizontal and vertical
+                      blocks, puncture resistance bottom design and stone
+                      ejection design provide strong drive and braking
+                      performance.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super wearable tread formula design ensures higher
-                      mileage.
+                      Widening and deepening the tread pattern design
+                      effectively suppresses the abnormal wear of the tire and
+                      ensures a longer service life of the product.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      New environment protection series formula system design,
-                      lightweight material distribution design, lower rolling
-                      resistance, excellent oil saving performance.
+                      Specific low heating tread recipe effectively reduces the
+                      quality risk of shoulder explosion, chipping, groove
+                      splitting and crown removal.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <span>&gt;</span>
-                      Super strong flexible steel wire structure ensures the
-                      good load-bearing safety performance of the tire under the
-                      light weight and low rolling resistance design conditions,
-                      and realizes multiple retreading.
+                      Reinforced carcass and bead structure,tyre bead adopts
+                      light truck heavy load tech,enhancing load, impact and
+                      puncture resistance.
                     </p>
                     <p style={{ whiteSpace: "normal" }}>
                       <br />
@@ -174,17 +169,17 @@ const HF252 = () => {
                           </td>
                         </tr>
                         <tr>
-                          <td width="101" style={{ wordBreak: "break-all" }}>
-                            245/70R19.5
+                          <td width="71" style={{ wordBreak: "break-all" }}>
+                            8.25R16 &nbsp;LT
                           </td>
-                          <td width="56">16PR</td>
-                          <td width="88">2180/2060</td>
-                          <td width="107">135/133</td>
-                          <td width="65">M</td>
-                          <td width="74">839</td>
-                          <td width="66">248</td>
-                          <td width="68">830</td>
-                          <td width="67">7.50</td>
+                          <td width="54">18PR</td>
+                          <td width="86">2000/1800</td>
+                          <td width="93">132/128</td>
+                          <td width="54">J</td>
+                          <td width="73">863</td>
+                          <td width="63">235</td>
+                          <td width="80">870</td>
+                          <td width="113">6.50H</td>
                         </tr>
                       </tbody>
                     </table>
@@ -204,7 +199,7 @@ const HF252 = () => {
                   )}
                 </div>
 
-                <SwipperProduct ids={[1, 2, 3,4,5,6,7,8,9]} />
+                <SwipperProduct ids={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
               </div>
             </div>
           </div>
@@ -214,4 +209,4 @@ const HF252 = () => {
   );
 };
 
-export default HF252;
+export default GD800Light;

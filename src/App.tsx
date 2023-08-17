@@ -17,7 +17,6 @@ import SocialResponsibility from "./pages/About/SocialResponsibility";
 import ContactUs from "./pages/About/ContactUs";
 import FooterMobile from "./component/Footer/FooterMobile";
 import Productpage from "./pages/Product/Productpage";
-import Header from "./component/Header/Header";
 import NewDetails20180820 from "./pages/New/NewDetails/NewDetails20180820";
 import NewDetails20180622 from "./pages/New/NewDetails/NewDetails20180622";
 import NewDetails20170306 from "./pages/New/NewDetails/NewDetails20170306";
@@ -26,8 +25,16 @@ import TyreFunction from "./pages/Service/ServiceDetails/TyreFunction";
 import TyreMarketing from "./pages/Service/ServiceDetails/TyreMarketing";
 import TyreSpecification from "./pages/Service/ServiceDetails/TyreSpecification";
 import TyreStorage from "./pages/Service/ServiceDetails/TyreStorage";
+import ProductRoute from "./routes/ProductRoutes";
 
 const App = () => {
+  const renderedProductRoutes = ProductRoute.map(({ path, component }) => (
+    <Route
+      key={path}
+      path={`${path}`}
+      element={React.createElement(component)}
+    />
+  ));
   const [showFooterMobile, setShowFooterMobile] = useState(false);
 
   const handleWindowResize = () => {
@@ -77,6 +84,8 @@ const App = () => {
         <Route path="/services/guestbook" element={<ServiceForm />} />
         <Route path="/services/download" element={<ServiceDownload />} />
         <Route path="/products" element={<Productpage />} />
+        {renderedProductRoutes}
+
         <Route path="/recruitment" element={<Recruitment />} />
         <Route
           path="/recruitment/social"

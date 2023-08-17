@@ -1,0 +1,21 @@
+.swiper-button-prev {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 120px;
+  cursor: pointer;
+  background: url(../../static/assets/picture/btn1.png) no-repeat;
+  width: 3rem;
+  height: 3rem;
+}
+
+.swiper-button-next {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    top: 120px;
+    cursor: pointer;
+    background: url(../../static/assets/picture/btn2.png) no-repeat;
+    width: 3rem;
+    height: 3rem;
+  }
