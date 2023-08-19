@@ -83,7 +83,10 @@ const App = () => {
 
         <Route path="/services/guestbook" element={<ServiceForm />} />
         <Route path="/services/download" element={<ServiceDownload />} />
-        <Route path="/products" element={<Productpage />} />
+        <Route
+          path="/products/:category?/:subcategory?"
+          element={<Productpage />}
+        />
         {renderedProductRoutes}
 
         <Route path="/recruitment" element={<Recruitment />} />

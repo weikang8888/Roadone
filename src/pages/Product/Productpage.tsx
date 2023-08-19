@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+
 import Type28 from "../../static/assets/picture/type_28.jpg";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,12 +22,16 @@ const Productpage = () => {
   const [showPagination, setShowPagination] = useState(true);
   const itemsPerPage = 10;
 
+  const { category, subcategory } = useParams(); // Get the category and subcategory parameters from the URL
+  const navigate = useNavigate();
+
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     setSelectedTruckCategory("");
     setSelectedBusCategory("");
     setCurrentPage(1);
     setShowPagination(true);
+    navigate(`/products/${category}`);
   };
 
   const handleTruckCategoryClick = (truckCategory) => {
@@ -101,7 +107,14 @@ const Productpage = () => {
     const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
     setFilteredPaginatedProducts(paginatedProducts);
   }, [filteredProducts, currentPage]);
-
+  useEffect(() => {
+    // Update the selected category and subcategory states based on the URL parameters
+    setSelectedCategory(category || "");
+    setSelectedTruckCategory(subcategory || "");
+    setSelectedBusCategory("");
+    setCurrentPage(1);
+    setShowPagination(true);
+  }, [category, subcategory]);
   return (
     <>
       <ProductHeader />
@@ -169,8 +182,9 @@ const Productpage = () => {
                         ].map((subcategory) => (
                           <li
                             key={subcategory.id}
-                            onClick={() =>
-                              handleTruckCategoryClick(subcategory.id)
+                            onClick={
+                              () =>
+                                navigate(`/products/truck/${subcategory.id}`) // Update the URL dynamically
                             }>
                             <a
                               className={` ${
@@ -201,8 +215,8 @@ const Productpage = () => {
                         ].map((subcategory) => (
                           <li
                             key={subcategory.id}
-                            onClick={() =>
-                              handleBusCategoryClick(subcategory.id)
+                            onClick={
+                              () => navigate(`/products/bus/${subcategory.id}`) // Update the URL dynamically
                             }>
                             <a
                               className={` ${
@@ -316,7 +330,8 @@ const Productpage = () => {
                             <div className="col-lg-9">
                               <div className="ct_d1 fl clearfix">
                                 <div className="cp_intro clearfix">
-                                  <a className="col-lg-4"
+                                  <a
+                                    className="col-lg-4"
                                     href={products.products_url}
                                     onClick={() =>
                                       handleShowSpecifyProduct(

@@ -50,9 +50,7 @@ const SwipperProduct = ({ ids }) => {
                           <span>{product.products_name}</span>
                         </div>
                       </a>
-                      <div className="zj_rt_d2">
-                        {product.products_description}
-                      </div>
+                   
                       <div className="zj_rt_d4">
                         <a href="">
                           View details
