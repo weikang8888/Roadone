@@ -253,7 +253,7 @@ const GD708 = () => {
             </div>
           </div>
         </div>
-        <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
+        <SwipperProduct ids={[53, 28, 46, 14, 21, 13, 22, 1, 20]} />
       </div>
     </>
   );

@@ -230,7 +230,7 @@ const RD535 = () => {
             </div>
           </div>
         </div>
-        <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
+        <SwipperProduct ids={[35, 28, 1, 46, 28, 53, 13, 61, 14]} />
       </div>
     </>
   );

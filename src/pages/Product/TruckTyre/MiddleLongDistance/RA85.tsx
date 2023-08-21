@@ -266,6 +266,7 @@ const RA85 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
+
       </div>
     </>
   );

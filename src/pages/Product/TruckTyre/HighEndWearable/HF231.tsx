@@ -234,7 +234,7 @@ const HF231 = () => {
             </div>
           </div>
         </div>
-        <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
+        <SwipperProduct ids={[46, 21, 13, 28, 23, 22, 53, 58, 28]} />
       </div>
     </>
   );

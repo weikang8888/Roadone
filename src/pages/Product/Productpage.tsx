@@ -108,10 +108,9 @@ const Productpage = () => {
     setFilteredPaginatedProducts(paginatedProducts);
   }, [filteredProducts, currentPage]);
   useEffect(() => {
-    // Update the selected category and subcategory states based on the URL parameters
     setSelectedCategory(category || "");
     setSelectedTruckCategory(subcategory || "");
-    setSelectedBusCategory("");
+    setSelectedBusCategory(subcategory || "");
     setCurrentPage(1);
     setShowPagination(true);
   }, [category, subcategory]);
@@ -242,57 +241,59 @@ const Productpage = () => {
                         id="banner">
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("long-haul-wearable")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/truck/long-haul-wearable`);
+                            }}>
                             Long Haul Wearable Tyres
                           </a>
                         </SwiperSlide>
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("middle-long-distance")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/truck/middle-long-distance`);
+                            }}>
                             Middle & Long Distance
                           </a>
                         </SwiperSlide>
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("middle-short-distance")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/truck/middle-short-distance`);
+                            }}>
                             Middle & Short Distance
                           </a>
                         </SwiperSlide>{" "}
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("quarry-building-site")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/truck/quarry-building-site`);
+                            }}>
                             Quarry & Building Sites
                           </a>
                         </SwiperSlide>{" "}
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("high-end-off-road")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/truck/high-end-off-road`);
+                            }}>
                             High End Off-road Tyres
                           </a>
                         </SwiperSlide>
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("high-end-heavy-loading")
-                            }>
+                            onClick={() => {
+                              navigate(
+                                `/products/truck/high-end-heavy-loading`
+                              );
+                            }}>
                             High End Heavy Loading Tyres
                           </a>
                         </SwiperSlide>
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleTruckCategoryClick("high-end-wearable")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/truck/high-end-wearable`);
+                            }}>
                             HIGH END WEARABLE TYRE
                           </a>
                         </SwiperSlide>
@@ -307,14 +308,17 @@ const Productpage = () => {
                         id="banner">
                         <SwiperSlide>
                           <a
-                            onClick={() =>
-                              handleBusCategoryClick("inter-city")
-                            }>
+                            onClick={() => {
+                              navigate(`/products/bus/inter-city`);
+                            }}>
                             Inter-city Bus
                           </a>
                         </SwiperSlide>
                         <SwiperSlide>
-                          <a onClick={() => handleBusCategoryClick("city-bus")}>
+                          <a
+                            onClick={() => {
+                              navigate(`/products/bus/city-bus`);
+                            }}>
                             City-city Bus{" "}
                           </a>
                         </SwiperSlide>

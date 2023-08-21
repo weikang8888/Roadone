@@ -220,7 +220,7 @@ const HD520 = () => {
             </div>
           </div>
         </div>
-        <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
+        <SwipperProduct ids={[53, 23, 28, 14, 61, 21, 48, 35, 20]} />
       </div>
     </>
   );

@@ -238,7 +238,7 @@ const RA695 = () => {
             </div>
           </div>
         </div>
-        <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
+        <SwipperProduct ids={[61, 21, 52, 34, 1, 35, 46, 53, 28]} />
       </div>
     </>
   );
