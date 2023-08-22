@@ -17,7 +17,11 @@ import { Link } from "react-router-dom";
 import TopButton_m from "../../component/Button/TopButton_m";
 import Header_m from "../../component/Header/Header_m";
 import Swipper_m from "../../component/Swiper/Swipper_m";
+import { useTranslation } from "react-i18next";
+
 const SocialResponsibility = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [
     { image: AboutMobileBanner1 },
@@ -65,7 +69,7 @@ const SocialResponsibility = () => {
             logo={LogoOther}
             logoClassName={""}
             logoDivClassName={"nav_left nav_left1 fl"}
-          />{" "}
+          />
         </div>
       )}
 
@@ -74,15 +78,15 @@ const SocialResponsibility = () => {
           <div className="zx_list">
             <ul className="clearfix">
               <li>
-                <Link to="/about/roadone">About Roadone</Link>
+                <Link to="/about/roadone">{t("header.aboutRoadone")}</Link>
               </li>
               <li>
                 <Link to="/about/social-responsibility" className="zx_on">
-                  CSR
+                  {t("header.csr")}
                 </Link>
               </li>
               <li>
-                <Link to="/about/contact">Contact Us</Link>
+                <Link to="/about/contact">{t("header.contactUs")}</Link>
               </li>
             </ul>
             <div className="about_main">
@@ -94,7 +98,7 @@ const SocialResponsibility = () => {
               </div>
               <div className="about_d1">
                 <p style={{ textAlign: "center" }}>
-                  <img src={ResponsibilityImage1} />
+                  <img src={t("image.socialResponsibility.src")} />
                   <img src={ResponsibilityImage2} />
                 </p>
               </div>

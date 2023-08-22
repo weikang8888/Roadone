@@ -17,7 +17,7 @@ const ProductTypeMobile = ({
 }: ProductTypeMobileOptions) => {
   return (
     <>
-      {" "}
+      
       <div className="typebox_m">
         {showTruckList && (
           <Swiper
@@ -40,12 +40,12 @@ const ProductTypeMobile = ({
               <NavLink to="/products/truck/middle-short-distance">
                 Middle & Short Distance
               </NavLink>
-            </SwiperSlide>{" "}
+            </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/quarry-building-site">
                 Quarry & Building Sites
               </NavLink>
-            </SwiperSlide>{" "}
+            </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/high-end-off-road">
                 High End Off-road Tyres

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import QRcode from "../../static/assets/picture/qrcode.jpg";
 import Wechat from "../../static/assets/picture/weixin.png";
@@ -7,10 +8,12 @@ import Qzone from "../../static/assets/picture/qzone.png";
 import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div>
-        {" "}
+        
         <div className="container foot_top">
           <div className="foot_top_box clearfix">
             <div className="foot_top1 fl">
@@ -128,8 +131,8 @@ const Footer = () => {
         <div className="container foot">
           <div className="foot_box clearfix px-3">
             <div className="fl foot_txt">
-              Copyright &copy; 2003-2021&nbsp; Tongli Tyre Co., Ltd. All Rights
-              Reserved.
+              Copyright &copy; 2003-2021&nbsp; {t("about.companyName")} All
+              Rights Reserved.
             </div>
             <div className="foot_list fr">
               <ul className="clearfix">

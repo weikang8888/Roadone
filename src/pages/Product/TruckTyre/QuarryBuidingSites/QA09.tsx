@@ -128,7 +128,7 @@ const QA09 = () => {
                             <span>&gt;</span>
                             Thickened groove bottom design, enhancing puncture
                             resistance on unpaved road.
-                          </p>{" "}
+                          </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
                             Lateral grooves with wide angles design, increasing

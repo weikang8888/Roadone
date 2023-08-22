@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./footermobile.css";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
@@ -6,6 +7,8 @@ import Qrcode from "../../static/assets/m/erweima.png";
 import { NavLink, Link } from "react-router-dom";
 
 const FooterMobile = () => {
+  const { t } = useTranslation();
+
   const [serviceOpen, setServiceOpen] = useState(false);
   const [recruitmentOpen, setRecruitmentOpen] = useState(false);
   const [aboutUsOpen, setAboutUsOpen] = useState(false);
@@ -94,7 +97,7 @@ const FooterMobile = () => {
                 <i className="fr jia">+</i>
               </div>
               <SlideDown className="sfq_a">
-                {" "}
+                
                 {serviceOpen && (
                   <ul>
                     <li>
@@ -161,7 +164,7 @@ const FooterMobile = () => {
         </div>
       </div>
       <div className="foot_d2">
-        Copyright &copy; Tongli Tyre Co., Ltd. All Rights Reserved.
+        Copyright &copy; {t("about.companyName")} All Rights Reserved.
       </div>
     </>
   );

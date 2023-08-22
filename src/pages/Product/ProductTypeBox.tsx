@@ -23,7 +23,7 @@ const ProductTypeBox = ({
                 className={activeLink === "long-haul-wearable" ? "cpfl2" : ""}>
                 Long Haul Wearable Tyres
               </NavLink>
-            </li>{" "}
+            </li>
             <li>
               <NavLink
                 to="/products/truck/middle-long-distance"
@@ -32,7 +32,7 @@ const ProductTypeBox = ({
                 }>
                 Middle & Long Distance
               </NavLink>
-            </li>{" "}
+            </li>
             <li>
               <NavLink
                 to="/products/truck/middle-short-distance"
@@ -41,7 +41,7 @@ const ProductTypeBox = ({
                 }>
                 Middle & Short Distance
               </NavLink>
-            </li>{" "}
+            </li>
             <li>
               <NavLink
                 to="/products/truck/quarry-building-site"
@@ -50,14 +50,14 @@ const ProductTypeBox = ({
                 }>
                 Quarry & Building Sites
               </NavLink>
-            </li>{" "}
+            </li>
             <li>
               <NavLink
                 to="/products/truck/high-end-off-road"
                 className={activeLink === "high-end-off-road" ? "cpfl2" : ""}>
                 High End Off-road Tyres
               </NavLink>
-            </li>{" "}
+            </li>
             <li>
               <NavLink
                 to="/products/truck/high-end-heavy-loading"
@@ -83,16 +83,16 @@ const ProductTypeBox = ({
               <NavLink
                 to="/products/bus/inter-city"
                 className={activeLink === "inter-city" ? "cpfl2" : ""}>
-                Inter-city Bus{" "}
+                Inter-city Bus
               </NavLink>
-            </li>{" "}
+            </li>
             <li>
               <NavLink
                 to="/products/bus/city-bus"
                 className={activeLink === "city-bus" ? "cpfl2" : ""}>
-                City-city Bus{" "}
+                City-city Bus
               </NavLink>
-            </li>{" "}
+            </li>
           </ul>
         )}
       </div>

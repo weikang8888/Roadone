@@ -22,7 +22,7 @@ const NewHeader = () => {
   }, []);
   return (
     <>
-      {" "}
+      
       {windowWidth <= 990 ? (
         <>
           <Header_m />

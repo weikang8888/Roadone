@@ -133,7 +133,7 @@ const GD858 = () => {
                             the heavy load-bearing performance of cap,and
                             improve the anti-stab performance of tire in complex
                             road conditions.
-                          </p>{" "}
+                          </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
                             Reinforced carcass and bead structure,tyre bead

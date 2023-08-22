@@ -24,7 +24,7 @@ const TyreStorage = () => {
   }, []);
   return (
     <>
-      {" "}
+      
       <ServiceHeader />
       <div className="container zxns">
         <div className="zx_box">
@@ -48,7 +48,7 @@ const TyreStorage = () => {
                   {servicesItems.map((services, index) => (
                     <div className="kt" key={index}>
                       <div className="kt_d2 gn_d2">
-                        {" "}
+                        
                         {services.services_title}
                       </div>
                       <div className="news_rt_d3 kt_d5 clearfix">
@@ -57,7 +57,7 @@ const TyreStorage = () => {
                           <span className="news_date">Roadone</span>
                           <img src={NewsDateIcon} />
                           <span className="news_date">
-                            {" "}
+                            
                             {services.services_date}
                           </span>
                         </p>

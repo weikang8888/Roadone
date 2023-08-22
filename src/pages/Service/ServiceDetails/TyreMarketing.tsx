@@ -47,7 +47,7 @@ const TyreMarketing = () => {
                   {servicesItems.map((services, index) => (
                     <div className="kt" key={index}>
                       <div className="kt_d2 gn_d2">
-                        {" "}
+                        
                         {services.services_title}
                       </div>
                       <div className="news_rt_d3 kt_d5 clearfix">
@@ -56,7 +56,7 @@ const TyreMarketing = () => {
                           <span className="news_date">Roadone</span>
                           <img src={NewsDateIcon} />
                           <span className="news_date">
-                            {" "}
+                            
                             {services.services_date}
                           </span>
                         </p>

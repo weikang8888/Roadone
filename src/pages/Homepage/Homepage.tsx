@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 import "aos/dist/aos.css";
 import Swipper from "../../component/Swiper/Swipper";
 import "swiper/css";
@@ -30,6 +31,7 @@ AOS.init();
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Homepage = () => {
+  const { t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [newsItems, setNewsItems] = useState([]);
   const swiperSlides = [
@@ -113,15 +115,10 @@ const Homepage = () => {
                   </div>
                   <div className="fr cp_rt_r">
                     <div className="cp_rt2">
-                      <a href="product.html">Product</a>
+                      <a href="product.html">{t("header.products")}</a>
                     </div>
                     <div className="cp_rt4">
-                      Roadone is of the international high end quality gene and
-                      local applicable advantage of Chinese Market. All the key
-                      equipment is from the famous world-className tyre
-                      equipment suppliers. It adopts the global leading
-                      technology of all steel radial truck tyres from the
-                      European century producer. ...
+                      {t("homepage.productDescription")}
                     </div>
                   </div>
                 </div>
@@ -132,13 +129,12 @@ const Homepage = () => {
                   data-aos-duration="1000">
                   <div className="fr cp_rt_r cp_rt_r1">
                     <div className="cp_rt2 cp_rt5">
-                      <a href="marketing.html">Marketing</a>
+                      <a href="marketing.html">{t("homepage.marketing")}</a>
                     </div>
                     <div className="cp_rt4">
-                      Roadone Stores provide not only the high quality truck and
-                      bus tyres, but also good service for our customers. ...
+                      {t("homepage.marketingDescription")}
                     </div>
-                  </div>{" "}
+                  </div>
                   <div className="fr cp_rt_l">
                     <a href="marketing.html">
                       <img src={Tyre06} />
@@ -155,22 +151,25 @@ const Homepage = () => {
                 data-aos="slide-up"
                 data-aos-duration="1000"
                 data-aos-easing="ease-out-back">
-                <div className="news">News</div>
+                <div className="news">{t("header.news")}</div>
                 <div className="news_main">
                   <ul>
-                    {newsItems.map((news, index) => (
-                      <li key={index}>
-                        <div>{news.news_date}</div>
-                        <p>
-                          <a href={news.news_url} target="_blank">
-                            {news.news_title}
-                          </a>
-                        </p>
-                      </li>
-                    ))}
+                    {newsItems.map((news, index) => {
+                      const translationIndex = parseInt(news.id, 10);
+                      return (
+                        <li key={index}>
+                          <div>{news.news_date}</div>
+                          <p>
+                            <a href={news.news_url} target="_blank">
+                              {t(`news.news_title.${translationIndex}`)}
+                            </a>
+                          </p>
+                        </li>
+                      );
+                    })}
                   </ul>
                   <div className="more">
-                    <a href="news.html">MORE {">"}</a>
+                    <a href="news.html">{t("header.more")} {">"}</a>
                   </div>
                 </div>
               </div>
@@ -216,25 +215,24 @@ const Homepage = () => {
                 <div className="cp4_box">
                   <div className="ul2 fl">
                     <ul>
-                      <li className="first_li">Tongli Tyre Co., Ltd.</li>
-                      <li>
-                        Hixih Industrial Park, Yanzhou District, Jining City,
-                        Shandong Province, China. 272199
-                      </li>
+                      <li className="first_li">{t("about.companyName")}</li>
+                      <li>{t("about.companyAddress")}</li>
                       <li>
                         <span>
-                          National Service Hotline: <s>400-639-1111</s>
+                          {t("about.nationalServiceHotline")}:
+                          <s>400-639-1111</s>
                         </span>
                         <i>
-                          International Service Hotline: <s>+86-537-5174476</s>
+                          {t("about.internationalServiceHotline")}:
+                          <s>+86-537-5174476</s>
                         </i>
                       </li>
                       <li>
                         <span>
-                          E-mail: <s>roadone@hixih.com.cn</s>{" "}
+                          {t("about.email")}: <s>roadone@hixih.com.cn</s>
                         </span>
                         <i className="web">
-                          Website: <s>http://en.tltyre.com</s>
+                          {t("about.website")}: <s>http://en.tltyre.com</s>
                         </i>
                       </li>
                     </ul>

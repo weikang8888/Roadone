@@ -14,8 +14,11 @@ import RoadOneGoogleMap from "../../component/GoogleMap/RoadOneGoogleMap";
 import TopButton_m from "../../component/Button/TopButton_m";
 import Header_m from "../../component/Header/Header_m";
 import Swipper_m from "../../component/Swiper/Swipper_m";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [
     { image: AboutMobileBanner1 },
@@ -63,7 +66,7 @@ const ContactUs = () => {
             logo={LogoOther}
             logoClassName={""}
             logoDivClassName={"nav_left nav_left1 fl"}
-          />{" "}
+          />
         </div>
       )}
 
@@ -72,14 +75,14 @@ const ContactUs = () => {
           <div className="zx_list">
             <ul className="clearfix">
               <li>
-                <Link to="/about/roadone">About Roadone</Link>
+                <Link to="/about/roadone">{t("header.aboutRoadone")}</Link>
               </li>
               <li>
-                <Link to="/about/social-responsibility">CSR</Link>
+                <Link to="/about/social-responsibility">{t("header.csr")}</Link>
               </li>
               <li>
                 <Link to="/about/contact" className="zx_on">
-                  Contact Us
+                  {t("header.contactUs")}
                 </Link>
               </li>
             </ul>
@@ -92,36 +95,35 @@ const ContactUs = () => {
                       color: "#111",
                       fontWeight: 600,
                     }}>
-                    TONGLI TYRE CO., LTD.
+                    {t("about.companyName")}
                   </span>
                 </p>
                 <p>
                   <br />
                 </p>
                 <p>
-                  Address: Hixih Industrial Park, Yanzhou District, Jining City,
-                  Shandong Province, China. 272199
+                  {t("about.address")}: {t("about.companyAddress")}
                 </p>
                 <p>
                   <br />
                 </p>
                 <p>
-                  National Service Hotline:{" "}
+                  {t("about.nationalServiceHotline")}:
                   <span style={{ fontWeight: 600 }}>400-639-1111</span>
                 </p>
                 <p>
-                  International Service Hotline:{" "}
+                  {t("about.internationalServiceHotline")}:
                   <span style={{ fontWeight: 600 }}>+86-537-5179111</span>
                 </p>
                 <p>
                   <br />
                 </p>
                 <p>
-                  E-mail:{" "}
+                  {t("about.email")}:
                   <span style={{ fontWeight: 600 }}>roadone@hixih.com.cn</span>
                 </p>
                 <p>
-                  Website:{" "}
+                  {t("about.website")}:
                   <span style={{ fontWeight: 600 }}>
                     http://www.roadone.com.cn
                   </span>

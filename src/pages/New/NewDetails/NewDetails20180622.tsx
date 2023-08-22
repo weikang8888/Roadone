@@ -25,7 +25,7 @@ const NewDetails20180622 = () => {
 
   return (
     <>
-      {" "}
+      
       <NewHeader />
       <div className="container zxns">
         <div className="zx_box">

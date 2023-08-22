@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../component/Header/Header";
 import LogoOther from "../../static/assets/main/cd_logo.png";
 import Swipper from "../../component/Swiper/Swipper";
+import { useTranslation } from "react-i18next";
 
 import InsideImage1 from "../../static/assets/image/inside_tlt_1.jpg";
 import InsideImage2 from "../../static/assets/image/inside_tlt_2.jpg";
@@ -14,6 +15,7 @@ import AdvanceButton from "../../component/Button/AdvanceButton";
 import ModalRoadone from "../../component/Modal/ModalRoadone";
 
 const SocialRecruitment = ({ showHeader }) => {
+  const { t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [{ image: Recruitmentbanner }];
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -98,226 +100,276 @@ const SocialRecruitment = ({ showHeader }) => {
                 </div>
 
                 <div className="sh_zp_hd">
-                  <a href="social.html">Social Recruitment</a>
+                  <a href="social.html">{t("header.socialRecruitment")}</a>
                 </div>
                 <div className="zw">
                   <table>
                     <tr className="tb_frist">
-                      <td className="tb_frist_t1">Position</td>
-                      <td className="tb_frist_t2">Major Requirement</td>
-                      <td className="tb_frist_t3">Degree</td>
-                      <td className="tb_frist_t4">Number of Hiring</td>
+                      <td className="tb_frist_t1">
+                        {t("socialRecruitment.position")}
+                      </td>
+                      <td className="tb_frist_t2">
+                        {t("socialRecruitment.majorRequirement")}
+                      </td>
+                      <td className="tb_frist_t3">
+                        {t("socialRecruitment.degree")}
+                      </td>
+                      <td className="tb_frist_t4">
+                        {t("socialRecruitment.numberOfHiring")}
+                      </td>
                     </tr>
                     <tr>
                       <td className="zw_d1">
                         <a
                           href="item-705.html"
                           title="Industrial Engineering Specialist">
-                          Industrial Engineering Specialist
+                          {t("socialRecruitment.industrialEngineering")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
                           <p>
-                            1. Conducted capacity evaluation in the production
-                            process and made management plan in annual of 5-year
-                            and PMAT personnel management plan;
-                            <br />
-                            2. Conducted action research on existing operations
-                            and apply the knowledge of industrial engineering,
-                            value engineering theory, lean production, rapid
-                            mold change, total preventive maintenance and so on.
-                            Eliminating the non-value-added processes and
-                            improving site bottlenecks.
-                            <br />
-                            3. Improve personnel efficiency and formulate annual
-                            EAP personnel efficiency improvement plan
-                            <br />
-                            4. Standardization
-                            <br />
-                            5. Led the installation and debugging process of new
-                            equipment
+                            {t(
+                              "socialRecruitment.industrialEngineeringDescription1"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.industrialEngineeringDescription2"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.industrialEngineeringDescription3"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.industrialEngineeringDescription4"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.industrialEngineeringDescription5"
+                            )}
                           </p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">1</td>
                     </tr>
                     <tr>
                       <td className="zw_d1">
                         <a href="item-704.html" title="Motorcade Salesperson">
-                          Motorcade Salesperson
+                          {t("socialRecruitment.motorcadeSalesperson")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
                           <p>
-                            1. Accomplish sales tasks assigned by the company;
+                            {t(
+                              "socialRecruitment.motorcadeSalespersonDescription1"
+                            )}
                           </p>
                           <p>
-                            2. Mainly responsible for the development and
-                            maintenance of large motorcade customers, the
-                            establishment of distribution network within the
-                            jurisdiction and the expansion of the company&#39;s
-                            product coverage;
+                            {t(
+                              "socialRecruitment.motorcadeSalespersonDescription2"
+                            )}
                           </p>
                           <p>
-                            3. Carry out product promotion activities according
-                            to enterprise plans and procedures, introduce
-                            products and provide relevant information;
+                            {t(
+                              "socialRecruitment.motorcadeSalespersonDescription3"
+                            )}
                           </p>
                           <p>
-                            4. Set up customer information card and customer
-                            file, complete related sales report;
+                            {t(
+                              "socialRecruitment.motorcadeSalespersonDescription4"
+                            )}
                           </p>
                           <p>
-                            5. Participate in the company&#39;s sales meeting or
-                            organized training;
+                            {t(
+                              "socialRecruitment.motorcadeSalespersonDescription5"
+                            )}
                           </p>
                           <p>
-                            6. Establish good relationship with customers to
-                            maintain corporate image.
+                            {t(
+                              "socialRecruitment.motorcadeSalespersonDescription6"
+                            )}
                           </p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">1</td>
                     </tr>
                     <tr>
                       <td className="zw_d1">
                         <a href="item-703.html" title="Quality Engineer">
-                          Quality Engineer
+                          {t("socialRecruitment.qualityEngineer")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
                           <p>
-                            1. At least 3 years quality management experience in
-                            tire industry
-                            <br />
-                            2. Majored in polymer, chemistry or related major
-                            <br />
-                            3. Familiar with quality management and specific
-                            methods, the performance of product technical
-                            specifications, product inspection standard and
-                            related knowledge
-                            <br />
-                            4. Familiar with product structure, performance,
-                            mechanism, solid theoretical basis and technical
-                            working experience
-                            <br />
-                            5. Good communication, coordination, organization
-                            and team building skills
+                            {t("socialRecruitment.qualityEngineerDescription1")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.qualityEngineerDescription2")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.qualityEngineerDescription3")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.qualityEngineerDescription4")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.qualityEngineerDescription5")}
                           </p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">1</td>
                     </tr>
                     <tr>
                       <td className="zw_d1">
                         <a href="item-702.html" title="Formula Design Engineer">
-                          Formula Design Engineer
+                          {t("socialRecruitment.formulaDesignEngineer")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
                           <p>
-                            1. At least 3 years experience in formula design
-                            <br />
-                            2. Majored in chemistry, rubber, polymer or related
-                            field
-                            <br />
-                            3. Understand the test method and principle of the
-                            test equipment for the material and formula
-                            performance index test
-                            <br />
-                            4. Understand TS16949 standard requirements and the
-                            application of the five core tools
-                            <br />
-                            5. Good discipline, teamwork, and innovative spirit
+                            {t(
+                              "socialRecruitment.formulaDesignEngineerDescription1"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.formulaDesignEngineerDescription2"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.formulaDesignEngineerDescription3"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.formulaDesignEngineerDescription4"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.formulaDesignEngineerDescription5"
+                            )}
                           </p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">1</td>
                     </tr>
                     <tr>
                       <td className="zw_d1">
                         <a href="item-701.html" title="Structural Engineer">
-                          Structural Engineer
+                          {t("socialRecruitment.structuralEngineer")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
                           <p>
-                            1. At least 3 years experience in tire structural
-                            design
-                            <br />
-                            2. Majored in polymer, material, chemistry or
-                            related field
-                            <br />
-                            3. Have a good knowledge of tire manufacturing
-                            process, understand key parameters and performance
-                            indicators of all kinds of vehicles
-                            <br />
-                            4. Understand TS16949 standard requirements and the
-                            application of the five core tools
-                            <br />
-                            5. Good discipline, teamwork, and innovative spirit
+                            {t(
+                              "socialRecruitment.structuralEngineerDescription1"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.structuralEngineerDescription2"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.structuralEngineerDescription3"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.structuralEngineerDescription4"
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "socialRecruitment.structuralEngineerDescription5"
+                            )}
                           </p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">1</td>
                     </tr>
                     <tr>
                       <td className="zw_d1">
                         <a href="item-700.html" title="Cost Accountant">
-                          Cost Accountant
+                          {t("socialRecruitment.costAccountant")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
                           <p>
-                            1. At least 2 years finance experience in tire
-                            industry
-                            <br />
-                            2. Accounting, finance, auditing or related major
-                            <br />
-                            3. Skilled in financial software and Office
-                            software; Sufficient experience in cost control
-                            <br />
-                            4. Dedicated, responsible, rigorous, practical, and
-                            careful
-                            <br />
-                            5. Good discipline, teamwork, and innovative spirit
+                            {t("socialRecruitment.costAccountantDescription1")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.costAccountantDescription2")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.costAccountantDescription3")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.costAccountantDescription4")}
+                          </p>
+                          <p>
+                            {t("socialRecruitment.costAccountantDescription5")}
                           </p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">1</td>
                     </tr>
                   </table>
                   <div className="zp_date clearfix">
                     <ul className="list-paddingleft-2">
                       <li>
-                        <p>Recruitment deadline: 2019/06/30</p>
+                        <p>
+                          {t("socialRecruitment.recruitmentDeadline")}:
+                          2019/06/30
+                        </p>
                       </li>
                       <li>
-                        <p>E-mail: feifei.chen@hixih.com</p>
+                        <p>
+                          {t("socialRecruitment.email")}: feifei.chen@hixih.com
+                        </p>
                       </li>
                       <li>
-                        <p>Linkman: Chenfeifei</p>
+                        <p>{t("socialRecruitment.linkMan")}: Chenfeifei</p>
                       </li>
                       <li>
-                        <p>Tel: 0537-5174413</p>
+                        <p>{t("socialRecruitment.tel")}: 0537-5174413</p>
                       </li>
                       <li>
                         <p className="lastrow">
                           【
                           <a href="/uploads/file/2003/1583918028869844.xlsx">
-                            Download Resume
+                            {t("socialRecruitment.downloadResume")}
                           </a>
                           】
                         </p>
@@ -325,7 +377,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </ul>
                   </div>
                   <AdvanceButton
-                    advanceButtonText={"Submit Resume"}
+                    advanceButtonText={t("socialRecruitment.submitResume")}
                     advanceButtonClass={"n_sq "}
                     handleOpenModal={handleOpenModal}
                   />

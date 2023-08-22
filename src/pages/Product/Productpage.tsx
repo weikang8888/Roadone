@@ -34,17 +34,6 @@ const Productpage = () => {
     navigate(`/products/${category}`);
   };
 
-  const handleTruckCategoryClick = (truckCategory) => {
-    setSelectedTruckCategory(truckCategory);
-    setCurrentPage(1);
-    setShowPagination(true);
-  };
-  const handleBusCategoryClick = (busCategory) => {
-    setSelectedBusCategory(busCategory);
-    setCurrentPage(1);
-    setShowPagination(true);
-  };
-
   const handleShowSpecifyProduct = (
     productId,
     category,
@@ -262,7 +251,7 @@ const Productpage = () => {
                             }}>
                             Middle & Short Distance
                           </a>
-                        </SwiperSlide>{" "}
+                        </SwiperSlide>
                         <SwiperSlide>
                           <a
                             onClick={() => {
@@ -270,7 +259,7 @@ const Productpage = () => {
                             }}>
                             Quarry & Building Sites
                           </a>
-                        </SwiperSlide>{" "}
+                        </SwiperSlide>
                         <SwiperSlide>
                           <a
                             onClick={() => {
@@ -319,7 +308,7 @@ const Productpage = () => {
                             onClick={() => {
                               navigate(`/products/bus/city-bus`);
                             }}>
-                            City-city Bus{" "}
+                            City-city Bus
                           </a>
                         </SwiperSlide>
                       </Swiper>

@@ -34,7 +34,7 @@ const Recruitment = () => {
   ];
   return (
     <>
-      {" "}
+      
       {windowWidth <= 990 ? (
         <>
           <Header_m />
@@ -56,7 +56,7 @@ const Recruitment = () => {
             logo={LogoOther}
             logoClassName={""}
             logoDivClassName={"nav_left nav_left1 fl"}
-          />{" "}
+          />
         </div>
       )}
       <div className="container zxns">

@@ -66,23 +66,23 @@ const ServiceForm = () => {
                     Please fill in the valid email address so that you can
                     receive the question from lutong tire in the first place.
                   </div>
-                </div>{" "}
+                </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              {" "}
+              
               <div className="col-3">
                 <span className="zx_a fl zx_c">Name</span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
                   <input name="name" id="name" className="in_bg_s" type="" />
-                </div>{" "}
+                </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
               <div className="col-3">
-                <span className="zx_a fl zx_c">Sex</span>{" "}
+                <span className="zx_a fl zx_c">Sex</span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b zx_d">
@@ -94,14 +94,14 @@ const ServiceForm = () => {
                     <input type="radio" id="sex" name="sex" value="Female" />
                     <span>Female</span>
                   </label>
-                </div>{" "}
+                </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              {" "}
+              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Address</span>{" "}
-              </div>{" "}
+                <span className="zx_a fl zx_c">Address</span>
+              </div>
               <div className="col-9">
                 <div className="fr zx_b">
                   <input name="area" id="area" className="in_bg" type="" />
@@ -109,10 +109,10 @@ const ServiceForm = () => {
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              {" "}
+              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Message</span>{" "}
-              </div>{" "}
+                <span className="zx_a fl zx_c">Message</span>
+              </div>
               <div className="col-9">
                 <div className="fr zx_b zx_d">
                   <label>
@@ -127,13 +127,13 @@ const ServiceForm = () => {
                     <input type="radio" id="d5" name="gtype" value="Suggest" />
                     <span>Suggest</span>
                   </label>
-                </div>{" "}
+                </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              {" "}
+              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Title</span>{" "}
+                <span className="zx_a fl zx_c">Title</span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
@@ -142,10 +142,10 @@ const ServiceForm = () => {
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              {" "}
+              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Content</span>{" "}
-              </div>{" "}
+                <span className="zx_a fl zx_c">Content</span>
+              </div>
               <div className="col-9">
                 <div className="fr zx_b">
                   <textarea
@@ -155,7 +155,7 @@ const ServiceForm = () => {
                   <div className="submit">
                     <input type="image" src={SubmitImage} className="tjbtn" />
                   </div>
-                </div>{" "}
+                </div>
               </div>
             </div>
 

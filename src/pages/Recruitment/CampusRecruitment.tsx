@@ -50,7 +50,7 @@ const CampusRecruit = ({ showHeader }) => {
   ];
   return (
     <>
-      {" "}
+      
       {showHeader && windowWidth <= 990 ? (
         <>
           <Header_m />
@@ -95,7 +95,7 @@ const CampusRecruit = ({ showHeader }) => {
                     onMouseOut={(e) => {
                       e.currentTarget.style.transform = "scale(1)";
                     }}
-                  />{" "}
+                  />
                 </div>
                 <div className="sh_zp_hd">
                   <a href="Campus.html">Campus Recruitment</a>

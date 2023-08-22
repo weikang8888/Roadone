@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface HeaderOption {
   logo: string;
@@ -8,6 +9,16 @@ interface HeaderOption {
 }
 
 const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+  const changeToEnglish = () => {
+    changeLanguage("en");
+  };
+  const changeToChinese = () => {
+    changeLanguage("zh");
+  };
   return (
     <>
       <div className="nav clearfixzz container p-0">
@@ -22,10 +33,14 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
           <div className="nav_box fr">
             <div className="nav_d1 clearfix">
               <p className="nav_d1_box fr">
-                <NavLink to="">中文</NavLink>
-                <NavLink to="">English</NavLink>
+                <NavLink to="" onClick={changeToChinese}>
+                  中文
+                </NavLink>
+                <NavLink to="" onClick={changeToEnglish}>
+                  English
+                </NavLink>
                 <NavLink to="http://www.hixih.com.cn/" target="_blank">
-                  HIXIH Group
+                  {t("header.hixihGroup")}
                 </NavLink>
               </p>
             </div>
@@ -33,53 +48,63 @@ const Header = ({ logo, logoDivClassName, logoClassName }: HeaderOption) => {
               <ul className="clearfix">
                 <li>
                   <NavLink to="/" className="a1 current" id="nav0">
-                    Home
+                    {t("header.home")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/news" className="a1" id="nav1">
-                    News
+                    {t("header.news")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/products" className="a1" id="nav2">
-                    Product
+                    {t("header.products")}
                   </NavLink>
-                  {/* <div className="lb product-submenu">
-                    <Link to="/products#truck-tyres">Truck Tyres</Link>
-                    <Link to="/products#light-truck-tyres">
-                      Light Truck Tyres
+                  <div className="lb product-submenu">
+                    <Link to="/products/truck/">{t("header.truckTyre")}</Link>
+                    <Link to="/products/light-truck">
+                      {t("header.lightTruckTyre")}
                     </Link>
-                    <Link to="/products#bus-tyres">Bus Tyres</Link>
-                  </div> */}
+                    <Link to="/products/bus">{t("header.busTyre")}</Link>
+                  </div>
                 </li>
                 <li>
                   <NavLink to="/services/tyre-class" className="a1" id="nav4">
-                    Service
+                    {t("header.service")}
                   </NavLink>
                   <div className="lb service-submenu">
-                    <Link to="/services/tyre-class">Tyre Class</Link>
-                    <Link to="/services/guestbook">Guestbook</Link>
-                    <Link to="/services/download">Download</Link>
+                    <Link to="/services/tyre-class">
+                      {t("header.tyreClass")}
+                    </Link>
+                    <Link to="/services/guestbook">
+                      {t("header.guestBook")}
+                    </Link>
+                    <Link to="/services/download">{t("header.download")}</Link>
                   </div>
                 </li>
                 <li>
                   <NavLink to="/recruitment" className="a1" id="nav5">
-                    Recruitment
+                    {t("header.recruitment")}
                   </NavLink>
                   <div className="lb recruitment-submenu">
-                    <Link to="/recruitment/social">Social Recruitment</Link>
-                    <Link to="/recruitment/campus">Campus Recruitment</Link>
+                    <Link to="/recruitment/social">
+                      {t("header.socialRecruitment")}
+                    </Link>
+                    <Link to="/recruitment/campus">
+                      {t("header.campusRecruitment")}
+                    </Link>
                   </div>
                 </li>
                 <li>
                   <NavLink to="/about/roadone" className="a1" id="nav6">
-                    About Us
+                    {t("header.about")}
                   </NavLink>
                   <div className="lb aboutus-submenu">
-                    <Link to="/about/roadone">About Roadone</Link>
-                    <Link to="/about/social-responsibility">CSR</Link>
-                    <Link to="/about/contact">Contact Us</Link>
+                    <Link to="/about/roadone">{t("header.aboutRoadone")}</Link>
+                    <Link to="/about/social-responsibility">
+                      {t("header.csr")}
+                    </Link>
+                    <Link to="/about/contact">{t("header.contactUs")}</Link>
                   </div>
                 </li>
               </ul>

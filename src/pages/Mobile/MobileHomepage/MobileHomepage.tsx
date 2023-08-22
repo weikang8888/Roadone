@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
@@ -24,6 +25,8 @@ import Swipper_m from "../../../component/Swiper/Swipper_m";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const MobileHomepage = () => {
+  const { t } = useTranslation();
+
   const [newsItems, setNewsItems] = useState([]);
 
   const swiperTopSlides = [
@@ -62,24 +65,15 @@ const MobileHomepage = () => {
       <div className="in_main">
         <div className="in_main_box">
           <a href="list-2.html">
-            <div className="i_hd">Product</div>
-            <div className="i_d3">
-              Roadone is of the international high end quality gene and local
-              applicable advantage of Chinese Market. All the key equipment is
-              from the famous world-className tyre equipment suppliers. It
-              adopts the global leading technology of all steel radial truck
-              tyres from the European century producer. ...
-            </div>
+            <div className="i_hd">{t("header.products")}</div>
+            <div className="i_d3">{t("homepage.productDescription")}</div>
             <div className="i_d4">
               <img src={Tyre02} />
             </div>
           </a>
           <a href="list-6.html">
-            <div className="i_hd">Marketing</div>
-            <div className="i_d3">
-              Roadone Stores provide not only the high quality truck and bus
-              tyres, but also good service for our customers. ...
-            </div>
+            <div className="i_hd">{t("homepage.marketing")}</div>
+            <div className="i_d3">{t("homepage.marketingDescription")}</div>
             <div className="i_d4">
               <img src={Tyre06} />
             </div>
@@ -104,20 +98,27 @@ const MobileHomepage = () => {
             ))}
           </Swiper>
         </div>
-        <div className="i_hd i_hd1">News</div>
+        <div className="i_hd i_hd1">{t("header.news")}</div>
         <div className="i_new">
-          {newsItems.map((news, index) => (
-            <ul key={index}>
-              <li key={index}>
-                <a href={news.news_url}>
-                  <div className="i_new_bt">{news.news_title}</div>
-                  <span>{news.news_date}</span>
-                </a>
-              </li>
-            </ul>
-          ))}
+          {newsItems.map((news, index) => {
+            const translationIndex = parseInt(news.id, 10);
+            return (
+              <ul key={index}>
+                <li key={index}>
+                  <a href={news.news_url}>
+                    <div className="i_new_bt">
+                      {t(`news.news_title.${translationIndex}`)}
+                    </div>
+                    <span>{news.news_date}</span>
+                  </a>
+                </li>
+              </ul>
+            );
+          })}
           <div className="more">
-            <a href="list-1.html">MORE {">"}</a>
+            <a href="list-1.html">
+              {t("header.more")} {">"}
+            </a>
           </div>
         </div>
         <div className="ji_d">
@@ -126,18 +127,17 @@ const MobileHomepage = () => {
           </div>
         </div>
         <div className="lx">
-          <div className="lx_a">Contact Us</div>
-          <div className="lx_b">Tongli Tyre Co., Ltd.</div>
+          <div className="lx_a">{t("header.contactUs")}</div>
+          <div className="lx_b">{t("about.companyName")}</div>
+          <div className="lx_c">{t("about.companyAddress")}</div>
           <div className="lx_c">
-            Hixih Industrial Park, Yanzhou District, Jining City, Shandong
-            Province, China. 272199
+            {t("about.nationalServiceHotline")}: 400-639-1111
           </div>
-          <div className="lx_c">National Service Hotline: 400-639-1111</div>
           <div className="lx_c">
-            International Service Hotline: +86-537-5174476
+            Inter{t("about.nationalServiceHotline")}: +86-537-5174476
           </div>
-          <div className="lx_c">E-mail: roadone@hixih.com.cn</div>
-          <div className="lx_c">Website: http://en.tltyre.com</div>
+          <div className="lx_c">{t("about.email")}: roadone@hixih.com.cn</div>
+          <div className="lx_c">{t("about.website")}: http://en.tltyre.com</div>
         </div>
       </div>
     </>
