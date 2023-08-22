@@ -1,9 +1,71 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
+import axios from "axios";
+
 import YuYueimage from "../../static/assets/picture/yuyue_lt.jpg";
 import YYlogo from "../../static/assets/picture/yy_logo.png";
 import SubmitImage from "../../static/assets/picture/submit.png";
 
 const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+    jobTitle: "",
+    message: "",
+  });
+
+  const [file, setFile] = useState<File>();
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formDataToSend = new FormData();
+
+    // Append form data fields
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("phoneNumber", formData.phoneNumber);
+    formDataToSend.append("address", formData.address);
+    formDataToSend.append("jobTitle", formData.jobTitle);
+    formDataToSend.append("message", formData.message);
+
+    // Append the file attachment if it exists
+    if (file) {
+      formDataToSend.append("attachment", file);
+    }
+
+    axios
+      .post("http://localhost:8080/api_roadone/contact/contact", formDataToSend)
+      .then((response) => {
+        console.log(response.data);
+        setIsSuccess(true);
+      })
+      .catch((error) => {
+        console.error(error);
+        setIsSuccess(false);
+        alert(
+          "There was an error submitting the form. Please try again later."
+        );
+      });
+  };
+
   return (
     <>
       <div className="layui-layer layer-animation">
@@ -17,7 +79,7 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                 <img className="fr" src={YYlogo} />
               </div>
               <div className="yy_f">
-                <form className="clearfix" id="form1">
+                <form className="clearfix" id="form1" onSubmit={handleSubmit}>
                   <div className="col-6 yy_f_lt ">
                     {fieldVisibility.fullName && (
                       <div className="yy_phone">
@@ -26,6 +88,7 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             type="text"
                             name="name"
                             id="name"
+                            onChange={handleInputChange}
                             placeholder="Your Name"
                           />
                         </div>
@@ -37,8 +100,9 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                         <div className="phone1">
                           <input
                             type="text"
-                            name="phone"
-                            id="phone"
+                            name="phoneNumber"
+                            id="phoneNumber"
+                            onChange={handleInputChange}
                             placeholder="Your Telephone"
                           />
                         </div>
@@ -52,6 +116,7 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             type="text"
                             name="email"
                             id="email"
+                            onChange={handleInputChange}
                             placeholder="Your E-mail"
                           />
                         </div>
@@ -65,6 +130,7 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             type="text"
                             name="address"
                             id="address"
+                            onChange={handleInputChange}
                             placeholder="Your Address"
                           />
                         </div>
@@ -76,36 +142,24 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                         <div className="phone1">
                           <input
                             type="text"
-                            name="name"
-                            id="name"
+                            name="jobTitle"
+                            id="jobTitle"
+                            onChange={handleInputChange}
                             placeholder="Job Title"
                           />
                         </div>
                         <div className="phone2">Job Title</div>
                       </div>
                     )}
-                    {fieldVisibility.contactInformation && (
-                      <div className="yy_phone">
-                        <div className="phone1">
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Contact Information"
-                          />
-                        </div>
-                        <div className="phone2">Contact Information</div>
-                      </div>
-                    )}
                     {fieldVisibility.attachment && (
                       <div className="yy_phone">
                         <input
                           type="file"
-                          name="attfile"
-                          id="attfile"
+                          name="attachment"
+                          id="attachment"
                           className="scfj"
+                          onChange={handleFileChange}
                         />
-                        &nbsp; Upload Attachment
                       </div>
                     )}
                   </div>
@@ -114,32 +168,29 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                       className="liuyan"
                       name="message"
                       id="message"
+                      onChange={handleInputChange}
                       placeholder="Leaving Message"></textarea>
-                    <div className="vcode">
+                    {/* <div className="vcode">
                       <input
                         id="vdcode"
                         className="in_bg_ss"
+                        style={{ textTransform: "uppercase" }}
                         name="vdcode"
                         type="text"
+                        value={formData.message}
                         placeholder="Verification Code"
+                        required
                       />
-                      &nbsp;&nbsp; <img title="Click to change" id="vdimgck" />{" "}
-                      &nbsp;
-                      <span>
-                        <a>Click to change</a>
-                      </span>
-                    </div>
+                      &nbsp;&nbsp;
+                      <img
+                        title="Click to change"
+                        id="vdimgck"
+                        onClick={changeAuthCode}
+                        src={authCodeSrc}
+                        style={{ cursor: "pointer" }}
+                      />
+                    </div> */}
                     <div className="submit">
-                      <input
-                        type="hidden"
-                        name="dede_fields"
-                        value="name,text;email,text;phone,text;address,text;message,multitext;time,text"
-                      />
-                      <input
-                        type="hidden"
-                        name="dede_fieldshash"
-                        value="7b38ad3b8f8ba147d402cc390ddfb2b3"
-                      />
                       <input type="image" src={SubmitImage} className="tjbtn" />
                     </div>
                   </div>

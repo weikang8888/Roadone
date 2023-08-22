@@ -28,7 +28,7 @@ const CampusRecruit = ({ showHeader }) => {
   const fieldVisibility = {
     fullName: true,
     jobTitle: true,
-    contactInformation: true,
+    email: true,
     attachment: true,
   };
   useEffect(() => {
@@ -51,7 +51,7 @@ const CampusRecruit = ({ showHeader }) => {
   return (
     <>
       {" "}
-      {windowWidth <= 990 ? (
+      {showHeader && windowWidth <= 990 ? (
         <>
           <Header_m />
           <Swipper_m

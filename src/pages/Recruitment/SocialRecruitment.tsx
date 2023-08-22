@@ -27,7 +27,7 @@ const SocialRecruitment = ({ showHeader }) => {
   const fieldVisibility = {
     fullName: true,
     jobTitle: true,
-    contactInformation: true,
+    email: true,
     attachment: true,
   };
   useEffect(() => {
@@ -49,7 +49,7 @@ const SocialRecruitment = ({ showHeader }) => {
   ];
   return (
     <>
-      {windowWidth <= 990 ? (
+      {showHeader && windowWidth <= 990 ? (
         <>
           <Header_m />
           <Swipper_m
@@ -75,6 +75,7 @@ const SocialRecruitment = ({ showHeader }) => {
           </div>
         )
       )}
+
       <div className="container zxns">
         <div className="zx_box">
           <div className="zx_list">

@@ -980,9 +980,7 @@ li:hover .lb {
   .typebox_m {
     display: none;
   }
-  .layui-layer-wrap {
-    display: flex;
-  }
+
   .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq2 div {
     padding-right: 100px;
   }
@@ -1258,6 +1256,9 @@ li:hover .lb {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+.layui-layer-wrap {
+  display: flex;
 }
 .layui-layer-content {
   position: relative;

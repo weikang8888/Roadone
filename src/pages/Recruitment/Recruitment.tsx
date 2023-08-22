@@ -63,7 +63,6 @@ const Recruitment = () => {
         <div className="zx_box">
           <div className="zx_list">
             <SocialRecruitment showHeader={false} />
-
             <CampusRecruit showHeader={false} />
           </div>
         </div>
