@@ -32,7 +32,7 @@ const RA85Light = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=59")
+      .get("https://backend.roadone.com.my/api_roadone/products/products?id=59")
       .then((response) => {
         setProductsItems(response.data);
       })

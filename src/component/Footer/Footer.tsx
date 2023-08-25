@@ -166,7 +166,7 @@ const Footer = () => {
                   <a href="">{t("homepage.legalDeclaration")}</a>
                 </li>
                 <li>
-                  <a href="">{t("header.contactUs")}</a>
+                  <a href="/about/contact">{t("header.contactUs")}</a>
                 </li>
                 <li>
                   <a href="">{t("homepage.siteMap")}</a>

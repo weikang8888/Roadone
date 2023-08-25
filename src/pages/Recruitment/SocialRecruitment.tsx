@@ -100,7 +100,7 @@ const SocialRecruitment = ({ showHeader }) => {
                 </div>
 
                 <div className="sh_zp_hd">
-                  <a href="social.html">{t("header.socialRecruitment")}</a>
+                  <a>{t("header.socialRecruitment")}</a>
                 </div>
                 <div className="zw">
                   <table>
@@ -120,9 +120,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </tr>
                     <tr>
                       <td className="zw_d1">
-                        <a
-                          href="item-705.html"
-                          title="Industrial Engineering Specialist">
+                        <a title="Industrial Engineering Specialist">
                           {t("socialRecruitment.industrialEngineering")}
                         </a>
                       </td>
@@ -162,7 +160,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </tr>
                     <tr>
                       <td className="zw_d1">
-                        <a href="item-704.html" title="Motorcade Salesperson">
+                        <a title="Motorcade Salesperson">
                           {t("socialRecruitment.motorcadeSalesperson")}
                         </a>
                       </td>
@@ -207,7 +205,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </tr>
                     <tr>
                       <td className="zw_d1">
-                        <a href="item-703.html" title="Quality Engineer">
+                        <a title="Quality Engineer">
                           {t("socialRecruitment.qualityEngineer")}
                         </a>
                       </td>
@@ -237,7 +235,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </tr>
                     <tr>
                       <td className="zw_d1">
-                        <a href="item-702.html" title="Formula Design Engineer">
+                        <a title="Formula Design Engineer">
                           {t("socialRecruitment.formulaDesignEngineer")}
                         </a>
                       </td>
@@ -277,7 +275,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </tr>
                     <tr>
                       <td className="zw_d1">
-                        <a href="item-701.html" title="Structural Engineer">
+                        <a title="Structural Engineer">
                           {t("socialRecruitment.structuralEngineer")}
                         </a>
                       </td>
@@ -317,7 +315,7 @@ const SocialRecruitment = ({ showHeader }) => {
                     </tr>
                     <tr>
                       <td className="zw_d1">
-                        <a href="item-700.html" title="Cost Accountant">
+                        <a title="Cost Accountant">
                           {t("socialRecruitment.costAccountant")}
                         </a>
                       </td>
@@ -367,11 +365,7 @@ const SocialRecruitment = ({ showHeader }) => {
                       </li>
                       <li>
                         <p className="lastrow">
-                          【
-                          <a href="/uploads/file/2003/1583918028869844.xlsx">
-                            {t("socialRecruitment.downloadResume")}
-                          </a>
-                          】
+                          【<a>{t("socialRecruitment.downloadResume")}</a>】
                         </p>
                       </li>
                     </ul>

@@ -178,7 +178,7 @@ const FooterMobile = () => {
         </div>
         <div className="foot_d1">
           <a href="">{t("homepage.legalDeclaration")}</a>
-          <a href="">{t("header.contactUs")}</a>
+          <a href="/about/contact">{t("header.contactUs")}</a>
           <a href="">{t("homepage.siteMap")}</a>
         </div>
       </div>

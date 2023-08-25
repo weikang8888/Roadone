@@ -1,16 +1,52 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import { useTranslation } from "react-i18next";
 import SubmitImage from "../../static/assets/picture/submit.png";
+import SubmitImage_CN from "../../static/assets/cn/submit.png";
+
 import { Link } from "react-router-dom";
 import TopButton_m from "../../component/Button/TopButton_m";
 import TopButton from "../../component/Button/TopButton";
 import ServiceHeader from "./ServiceHeader";
 
 const ServiceForm = () => {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    gender: "",
+    address: "",
+    messageType: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("https://backend.roadone.com.my/api_roadone/contact/contact", formData)
+      .then((response) => {
+        console.log(response.data);
+        const submitSuccessLink = `/submit-success`;
+        window.location.href = submitSuccessLink;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -46,14 +82,20 @@ const ServiceForm = () => {
           </div>
         </div>
         <div className="zxfw zxfw1">
-          <form action="" method="post">
+          <form className="clearfix" id="form1" onSubmit={handleSubmit}>
             <div className="clearfix zxfw_d1">
               <div className="col-3">
                 <span className="zx_a fl">{t("services.guestBook.phone")}</span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
-                  <input name="phone" id="phone" className="in_bg_s" type="" />
+                  <input
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    className="in_bg_s"
+                    type="text"
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
             </div>
@@ -63,7 +105,13 @@ const ServiceForm = () => {
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
-                  <input name="email" id="email" className="in_bg_s" type="" />
+                  <input
+                    name="email"
+                    id="email"
+                    className="in_bg_s"
+                    type="text"
+                    onChange={handleInputChange}
+                  />
                   <div>{t("services.guestBook.validEmailMessage")}</div>
                 </div>
               </div>
@@ -76,7 +124,13 @@ const ServiceForm = () => {
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
-                  <input name="name" id="name" className="in_bg_s" type="" />
+                  <input
+                    name="name"
+                    id="name"
+                    className="in_bg_s"
+                    type="text"
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
             </div>
@@ -89,11 +143,23 @@ const ServiceForm = () => {
               <div className="col-9">
                 <div className="fr zx_b zx_d">
                   <label>
-                    <input type="radio" id="sex" name="sex" value="Male" />
+                    <input
+                      type="radio"
+                      id="gender"
+                      name="gender"
+                      value="Male"
+                      onChange={handleInputChange}
+                    />
                     <span>{t("services.guestBook.male")}</span>
                   </label>
                   <label>
-                    <input type="radio" id="sex" name="sex" value="Female" />
+                    <input
+                      type="radio"
+                      id="gender"
+                      name="gender"
+                      value="Female"
+                      onChange={handleInputChange}
+                    />
                     <span>{t("services.guestBook.female")}</span>
                   </label>
                 </div>
@@ -107,7 +173,13 @@ const ServiceForm = () => {
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
-                  <input name="area" id="area" className="in_bg" type="" />
+                  <input
+                    name="address"
+                    id="address"
+                    className="in_bg"
+                    type="text"
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
             </div>
@@ -120,15 +192,33 @@ const ServiceForm = () => {
               <div className="col-9">
                 <div className="fr zx_b zx_d">
                   <label>
-                    <input type="radio" id="d3" name="gtype" value="Consult" />
+                    <input
+                      type="radio"
+                      id="messageType"
+                      name="messageType"
+                      value="Consult"
+                      onChange={handleInputChange}
+                    />
                     <span>{t("services.guestBook.consult")}</span>
                   </label>
                   <label>
-                    <input type="radio" id="d4" name="gtype" value="Complain" />
+                    <input
+                      type="radio"
+                      id="messageType"
+                      name="messageType"
+                      value="Complain"
+                      onChange={handleInputChange}
+                    />
                     <span>{t("services.guestBook.complain")}</span>
                   </label>
                   <label>
-                    <input type="radio" id="d5" name="gtype" value="Suggest" />
+                    <input
+                      type="radio"
+                      id="messageType"
+                      name="messageType"
+                      value="Suggest"
+                      onChange={handleInputChange}
+                    />
                     <span>{t("services.guestBook.suggest")}</span>
                   </label>
                 </div>
@@ -142,7 +232,13 @@ const ServiceForm = () => {
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
-                  <input name="title" id="title" className="in_bg" type="" />
+                  <input
+                    name="subject"
+                    id="subject"
+                    className="in_bg"
+                    type="text"
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
             </div>
@@ -157,15 +253,32 @@ const ServiceForm = () => {
                   <textarea
                     className="text_bg"
                     name="message"
-                    id="message"></textarea>
+                    id="message"
+                    onChange={handleInputChange}></textarea>
                   <div className="submit">
-                    <input type="image" src={SubmitImage} className="tjbtn" />
+                    {i18n.language === "zh" ? (
+                      <>
+                        <input
+                          type="image"
+                          src={SubmitImage_CN}
+                          className="tjbtn"
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <input
+                          type="image"
+                          src={SubmitImage}
+                          className="tjbtn"
+                        />
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="clearfix zxfw_d1">
+            {/* <div className="clearfix zxfw_d1">
               <div className="fr zx_b">
                 <input
                   id="vcode"
@@ -187,17 +300,7 @@ const ServiceForm = () => {
                   <a>Click to change</a>
                 </span>
               </div>
-            </div>
-            <input
-              type="hidden"
-              name="dede_fields"
-              value="name,text;sex,radio;phone,text;email,text;area,text;gtype,radio;title,text;message,multitext;time,text"
-            />
-            <input
-              type="hidden"
-              name="dede_fieldshash"
-              value="6931e64fdabdf67d87bb4a865cdf0c4d"
-            />
+            </div> */}
           </form>
         </div>
         {windowWidth <= 990 ? <TopButton_m /> : <TopButton />}

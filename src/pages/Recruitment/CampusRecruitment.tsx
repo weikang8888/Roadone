@@ -100,7 +100,7 @@ const CampusRecruit = ({ showHeader }) => {
                   />
                 </div>
                 <div className="sh_zp_hd">
-                  <a href="Campus.html">{t("header.campusRecruitment")}</a>
+                  <a>{t("header.campusRecruitment")}</a>
                 </div>
                 <div className="zw">
                   <table>
@@ -123,7 +123,7 @@ const CampusRecruit = ({ showHeader }) => {
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
-                        <a href="item-709.html" title="Laboratory Technician">
+                        <a title="Laboratory Technician">
                           {t("campusRecruitment.laboratory")}
                         </a>
                       </td>
@@ -142,9 +142,7 @@ const CampusRecruit = ({ showHeader }) => {
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
-                        <a
-                          href="item-708.html"
-                          title="Mechanical / Electrical Technician">
+                        <a title="Mechanical / Electrical Technician">
                           {t("campusRecruitment.mechanical")}
                         </a>
                       </td>
@@ -163,7 +161,7 @@ const CampusRecruit = ({ showHeader }) => {
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
-                        <a href="item-707.html" title="Quality Technician">
+                        <a title="Quality Technician">
                           {t("campusRecruitment.quality")}
                         </a>
                       </td>
@@ -182,7 +180,7 @@ const CampusRecruit = ({ showHeader }) => {
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
-                        <a href="item-706.html" title="R &amp; D Technician">
+                        <a title="R &amp; D Technician">
                           {t("campusRecruitment.r&d")}
                         </a>
                       </td>
@@ -222,11 +220,7 @@ const CampusRecruit = ({ showHeader }) => {
                       </li>
                       <li>
                         <p className="lastrow">
-                          【
-                          <a href="/uploads/file/2003/1583918028869844.xlsx">
-                            {t("socialRecruitment.downloadResume")}
-                          </a>
-                          】
+                          【<a>{t("socialRecruitment.downloadResume")}</a>】
                         </p>
                       </li>
                     </ul>

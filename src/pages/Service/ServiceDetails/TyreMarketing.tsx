@@ -19,7 +19,7 @@ const TyreMarketing = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/services/services?id=2")
+      .get("https://backend.roadone.com.my/api_roadone/services/services?id=2")
       .then((response) => {
         setServicesItems(response.data);
       })

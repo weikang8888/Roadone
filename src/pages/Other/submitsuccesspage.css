@@ -1,0 +1,62 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f6f6f6;
+}
+.tips-box {
+  margin-top: 50px;
+  padding: 0;
+  width: 450px;
+  border: 10px solid #e8e8e8;
+  background: #fff;
+  color: #444;
+}
+
+.title {
+  margin: 0 20px;
+  padding: 15px 0;
+  border-bottom: 1px dotted #ddd;
+  text-align: left;
+  font-size: 15px;
+}
+
+.title p {
+  padding-left: 10px;
+  height: 18px;
+  border-left: 3px solid #ddd;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+}
+
+.content {
+  position: relative;
+  padding: 30px 20px;
+  background: #fff;
+  color: #666;
+  font-size: 15px;
+}
+
+.content p.tip {
+  color: #999;
+  font-size: 1px;
+}
+
+.content a.go {
+  display: block;
+  margin: 15px auto 0;
+  padding: 6px 10px;
+  width: 80px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #333;
+  text-decoration: blink;
+  font-size: 13px;
+}
+
+.content a:hover {
+  background: #999;
+  color: #fff;
+}

@@ -32,7 +32,7 @@ const HF81 = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/products/products?id=50")
+      .get("https://backend.roadone.com.my/api_roadone/products/products?id=50")
       .then((response) => {
         setProductsItems(response.data);
       })

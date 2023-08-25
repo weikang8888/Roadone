@@ -51,7 +51,7 @@ const Homepage = () => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get("http://localhost:8080/api_roadone/news/news")
+      .get("https://backend.roadone.com.my/api_roadone/news/news")
       .then((response) => {
         setNewsItems(response.data);
       })
@@ -169,7 +169,9 @@ const Homepage = () => {
                     })}
                   </ul>
                   <div className="more">
-                    <a href="news.html">{t("header.more")} {">"}</a>
+                    <a href="/news">
+                      {t("homepage.more")} {">"}
+                    </a>
                   </div>
                 </div>
               </div>

@@ -308,6 +308,9 @@
   .yy .yy_left {
     display: none;
   }
+  .zxfw_d1 .col-9{
+    padding-left:20px;
+  }
 }
 
 @media (max-width: 770px) {

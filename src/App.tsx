@@ -26,6 +26,7 @@ import TyreMarketing from "./pages/Service/ServiceDetails/TyreMarketing";
 import TyreSpecification from "./pages/Service/ServiceDetails/TyreSpecification";
 import TyreStorage from "./pages/Service/ServiceDetails/TyreStorage";
 import ProductRoute from "./routes/ProductRoutes";
+import SubmitSuccessPage from "./pages/Other/SubmitSuccessPage";
 
 const App = () => {
   const renderedProductRoutes = ProductRoute.map(({ path, component }) => (
@@ -104,8 +105,10 @@ const App = () => {
           element={<SocialResponsibility />}
         />
         <Route path="/about/contact" element={<ContactUs />} />
+        <Route path="/submit-success" element={<SubmitSuccessPage />} />
       </Routes>
-      {showFooterMobile ? <FooterMobile /> : <Footer />}
+      {window.location.pathname !== "/submit-success" &&
+        (showFooterMobile ? <FooterMobile /> : <Footer />)}
     </Router>
   );
 };

@@ -16,7 +16,7 @@ const SwipperProduct = ({ ids }) => {
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
     axios
-      .get(`http://localhost:8080/api_roadone/products/products?id=${ids}`)
+      .get(`https://backend.roadone.com.my/api_roadone/products/products?id=${ids}`)
       .then((response) => {
         setProductsItems(response.data);
         console.log(response.data);

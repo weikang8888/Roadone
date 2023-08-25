@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 
 const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
   const { t, i18n } = useTranslation();
-
   const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -57,10 +56,12 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
     }
 
     axios
-      .post("http://localhost:8080/api_roadone/contact/contact", formDataToSend)
+      .post("https://backend.roadone.com.my/api_roadone/contact/apply", formDataToSend)
       .then((response) => {
         console.log(response.data);
         setIsSuccess(true);
+        const submitSuccessLink = `/submit-success`;
+        window.location.href = submitSuccessLink;
       })
       .catch((error) => {
         console.error(error);
