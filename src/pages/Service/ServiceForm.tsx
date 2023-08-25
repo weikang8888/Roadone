@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useTranslation } from "react-i18next";
 import SubmitImage from "../../static/assets/picture/submit.png";
 import { Link } from "react-router-dom";
 import TopButton_m from "../../component/Button/TopButton_m";
@@ -7,6 +7,8 @@ import TopButton from "../../component/Button/TopButton";
 import ServiceHeader from "./ServiceHeader";
 
 const ServiceForm = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -30,15 +32,15 @@ const ServiceForm = () => {
           <div className="zx_list fuwu_list">
             <ul className="clearfix">
               <li>
-                <Link to="/services/tyre-class">Tyre className</Link>
+                <Link to="/services/tyre-class">{t("header.tyreClass")}</Link>
               </li>
               <li>
                 <Link to="/services/guestbook" className="zx_on">
-                  Guestbook
+                  {t("header.guestBook")}
                 </Link>
               </li>
               <li>
-                <Link to="/services/download">Download</Link>
+                <Link to="/services/download">{t("header.download")}</Link>
               </li>
             </ul>
           </div>
@@ -47,7 +49,7 @@ const ServiceForm = () => {
           <form action="" method="post">
             <div className="clearfix zxfw_d1">
               <div className="col-3">
-                <span className="zx_a fl">Phone</span>
+                <span className="zx_a fl">{t("services.guestBook.phone")}</span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
@@ -57,22 +59,20 @@ const ServiceForm = () => {
             </div>
             <div className="clearfix zxfw_d1">
               <div className="col-3">
-                <span className="zx_a fl">E-mail</span>
+                <span className="zx_a fl">{t("services.guestBook.email")}</span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
                   <input name="email" id="email" className="in_bg_s" type="" />
-                  <div>
-                    Please fill in the valid email address so that you can
-                    receive the question from lutong tire in the first place.
-                  </div>
+                  <div>{t("services.guestBook.validEmailMessage")}</div>
                 </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Name</span>
+                <span className="zx_a fl zx_c">
+                  {t("services.guestBook.name")}
+                </span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
@@ -82,25 +82,28 @@ const ServiceForm = () => {
             </div>
             <div className="clearfix zxfw_d1">
               <div className="col-3">
-                <span className="zx_a fl zx_c">Sex</span>
+                <span className="zx_a fl zx_c">
+                  {t("services.guestBook.sex")}
+                </span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b zx_d">
                   <label>
                     <input type="radio" id="sex" name="sex" value="Male" />
-                    <span>Male</span>
+                    <span>{t("services.guestBook.male")}</span>
                   </label>
                   <label>
                     <input type="radio" id="sex" name="sex" value="Female" />
-                    <span>Female</span>
+                    <span>{t("services.guestBook.female")}</span>
                   </label>
                 </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Address</span>
+                <span className="zx_a fl zx_c">
+                  {t("services.guestBook.address")}
+                </span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
@@ -109,31 +112,33 @@ const ServiceForm = () => {
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Message</span>
+                <span className="zx_a fl zx_c">
+                  {t("services.guestBook.message")}
+                </span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b zx_d">
                   <label>
                     <input type="radio" id="d3" name="gtype" value="Consult" />
-                    <span>Consult</span>
+                    <span>{t("services.guestBook.consult")}</span>
                   </label>
                   <label>
                     <input type="radio" id="d4" name="gtype" value="Complain" />
-                    <span>Complain</span>
+                    <span>{t("services.guestBook.complain")}</span>
                   </label>
                   <label>
                     <input type="radio" id="d5" name="gtype" value="Suggest" />
-                    <span>Suggest</span>
+                    <span>{t("services.guestBook.suggest")}</span>
                   </label>
                 </div>
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Title</span>
+                <span className="zx_a fl zx_c">
+                  {t("services.guestBook.title")}
+                </span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">
@@ -142,9 +147,10 @@ const ServiceForm = () => {
               </div>
             </div>
             <div className="clearfix zxfw_d1">
-              
               <div className="col-3">
-                <span className="zx_a fl zx_c">Content</span>
+                <span className="zx_a fl zx_c">
+                  {t("services.guestBook.content")}
+                </span>
               </div>
               <div className="col-9">
                 <div className="fr zx_b">

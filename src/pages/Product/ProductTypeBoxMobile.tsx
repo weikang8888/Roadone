@@ -3,6 +3,7 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -15,9 +16,10 @@ const ProductTypeMobile = ({
   showTruckList,
   showBusList,
 }: ProductTypeMobileOptions) => {
+  const { t } = useTranslation();
+
   return (
     <>
-      
       <div className="typebox_m">
         {showTruckList && (
           <Swiper
@@ -28,37 +30,37 @@ const ProductTypeMobile = ({
             id="banner">
             <SwiperSlide>
               <NavLink to="/products/truck/long-haul-wearable">
-                Long Haul Wearable Tyres
+                {t("products.longHaulWearable")}
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/middle-long-distance">
-                Middle & Long Distance
+                {t("products.middleLongDistance")}
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/middle-short-distance">
-                Middle & Short Distance
+                {t("products.middleShortDistance")}
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/quarry-building-site">
-                Quarry & Building Sites
+                {t("products.quarryBuidlingSites")}
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/high-end-off-road">
-                High End Off-road Tyres
+                {t("products.highEndOffRoad")}
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/high-end-heavy-loading">
-                High End Heavy Loading Tyres
+                {t("products.highEndHeavyLoading")}
               </NavLink>
             </SwiperSlide>
             <SwiperSlide>
               <NavLink to="/products/truck/high-end-wearable">
-                HIGH END WEARABLE TYRE
+                {t("products.highEndWearable")}
               </NavLink>
             </SwiperSlide>
           </Swiper>
@@ -72,10 +74,10 @@ const ProductTypeMobile = ({
             className="swiper-container"
             id="banner">
             <SwiperSlide>
-              <NavLink to="/products/bus/inter-city">Inter-city Bus</NavLink>
+              <NavLink to="/products/bus/inter-city">{t("products.interCityBus")}</NavLink>
             </SwiperSlide>
             <SwiperSlide>
-              <NavLink to="/products/bus/city-bus">City-city Bus </NavLink>
+              <NavLink to="/products/bus/city-bus">{t("products.cityCityBus")} </NavLink>
             </SwiperSlide>
           </Swiper>
         )}

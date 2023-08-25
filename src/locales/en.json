@@ -17,13 +17,25 @@
     "aboutRoadone": "About Roadone",
     "csr": "CSR",
     "contactUs": "Contact Us",
-    "hixihGroup": "HIXIH Group",
-    "more": "More"
+    "hixihGroup": "HIXIH Group"
   },
   "homepage": {
     "productDescription": "Roadone is of the international high end quality gene and local applicable advantage of Chinese Market. All the key equipment is from the famous world-className tyre equipment suppliers. It adopts the global leading technology of all steel radial truck tyres from the European century producer. ...",
     "marketing": "Marketing",
-    "marketingDescription": "Roadone Stores provide not only the high quality truck and bus tyres, but also good service for our customers. ..."
+    "marketingDescription": "Roadone Stores provide not only the high quality truck and bus tyres, but also good service for our customers. ...",
+    "more": "More",
+    "viewDetails": "View details",
+    "roadone": "Roadone",
+    "none": "None",
+    "sendAMessage": "Send A Message",
+    "roadoneTireIsForYour": "Roadone tire is for you",
+    "share": "Share",
+    "legalDeclaration": "Legal Declaration",
+    "siteMap": "Sitemap",
+    "copyright": "Copyright",
+    "allRightReserved": "All Rights Reserved.",
+    "prev": "PREV",
+    "next": "NEXT"
   },
   "news": {
     "news_title": {
@@ -31,6 +43,460 @@
       "2": "ROADONE Tire `sailing` in Qingdao Port, HIXIH Group and Qingdao Port International Logistic",
       "3": "Roadone Passed ISO/TS 16949 Certification, and Get OE Permit of International Automobile Industry",
       "4": "New Product: Roadone New RD05: Fuel-efficient, High Speed, Standard Load Series"
+    }
+  },
+  "products": {
+    "longHaulWearable": "Long Haul Wearable Tyres",
+    "middleLongDistance": "Middle & Long Distance",
+    "middleShortDistance": "Middle & Short Distance",
+    "quarryBuidlingSites": "Quarry & Building Sites",
+    "highEndOffRoad": "High End Off-road Tyres",
+    "highEndHeavyLoading": "High End Heavy Loading Tyres",
+    "highEndWearable": "HIGH END WEARABLE TYRES",
+    "interCityBus": "Inter-city Bus",
+    "cityCityBus": "City-city Bus",
+    "products_description": {
+      "1": "Suitable for steer/load bearing positions. Designed for standard loading, long distance, high speed in high-way, national roads, suitable for steer and trailer positions.",
+      "2": "Suitable for steer/load bearing positions. Designed for standard loading, long distance, high speed in high-way, national roads, suitable for steer and trailer positions.",
+      "3": "Suitable for steer/load bearing positions. Designed for standard loading, long distance, high speed in high-way, national roads, suitable for steer and trailer positions.",
+      "4": "Suitable for city-city bus all positions. Designed for high-speed, national roads, provincial roads, urban roads, suitable for passengers bus all positions.",
+      "5": "Suitable for all positions. Designed for standard loading, long distance, high speed in high-way, national roads, and provincial roads, Suitable for all positions..",
+      "6": "Suitable for all positions. Designed for standard loading, long distance, high speed in high-way, national roads, and provincial roads, Suitable for all positions..",
+      "7": "Suitable for drive position. Designed for standard loading, long distance, high speed in high-way, national roads, Suitable for drive position..",
+      "8": "Suitable for drive position. Designed for standard loading, long distance, high speed in high-way, national roads, Suitable for drive position..",
+      "9": "Suitable for drive position. Designed for standard loading, long distance, high speed in high-way, national roads, Suitable for drive position..",
+      "10": "Suitable for all positions. Designed for  highly overload, mid distance, mid speed on provincial roads, county roads and mixed roads,suitable for  all positions(load bearing position recommended).",
+      "11": "Suitable for all positions. Designed for  highly overload, mid distance, mid speed on provincial roads, county roads and mixed roads,suitable for  all positions(load bearing position recommended).",
+      "12": "Suitable for all positions. Designed for  highly overload, mid distance, mid speed on provincial roads, county roads and mixed roads,suitable for  all positions(load bearing position recommended).",
+      "13": "Suitable for all positions. Designed for  highly overload, mid-short distance, mid-low speed on provincial roads, county roads and mixed roads,Suitable for drive position..",
+      "14": "Suitable for all positions. Designed for highly overload, mid-short distance, low-speed driving on gravel, construction site mixed road, Suitable for all positions.(drive position recommended).",
+      "15": "Suitable for all positions. Designed for  highly overload, mid-short distance, mid-low speed driving on gravel, construction site mixed road,Suitable for drive position..",
+      "16": "Suitable for all positions. Designed for highly overload, short-distance, low-speed on on mixed road conditions, Suitable for drive position..",
+      "17": "Suitable for all positions. Designed for highly overload, short-distance, low-speed on on mixed road conditions, Suitable for drive position..",
+      "18": "Suitable for all positions. Designed for heavy-duty transportation in hard mines, suitable for heavy-loading trucks all wheel positions. (drive position recommended)",
+      "19": "Suitable for all positions. Designed for heavy-duty transportation in hard mines, suitable for heavy-loading trucks all wheel positions. (drive position recommended)",
+      "20": "Suitable for all positions. Designed for heavy-duty transportation in soft mines, suitable for heavy-loading trucks all wheel positions. (drive position recommended)",
+      "21": "Suitable for all positions. Specially designed for soft mines, construction sites and other non-paved road and short distance paved road, suitable for heavy-loading trucks all wheel positions. (drive position recommended)",
+      "22": "Suitable for steer/drive positions. Specially designed for short distance, low speed driving in soft mine, low slope, extremely bad road surface vehicle design, suitable for heavy-loading trucks all positions (Drive position is recommended).",
+      "23": "Suitable for drive position. Designed for  short-distance, low-speed driving in soft mines, industrial and mining mixed-road , suitable for heavy load trucks  all positions (drive position recommended).",
+      "24": "Suitable for drive position. Designed for  short-distance, low-speed driving in soft mines, industrial and mining mixed-road , suitable for heavy load trucks  all positions (drive position recommended).",
+      "25": "Suitable for drive position. Designed for mid-short distance, mid-low speed on provincial roads, county roads and mixed roads,Suitable for drive position..",
+      "26": "Suitable for drive position. Designed for mid-short distance, mid-low speed on provincial roads, county roads and mixed roads,Suitable for drive position..",
+      "27": "Suitable for drive position. Designed for mid-short distance, mid-low speed on provincial roads, county roads and mixed roads,Suitable for drive position..",
+      "28": "Suitable for all positions. Designed for  highly overload, mid-short distance, mid-low speed driving on gravel, construction site mixed road,suitable for  all positions(Drive position is recommended).",
+      "29": "Suitable for all positions. Designed for mid-short distance and heavy load transport on national and provincial roads, Suitable for all positions..",
+      "30": "Suitable for all positions. Designed for mid-short distance and heavy load transport on national and provincial roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "31": "Suitable for all positions. Designed for mid-short distance and heavy load transport on national and provincial roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "32": "Suitable for steer/load bearing positions. Designed for mid-long distance, high speed in high-way, national roads, suitable for steer and load bearing positions.",
+      "33": "Suitable for steer/load bearing positions. Designed for mid-long distance, high speed in high-way, national roads, suitable for steer and load bearing positions.",
+      "34": "Suitable for drive position. Designed for mid-long distance, high speed in high-way, national roads, Suitable for drive position..",
+      "35": "Suitable for drive position. Designed for mid-long distance, high speed in high-way, national roads, Suitable for drive position..",
+      "36": "Suitable for all positions. Designed for mid distance, mid speed in national roads and provincial roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "37": "Suitable for drive position. Designed for mid-long distance, high speed in high-way, national roads, Suitable for drive position..",
+      "38": "Suitable for drive position. Designed for mid-long distance, mid-high speed in national roads, and provincial roads, Suitable for drive position..",
+      "39": "Suitable for all positions. Designed for mid distance, mid speed in national roads and provincial roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "40": "Suitable for trailer position. Designed for mid-long distance, high speed in high-way, national roads, suitable for trailer position.",
+      "41": "Suitable for all positions. Designed for mid-long distance, mid-high speeds in high-way, national roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "42": "Suitable for drive position. Designed for mid-long distance, high speed in national roads, Suitable for drive position..",
+      "43": "Suitable for all positions. Designed for mid-long distance, high speed in high-way, national roads, Suitable for all positions.(load bearing position recommended).",
+      "44": "Suitable for all positions. Designed for mid-long distance, mid-low speed in national roads and provincial roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "45": "Suitable for all positions. Designed for mid-long distance, mid-high speeds in high-way, national roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "46": "Suitable for steer/load bearing positions. Designed for mid-long distance, high speed in high-way, national roads, suitable for steer and load bearing positions.",
+      "47": "Suitable for all positions. Designed for mid-long distance, mid-speed in national roads, and provincial roads, Suitable for all positions.(steer and load bearing positions recommended).",
+      "48": "Suitable for steer / trailer position. Designed for middle / long distance transportation on highway or paved roads.",
+      "49": "Suitable for all positions. Designed for mid-long distance, high speed in high-way, national roads, Suitable for all positions.(load bearing position recommended).",
+      "50": "Suitable for steer/load bearing positions. Designed for long distance, high speed in high-way, national roads.",
+      "51": "Suitable for steer/load bearing position Designed for long distance, high speed in high-way, national roads",
+      "52": "Suitable for steer / trailer position. Designed for long distance, high speed in high-way,suitable for steer and load bearing positions.",
+      "53": "Suitable for steer / trailer position. Designed for long distance, high speed in high-way,suitable for steer and load bearing positions.",
+      "54": "Suitable for all positions. Designed for mid-short distance, mid-low speed in national roads,provincial roads,county roads,suitable for light truck all positions.",
+      "55": "Suitable for drive position. Designed for mid-short distance, mid-low speed in provincial roads,county roads,suitable for light truck drive position.",
+      "56": "Suitable for all positions. Specially designed for short distance, low speed driving in mine and village, extremely bad road surface light truck design, suitable for light truck all positions.",
+      "57": "Suitable for drive position. Designed for mid-short distance light truck on mixed roads.",
+      "58": "Suitable for all positions. Suitable for all positions. Designed for mid-long distance, mid-high speed in national roads, suitable for light truck all positions.",
+      "59": "Suitable for all positions. Designed for mid-short distance light truck on mixed roads.",
+      "60": "Suitable for city-city bus all positions. Designed for passenger vehicles with medium and long distance, high speed on highway or national highway. suitable for passengers bus all positions.",
+      "61": "Suitable for inter-city bus all positions. Designed for urban road bus,suitable for bus passenger transport all positions."
+    },
+    "size": "Size",
+    "plyRating": "Ply Rating",
+    "maxLoadSingleDual": "Max. Load (Kg) (Single/Dual)",
+    "loadIndexSingleDual": "Load Index (Single/Dual)",
+    "speedRating": "Speed Rating",
+    "overallDiameter": "Overall Diameter (mm)",
+    "sectionWidth": "Section Width (mm)",
+    "standardInflationPressure": "Standard Inflation Pressure (kPa)",
+    "standardRim": "Standard Rim (inch)",
+    "advanced": "Advance",
+    "recommendation": "Recommendation"
+  },
+  "truck": {
+    "highEndWearable": {
+      "HF252": {
+        "content1": "The new optimized contour design, the angle traction pattern groove wall design and the unique pattern steel sheet structure provide good traction performance and excellent grip performance.",
+        "content2": "Super wearable tread formula design ensures higher mileage.",
+        "content3": "New environment protection series formula system design, lightweight material distribution design, lower rolling resistance, excellent oil saving performance.",
+        "content4": "Super strong flexible steel wire structure ensures the good load-bearing safety performance of the tire under the light weight and low rolling resistance design conditions, and realizes multiple retreading."
+      },
+      "HF231": {
+        "content1": "Optimized profile design, stone ejection treatment at the bottom groove, and widened block design on the shoulder to provide excellent anti-biasing performance and better stone ejection effect in different road conditions.",
+        "content2": "High-way specific wearable tread design, widening tread surface to ensure higher mileage.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      },
+      "HF262": {
+        "content1": "Optimized profile design, with angle traction pattern groove wall design, providing good traction performance and excellent anti eccentric wear performance in different wheel positions and different road conditions.",
+        "content2": "High-way special super wear-resistant tread formula design, widened driving surface, deepened and high saturation pattern design ensure a higher mileage in high-way, National Road and other mixed road conditions.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      },
+      "HA360": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent anti-biasing performance for different wheel positions.",
+        "content2": "Widened driving surface, deepened tread depth, special super wear-resistant tread formula for high-way drive, ensure higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "RA325": {
+        "content1": "Unique three-line longitudinal groove, optimized steel sheet design, excellent grip performance and driving and braking performance in different positions in high-way driving conditions.",
+        "content2": "Deepened tread depth, special super wear-resistant tread formula for high-way drive, ensure higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      },
+      "HD520": {
+        "content1": "With unique pattern and optimized steel plate design, it can provide strong driving performance and traction performance, and effectively restrain irregular wear.",
+        "content2": "Widened driving surface, deepened tread depth, special super wear-resistant tread formula for high-way drive, ensure higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      },
+      "RD535": {
+        "content1": "Unique ribbed design with direction, asymmetric lateral groove angle, optimized steel sheet design, providing strong driving performance, effectively suppressing deformed wear.",
+        "content2": "High-way specific wearable tread design, widening tread surface to ensure higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      },
+      "RD525": {
+        "content1": "Unique ribbed design with direction, asymmetric lateral groove angle, optimized steel sheet design, providing strong driving performance, effectively suppressing deformed wear.",
+        "content2": "High-way specific wearable tread design, widening tread surface to ensure higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Reinforced cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      }
+    },
+    "highEndHeavyLoading": {
+      "RA625": {
+        "content1": "Unique three-line longitudinal groove, bottom boss design, anti-cracking, anti-grooving, puncture resistance, anti-smashing block, inhibiting deformed grinding.",
+        "content2": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts tubeless III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "RA685": {
+        "content1": "Unique three-line longitudinal groove, bottom boss design, anti-cracking, anti-grooving, puncture resistance, anti-smashing block, inhibiting deformed grinding.",
+        "content2": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts tubeless III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion"
+      },
+      "RA695": {
+        "content1": "Unique three-line longitudinal groove, bottom boss design, anti-cracking, anti-grooving, puncture resistance, anti-smashing block, inhibiting deformed grinding.",
+        "content2": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "GD708": {
+        "content1": "Strong driving, heat-dissipating type, shoulder rip-proof reinforced connecting ribs, groove bottom stone ejection, puncture resistance block design, providing strong driving performance, effectively preventing cracks, lumps, and inhibiting deformed wear.",
+        "content2": "High wear-resistant tread formula design and widened tread pattern design ensure longer service life of the product.",
+        "content3": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content4": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content5": "Reinforced carcass and bead structure,tyre bead adopts III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "GA898": {
+        "content1": "The unique horizontal and vertical patterns and the horizontally longitudinally connecting ribs, puncture resistance and stone ejection design effectively prevent the cracks, lumps and deformations from being deformed.",
+        "content2": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "GD858": {
+        "content1": "Unique horizontal and vertical blocks, puncture resistance bottom design and stone ejection design provide strong drive and braking performance.",
+        "content2": "Wearable tread recipe and widening and deepening the tread pattern design effectively ensures a longer service life.",
+        "content3": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content4": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content5": "Reinforced carcass and bead structure,tyre bead adopts III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "GD800": {
+        "content1": "Optimized profile design, unique horizontal and vertical blocks, puncture resistance bottom design and stone ejection design suppresses the abnormal wear and provide strong drive and braking performance.",
+        "content2": "Wearable tread recipe and widening and deepening the tread pattern design effectively ensures a longer service life.",
+        "content3": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content4": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content5": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "GD888": {
+        "content1": "Optimized profile design, unique horizontal and vertical blocks, puncture resistance bottom design and stone ejection design suppresses the abnormal wear and provide strong drive and braking performance.",
+        "content2": "Wearable tread recipe and widening and deepening the tread pattern design effectively ensures a longer service life.",
+        "content3": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content4": "Reinforced steel wire structure and special design of explosion-proof cap belt can effectively ensure the heavy load-bearing performance of cap,and improve the anti-stab performance of tire in complex road conditions.",
+        "content5": "Reinforced carcass and bead structure,tyre bead adopts III+ generation heavy load tech,improves the fatigue and shear resistance of tyre bead under ultra-high and heavy load conditions,reduce quality risks of the bead seperation, crack or explosion."
+      }
+    },
+    "highEndOffRoad": {
+      "QA906": {
+        "content1": "Unique lateral groove, large block design, widened&deepened tread pattern design, enhancing the grounding area and performance in the hard industrial and mining pavement, and ensure the longer service life of the product.",
+        "content2": "Ⅲ generation explosion-proof & puncture resistance design, Extra thick sidewall and thickened groove bottom design enhancing capabilities of impact and puncture on unpaved road.",
+        "content3": "Low heating tread recipe designed for hard mining condition,provides better perofrmance of anti-stab、anti-tear、low heating,reducing shoulder/crown separation effectively under rough condition.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopt special Ⅲ generation heavy loading technology providing higher performance of high pressure and heavy loading, and effectively reduce the risk of tyre bead crack/seperation."
+      },
+      "QA905": {
+        "content1": "Unique lateral groove, large block design, widened&deepened tread pattern design, enhancing the grounding area and performance in the soft industrial and mining pavement, and ensure the longer service life of the product.",
+        "content2": "Ⅲ generation explosion-proof & puncture resistance design, Extra thick sidewall and thickened groove bottom design enhancing capabilities of impact and puncture on unpaved road.",
+        "content3": "Low heating tread recipe designed for soft mining condition,provides better perofrmance of anti-stab、anti-tear、low heating,reducing shoulder/crown separation effectively under rough condition.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopt special Ⅲ generation heavy loading technology providing higher performance of high pressure and heavy loading, and effectively reduce the risk of tyre bead crack/seperation."
+      },
+      "QA919": {
+        "content1": "Unique horizontal and vertical ditch, widened and deepened tread pattern design, and enhanced the applicable performance of the product in the industrial and mining and other non paved roads.",
+        "content2": "Latest explosion-proof & puncture resistance design, Extra thick sidewall and thickened groove bottom design enhancing impact and puncture resistance on unpaved road.",
+        "content3": "Low heating tread recipe designed for soft mining and mixed road conditions,provides better perofrmance of anti-stab、anti-tear、low heating, reducing shoulder/crown separation effectively."
+      },
+      "QA999": {
+        "content1": "Optimize the contour, groove bottom anti stabbing stone relief platform, widen the driving surface, deepen the pattern groove and large pattern design, enhance the adaptability of the product in the industrial and mining and other non paved roads, and ensure the longer service life of the product.",
+        "content2": "Extra thick sidewall and thickened groove bottom design enhancing impact and puncture resistance on unpaved road.",
+        "content3": "0°structure cap,reinforced carcass and bead structure, specific heavy loading technology enhancing impact, puncture,pressure and load resistance under heavy load conditions.",
+        "content4": "Extremely low heating tread recipe,provides better perofrmance of anti-tear、low heating,reducing shoulder/crown separation effectively on paved road driving fast."
+      }
+    },
+    "quarryBuidlingSites": {
+      "QA19": {
+        "content1": "Optimized cap and shoulder contour design, excellent performance on mixed road conditions.",
+        "content2": "Four zigzag grooves and solid logitudinal ribs design, special sipes on tread, improving wet grip perfomance, safe, comfortable and fuel-efficient.",
+        "content3": "High-tensile casing steel cord structure design, superior durability, retreadability."
+      },
+      "QA09": {
+        "content1": "Reinforced carcass and bead design, 0 degree structure on shoulder, providing high quality and performance under heavy load conditions.",
+        "content2": "Extra thick sidewall design, enhancing cut and impact resistance.",
+        "content3": "Low heat generation tread recipe, wider shoulder pattern design, reducing shoulder separation effectively.",
+        "content4": "Thickened groove bottom design, enhancing puncture resistance on unpaved road.",
+        "content5": "Lateral grooves with wide angles design, increasing driving power and self-cleaning abilities."
+      },
+      "QA99": {
+        "content1": "High saturation, low void, stone ejection at the bottom groove, large block design, enhancing the performance on non-paved roads such as industrial and mining.",
+        "content2": "0°structure cap,reinforced carcass and bead structure, specific heavy loading technology for bead enhancing the anti-riot, anti-puncture, pressure and load-resistance properties of non-paved roads such as industrial and mining.",
+        "content3": "Low heating tread recipe designed for soft mining condition,provides better perofrmance of anti-stab、anti-tear、low heating,reducing shoulder/crown separation effectively under rough condition."
+      }
+    },
+    "middleShortDistance": {
+      "GD58": {
+        "content1": "Sturdy shoulder block pattern and optimized lateral groove design for powerful drive and braking performance.",
+        "content2": "Widening and deepening the tread pattern design effectively suppresses the abnormal wear of the tire and ensures a longer service life.",
+        "content3": "Specific tread for mid-short distance transport and low heating recipe, high wear resistance, low heating, tear resistance and block resistance,effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal.",
+        "content4": "Ply with `*` products' super structure of crown and design technology of special explosion-proof crown belt, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions."
+      },
+      "GD09": {
+        "content1": "Heat-dissipation, shoulder rip-proof reinforcement joints provide strong driving performance.",
+        "content2": "Specific tread for mid-short distance transport and low heating recipe, high wear resistance, low heating, tear resistance and block resistance,effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal.",
+        "content3": "Tube-in products 0°structure explosion proof cap design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the tyre bead open, crack or explosion."
+      },
+      "GD08": {
+        "content1": "Strong drive, heat-dissipation, shoulder rip-proof reinforcement joints provide strong driving performance, effectively prevent cracking, smashing, and suppress deformed wear.",
+        "content2": "Specific tread for mid-short distance transport and low heating recipe, high wear resistance, low heating, tear resistance and block resistance,effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal.",
+        "content3": "Tube-in products 0°structure explosion proof cap design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the tyre bead open, crack or explosion."
+      },
+      "GA98": {
+        "content1": "Optimized horizontal and vertical patterns and the strong bottom groove strengthen the connecting ribs in the longitudinal direction, and puncture resistance and stone-ejection grooves are designed and treated to effectively prevent the cracks, the lumps, and the deformation of the deformed wear.",
+        "content2": "Specific tread for mid-short distance transport and low heating recipe, high wear resistance, low heating, tear resistance and block resistance,effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal.",
+        "content3": "0°structure explosion proof cap design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the tyre bead open, crack or explosion."
+      },
+      "GA36": {
+        "content1": "The unique pattern design of the folding line guarantees good driving performance and anti-biasing performance.",
+        "content2": "Low heating tread recipe and heat-dissipating shoulder pattern design, effectively reducing the risk of shoulder quality under heavy load.",
+        "content3": "Super high strength steel wire structure can effectively guarantee the bearing capacity of the product."
+      },
+      "GA06": {
+        "content1": "The serrated circumferential groove pattern design ensures good traction and provides excellent grip.",
+        "content2": "Low heat-generating tread recipe and heat-dissipating shoulder pattern design, effectively reducing the risk of shoulder quality under heavy load.",
+        "content3": "0°structure explosion proof cap design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the tyre bead open, crack or explosion."
+      },
+      "GA26": {
+        "content1": "Zigzag circumferential continuous pattern and the transverse block groove ensure the grip performance on wet road condition and the driving performance under mixed road conditions.",
+        "content2": "Low heating tread recipe and heat-dissipating shoulder pattern design, effectively reducing the risk of shoulder quality under heavy load.",
+        "content3": "Super high strength steel wire structure can effectively guarantee the bearing capacity of the product."
+      }
+    },
+    "middleLongDistance": {
+      "RF61": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent grip performance for different wheel positions.",
+        "content2": "Special super wear-resistant tread formula design,ensure a higher mileage in high-speed, National Road and other mixed road conditions.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "RF22": {
+        "content1": "Optimized profile design, special fine pattern treatment, improve the grip of slippery road, safe, comfortable and fuel saving.",
+        "content2": "High-speed specific wearable tread design, ensure higher mileage.",
+        "content3": "Reinforced cap specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting reduce the rolling resistance of driving,environmental protection,suitable for multiple retreading of tires."
+      },
+      "RD65": {
+        "content1": "Four longitudinal grooves are designed with inclined transverse grooves to provide super driving force and wet grip, safe, comfortable and fuel saving.",
+        "content2": "Optimized profile design, special super wear-resistant tread formula for high-speed drive, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Reinforced and flexible carcass and bead structure, high performance steel cord compound formula,ensure multiple retreading of tires."
+      },
+      "RD35": {
+        "content1": "Dedicated block design provides superior driving force and wet grip, safe, durable and powerful.",
+        "content2": "Widened and deepened driving surface,optimized profile design,special super wear-resistant tread formula for high-speed drive, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "RA85": {
+        "content1": "Unique three-line longitudinal groove, variable angle profile contour design, anti-cracking, anti-grooving, puncture resistance, anti-smashing block, inhibiting deformed grinding.",
+        "content2": "Specific tread for heavy load and low heating recipe, high wear resistance, low heating, tear resistance and block resistance,effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "0°structure explosion proof cap design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "RD25": {
+        "content1": "The special single-direction block design provides superior driving force and wet grip, safe, durable and powerful.",
+        "content2": "Widened and deepened driving surface,optimized profile design,special super wear-resistant tread formula for high-speed drive, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "RD15L": {
+        "content1": "Dedicated block design for powerful driving and slippery grip.",
+        "content2": "Widened driving surface, deepened tread depth, special super wear-resistant tread formula for high-speed drive, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Reinforced high cap strength structure, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and shoulder explosion.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion,ensure multiple retreading of tires."
+      },
+      "RA95": {
+        "content1": "Reinforced bead with nylon and strong carcass design for sizes with ★ , 0 degree structure on shoulder, providing high quality and performance under heavy load conditions.",
+        "content2": "Low heat generation tread recipe, open shoulder design, reducing shoulder separation effectively.",
+        "content3": "Optimized cap profile, durable tread formula, providing excellent sevice mileage on paved roads, cost-effective."
+      },
+      "RT02": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent comprehensive performance in different road conditions.",
+        "content2": "Special super wear-resistant tread formula design,ensure a higher mileage in high-speed, National Road and other mixed road conditions.",
+        "content3": "Reinforced 0° cap belt design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear.",
+        "content4": "Reinforced and flexible carcass and bead structure, high performance steel cord compound formula,ensure multiple retreading of tires."
+      },
+      "RA25+": {
+        "content1": "Unique three-line longitudinal groove, optimized steel sheet design, ensure excellent grip performance and driving and braking performance in different positions.",
+        "content2": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "Super high strength steel wire structure and explosion proof cap belt design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "RD05": {
+        "content1": "Four zigzag grooves and solid logitudinal ribs design, special sipes on tread, improving driving and wet grip perfomance, safe, comfortable and fuel-efficient.",
+        "content2": "Widened driving surface, optimized profile design, special super wear-resistant tread formula for high-speed drive, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "RA36": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent comprehensive performance in different road conditions.",
+        "content2": "Super wear-resistant tread formula, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Reinforced 0° cap belt design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear.",
+        "content4": "Reinforced and flexible carcass and bead structure, high performance steel cord compound formula,ensure multiple retreading of tires."
+      },
+      "RA25": {
+        "content1": "Unique three-line longitudinal groove, optimized steel sheet design, ensure excellent grip performance and driving and braking performance in different positions.",
+        "content2": "Extremely low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal under overload and overspeed conditions.",
+        "content3": "Super high strength steel wire structure and explosion proof cap belt design, effectively improve the cap loading capacity, enhancing the puncture resistance and explosion proof perforamce under complex conditions.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance ,reduce quality risks of the bead seperation, crack or explosion."
+      },
+      "RA16": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent anti-biasing performance for different wheel positions.",
+        "content2": "High-speed specific wearable tread design, widening tread surface to ensure higher mileage.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear and reducing the quality risk as shoulder cap explosion, cap off etc.",
+        "content4": "Reinforced carcass and bead structure, high performance steel cord compound formula,ensure multiple retreading of tires."
+      },
+      "RF02": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent anti-biasing performance for different wheel positions",
+        "content2": "Special super wear-resistant tread formula design,ensure a higher mileage in high-speed, National Road and other mixed road conditions.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "RA05": {
+        "content1": "The unique three-way longitudinal ditch and the optimized design of anti pinch stone at the bottom of the ditch are suitable for different mixed road conditions such as national road, provincial road and construction site.",
+        "content2": "High wearable and low heating tread formula design ensures longer service life and inhibits the risk of shoulder crown void.",
+        "content3": "0°structure explosion proof cap design, effectively improve the cap loading capacity.",
+        "content4": "Reinforced carcass and bead structure,tyre bead adopts heavy load tech,improves the fatigue and shear resistance."
+      },
+      "RF12": {
+        "content1": "Optimized profile design, unique longitudinal pattern, providing excellent grip performance for different wheel positions.",
+        "content2": "Special super wear-resistant tread formula design,ensure a higher mileage in high-speed, National Road and other mixed road conditions.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "RA66": {
+        "content1": "Optimized light and oil saving profile design, unique longitudinal pattern, providing excellent anti-biasing performance for different wheel positions and better oil saving performance.",
+        "content2": "Super wear-resistant tread formula, ensure higher mileage in mixed road conditions such as high-way and national road.",
+        "content3": "Reinforced and flexible carcass and bead structure, high performance steel cord compound formula,ensure multiple retreading of tires."
+      }
+    },
+    "longHaulWearable": {
+      "HF81": {
+        "content1": "Optimized profile design, stone ejection treatment at the bottom groove, provide excellent anti-biasing performance and better stone ejection effect in different road conditions.",
+        "content2": "The high-speed special super wearable tread recipe design ensures higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Special steel structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires.",
+        "content4": "Environmental protection material formula,new pattern design and overall optimization of material distribution design technology, realize low rolling resistance while taking into account the wet and slippery performance."
+      },
+      "HF31": {
+        "content1": "Designed for long-distance transportation on smooth and straight highway",
+        "content2": "Special tread compound and four-layer belts design, enhancing wear resistance, providing longer mileage.",
+        "content3": "Stone ejection design,reducing groove cracking.",
+        "content4": "Special shouler design, avoiding irregular wear."
+      },
+      "HF01": {
+        "content1": "The optimized profile design, flat high speed dedicated linear design providing excellent guided traction performance .",
+        "content2": "The high-speed special super wearable tread recipe design ensures higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, inhibiting deformed wear,ensure multiple retreading of tires."
+      },
+      "HF21": {
+        "content1": "Optimized profile design, special fine pattern treatment, improve the grip of slippery road, safe, comfortable and fuel saving.",
+        "content2": "The high-speed special super wearable tread recipe design ensures higher mileage in mixed road conditions such as high speed and national road.",
+        "content3": "Special cap structure and specific 4 belt cap design, low heating recipe, optimised shoulder desigh, effectively reduce rolling resistance,environmental protection,ensure multiple retreading of tires."
+      }
+    }
+  },
+  "lightTruck": {
+    "GA06": {
+      "content1": "Unique three-line longitudinal groove, variable angle profile contour design, anti-cracking, anti-grooving, puncture resistance, anti-smashing block.",
+      "content2": "Light truck special low heating, high wear-resistant tread formula to ensure a longer service life."
+    },
+    "GD800": {
+      "content1": "Optimized profile design, unique horizontal and vertical blocks, puncture resistance bottom design and stone ejection design provide strong drive and braking performance.",
+      "content2": "Widening and deepening the tread pattern design effectively suppresses the abnormal wear of the tire and ensures a longer service life of the product.",
+      "content3": "Specific low heating tread recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal.",
+      "content4": "Reinforced carcass and bead structure,tyre bead adopts light truck heavy load tech,enhancing load, impact and puncture resistance."
+    },
+    "QA39": {
+      "content1": "Optimized profile, stone ejection at the groove bottom, open shoulder pattern design enhancing the performance on non-paved roads such as industrial and mining, county roads and rural roads.",
+      "content2": "The thickeded sidewall and the thickened groove bottom of the groove prevent the crowning of the cap under the harsh environment of the industrial and mining, and the side scratches and other factors affect the quality of the tire.",
+      "content3": "Specific low heating tread recipe,provides better perofrmance of anti-stab、anti-tear、low heating,reducing shoulder/crown separation effectively under rough condition."
+    },
+    "GD08": {
+      "content1": "Unique horizontal and vertical blocks and stone ejection design providing powerful drive and braking performance.",
+      "content2": "Widening and deepening the tread pattern design effectively suppresses the abnormal wear of the tire and ensures a longer service life of the product.",
+      "content3": "Specific tread low heating recipe effectively reduces the quality risk of shoulder explosion, chipping, groove splitting and crown removal.",
+      "content4": "Reinforced carcass and bead structure,tyre bead adopts light truck heavy load tech,enhancing load, impact and puncture resistance."
+    },
+    "RF02": {
+      "content1": "Four zigzag grooves and solid longitudinal rib pattern block design, special crown groove treatment, ensure strong grip on wet and slippery road, safety, comfort and fuel saving.",
+      "content2": "Optimized cap profile,light truck special low heat, high wear-resistant tread formula to ensure a longer service life."
+    },
+    "RA85": {
+      "content1": "Unique three-line longitudinal groove, variable angle profile contour design, anti-cracking, anti-grooving, puncture resistance, anti-smashing block, inhibiting deformed grinding.",
+      "content2": "Light truck special low heat, high wear-resistant tread formula to ensure a longer service life."
+    }
+  },
+  "bus": {
+    "inter": {
+      "RF22": {
+        "content1": "Optimized profile design, special fine pattern treatment, improve the grip of slippery road, safe, comfortable and fuel saving.",
+        "content2": "High-speed specific wearable tread design for bus, ensure higher mileage.",
+        "content3": "Reinforced cap specific 4 belt cap design, low heat generation recipe, optimised shoulder desigh, inhibiting reduce the rolling resistance of driving,environmental protection,suitable for multiple retreading of tires."
+      },
+      "HF21": {
+        "content1": "Optimized profile design, special fine pattern treatment, improve the grip of slippery road, safe, comfortable and fuel saving.",
+        "content2": "Special super wear-resistant tread formula design,ensure a higher mileage in high-speed, National Road and other mixed road conditions.",
+        "content3": "Reinforced cap specific 4 belt cap design, low heat generation recipe, optimised shoulder desigh, inhibiting reduce the rolling resistance of driving,environmental protection,suitable for multiple retreading of tires."
+      }
+    },
+    "city": {
+      "CA10": {
+        "content1": "The specific bus pattern design ensures a strong wet grip and ensures excellent braking performance.",
+        "content2": "Specific steel sheet fine grain design ensures uniform wear of the cap under frequent brakes.",
+        "content3": "The thickened sidewall and scratch-resistant to prevent premature damage to the tire by scratching the sidewall.",
+        "content4": "The special reinforcement design of the bead ensures the braking and bead bearing and aging performance of the brakes."
+      }
     }
   },
   "about": {
@@ -50,11 +516,46 @@
       "src": "../../static/assets/picture/responsibility_1.jpg"
     }
   },
+  "services": {
+    "services_title": {
+      "1": "Tire Function and Structure",
+      "2": "Tyre Marking",
+      "3": "Tyre Specification",
+      "4": "Tire Storage"
+    },
+    "services_content": {
+      "1": "Load (support the weight of the vehicle), Vibration Reduction (buffer the vibration and impact from the road, Grip (The adhesion performance between the tire and the road transmit the driving and braking force), Handling (By the influence of the combinati",
+      "2": "As per the stipulations of the national symbol, the following shall be marked on both sides of the tire, e.g. production number, brand, size, plying rate, max. load and pressure, carcass ply code, installation requirements and driving direction, etc.",
+      "3": "As per the stipulations of the national symbol, the following shall be marked on both sides of the tire, e.g. production number, brand, size, plying rate, max. load and pressure, carcass ply code, installation requirements and driving direction, etc.",
+      "4": "According to national standard, tyres must be stored inside a clean, dry and ventilated area, protected from direct sunlight or other source of artificial light. The storage temperature shall be -10℃ - +30℃, and the relative humidity is preferably 50% - 8"
+    },
+    "guestBook": {
+      "phone": "Phone",
+      "email": "E-mail",
+      "name": "Name",
+      "sex": "Sex",
+      "address": "Address",
+      "message": "Message",
+      "title": "Title",
+      "content": "Content",
+      "validEmailMessage": "Please fill in the valid email address so that you can receive the question from lutong tire in the first place.",
+      "male": "Male",
+      "female": "Female",
+      "consult": "Consult",
+      "complain": "Complain",
+      "suggest": "Suggest"
+    },
+    "download": {
+      "productCatalogue": "Roadone Product Catalogue",
+      "productPoster": "Roadone Product Posters"
+    }
+  },
   "socialRecruitment": {
     "position": "Position",
     "degree": "Degree",
     "bachelorDegree": "Bachelor degree or above",
     "numberOfHiring": "Number of Hiring",
+    "otherRecruitment": "Other Requirement",
     "recruitmentDeadline": "Recruitment Deadline",
     "linkMan": "Linkman",
     "email": "E-mail",
@@ -105,5 +606,29 @@
     "costAccountantDescription3": "3. Skilled in financial software and Office software; Sufficient experience in cost control",
     "costAccountantDescription4": "4. Dedicated, responsible, rigorous, practical, and careful",
     "costAccountantDescription5": "5. Good discipline, teamwork, and innovative spirit"
+  },
+  "campusRecruitment": {
+    "laboratory": "Laboratory Technician",
+    "mechanical": "Mechanical / Electrical Technician",
+    "quality": "Quality Technician",
+    "r&d": "R & D Technician",
+    "laboratoryDescription": "Majored in chemistry, physics or related major.",
+    "mechanicalDescription": "Majored in automation, mechanical engineering.",
+    "qualityDescription": "Majored in polymer, material, chemistry or related major.",
+    "r&dDescription": "Majored in polymer, material, chemistry or related major",
+    "otherRequirementDescription": "Solid professional knowledge,innovative, hard-working,self-motivated, fast-learned,good com ..."
+  },
+  "popup": {
+    "yourname": "Your Name",
+    "fullname": "Full Name",
+    "yourphone": "Your Telephone",
+    "phone": "Telephone",
+    "youremail": "Your E-mail",
+    "email": "E-mail",
+    "youraddress": "Your Address",
+    "address": "Address",
+    "leavingmessage": "Leaving Message",
+    "jobT": "Job Title",
+    "jobtitle": "Job Title"
   }
 }

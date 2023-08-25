@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const CA10 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const CA10 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.61")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,25 +113,19 @@ const CA10 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            The specific bus pattern design ensures a strong wet
-                            grip and ensures excellent braking performance.
+                            {t("bus.inter.CA10.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Specific steel sheet fine grain design ensures
-                            uniform wear of the cap under frequent brakes.
+                            {t("bus.inter.CA10.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            The thickened sidewall and scratch-resistant to
-                            prevent premature damage to the tire by scratching
-                            the sidewall.F
+                            {t("bus.inter.CA10.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            The special reinforcement design of the bead ensures
-                            the braking and bead bearing and aging performance
-                            of the brakes.
+                            {t("bus.inter.CA10.content4")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -136,98 +134,75 @@ const CA10 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
-                                <td width="115">275/70R22.5</td>
-                                <td width="72">16PR</td>
-                                <td width="107">2800/2575</td>
-                                <td width="143">144/141</td>
-                                <td width="72">J</td>
-                                <td width="95">970</td>
-                                <td width="89">276</td>
-                                <td width="72">830</td>
-                                <td width="72">8.25</td>
+                                <td >275/70R22.5</td>
+                                <td >16PR</td>
+                                <td >2800/2575</td>
+                                <td >144/141</td>
+                                <td >J</td>
+                                <td >970</td>
+                                <td >276</td>
+                                <td >830</td>
+                                <td >8.25</td>
                               </tr>
                               <tr>
-                                <td width="115">275/70R22.5</td>
-                                <td width="72">18PR</td>
-                                <td width="107">3000/2725</td>
-                                <td width="143">146/143</td>
-                                <td width="72">J</td>
-                                <td width="95">970</td>
-                                <td width="89">276</td>
-                                <td width="72">900</td>
-                                <td width="72">8.25</td>
+                                <td >275/70R22.5</td>
+                                <td >18PR</td>
+                                <td >3000/2725</td>
+                                <td >146/143</td>
+                                <td >J</td>
+                                <td >970</td>
+                                <td >276</td>
+                                <td >900</td>
+                                <td >8.25</td>
                               </tr>
                               <tr>
-                                <td width="115">11R22.5</td>
-                                <td width="72">16PR</td>
-                                <td width="107">3000/2725</td>
-                                <td width="143">146/143</td>
-                                <td width="72">J</td>
-                                <td width="95">1058</td>
-                                <td width="89">276</td>
-                                <td width="72">830</td>
-                                <td width="72">8.25</td>
+                                <td >11R22.5</td>
+                                <td >16PR</td>
+                                <td >3000/2725</td>
+                                <td >146/143</td>
+                                <td >J</td>
+                                <td >1058</td>
+                                <td >276</td>
+                                <td >830</td>
+                                <td >8.25</td>
                               </tr>
                               <tr>
                                 <td
-                                  width="115"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   11R22.5
                                 </td>
-                                <td width="72">18PR</td>
-                                <td width="107">3250/3000</td>
-                                <td width="143">149/146</td>
-                                <td width="72">J</td>
-                                <td width="95">1058</td>
-                                <td width="89">276</td>
-                                <td width="72">930</td>
-                                <td width="72">8.25</td>
+                                <td >18PR</td>
+                                <td >3250/3000</td>
+                                <td >149/146</td>
+                                <td >J</td>
+                                <td >1058</td>
+                                <td >276</td>
+                                <td >930</td>
+                                <td >8.25</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -247,7 +222,6 @@ const CA10 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

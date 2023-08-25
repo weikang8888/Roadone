@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../component/Modal/ModalRoadone";
 import ProductHeader from "../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../ProductTypeBox";
 import ProductMainBox from "../ProductMainBox";
 import ProductTypeMobile from "../ProductTypeBoxMobile";
 
 const RF02Light = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -59,7 +61,10 @@ const RF02Light = () => {
                     showBusList={false}
                   />
 
-                  <ProductTypeMobile showTruckList={false} showBusList={false} />
+                  <ProductTypeMobile
+                    showTruckList={false}
+                    showBusList={false}
+                  />
                   <div className="tab2">
                     <div className="ct_xq">
                       {productsItems.map((products, index) => (
@@ -75,7 +80,9 @@ const RF02Light = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.58")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,16 +116,11 @@ const RF02Light = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Four zigzag grooves and solid longitudinal rib
-                            pattern block design, special crown groove
-                            treatment, ensure strong grip on wet and slippery
-                            road, safety, comfort and fuel saving.
+                            {t("lightTruck.RF02.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Optimized cap profile,light truck special low heat,
-                            high wear-resistant tread formula to ensure a longer
-                            service life.
+                            {t("lightTruck.RF02.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -127,102 +129,79 @@ const RF02Light = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
                                 <td
-                                  width="54"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   6.50R16
                                 </td>
-                                <td width="54">12PR</td>
-                                <td width="54">1060/925</td>
-                                <td width="54">110/105</td>
-                                <td width="54">L</td>
-                                <td width="54">750</td>
-                                <td width="54">185</td>
-                                <td width="54">670</td>
-                                <td width="54">5.50F</td>
+                                <td >12PR</td>
+                                <td >1060/925</td>
+                                <td >110/105</td>
+                                <td >L</td>
+                                <td >750</td>
+                                <td >185</td>
+                                <td >670</td>
+                                <td >5.50F</td>
                               </tr>
                               <tr>
-                                <td width="54">7.00R16 LT</td>
-                                <td width="54">14PR</td>
-                                <td width="54">1320/1180</td>
-                                <td width="54">118/114</td>
-                                <td width="54">L</td>
-                                <td width="54">772</td>
-                                <td width="54">200</td>
-                                <td width="54">770</td>
-                                <td width="54">5.50F</td>
+                                <td >7.00R16 LT</td>
+                                <td >14PR</td>
+                                <td >1320/1180</td>
+                                <td >118/114</td>
+                                <td >L</td>
+                                <td >772</td>
+                                <td >200</td>
+                                <td >770</td>
+                                <td >5.50F</td>
                               </tr>
                               <tr>
-                                <td width="54">7.50R16 LT</td>
-                                <td width="54">14PR</td>
-                                <td width="54">1500/1320</td>
-                                <td width="54">122/118</td>
-                                <td width="54">L</td>
-                                <td width="54">802</td>
-                                <td width="54">215</td>
-                                <td width="54">770</td>
-                                <td width="54">6.00G</td>
+                                <td >7.50R16 LT</td>
+                                <td >14PR</td>
+                                <td >1500/1320</td>
+                                <td >122/118</td>
+                                <td >L</td>
+                                <td >802</td>
+                                <td >215</td>
+                                <td >770</td>
+                                <td >6.00G</td>
                               </tr>
                               <tr>
                                 <td
-                                  width="54"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   8.25R16 LT
                                 </td>
-                                <td width="54">16PR</td>
-                                <td width="54">1800/1600</td>
-                                <td width="54">128/124</td>
-                                <td width="54">L</td>
-                                <td width="54">852</td>
-                                <td width="54">235</td>
-                                <td width="54">770</td>
-                                <td width="54">6.50H</td>
+                                <td >16PR</td>
+                                <td >1800/1600</td>
+                                <td >128/124</td>
+                                <td >L</td>
+                                <td >852</td>
+                                <td >235</td>
+                                <td >770</td>
+                                <td >6.50H</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -242,7 +221,6 @@ const RF02Light = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const GA26 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const GA26 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.31")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,22 +113,15 @@ const GA26 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Zigzag circumferential continuous pattern and the
-                            transverse block groove ensure the grip performance
-                            on wet road condition and the driving performance
-                            under mixed road conditions.
+                            {t("truck.middleShortDistance.GA26.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Low heating tread recipe and heat-dissipating
-                            shoulder pattern design, effectively reducing the
-                            risk of shoulder quality under heavy load.
+                            {t("truck.middleShortDistance.GA26.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Super high strength steel wire structure can
-                            effectively guarantee the bearing capacity of the
-                            product.
+                            {t("truck.middleShortDistance.GA26.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -133,97 +130,55 @@ const GA26 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+                                <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                                <td className="tdWidth">{t("products.speedRating")}</td>
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+                                <td className="tdWidth">{t("products.sectionWidth")}</td>
+                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+                                <td className="tdWidth">{t("products.standardRim")}</td>
                               </tr>
                               <tr>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  315/80R22.5
-                                </td>
+                                <td>315/80R22.5</td>
                                 <td>18PR</td>
                                 <td>3750/3450</td>
                                 <td>154/151</td>
                                 <td>K</td>
-                                <td style={{ wordBreak: "break-all" }}>1083</td>
-                                <td style={{ wordBreak: "break-all" }}>312</td>
+                                <td>1083</td>
+                                <td>312</td>
                                 <td>830</td>
                                 <td>9.00</td>
                               </tr>
                               <tr>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  315/80R22.5
-                                </td>
-                                <td style={{ wordBreak: "break-all" }}>20PR</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  4125/3750
-                                </td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  157/154
-                                </td>
+                                <td>315/80R22.5</td>
+                                <td>20PR</td>
+                                <td>4125/3750</td>
+                                <td>157/154</td>
                                 <td>K</td>
-                                <td style={{ wordBreak: "break-all" }}>1083</td>
-                                <td style={{ wordBreak: "break-all" }}>312</td>
-                                <td style={{ wordBreak: "break-all" }}>900</td>
+                                <td>1083</td>
+                                <td>312</td>
+                                <td>900</td>
                                 <td>9.00</td>
                               </tr>
                               <tr>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  315/80R22.5
-                                </td>
-                                <td style={{ wordBreak: "break-all" }}>22PR</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  3750/3450
-                                </td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  160/157
-                                </td>
-                                <td style={{ wordBreak: "break-all" }}>K</td>
-                                <td style={{ wordBreak: "break-all" }}>1083</td>
-                                <td style={{ wordBreak: "break-all" }}>312</td>
-                                <td style={{ wordBreak: "break-all" }}>950</td>
-                                <td style={{ wordBreak: "break-all" }}>9.00</td>
+                                <td>315/80R22.5</td>
+                                <td>22PR</td>
+                                <td>3750/3450</td>
+                                <td>160/157</td>
+                                <td>K</td>
+                                <td>1083</td>
+                                <td>312</td>
+                                <td>950</td>
+                                <td>9.00</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -243,7 +198,6 @@ const GA26 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

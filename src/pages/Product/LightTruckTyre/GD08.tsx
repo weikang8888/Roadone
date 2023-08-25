@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../component/Modal/ModalRoadone";
 import ProductHeader from "../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../ProductTypeBox";
 import ProductMainBox from "../ProductMainBox";
 import ProductTypeMobile from "../ProductTypeBoxMobile";
 
 const GD08Light = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -59,7 +61,10 @@ const GD08Light = () => {
                     showBusList={false}
                   />
 
-                  <ProductTypeMobile showTruckList={false} showBusList={false} />
+                  <ProductTypeMobile
+                    showTruckList={false}
+                    showBusList={false}
+                  />
                   <div className="tab2">
                     <div className="ct_xq">
                       {productsItems.map((products, index) => (
@@ -75,7 +80,9 @@ const GD08Light = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.57")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,27 +116,19 @@ const GD08Light = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Unique horizontal and vertical blocks and stone
-                            ejection design providing powerful drive and braking
-                            performance.
+                            {t("lightTruck.GD08.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Widening and deepening the tread pattern design
-                            effectively suppresses the abnormal wear of the tire
-                            and ensures a longer service life of the product.
+                            {t("lightTruck.GD08.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Specific tread low heating recipe effectively
-                            reduces the quality risk of shoulder explosion,
-                            chipping, groove splitting and crown removal.
+                            {t("lightTruck.GD08.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Reinforced carcass and bead structure,tyre bead
-                            adopts light truck heavy load tech,enhancing load,
-                            impact and puncture resistance.
+                            {t("lightTruck.GD08.content4")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -138,91 +137,68 @@ const GD08Light = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
                                 <td
-                                  width="54"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   7.00R16 &nbsp;LT
                                 </td>
-                                <td width="54">14PR</td>
-                                <td width="54">1320/1180</td>
-                                <td width="54">118/114</td>
-                                <td width="54">L</td>
-                                <td width="54">780</td>
-                                <td width="54">200</td>
-                                <td width="54">770</td>
-                                <td width="54">5.50F</td>
+                                <td >14PR</td>
+                                <td >1320/1180</td>
+                                <td >118/114</td>
+                                <td >L</td>
+                                <td >780</td>
+                                <td >200</td>
+                                <td >770</td>
+                                <td >5.50F</td>
                               </tr>
                               <tr>
-                                <td width="54">7.50R16 LT</td>
-                                <td width="54">14PR</td>
-                                <td width="54">1500/1320</td>
-                                <td width="54">122/118</td>
-                                <td width="54">L</td>
-                                <td width="54">810</td>
-                                <td width="54">215</td>
-                                <td width="54">770</td>
-                                <td width="54">6.00G</td>
+                                <td >7.50R16 LT</td>
+                                <td >14PR</td>
+                                <td >1500/1320</td>
+                                <td >122/118</td>
+                                <td >L</td>
+                                <td >810</td>
+                                <td >215</td>
+                                <td >770</td>
+                                <td >6.00G</td>
                               </tr>
                               <tr>
                                 <td
-                                  width="54"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   8.25R16 LT
                                 </td>
-                                <td width="54">18PR</td>
-                                <td width="54">2000/1800</td>
-                                <td width="54">132/128</td>
-                                <td width="54">J</td>
-                                <td width="54">863</td>
-                                <td width="54">235</td>
-                                <td width="54">870</td>
-                                <td width="54">6.50H</td>
+                                <td >18PR</td>
+                                <td >2000/1800</td>
+                                <td >132/128</td>
+                                <td >J</td>
+                                <td >863</td>
+                                <td >235</td>
+                                <td >870</td>
+                                <td >6.50H</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -242,7 +218,6 @@ const GD08Light = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const GA36 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const GA36 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.29")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,21 +113,15 @@ const GA36 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            The unique pattern design of the folding line
-                            guarantees good driving performance and anti-biasing
-                            performance.
+                            {t("truck.middleShortDistance.GA36.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Low heating tread recipe and heat-dissipating
-                            shoulder pattern design, effectively reducing the
-                            risk of shoulder quality under heavy load.
+                            {t("truck.middleShortDistance.GA36.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Super high strength steel wire structure can
-                            effectively guarantee the bearing capacity of the
-                            product.
+                            {t("truck.middleShortDistance.GA36.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -132,162 +130,139 @@ const GA36 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
                                 <td
-                                  width="115"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   12.00R20
                                 </td>
-                                <td width="68">18PR</td>
+                                <td >18PR</td>
                                 <td
-                                  width="107"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   3750/3450
                                 </td>
                                 <td
-                                  width="115"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   154/151
                                 </td>
-                                <td width="72">K</td>
-                                <td width="84">1120</td>
+                                <td >K</td>
+                                <td >1120</td>
                                 <td
-                                  width="88"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   315
                                 </td>
-                                <td width="72">830</td>
+                                <td >830</td>
                                 <td
-                                  width="72"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   8.5
                                 </td>
                               </tr>
                               <tr>
-                                <td width="115">12.00R20</td>
-                                <td width="68">20PR</td>
-                                <td width="107">4000/3650</td>
-                                <td width="115">156/153</td>
-                                <td width="72">K</td>
-                                <td width="84">1120</td>
-                                <td width="88">315</td>
-                                <td width="72">900</td>
-                                <td width="72">8.5</td>
+                                <td >12.00R20</td>
+                                <td >20PR</td>
+                                <td >4000/3650</td>
+                                <td >156/153</td>
+                                <td >K</td>
+                                <td >1120</td>
+                                <td >315</td>
+                                <td >900</td>
+                                <td >8.5</td>
                               </tr>
                               <tr>
-                                <td width="115">11R22.5</td>
-                                <td width="68">16PR</td>
-                                <td width="107">3000/2725</td>
-                                <td width="115">146/143</td>
-                                <td width="72">K</td>
-                                <td width="84">1053</td>
-                                <td width="88">279</td>
-                                <td width="72">830</td>
-                                <td width="72">8.25</td>
+                                <td >11R22.5</td>
+                                <td >16PR</td>
+                                <td >3000/2725</td>
+                                <td >146/143</td>
+                                <td >K</td>
+                                <td >1053</td>
+                                <td >279</td>
+                                <td >830</td>
+                                <td >8.25</td>
                               </tr>
                               <tr>
-                                <td width="115">11R22.5</td>
-                                <td width="68">18PR</td>
-                                <td width="107">3250/3000</td>
-                                <td width="115">149/146</td>
-                                <td width="72">K</td>
-                                <td width="84">1053</td>
-                                <td width="88">279</td>
-                                <td width="72">930</td>
-                                <td width="72">8.25</td>
+                                <td >11R22.5</td>
+                                <td >18PR</td>
+                                <td >3250/3000</td>
+                                <td >149/146</td>
+                                <td >K</td>
+                                <td >1053</td>
+                                <td >279</td>
+                                <td >930</td>
+                                <td >8.25</td>
                               </tr>
                               <tr>
-                                <td width="115">12R22.5</td>
-                                <td width="68">16PR</td>
-                                <td width="107">3350/3075</td>
-                                <td width="115">150/147</td>
-                                <td width="72">K</td>
-                                <td width="84">1083</td>
-                                <td width="88">300</td>
-                                <td width="72">830</td>
-                                <td width="72">9.00</td>
+                                <td >12R22.5</td>
+                                <td >16PR</td>
+                                <td >3350/3075</td>
+                                <td >150/147</td>
+                                <td >K</td>
+                                <td >1083</td>
+                                <td >300</td>
+                                <td >830</td>
+                                <td >9.00</td>
                               </tr>
                               <tr>
-                                <td width="115">12R22.5</td>
-                                <td width="68">18PR</td>
-                                <td width="107">3550/3250</td>
-                                <td width="115">152/149</td>
-                                <td width="72">K</td>
-                                <td width="84">1083</td>
-                                <td width="88">300</td>
-                                <td width="72">930</td>
-                                <td width="72">9.00</td>
+                                <td >12R22.5</td>
+                                <td >18PR</td>
+                                <td >3550/3250</td>
+                                <td >152/149</td>
+                                <td >K</td>
+                                <td >1083</td>
+                                <td >300</td>
+                                <td >930</td>
+                                <td >9.00</td>
                               </tr>
                               <tr>
-                                <td width="115">315/80R22.5</td>
-                                <td width="68">18PR</td>
-                                <td width="107">3750/3450</td>
-                                <td width="115">154/151</td>
-                                <td width="72">K</td>
-                                <td width="84">1083</td>
-                                <td width="88">312</td>
-                                <td width="72">830</td>
-                                <td width="72">9.00</td>
+                                <td >315/80R22.5</td>
+                                <td >18PR</td>
+                                <td >3750/3450</td>
+                                <td >154/151</td>
+                                <td >K</td>
+                                <td >1083</td>
+                                <td >312</td>
+                                <td >830</td>
+                                <td >9.00</td>
                               </tr>
                               <tr>
                                 <td
-                                  width="115"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   315/80R22.5
                                 </td>
-                                <td width="68">20PR</td>
-                                <td width="107">4125/3750</td>
-                                <td width="115">157/154</td>
-                                <td width="72">K</td>
-                                <td width="84">1083</td>
-                                <td width="88">312</td>
-                                <td width="72">900</td>
-                                <td width="72">9.00</td>
+                                <td >20PR</td>
+                                <td >4125/3750</td>
+                                <td >157/154</td>
+                                <td >K</td>
+                                <td >1083</td>
+                                <td >312</td>
+                                <td >900</td>
+                                <td >9.00</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -307,7 +282,6 @@ const GA36 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

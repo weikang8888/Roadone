@@ -13,8 +13,11 @@ import Swipper_m from "../../component/Swiper/Swipper_m";
 import TopButton_m from "../../component/Button/TopButton_m";
 import AdvanceButton from "../../component/Button/AdvanceButton";
 import ModalRoadone from "../../component/Modal/ModalRoadone";
+import { useTranslation } from "react-i18next";
 
 const CampusRecruit = ({ showHeader }) => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [{ image: Recruitmentbanner }];
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,7 +53,6 @@ const CampusRecruit = ({ showHeader }) => {
   ];
   return (
     <>
-      
       {showHeader && windowWidth <= 990 ? (
         <>
           <Header_m />
@@ -98,33 +100,44 @@ const CampusRecruit = ({ showHeader }) => {
                   />
                 </div>
                 <div className="sh_zp_hd">
-                  <a href="Campus.html">Campus Recruitment</a>
+                  <a href="Campus.html">{t("header.campusRecruitment")}</a>
                 </div>
                 <div className="zw">
                   <table>
-                    <tr className="tb_frist t1">
-                      <td className="tb_frist_t1">Position</td>
-                      <td className="tb_frist_t2">Major Requirement</td>
-                      <td className="tb_frist_t3">Degree</td>
-                      <td className="tb_frist_t4">Number of Hiring</td>
-                      <td className="tb_frist_t5">Other Requirement</td>
+                    <tr className="tb_frist">
+                      <td className="tb_frist_t1">
+                        {t("socialRecruitment.position")}
+                      </td>
+                      <td className="tb_frist_t2">
+                        {t("socialRecruitment.majorRequirement")}
+                      </td>
+                      <td className="tb_frist_t3">
+                        {t("socialRecruitment.degree")}
+                      </td>
+                      <td className="tb_frist_t4">
+                        {t("socialRecruitment.numberOfHiring")}
+                      </td>
+                      <td className="tb_frist_t4">
+                        {t("socialRecruitment.otherRecruitment")}
+                      </td>
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
                         <a href="item-709.html" title="Laboratory Technician">
-                          Laboratory Technician
+                          {t("campusRecruitment.laboratory")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
-                          <p>Majored in chemistry, physics or related major.</p>
+                          <p>{t("campusRecruitment.laboratoryDescription")}</p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">10</td>
                       <td className="zw_d5">
-                        Solid professional knowledge,innovative,
-                        hard-working,self-motivated, fast-learned,good com ...
+                        {t("campusRecruitment.otherRequirementDescription")}
                       </td>
                     </tr>
                     <tr className="t1">
@@ -132,61 +145,58 @@ const CampusRecruit = ({ showHeader }) => {
                         <a
                           href="item-708.html"
                           title="Mechanical / Electrical Technician">
-                          Mechanical / Electrical Technician
+                          {t("campusRecruitment.mechanical")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
-                          <p>Majored in automation, mechanical engineering.</p>
+                          <p>{t("campusRecruitment.mechanicalDescription")}</p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">10</td>
                       <td className="zw_d5">
-                        Solid professional knowledge,innovative,
-                        hard-working,self-motivated, fast-learned,good com ...
+                        {t("campusRecruitment.otherRequirementDescription")}
                       </td>
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
                         <a href="item-707.html" title="Quality Technician">
-                          Quality Technician
+                          {t("campusRecruitment.quality")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
-                          <p>
-                            Majored in polymer, material, chemistry or related
-                            major.
-                          </p>
+                          <p>{t("campusRecruitment.qualityDescription")}</p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">10</td>
                       <td className="zw_d5">
-                        Solid professional knowledge,innovative,
-                        hard-working,self-motivated, fast-learned,good com ...
+                        {t("campusRecruitment.otherRequirementDescription")}
                       </td>
                     </tr>
                     <tr className="t1">
                       <td className="zw_d1">
                         <a href="item-706.html" title="R &amp; D Technician">
-                          R &amp; D Technician
+                          {t("campusRecruitment.r&d")}
                         </a>
                       </td>
                       <td className="zw_d2">
                         <div className="zw_d2_box">
-                          <p>
-                            Majored in polymer, material, chemistry or related
-                            major
-                          </p>
+                          <p>{t("campusRecruitment.r&dDescription")}</p>
                         </div>
                       </td>
-                      <td className="zw_d3">Bachelor degree or above</td>
+                      <td className="zw_d3">
+                        {t("socialRecruitment.bachelorDegree")}
+                      </td>
                       <td className="zw_d4">10</td>
                       <td className="zw_d5">
-                        Solid professional knowledge,innovative,
-                        hard-working,self-motivated, fast-learned,good com ...
+                        {t("campusRecruitment.otherRequirementDescription")}
                       </td>
                     </tr>
                   </table>
@@ -194,22 +204,27 @@ const CampusRecruit = ({ showHeader }) => {
                   <div className="zp_date clearfix">
                     <ul className="list-paddingleft-2">
                       <li>
-                        <p>Recruitment deadline: 2019/06/30</p>
+                        <p>
+                          {t("socialRecruitment.recruitmentDeadline")}:
+                          2019/06/30
+                        </p>
                       </li>
                       <li>
-                        <p>E-mail: feifei.chen@hixih.com</p>
+                        <p>
+                          {t("socialRecruitment.email")}: feifei.chen@hixih.com
+                        </p>
                       </li>
                       <li>
-                        <p>Linkman: Chenfeifei</p>
+                        <p>{t("socialRecruitment.linkMan")}: Chenfeifei</p>
                       </li>
                       <li>
-                        <p>Tel: 0537-5174413</p>
+                        <p>{t("socialRecruitment.tel")}: 0537-5174413</p>
                       </li>
                       <li>
                         <p className="lastrow">
                           【
                           <a href="/uploads/file/2003/1583918028869844.xlsx">
-                            Download Resume
+                            {t("socialRecruitment.downloadResume")}
                           </a>
                           】
                         </p>
@@ -217,7 +232,7 @@ const CampusRecruit = ({ showHeader }) => {
                     </ul>
                   </div>
                   <AdvanceButton
-                    advanceButtonText={"Submit Resume"}
+                    advanceButtonText={t("socialRecruitment.submitResume")}
                     advanceButtonClass={"n_sq "}
                     handleOpenModal={handleOpenModal}
                   />

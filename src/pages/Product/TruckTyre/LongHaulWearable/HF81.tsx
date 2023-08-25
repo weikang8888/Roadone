@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const HF81 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const HF81 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.50")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,31 +113,19 @@ const HF81 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Optimized profile design, stone ejection treatment
-                            at the bottom groove, provide excellent anti-biasing
-                            performance and better stone ejection effect in
-                            different road conditions.
+                            {t("truck.longHaulWearable.HF81.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            The high-speed special super wearable tread recipe
-                            design ensures higher mileage in mixed road
-                            conditions such as high speed and national road.
+                            {t("truck.longHaulWearable.HF81.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Special steel structure and specific 4 belt cap
-                            design, low heating recipe, optimised shoulder
-                            desigh, inhibiting deformed wear,ensure multiple
-                            retreading of tires.
+                            {t("truck.longHaulWearable.HF81.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Environmental protection material formula,new
-                            pattern design and overall optimization of material
-                            distribution design technology, realize low rolling
-                            resistance while taking into account the wet and
-                            slippery performance.
+                            {t("truck.longHaulWearable.HF81.content4")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -142,72 +134,49 @@ const HF81 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
-                                <td width="127">11R22.5</td>
-                                <td width="72">16PR</td>
-                                <td width="143">3000/2725</td>
-                                <td width="131">146/143</td>
-                                <td width="72">M</td>
-                                <td width="88">1050</td>
-                                <td width="95">279</td>
-                                <td width="72">830</td>
-                                <td width="111">8.25</td>
+                                <td >11R22.5</td>
+                                <td >16PR</td>
+                                <td >3000/2725</td>
+                                <td >146/143</td>
+                                <td >M</td>
+                                <td >1050</td>
+                                <td >279</td>
+                                <td >830</td>
+                                <td >8.25</td>
                               </tr>
                               <tr>
-                                <td width="127">12R22.5</td>
-                                <td width="72">18PR</td>
-                                <td width="143">3550/3250</td>
-                                <td width="131">152/149</td>
-                                <td width="72">M</td>
+                                <td >12R22.5</td>
+                                <td >18PR</td>
+                                <td >3550/3250</td>
+                                <td >152/149</td>
+                                <td >M</td>
                                 <td>1080</td>
-                                <td width="95">300</td>
-                                <td width="72">930</td>
-                                <td width="111">9.00</td>
+                                <td >300</td>
+                                <td >930</td>
+                                <td >9.00</td>
                               </tr>
                               <tr>
-                                <td width="127">295/60R22.5</td>
+                                <td >295/60R22.5</td>
                                 <td>18PR</td>
                                 <td>3350/3075</td>
                                 <td>150/147</td>
-                                <td width="72">L</td>
+                                <td >L</td>
                                 <td>924</td>
                                 <td>292</td>
                                 <td>900</td>
@@ -216,33 +185,33 @@ const HF81 = () => {
                               <tr>
                                 <td>315/60R22.5</td>
                                 <td>20PR</td>
-                                <td width="143">3650/3350</td>
-                                <td width="131">153/150</td>
-                                <td width="72">L</td>
-                                <td width="88">953</td>
-                                <td width="95">313</td>
-                                <td width="72">900</td>
-                                <td width="111">9.75</td>
+                                <td >3650/3350</td>
+                                <td >153/150</td>
+                                <td >L</td>
+                                <td >953</td>
+                                <td >313</td>
+                                <td >900</td>
+                                <td >9.75</td>
                               </tr>
                               <tr>
-                                <td style={{ wordBreak: "break-all" }}>
+                                <td >
                                   315/70R22.5
                                 </td>
                                 <td>20PR</td>
-                                <td width="143">3750/3450</td>
-                                <td width="131">154/151</td>
-                                <td width="72">L</td>
-                                <td width="88">1014</td>
-                                <td width="95">312</td>
-                                <td width="72">930</td>
-                                <td width="111">9.00</td>
+                                <td >3750/3450</td>
+                                <td >154/151</td>
+                                <td >L</td>
+                                <td >1014</td>
+                                <td >312</td>
+                                <td >930</td>
+                                <td >9.00</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -262,7 +231,6 @@ const HF81 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

@@ -658,6 +658,12 @@ li:hover .lb {
 .foot_top .foot_top_box ul li a {
   letter-spacing: 0.3px;
 }
+.sfq_a > ul > li.kc {
+  font-weight: bold;
+  float: none;
+  width: 100%;
+  padding: 5px 0;
+}
 
 .foot_top .fx {
   width: 150px;
@@ -793,6 +799,9 @@ li:hover .lb {
   .cd_main .cd_rt .cp_fl .typebox {
     display: flex;
     flex-wrap: wrap;
+  }
+  .yy .yy_right .yy_f form {
+    display: flex;
   }
 }
 .cd_main .cd_lt ul li a:hover {
@@ -1107,6 +1116,7 @@ li:hover .lb {
   font-size: 18px;
   line-height: 1.5;
   padding: 15px 0;
+  width: 100px;
 }
 .ct_xq_d4 a {
   display: block;
@@ -1385,9 +1395,7 @@ li:hover .lb {
   margin-right: 50px;
   margin-top: 40px;
 }
-.yy .yy_right .yy_f form {
-  display: flex;
-}
+
 .yy .yy_right .yy_f input {
   background: #efeff0;
   width: 100%;

@@ -4,9 +4,11 @@ import TopButton from "../../component/Button/TopButton";
 import Wechat from "../../static/assets/picture/weixin.png";
 import Weibo from "../../static/assets/picture/weibo.png";
 import Qzone from "../../static/assets/picture/qzone.png";
+import { useTranslation } from "react-i18next";
 
 const ServicePreNext = ({ currentId, totalIds, onPrevClick, onNextClick }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,7 +25,7 @@ const ServicePreNext = ({ currentId, totalIds, onPrevClick, onNextClick }) => {
     <>
       <div className="n_xq_s clearfix">
         <div className="fr n_xq_fx">
-          分享
+          {t("homepage.share")}
           <img className="h4" src={Wechat} />
           <a
             href="http://service.weibo.com/share/share.php?url=http://en.tltyre.com&title=Explosion scene | ROADONE debut at the SHANGHAI Tire Show, showing the national brand charm!-Roadone&pic=/uploads/image/2003/1J44R417-0-lp.jpg"
@@ -44,14 +46,14 @@ const ServicePreNext = ({ currentId, totalIds, onPrevClick, onNextClick }) => {
           role="button"
           tabIndex={0}
           className={`${currentId === 1 ? "disabled" : ""} prev`}>
-          Previous
+          {t("homepage.prev")}
         </div>
         <div
           onClick={onNextClick}
           role="button"
           tabIndex={0}
           className={`${currentId === totalIds ? "disabled" : ""} next`}>
-          Next
+          {t("homepage.next")}
         </div>
       </div>
 

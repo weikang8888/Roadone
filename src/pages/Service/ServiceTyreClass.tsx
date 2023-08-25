@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import Servicebanner from "../../static/assets/m/fw_banner.jpg";
 import NewsDateIcon from "../../static/assets/picture/news_date.png";
 import "./servicepage.css";
 import axios from "axios";
 import ServiceHeader from "./ServiceHeader";
 
 const Servicepage = () => {
+  const { t, i18n } = useTranslation();
+
+  const getImageSource = (defaultImage, chineseImage) => {
+    return i18n.language === "zh" ? chineseImage : defaultImage;
+  };
+  const chineseImageMap = {
+    1: "1583484161611051.jpg",
+    2: "16202J405-0.jpg",
+    3: "161ZGT5-0.jpg",
+    4: "16164J163-0.jpg",
+  };
   const [servicesItems, setServicesItems] = useState([]);
 
   useEffect(() => {
@@ -31,14 +42,14 @@ const Servicepage = () => {
             <ul className="clearfix">
               <li>
                 <Link to="/services/tyre-class" className="zx_on">
-                  Tyre Class
+                  {t("header.tyreClass")}
                 </Link>
               </li>
               <li>
-                <Link to="/services/guestbook">Guestbook</Link>
+                <Link to="/services/guestbook">{t("header.guestBook")}</Link>
               </li>
               <li>
-                <Link to="/services/download">Download</Link>
+                <Link to="/services/download">{t("header.download")}</Link>
               </li>
             </ul>
             <div className="zxns">
@@ -46,44 +57,58 @@ const Servicepage = () => {
                 <div className="zx_list fuwu_list">
                   <div className="kt">
                     <ul>
-                      {servicesItems.map((services, index) => (
-                        <li key={index}>
-                          <div className="kt_d1">
-                            <a
-                              href={services.services_url}
-                              title="Tire Function and Structure">
-                              <img
-                                src={require(`../../static/assets/picture/${services.services_image}`)}
-                              />
-                            </a>
-                          </div>
-                          <div className="kt_d2">
-                            <a
-                              href={services.services_url}
-                              title="Tire Function and Structure">
-                              {services.services_title}
-                            </a>
-                          </div>
-                          <div className="kt_d3">
-                            {services.services_content}
-                          </div>
-                          <div className="clearfix">
-                            <div className="news_rt_d3 kt_d4">
-                              <p className="fl">
-                                <img src={NewsDateIcon} />
-                                <span className="news_date">
-                                  {services.services_date}
-                                </span>
-                              </p>
-                            </div>
-                            <div className="yuedu kt_yuedu">
-                              <a href={services.services_url}>
-                                View details {">"}
+                      {servicesItems.map((services, index) => {
+                        const translationIndex = parseInt(services.id, 10);
+                        const chineseImage = chineseImageMap[services.id];
+                        const servicesImageUrl = getImageSource(
+                          services.services_image,
+                          chineseImage
+                        );
+                        return (
+                          <li key={index}>
+                            <div className="kt_d1">
+                              <a
+                                href={services.services_url}
+                                title="Tire Function and Structure">
+                                {servicesImageUrl && (
+                                  <img
+                                    src={require(`../../static/assets/picture/${servicesImageUrl}`)}
+                                  />
+                                )}
                               </a>
                             </div>
-                          </div>
-                        </li>
-                      ))}
+                            <div className="kt_d2">
+                              <a
+                                href={services.services_url}
+                                title="Tire Function and Structure">
+                                {t(
+                                  `services.services_title.${translationIndex}`
+                                )}
+                              </a>
+                            </div>
+                            <div className="kt_d3">
+                              {t(
+                                `services.services_content.${translationIndex}`
+                              )}
+                            </div>
+                            <div className="clearfix">
+                              <div className="news_rt_d3 kt_d4">
+                                <p className="fl">
+                                  <img src={NewsDateIcon} />
+                                  <span className="news_date">
+                                    {services.services_date}
+                                  </span>
+                                </p>
+                              </div>
+                              <div className="yuedu kt_yuedu">
+                                <a href={services.services_url}>
+                                  {t("homepage.viewDetails")} {">"}
+                                </a>
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>

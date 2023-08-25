@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import NewsDateIcon from "../../../static/assets/picture/news_date.png";
 import NewsSource from "../../../static/assets/picture/news_source.png";
 import ServiceImage1 from "../../../static/assets/picture/16164G4B-1.jpg";
+import ServiceImage1_CN from "../../../static/assets/cn/1583482770545642.jpg";
+
 import ServiceImage2 from "../../../static/assets/picture/16164H4D-2.jpg";
+import ServiceImage2_CN from "../../../static/assets/cn/1583482770608899.jpg";
+
 import NewPreNext from "../../New/NewDetails/NewPrevNext";
 import { Link } from "react-router-dom";
 import ServiceHeader from "../ServiceHeader";
 
 const TyreStorage = () => {
+  const { t, i18n } = useTranslation();
+
   const [servicesItems, setServicesItems] = useState([]);
 
   useEffect(() => {
@@ -24,7 +31,6 @@ const TyreStorage = () => {
   }, []);
   return (
     <>
-      
       <ServiceHeader />
       <div className="container zxns">
         <div className="zx_box">
@@ -32,14 +38,14 @@ const TyreStorage = () => {
             <ul className="clearfix">
               <li>
                 <Link to="/services/tyre-class" className="zx_on">
-                  Tyre Class
+                  {t("header.tyreClass")}
                 </Link>
               </li>
               <li>
-                <Link to="/services/guestbook">Guestbook</Link>
+                <Link to="/services/guestbook">{t("header.guestBook")}</Link>
               </li>
               <li>
-                <Link to="/services/download">Download</Link>
+                <Link to="/services/download">{t("header.download")}</Link>
               </li>
             </ul>
             <div className="zxns">
@@ -48,16 +54,16 @@ const TyreStorage = () => {
                   {servicesItems.map((services, index) => (
                     <div className="kt" key={index}>
                       <div className="kt_d2 gn_d2">
-                        
-                        {services.services_title}
+                        {t("services.services_title.4")}
                       </div>
                       <div className="news_rt_d3 kt_d5 clearfix">
                         <p className="bs_img">
                           <img src={NewsSource} />
-                          <span className="news_date">Roadone</span>
+                          <span className="news_date">
+                            {t("homepage.roadone")}
+                          </span>
                           <img src={NewsDateIcon} />
                           <span className="news_date">
-                            
                             {services.services_date}
                           </span>
                         </p>
@@ -68,8 +74,17 @@ const TyreStorage = () => {
                           <img
                             src={require(`../../../static/assets/picture/${services.services_image}`)}
                           />
-                          <img src={ServiceImage1} />
-                          <img src={ServiceImage2} />
+                          {i18n.language === "zh" ? (
+                            <>
+                              <img src={ServiceImage1_CN} />
+                              <img src={ServiceImage2_CN} />
+                            </>
+                          ) : (
+                            <>
+                              <img src={ServiceImage1} />
+                              <img src={ServiceImage2} />
+                            </>
+                          )}
                         </p>
                       </div>
                     </div>
@@ -79,9 +94,9 @@ const TyreStorage = () => {
             </div>
           </div>
           <NewPreNext
-            nextTitle={"Tyre Specification"}
+            nextTitle={t("services.services_title.3")}
             nextUrl="/services/tyre-class/tyre-specification"
-            prevTitle={"None"}
+            prevTitle={t("homepage.none")}
           />
         </div>
       </div>

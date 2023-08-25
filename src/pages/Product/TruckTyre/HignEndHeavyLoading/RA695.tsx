@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const RA695 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const RA695 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.13")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,33 +113,19 @@ const RA695 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Unique three-line longitudinal groove, bottom boss
-                            design, anti-cracking, anti-grooving, puncture
-                            resistance, anti-smashing block, inhibiting deformed
-                            grinding.
+                            {t("truck.highEndHeavyLoading.RA695.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Extremely low heating recipe effectively reduces the
-                            quality risk of shoulder explosion, chipping, groove
-                            splitting and crown removal under overload and
-                            overspeed conditions.
+                            {t("truck.highEndHeavyLoading.RA695.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Reinforced steel wire structure and special design
-                            of explosion-proof cap belt can effectively ensure
-                            the heavy load-bearing performance of cap,and
-                            improve the anti-stab performance of tire in complex
-                            road conditions.
+                            {t("truck.highEndHeavyLoading.RA695.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Reinforced carcass and bead structure,tyre bead
-                            adopts III+ generation heavy load tech,improves the
-                            fatigue and shear resistance of tyre bead under
-                            ultra-high and heavy load conditions,reduce quality
-                            risks of the bead seperation, crack or explosion.
+                            {t("truck.highEndHeavyLoading.RA695.content4")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -144,74 +134,58 @@ const RA695 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
+                                <td className="tdWidth">
+                                  {t("products.size")}
                                 </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
+                                <td className="tdWidth">
+                                  {t("products.plyRating")}
                                 </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
+                                <td className="tdWidth">
+                                  {t("products.maxLoadSingleDual")}
                                 </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
+                                <td className="tdWidth">
+                                  {t("products.loadIndexSingleDual")}
                                 </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
+                                <td className="tdWidth">
+                                  {t("products.speedRating")}
                                 </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
+
+                                <td className="tdWidth">
+                                  {t("products.overallDiameter")}
                                 </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
+
+                                <td className="tdWidth">
+                                  {t("products.sectionWidth")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.standardInflationPressure")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.standardRim")}
                                 </td>
                               </tr>
                               <tr>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  11.00R20
-                                </td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  18PR ★★
-                                </td>
+                                <td>11.00R20</td>
+                                <td>18PR ★★</td>
                                 <td>3550/3250</td>
                                 <td>152/149</td>
                                 <td>K</td>
-                                <td style={{ wordBreak: "break-all" }}>1091</td>
-                                <td style={{ wordBreak: "break-all" }}>293</td>
+                                <td>1091</td>
+                                <td>293</td>
                                 <td>930</td>
                                 <td>8.0</td>
                               </tr>
                               <tr>
                                 <td>12.00R20</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  20PR ★★
-                                </td>
-                                <td
-                                  width="143"
-                                  style={{ wordBreak: "break-all" }}>
-                                  4000/3650
-                                </td>
-                                <td width="121">156/153</td>
+                                <td>20PR ★★</td>
+                                <td>4000/3650</td>
+                                <td>156/153</td>
                                 <td>K</td>
-                                <td style={{ wordBreak: "break-all" }}>1123</td>
+                                <td>1123</td>
                                 <td>315</td>
-                                <td style={{ wordBreak: "break-all" }}>900</td>
+                                <td>900</td>
                                 <td>8.5</td>
                               </tr>
                             </tbody>
@@ -219,7 +193,7 @@ const RA695 = () => {
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />

@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const QA919 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const QA919 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.20")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,24 +113,15 @@ const QA919 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Unique horizontal and vertical ditch, widened and
-                            deepened tread pattern design, and enhanced the
-                            applicable performance of the product in the
-                            industrial and mining and other non paved roads.
+                            {t("truck.highEndOffRoad.QA919.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Latest explosion-proof & puncture resistance design,
-                            Extra thick sidewall and thickened groove bottom
-                            design enhancing impact and puncture resistance on
-                            unpaved road.
+                            {t("truck.highEndOffRoad.QA919.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Low heating tread recipe designed for soft mining
-                            and mixed road conditions,provides better
-                            perofrmance of anti-stab、anti-tear、low heating,
-                            reducing shoulder/crown separation effectively.
+                            {t("truck.highEndOffRoad.QA919.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -135,65 +130,42 @@ const QA919 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
                                 <td
-                                  width="70"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   12R22.5
                                 </td>
-                                <td width="50">18PR*</td>
-                                <td width="102">3550/3250</td>
-                                <td width="97">152/149</td>
-                                <td width="59">J</td>
-                                <td width="70">1103</td>
-                                <td width="69">300</td>
-                                <td width="69">930</td>
-                                <td width="59">9.0</td>
+                                <td >18PR*</td>
+                                <td >3550/3250</td>
+                                <td >152/149</td>
+                                <td >J</td>
+                                <td >1103</td>
+                                <td >300</td>
+                                <td >930</td>
+                                <td >9.0</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -213,7 +185,6 @@ const QA919 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

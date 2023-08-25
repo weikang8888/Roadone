@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../component/Modal/ModalRoadone";
 import ProductHeader from "../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../ProductTypeBox";
 import ProductMainBox from "../ProductMainBox";
 import ProductTypeMobile from "../ProductTypeBoxMobile";
 
 const GA06Light = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -59,7 +61,10 @@ const GA06Light = () => {
                     showBusList={false}
                   />
 
-                  <ProductTypeMobile showTruckList={false} showBusList={false} />
+                  <ProductTypeMobile
+                    showTruckList={false}
+                    showBusList={false}
+                  />
                   <div className="tab2">
                     <div className="ct_xq">
                       {productsItems.map((products, index) => (
@@ -75,7 +80,9 @@ const GA06Light = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.54")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,15 +116,11 @@ const GA06Light = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Unique three-line longitudinal groove, variable
-                            angle profile contour design, anti-cracking,
-                            anti-grooving, puncture resistance, anti-smashing
-                            block.
+                            {t("lightTruck.GA06.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Light truck special low heating, high wear-resistant
-                            tread formula to ensure a longer service life.
+                            {t("lightTruck.GA06.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -126,65 +129,42 @@ const GA06Light = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
                                 <td
-                                  width="71"
-                                  style={{ wordBreak: "break-all" }}>
+                                  
+                                  >
                                   8.25R16 &nbsp;LT
                                 </td>
-                                <td width="54">16PR</td>
-                                <td width="86">1800/1600</td>
-                                <td width="93">128/124</td>
-                                <td width="54">L</td>
-                                <td width="73">856</td>
-                                <td width="63">235</td>
-                                <td width="80">770</td>
-                                <td width="113">6.50H</td>
+                                <td >16PR</td>
+                                <td >1800/1600</td>
+                                <td >128/124</td>
+                                <td >L</td>
+                                <td >856</td>
+                                <td >235</td>
+                                <td >770</td>
+                                <td >6.50H</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -204,7 +184,6 @@ const GA06Light = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

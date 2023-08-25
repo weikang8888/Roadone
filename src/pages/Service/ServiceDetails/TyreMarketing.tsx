@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import NewsDateIcon from "../../../static/assets/picture/news_date.png";
 import NewsSource from "../../../static/assets/picture/news_source.png";
 import ServiceImage1 from "../../../static/assets/picture/16202M5I-1.jpg";
+import ServiceImage1_CN from "../../../static/assets/cn/1583483495140111.jpg";
 import ServiceImage2 from "../../../static/assets/picture/16202J4b-2.jpg";
+import ServiceImage2_CN from "../../../static/assets/cn/1583483498138760.jpg";
 import ServiceHeader from "../ServiceHeader";
 import { Link } from "react-router-dom";
 import NewPreNext from "../../New/NewDetails/NewPrevNext";
 
 const TyreMarketing = () => {
+  const { t, i18n } = useTranslation();
+
   const [servicesItems, setServicesItems] = useState([]);
 
   useEffect(() => {
@@ -31,14 +36,14 @@ const TyreMarketing = () => {
             <ul className="clearfix">
               <li>
                 <Link to="/services/tyre-class" className="zx_on">
-                  Tyre Class
+                  {t("header.tyreClass")}
                 </Link>
               </li>
               <li>
-                <Link to="/services/guestbook">Guestbook</Link>
+                <Link to="/services/guestbook">{t("header.guestBook")}</Link>
               </li>
               <li>
-                <Link to="/services/download">Download</Link>
+                <Link to="/services/download">{t("header.download")}</Link>
               </li>
             </ul>
             <div className="zxns">
@@ -47,16 +52,16 @@ const TyreMarketing = () => {
                   {servicesItems.map((services, index) => (
                     <div className="kt" key={index}>
                       <div className="kt_d2 gn_d2">
-                        
-                        {services.services_title}
+                        {t("services.services_title.2")}
                       </div>
                       <div className="news_rt_d3 kt_d5 clearfix">
                         <p className="bs_img">
                           <img src={NewsSource} />
-                          <span className="news_date">Roadone</span>
+                          <span className="news_date">
+                            {t("homepage.roadone")}
+                          </span>
                           <img src={NewsDateIcon} />
                           <span className="news_date">
-                            
                             {services.services_date}
                           </span>
                         </p>
@@ -67,8 +72,17 @@ const TyreMarketing = () => {
                           <img
                             src={require(`../../../static/assets/picture/${services.services_image}`)}
                           />
-                          <img src={ServiceImage1} />
-                          <img src={ServiceImage2} />
+                          {i18n.language === "zh" ? (
+                            <>
+                              <img src={ServiceImage1_CN} />
+                              <img src={ServiceImage2_CN} />
+                            </>
+                          ) : (
+                            <>
+                              <img src={ServiceImage1} />
+                              <img src={ServiceImage2} />
+                            </>
+                          )}{" "}
                         </p>
                       </div>
                     </div>
@@ -78,9 +92,9 @@ const TyreMarketing = () => {
             </div>
           </div>
           <NewPreNext
-            nextTitle={"Tire Function and Structure"}
+            nextTitle={t("services.services_title.1")}
             nextUrl="/services/tyre-class/tyre-function-and-structure"
-            prevTitle={"Tyre Specification"}
+            prevTitle={t("services.services_title.3")}
             prevUrl="/services/tyre-class/tyre-specification"
           />
         </div>

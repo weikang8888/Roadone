@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface ProductTypeBoxOptions {
   activeLink: string;
@@ -12,6 +13,8 @@ const ProductTypeBox = ({
   showTruckList,
   showBusList,
 }: ProductTypeBoxOptions) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="typebox">
@@ -21,7 +24,7 @@ const ProductTypeBox = ({
               <NavLink
                 to="/products/truck/long-haul-wearable"
                 className={activeLink === "long-haul-wearable" ? "cpfl2" : ""}>
-                Long Haul Wearable Tyres
+                {t("products.longHaulWearable")}
               </NavLink>
             </li>
             <li>
@@ -30,7 +33,7 @@ const ProductTypeBox = ({
                 className={
                   activeLink === "middle-long-distance" ? "cpfl2" : ""
                 }>
-                Middle & Long Distance
+                {t("products.middleLongDistance")}
               </NavLink>
             </li>
             <li>
@@ -39,7 +42,7 @@ const ProductTypeBox = ({
                 className={
                   activeLink === "middle-short-distance" ? "cpfl2" : ""
                 }>
-                Middle & Short Distance
+                {t("products.middleShortDistance")}
               </NavLink>
             </li>
             <li>
@@ -48,14 +51,14 @@ const ProductTypeBox = ({
                 className={
                   activeLink === "quarry-building-site" ? "cpfl2" : ""
                 }>
-                Quarry & Building Sites
+                {t("products.quarryBuidlingSites")}
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/products/truck/high-end-off-road"
                 className={activeLink === "high-end-off-road" ? "cpfl2" : ""}>
-                High End Off-road Tyres
+                {t("products.highEndOffRoad")}
               </NavLink>
             </li>
             <li>
@@ -64,14 +67,14 @@ const ProductTypeBox = ({
                 className={
                   activeLink === "high-end-heavy-loading" ? "cpfl2" : ""
                 }>
-                High End Heavy Loading Tyres
+                {t("products.highEndHeavyLoading")}
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/products/truck/high-end-wearable"
                 className={activeLink === "high-end-wearable" ? "cpfl2" : ""}>
-                HIGH END WEARABLE TYRE
+                {t("products.highEndWearable")}
               </NavLink>
             </li>
           </ul>
@@ -83,14 +86,14 @@ const ProductTypeBox = ({
               <NavLink
                 to="/products/bus/inter-city"
                 className={activeLink === "inter-city" ? "cpfl2" : ""}>
-                Inter-city Bus
+                {t("products.interCityBus")}
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/products/bus/city-bus"
                 className={activeLink === "city-bus" ? "cpfl2" : ""}>
-                City-city Bus
+                {t("products.cityCityBus")}
               </NavLink>
             </li>
           </ul>

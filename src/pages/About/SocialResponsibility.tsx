@@ -7,6 +7,8 @@ import InsideImage1 from "../../static/assets/image/inside_tlt_1.jpg";
 import InsideImage2 from "../../static/assets/image/inside_tlt_2.jpg";
 import InsideImage3 from "../../static/assets/image/inside_tlt_3.jpg";
 import ResponsibilityImage1 from "../../static/assets/picture/responsibility_1.jpg";
+import ResponsibilityImage1_CN from "../../static/assets/cn/responsibility_1.jpg";
+
 import ResponsibilityImage2 from "../../static/assets/picture/responsibility_2.jpg";
 import AboutMobileBanner1 from "../../static/assets/m/inside_tlt_1.jpg";
 import AboutMobileBanner2 from "../../static/assets/m/inside_tlt_2.jpg";
@@ -20,7 +22,7 @@ import Swipper_m from "../../component/Swiper/Swipper_m";
 import { useTranslation } from "react-i18next";
 
 const SocialResponsibility = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const swiperTopMobileSlides = [
@@ -98,7 +100,15 @@ const SocialResponsibility = () => {
               </div>
               <div className="about_d1">
                 <p style={{ textAlign: "center" }}>
-                  <img src={t("image.socialResponsibility.src")} />
+                  {i18n.language === "zh" ? (
+                    <>
+                      <img src={ResponsibilityImage1_CN} />
+                    </>
+                  ) : (
+                    <>
+                      <img src={ResponsibilityImage1} />
+                    </>
+                  )}
                   <img src={ResponsibilityImage2} />
                 </p>
               </div>

@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const GD800 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const GD800 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.16")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,40 +113,23 @@ const GD800 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Optimized profile design, unique horizontal and
-                            vertical blocks, puncture resistance bottom design
-                            and stone ejection design suppresses the abnormal
-                            wear and provide strong drive and braking
-                            performance.
+                            {t("truck.highEndHeavyLoading.GD800.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Wearable tread recipe and widening and deepening the
-                            tread pattern design effectively ensures a longer
-                            service life.
+                            {t("truck.highEndHeavyLoading.GD800.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Extremely low heating recipe effectively reduces the
-                            quality risk of shoulder explosion, chipping, groove
-                            splitting and crown removal under overload and
-                            overspeed conditions.
+                            {t("truck.highEndHeavyLoading.GD800.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Reinforced steel wire structure and special design
-                            of explosion-proof cap belt can effectively ensure
-                            the heavy load-bearing performance of cap,and
-                            improve the anti-stab performance of tire in complex
-                            road conditions.
+                            {t("truck.highEndHeavyLoading.GD800.content4")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Reinforced carcass and bead structure,tyre bead
-                            adopts heavy load tech,improves the fatigue and
-                            shear resistance of tyre bead under ultra-high and
-                            heavy load conditions,reduce quality risks of the
-                            bead seperation, crack or explosion.
+                            {t("truck.highEndHeavyLoading.GD800.content5")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -151,91 +138,77 @@ const GD800 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
+                                <td className="tdWidth">
+                                  {t("products.size")}
                                 </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
+                                <td className="tdWidth">
+                                  {t("products.plyRating")}
                                 </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
+                                <td className="tdWidth">
+                                  {t("products.maxLoadSingleDual")}
                                 </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
+                                <td className="tdWidth">
+                                  {t("products.loadIndexSingleDual")}
                                 </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
+                                <td className="tdWidth">
+                                  {t("products.speedRating")}
                                 </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
+
+                                <td className="tdWidth">
+                                  {t("products.overallDiameter")}
                                 </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
+
+                                <td className="tdWidth">
+                                  {t("products.sectionWidth")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.standardInflationPressure")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.standardRim")}
                                 </td>
                               </tr>
                               <tr>
-                                <td
-                                  width="54"
-                                  style={{ wordBreak: "break-all" }}>
-                                  8.25R20
-                                </td>
-                                <td width="54">16PR</td>
-                                <td width="54">2430/2300</td>
-                                <td width="54">139/137</td>
-                                <td width="54">J</td>
-                                <td width="54">978</td>
-                                <td width="54">236</td>
-                                <td width="54">930</td>
-                                <td width="54">6.5</td>
+                                <td>8.25R20</td>
+                                <td>16PR</td>
+                                <td>2430/2300</td>
+                                <td>139/137</td>
+                                <td>J</td>
+                                <td>978</td>
+                                <td>236</td>
+                                <td>930</td>
+                                <td>6.5</td>
                               </tr>
                               <tr>
-                                <td width="54">9.00R20</td>
-                                <td width="54">16PR</td>
-                                <td width="54">2800/2650</td>
-                                <td width="54">144/142</td>
-                                <td width="54">J</td>
-                                <td width="54">1024</td>
-                                <td width="54">259</td>
-                                <td width="54">900</td>
-                                <td width="54">7.0</td>
+                                <td>9.00R20</td>
+                                <td>16PR</td>
+                                <td>2800/2650</td>
+                                <td>144/142</td>
+                                <td>J</td>
+                                <td>1024</td>
+                                <td>259</td>
+                                <td>900</td>
+                                <td>7.0</td>
                               </tr>
                               <tr>
-                                <td
-                                  width="54"
-                                  style={{ wordBreak: "break-all" }}>
-                                  10.00R20
-                                </td>
-                                <td width="54">18PR*</td>
-                                <td width="54">3250/3000</td>
-                                <td width="54">149/146</td>
-                                <td width="54">J</td>
-                                <td width="54">1058</td>
-                                <td width="54">278</td>
-                                <td width="54">930</td>
-                                <td width="54">7.5</td>
+                                <td>10.00R20</td>
+                                <td>18PR*</td>
+                                <td>3250/3000</td>
+                                <td>149/146</td>
+                                <td>J</td>
+                                <td>1058</td>
+                                <td>278</td>
+                                <td>930</td>
+                                <td>7.5</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />

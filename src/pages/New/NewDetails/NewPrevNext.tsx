@@ -4,6 +4,8 @@ import TopButton from "../../../component/Button/TopButton";
 import Wechat from "../../../static/assets/picture/weixin.png";
 import Weibo from "../../../static/assets/picture/weibo.png";
 import Qzone from "../../../static/assets/picture/qzone.png";
+import { useTranslation } from "react-i18next";
+
 interface NewPrevNextOptions {
   nextTitle: string;
   prevTitle: string;
@@ -18,6 +20,7 @@ const NewPreNext = ({
   prevUrl,
 }: NewPrevNextOptions) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,7 +38,7 @@ const NewPreNext = ({
     <>
       <div className="n_xq_s clearfix">
         <div className="fr n_xq_fx">
-          分享
+          {t("homepage.share")}
           <img className="h4" src={Wechat} />
           <a
             href="http://service.weibo.com/share/share.php?url=http://en.tltyre.com&title=Explosion scene | ROADONE debut at the SHANGHAI Tire Show, showing the national brand charm!-Roadone&pic=/uploads/image/2003/1J44R417-0-lp.jpg"
@@ -51,7 +54,7 @@ const NewPreNext = ({
       </div>
 
       <div className="n_xq_up">
-        PREV:
+        {t("homepage.prev")}:
         {prevUrl ? (
           <a href={prevUrl} className="next">
             <span>{prevTitle}</span>
@@ -61,7 +64,7 @@ const NewPreNext = ({
         )}
       </div>
       <div className="n_xq_down">
-        NEXT:
+        {t("homepage.next")}:
         {nextUrl ? (
           <a href={nextUrl} className="next">
             <span>{nextTitle}</span>

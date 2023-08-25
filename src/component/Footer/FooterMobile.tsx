@@ -4,15 +4,18 @@ import "./footermobile.css";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
 import Qrcode from "../../static/assets/m/erweima.png";
-import { NavLink, Link } from "react-router-dom";
 
 const FooterMobile = () => {
   const { t } = useTranslation();
 
+  const [productOpen, setProductOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
   const [recruitmentOpen, setRecruitmentOpen] = useState(false);
   const [aboutUsOpen, setAboutUsOpen] = useState(false);
 
+  const toggleProduct = () => {
+    setProductOpen(!productOpen);
+  };
   const toggleService = () => {
     setServiceOpen(!serviceOpen);
   };
@@ -30,84 +33,94 @@ const FooterMobile = () => {
         <div className="sfq">
           <ul>
             <li>
-              <NavLink to="/news">News</NavLink>
+              <a href="/news">{t("header.news")}</a>
             </li>
             <li>
-              <div className="clearfix">
-                <NavLink to="/products" className="fl">
-                  Product
-                </NavLink>
+              <div className="clearfix" onClick={toggleProduct}>
+                <span className="fl"> {t("header.products")}</span>
+                <i className="fr jia">+</i>
               </div>
-              {/* <div className="sfq_a" style={{ display: "none" }}>
-                <ul>
-                  <li className="kc">
-                    <a to="list-3.html">Truck Tyres</a>
-                  </li>
 
-                  <li>
-                    <a to="list-21.html">Long Haul Wearable Tyres</a>
-                  </li>
-                  <li>
-                    <a to="list-23.html">Middle & Long Distance</a>
-                  </li>
-                  <li>
-                    <a to="list-24.html">Middle & Short Distance</a>
-                  </li>
-                  <li>
-                    <a to="list-25.html">Quarry & Building Sites</a>
-                  </li>
-                  <li>
-                    <a to="list-34.html">High End Off-road Tyres</a>
-                  </li>
-                  <li>
-                    <a to="list-35.html">High End Heavy Loading Tyres</a>
-                  </li>
-                  <li>
-                    <a to="list-36.html">HIGH END WEARABLE TYRE</a>
-                  </li>
-                  <li className="kc">
-                    <a to="list-28.html">Light Truck Tyres</a>
-                  </li>
+              <SlideDown className="sfq_a">
+                {productOpen && (
+                  <ul>
+                    <li className="kc">
+                      <a href="/products/truck">{t("header.truckTyre")}</a>
+                    </li>
+                    <li>
+                      <a href="/products/truck/long-haul-wearable">
+                        {t("products.longHaulWearable")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/truck/middle-long-distance">
+                        {t("products.middleLongDistance")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/truck/middle-short-distance">
+                        {t("products.middleShortDistance")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/quarry-building-site">
+                        {t("products.quarryBuidlingSites")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/truck/high-end-off-road">
+                        {t("products.highEndOffRoad")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/truck/high-end-heavy-loading">
+                        {t("products.highEndHeavyLoading")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/truck/high-end-wearable">
+                        {t("products.highEndWearable")}
+                      </a>
+                    </li>
+                    <li className="kc">
+                      <a href="/products/light-truck">
+                        {t("header.lightTruckTyre")}
+                      </a>
+                    </li>
+                    <li className="kc">
+                      <a href="/products/bus">{t("header.busTyre")}</a>
+                    </li>
 
-                  <li>
-                    <a to="list-3.html">Truck Tyres</a>
-                  </li>
-                  <li>
-                    <a to="list-28.html">Light Truck Tyres</a>
-                  </li>
-                  <li>
-                    <a to="list-4.html">Bus Tyres</a>
-                  </li>
-                  <li className="kc">
-                    <a to="list-4.html">Bus Tyres</a>
-                  </li>
-
-                  <li>
-                    <a to="list-26.html">Inter-city Bus</a>
-                  </li>
-                  <li>
-                    <a to="list-27.html">City-City Bus</a>
-                  </li>
-                </ul>
-              </div> */}
+                    <li>
+                      <a href="/products/bus/inter-city">
+                        {t("products.interCityBus")}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/products/bus/city-bus">
+                        {t("products.cityCityBus")}
+                      </a>
+                    </li>
+                  </ul>
+                )}
+              </SlideDown>
             </li>
             <li>
               <div className="clearfix" onClick={toggleService}>
-                <span className="fl">Service</span>
+                <span className="fl">{t("header.service")}</span>
                 <i className="fr jia">+</i>
               </div>
               <SlideDown className="sfq_a">
-                
                 {serviceOpen && (
                   <ul>
                     <li>
-                      <Link to="/service/tyre-class">Tyre className</Link>
+                      <a href="/service/tyre-class">{t("header.tyreClass")}</a>
                     </li>
                     <li>
-                      <Link to="/services/guestbook">Guestbook</Link>
+                      <a href="/services/guestbook">{t("header.guestBook")}</a>
                     </li>
                     <li>
-                      <Link to="/services/download">Download</Link>
+                      <a href="/services/download">{t("header.download")}</a>
                     </li>
                   </ul>
                 )}
@@ -115,17 +128,21 @@ const FooterMobile = () => {
             </li>
             <li>
               <div className="clearfix" onClick={toggleRecruitment}>
-                <span className="fl">Recruitment</span>
+                <span className="fl">{t("header.recruitment")}</span>
                 <i className="fr jia">+</i>
               </div>
               <SlideDown className="sfq_a">
                 {recruitmentOpen && (
                   <ul>
                     <li>
-                      <Link to="/recruitment/social">Social Recruitment</Link>
+                      <a href="/recruitment/social">
+                        {t("header.socialRecruitment")}
+                      </a>
                     </li>
                     <li>
-                      <Link to="/recruitment/campus">Campus Recruitment</Link>
+                      <a href="/recruitment/campus">
+                        {t("header.campusRecruitment")}
+                      </a>
                     </li>
                   </ul>
                 )}
@@ -133,20 +150,22 @@ const FooterMobile = () => {
             </li>
             <li>
               <div className="clearfix" onClick={toggleAboutUs}>
-                <span className="fl">About Us</span>
+                <span className="fl">{t("header.about")}</span>
                 <i className="fr jia">+</i>
               </div>
               <SlideDown className="sfq_a">
                 {aboutUsOpen && (
                   <ul>
                     <li>
-                      <Link to="/about/roadone">About Roadone</Link>
+                      <a href="/about/roadone">{t("header.aboutRoadone")}</a>
                     </li>
                     <li>
-                      <Link to="/about/social-responsibility">CSR</Link>
+                      <a href="/about/social-responsibility">
+                        {t("header.csr")}
+                      </a>
                     </li>
                     <li>
-                      <Link to="/about/contact">Contact Us</Link>
+                      <a href="/about/contact">{t("header.contactUs")}</a>
                     </li>
                   </ul>
                 )}
@@ -158,13 +177,14 @@ const FooterMobile = () => {
           <img src={Qrcode} />
         </div>
         <div className="foot_d1">
-          <NavLink to="">Legal Declaration</NavLink>
-          <NavLink to="">Contact Us</NavLink>
-          <NavLink to="">Sitemap</NavLink>
+          <a href="">{t("homepage.legalDeclaration")}</a>
+          <a href="">{t("header.contactUs")}</a>
+          <a href="">{t("homepage.siteMap")}</a>
         </div>
       </div>
       <div className="foot_d2">
-        Copyright &copy; {t("about.companyName")} All Rights Reserved.
+        {t("homepage.copyright")} &copy; {t("about.companyName")}{" "}
+        {t("homepage.allRightReserved")}
       </div>
     </>
   );

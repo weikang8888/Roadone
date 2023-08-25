@@ -3,13 +3,15 @@ import axios from "axios";
 import AdvanceButton from "../../../../component/Button/AdvanceButton";
 import ModalRoadone from "../../../../component/Modal/ModalRoadone";
 import ProductHeader from "../../ProductHeader";
-import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SwipperProduct from "../../../../component/Swiper/SwipperProduct";
 import ProductTypeBox from "../../ProductTypeBox";
 import ProductMainBox from "../../ProductMainBox";
 import ProductTypeMobile from "../../ProductTypeBoxMobile";
 
 const RD35 = () => {
+  const { t } = useTranslation();
+
   const [productsItems, setProductsItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +77,9 @@ const RD35 = () => {
                                 data-aos="zoom-in"
                                 data-aos-duration="1000"
                                 data-aos-easing="ease-out-back">
-                                <div>{products.products_description}</div>
+                                <div>
+                                  {t("products.products_description.35")}
+                                </div>
                               </div>
                               <div
                                 className="ct_xq3"
@@ -109,23 +113,15 @@ const RD35 = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Dedicated block design provides superior driving
-                            force and wet grip, safe, durable and powerful.
+                            {t("truck.middleLongDistance.RD35.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Widened and deepened driving surface,optimized
-                            profile design,special super wear-resistant tread
-                            formula for high-speed drive, ensure higher mileage
-                            in mixed road conditions such as high-way and
-                            national road.
+                            {t("truck.middleLongDistance.RD35.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            Special cap structure and specific 4 belt cap
-                            design, low heating recipe, optimised shoulder
-                            desigh, inhibiting deformed wear,ensure multiple
-                            retreading of tires.
+                            {t("truck.middleLongDistance.RD35.content3")}
                           </p>
 
                           <p style={{ whiteSpace: "normal" }}>
@@ -135,85 +131,62 @@ const RD35 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td>Size</td>
-                                <td>Ply Rating</td>
-                                <td style={{ wordBreak: "break-all" }}>
-                                  Max. Load (Kg)
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Load Index&nbsp;
-                                  <br />
-                                  (Single/Dual)
-                                </td>
-                                <td>
-                                  Speed
-                                  <br />
-                                  Rating
-                                </td>
-                                <td>
-                                  Overall Diameter&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Section Width&nbsp;
-                                  <br />
-                                  (mm)
-                                </td>
-                                <td>
-                                  Standard Inflation Pressure
-                                  <br />
-                                  (kPa)
-                                </td>
-                                <td>
-                                  Standard Rim
-                                  <br />
-                                  (inch)
-                                </td>
+                                <td className="tdWidth">{t("products.size")}</td>
+                                <td className="tdWidth">{t("products.plyRating")}</td>
+                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
+             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
+                               <td className="tdWidth">{t("products.speedRating")}</td>
+
+                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+
+                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+
+                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+
+                                         <td className="tdWidth">{t("products.standardRim")}</td>
+
                               </tr>
                               <tr>
-                                <td width="133">245/70R19.5</td>
-                                <td width="72">16PR</td>
-                                <td width="143">2180/2060</td>
-                                <td width="121">135/133</td>
-                                <td width="72">L</td>
-                                <td width="88">843</td>
-                                <td width="92">248</td>
-                                <td width="72">830</td>
-                                <td width="96">7.50</td>
+                                <td >245/70R19.5</td>
+                                <td >16PR</td>
+                                <td >2180/2060</td>
+                                <td >135/133</td>
+                                <td >L</td>
+                                <td >843</td>
+                                <td >248</td>
+                                <td >830</td>
+                                <td >7.50</td>
                               </tr>
                               <tr>
                                 <td>245/70R19.5</td>
                                 <td>18PR</td>
-                                <td width="143">2800/2650</td>
-                                <td width="121">144/142</td>
-                                <td width="72">L</td>
-                                <td width="88">843</td>
-                                <td width="92">248</td>
-                                <td width="72">900</td>
-                                <td width="96">7.50</td>
+                                <td >2800/2650</td>
+                                <td >144/142</td>
+                                <td >L</td>
+                                <td >843</td>
+                                <td >248</td>
+                                <td >900</td>
+                                <td >7.50</td>
                               </tr>
                               <tr>
-                                <td style={{ wordBreak: "break-all" }}>
+                                <td >
                                   295/80R22.5
                                 </td>
                                 <td>18PR</td>
-                                <td width="143">3550/3250</td>
-                                <td width="121">152/149</td>
-                                <td width="72">L</td>
-                                <td width="88">1062</td>
-                                <td width="92">298</td>
-                                <td width="72">900</td>
-                                <td width="96">9.00</td>
+                                <td >3550/3250</td>
+                                <td >152/149</td>
+                                <td >L</td>
+                                <td >1062</td>
+                                <td >298</td>
+                                <td >900</td>
+                                <td >9.00</td>
                               </tr>
                             </tbody>
                           </table>
                           <p></p>
                         </div>
                         <AdvanceButton
-                          advanceButtonText={"Advance"}
+                          advanceButtonText={t("products.advanced")}
                           advanceButtonClass={"ct_xq_d4 "}
                           handleOpenModal={handleOpenModal}
                         />
@@ -233,7 +206,6 @@ const RD35 = () => {
           </div>
         </div>
         <SwipperProduct ids={[53, 28, 52, 46, 58, 14, 22, 40, 35]} />
-
       </div>
     </>
   );

@@ -284,4 +284,62 @@
   .kt .kt_d5 {
     margin: 0;
   }
+  .yy_logo {
+    text-align: center;
+  }
+  .yy .yy_right .yy_logo img {
+    float: none;
+    margin-right: 0;
+  }
+  .yy .yy_right .yy_f .yy_f_lt .yy_phone {
+    margin: 0 15px;
+  }
+  .yy .yy_right .yy_f .yy_f_rt {
+    padding-right: 30px;
+  }
+  .yy .yy_right .yy_f .yy_f_rt textarea {
+    margin: 0px 15px;
+    height: 140px;
+  }
+  .yy .yy_right .yy_f .yy_f_rt .tjbtn {
+    bottom: 0;
+    right: 0;
+  }
+  .yy .yy_left {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .ct_xq {
+    padding-top: 20px;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq1 em {
+    font-size: 18px;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq1 span {
+    font-size: 36px;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq2 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq3 {
+    margin-top: 0;
+  }
+  .ct_xq .ct_xq_d1 .ct_xq_lt .ct_xq3 img {
+    width: 200px;
+  }
+  .ct_xq_d2 table .firstRow td {
+    font-size: 14px;
+  }
+  .ct_xq_d2 table tr td {
+    font-size: 12px;
+  }
+  .zj ul li .zj_rt .zj_rt_d1 em {
+    font-size: 16px;
+  }
+  .zj ul li .zj_rt .zj_rt_d1 span {
+    font-size: 35px;
+  }
 }

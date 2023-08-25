@@ -4,8 +4,13 @@ import axios from "axios";
 import YuYueimage from "../../static/assets/picture/yuyue_lt.jpg";
 import YYlogo from "../../static/assets/picture/yy_logo.png";
 import SubmitImage from "../../static/assets/picture/submit.png";
+import SubmitImage_CN from "../../static/assets/cn/submit.png";
+
+import { useTranslation } from "react-i18next";
 
 const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
+  const { t, i18n } = useTranslation();
+
   const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -80,7 +85,7 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
               </div>
               <div className="yy_f">
                 <form className="clearfix" id="form1" onSubmit={handleSubmit}>
-                  <div className="col-6 yy_f_lt ">
+                  <div className="col-lg-6 yy_f_lt ">
                     {fieldVisibility.fullName && (
                       <div className="yy_phone">
                         <div className="phone1">
@@ -89,10 +94,10 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             name="name"
                             id="name"
                             onChange={handleInputChange}
-                            placeholder="Your Name"
+                            placeholder={t("popup.yourname")}
                           />
                         </div>
-                        <div className="phone2">Full Name</div>
+                        <div className="phone2">{t("popup.fullname")}</div>
                       </div>
                     )}
                     {fieldVisibility.telephone && (
@@ -103,10 +108,10 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             name="phoneNumber"
                             id="phoneNumber"
                             onChange={handleInputChange}
-                            placeholder="Your Telephone"
+                            placeholder={t("popup.yourphone")}
                           />
                         </div>
-                        <div className="phone2">Telephone</div>
+                        <div className="phone2">{t("popup.phone")}</div>
                       </div>
                     )}
                     {fieldVisibility.email && (
@@ -117,10 +122,10 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             name="email"
                             id="email"
                             onChange={handleInputChange}
-                            placeholder="Your E-mail"
+                            placeholder={t("popup.youremail")}
                           />
                         </div>
-                        <div className="phone2">E-mail</div>
+                        <div className="phone2">{t("popup.email")}</div>
                       </div>
                     )}
                     {fieldVisibility.address && (
@@ -131,10 +136,10 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             name="address"
                             id="address"
                             onChange={handleInputChange}
-                            placeholder="Your Address"
+                            placeholder={t("popup.youraddress")}
                           />
                         </div>
-                        <div className="phone2">Address</div>
+                        <div className="phone2">{t("popup.address")}</div>
                       </div>
                     )}
                     {fieldVisibility.jobTitle && (
@@ -145,10 +150,10 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                             name="jobTitle"
                             id="jobTitle"
                             onChange={handleInputChange}
-                            placeholder="Job Title"
+                            placeholder={t("popup.jobtitle")}
                           />
                         </div>
-                        <div className="phone2">Job Title</div>
+                        <div className="phone2">{t("popup.jobT")}</div>
                       </div>
                     )}
                     {fieldVisibility.attachment && (
@@ -163,13 +168,13 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                       </div>
                     )}
                   </div>
-                  <div className="col-6 yy_f_rt ">
+                  <div className="col-lg-6 yy_f_rt ">
                     <textarea
                       className="liuyan"
                       name="message"
                       id="message"
                       onChange={handleInputChange}
-                      placeholder="Leaving Message"></textarea>
+                      placeholder={t("popup.leavingmessage")}></textarea>
                     {/* <div className="vcode">
                       <input
                         id="vdcode"
@@ -191,7 +196,23 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                       />
                     </div> */}
                     <div className="submit">
-                      <input type="image" src={SubmitImage} className="tjbtn" />
+                      {i18n.language === "zh" ? (
+                        <>
+                          <input
+                            type="image"
+                            src={SubmitImage_CN}
+                            className="tjbtn"
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <input
+                            type="image"
+                            src={SubmitImage}
+                            className="tjbtn"
+                          />
+                        </>
+                      )}
                     </div>
                   </div>
                 </form>
