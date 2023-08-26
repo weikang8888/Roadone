@@ -9,10 +9,12 @@ import { Link } from "react-router-dom";
 import TopButton_m from "../../component/Button/TopButton_m";
 import TopButton from "../../component/Button/TopButton";
 import ServiceHeader from "./ServiceHeader";
+import Loader from "../../component/Loader/Loader";
 
 const ServiceForm = () => {
   const { t, i18n } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -35,9 +37,13 @@ const ServiceForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
 
     axios
-      .post("https://backend.roadone.com.my/api_roadone/contact/contact", formData)
+      .post(
+        "https://backend.roadone.com.my/api_roadone/contact/contact",
+        formData
+      )
       .then((response) => {
         console.log(response.data);
         const submitSuccessLink = `/submit-success`;
@@ -45,6 +51,9 @@ const ServiceForm = () => {
       })
       .catch((error) => {
         console.error(error);
+      })
+      .finally(() => {
+        setIsLoading(false); // Set loading to false after submission attempt
       });
   };
   useEffect(() => {
@@ -82,203 +91,208 @@ const ServiceForm = () => {
           </div>
         </div>
         <div className="zxfw zxfw1">
-          <form className="clearfix" id="form1" onSubmit={handleSubmit}>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl">{t("services.guestBook.phone")}</span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b">
-                  <input
-                    name="phoneNumber"
-                    id="phoneNumber"
-                    className="in_bg_s"
-                    type="text"
-                    onChange={handleInputChange}
-                  />
+          <div className="form-container">
+            <form className="clearfix" id="form1" onSubmit={handleSubmit}>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl">
+                    {t("services.guestBook.phone")}
+                  </span>
                 </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl">{t("services.guestBook.email")}</span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b">
-                  <input
-                    name="email"
-                    id="email"
-                    className="in_bg_s"
-                    type="text"
-                    onChange={handleInputChange}
-                  />
-                  <div>{t("services.guestBook.validEmailMessage")}</div>
-                </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl zx_c">
-                  {t("services.guestBook.name")}
-                </span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b">
-                  <input
-                    name="name"
-                    id="name"
-                    className="in_bg_s"
-                    type="text"
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl zx_c">
-                  {t("services.guestBook.sex")}
-                </span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b zx_d">
-                  <label>
+                <div className="col-9">
+                  <div className="fr zx_b">
                     <input
-                      type="radio"
-                      id="gender"
-                      name="gender"
-                      value="Male"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      className="in_bg_s"
+                      type="text"
                       onChange={handleInputChange}
                     />
-                    <span>{t("services.guestBook.male")}</span>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="gender"
-                      name="gender"
-                      value="Female"
-                      onChange={handleInputChange}
-                    />
-                    <span>{t("services.guestBook.female")}</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl zx_c">
-                  {t("services.guestBook.address")}
-                </span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b">
-                  <input
-                    name="address"
-                    id="address"
-                    className="in_bg"
-                    type="text"
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl zx_c">
-                  {t("services.guestBook.message")}
-                </span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b zx_d">
-                  <label>
-                    <input
-                      type="radio"
-                      id="messageType"
-                      name="messageType"
-                      value="Consult"
-                      onChange={handleInputChange}
-                    />
-                    <span>{t("services.guestBook.consult")}</span>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="messageType"
-                      name="messageType"
-                      value="Complain"
-                      onChange={handleInputChange}
-                    />
-                    <span>{t("services.guestBook.complain")}</span>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="messageType"
-                      name="messageType"
-                      value="Suggest"
-                      onChange={handleInputChange}
-                    />
-                    <span>{t("services.guestBook.suggest")}</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl zx_c">
-                  {t("services.guestBook.title")}
-                </span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b">
-                  <input
-                    name="subject"
-                    id="subject"
-                    className="in_bg"
-                    type="text"
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="clearfix zxfw_d1">
-              <div className="col-3">
-                <span className="zx_a fl zx_c">
-                  {t("services.guestBook.content")}
-                </span>
-              </div>
-              <div className="col-9">
-                <div className="fr zx_b">
-                  <textarea
-                    className="text_bg"
-                    name="message"
-                    id="message"
-                    onChange={handleInputChange}></textarea>
-                  <div className="submit">
-                    {i18n.language === "zh" ? (
-                      <>
-                        <input
-                          type="image"
-                          src={SubmitImage_CN}
-                          className="tjbtn"
-                        />
-                      </>
-                    ) : (
-                      <>
-                        <input
-                          type="image"
-                          src={SubmitImage}
-                          className="tjbtn"
-                        />
-                      </>
-                    )}
                   </div>
                 </div>
               </div>
-            </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl">
+                    {t("services.guestBook.email")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b">
+                    <input
+                      name="email"
+                      id="email"
+                      className="in_bg_s"
+                      type="text"
+                      onChange={handleInputChange}
+                    />
+                    <div>{t("services.guestBook.validEmailMessage")}</div>
+                  </div>
+                </div>
+              </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl zx_c">
+                    {t("services.guestBook.name")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b">
+                    <input
+                      name="name"
+                      id="name"
+                      className="in_bg_s"
+                      type="text"
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl zx_c">
+                    {t("services.guestBook.sex")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b zx_d">
+                    <label>
+                      <input
+                        type="radio"
+                        id="gender"
+                        name="gender"
+                        value="Male"
+                        onChange={handleInputChange}
+                      />
+                      <span>{t("services.guestBook.male")}</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        id="gender"
+                        name="gender"
+                        value="Female"
+                        onChange={handleInputChange}
+                      />
+                      <span>{t("services.guestBook.female")}</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl zx_c">
+                    {t("services.guestBook.address")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b">
+                    <input
+                      name="address"
+                      id="address"
+                      className="in_bg"
+                      type="text"
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl zx_c">
+                    {t("services.guestBook.message")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b zx_d">
+                    <label>
+                      <input
+                        type="radio"
+                        id="messageType"
+                        name="messageType"
+                        value="Consult"
+                        onChange={handleInputChange}
+                      />
+                      <span>{t("services.guestBook.consult")}</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        id="messageType"
+                        name="messageType"
+                        value="Complain"
+                        onChange={handleInputChange}
+                      />
+                      <span>{t("services.guestBook.complain")}</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        id="messageType"
+                        name="messageType"
+                        value="Suggest"
+                        onChange={handleInputChange}
+                      />
+                      <span>{t("services.guestBook.suggest")}</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl zx_c">
+                    {t("services.guestBook.title")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b">
+                    <input
+                      name="subject"
+                      id="subject"
+                      className="in_bg"
+                      type="text"
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="clearfix zxfw_d1">
+                <div className="col-3">
+                  <span className="zx_a fl zx_c">
+                    {t("services.guestBook.content")}
+                  </span>
+                </div>
+                <div className="col-9">
+                  <div className="fr zx_b">
+                    <textarea
+                      className="text_bg"
+                      name="message"
+                      id="message"
+                      onChange={handleInputChange}></textarea>
+                    <div className="submit">
+                      {i18n.language === "zh" ? (
+                        <>
+                          <input
+                            type="image"
+                            src={SubmitImage_CN}
+                            className="tjbtn"
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <input
+                            type="image"
+                            src={SubmitImage}
+                            className="tjbtn"
+                          />
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            {/* <div className="clearfix zxfw_d1">
+              {/* <div className="clearfix zxfw_d1">
               <div className="fr zx_b">
                 <input
                   id="vcode"
@@ -301,7 +315,9 @@ const ServiceForm = () => {
                 </span>
               </div>
             </div> */}
-          </form>
+            </form>
+            {isLoading && <Loader />}
+          </div>
         </div>
         {windowWidth <= 990 ? <TopButton_m /> : <TopButton />}
       </div>

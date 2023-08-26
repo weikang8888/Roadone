@@ -3004,6 +3004,10 @@ li:hover .lb {
   font-size: 14px;
   color: #06c;
 }
+
+.form-container{
+  position: relative;
+}
 /* Styling the scrollbar */
 div::-webkit-scrollbar {
   width: 100%; /* width of the scrollbar */

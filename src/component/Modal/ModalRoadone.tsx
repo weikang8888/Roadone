@@ -7,10 +7,12 @@ import SubmitImage from "../../static/assets/picture/submit.png";
 import SubmitImage_CN from "../../static/assets/cn/submit.png";
 
 import { useTranslation } from "react-i18next";
+import Loader from "../Loader/Loader";
 
 const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
   const { t, i18n } = useTranslation();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,6 +41,7 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
 
     const formDataToSend = new FormData();
 
@@ -56,7 +59,10 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
     }
 
     axios
-      .post("https://backend.roadone.com.my/api_roadone/contact/apply", formDataToSend)
+      .post(
+        "https://backend.roadone.com.my/api_roadone/contact/apply",
+        formDataToSend
+      )
       .then((response) => {
         console.log(response.data);
         setIsSuccess(true);
@@ -69,6 +75,9 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
         alert(
           "There was an error submitting the form. Please try again later."
         );
+      })
+      .finally(() => {
+        setIsLoading(false); // Set loading to false after submission attempt
       });
   };
 
@@ -85,6 +94,8 @@ const ModalRoadone = ({ clodeModal, fieldVisibility }) => {
                 <img className="fr" src={YYlogo} />
               </div>
               <div className="yy_f">
+                {isLoading && <Loader />}
+
                 <form className="clearfix" id="form1" onSubmit={handleSubmit}>
                   <div className="col-lg-6 yy_f_lt ">
                     {fieldVisibility.fullName && (

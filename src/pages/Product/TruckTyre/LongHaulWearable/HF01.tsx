@@ -141,33 +141,50 @@ const HF01 = () => {
                             <table>
                               <tbody>
                                 <tr className="firstRow">
-                                <td className="tdWidth">{t("products.size")}</td>
-                                <td className="tdWidth">{t("products.plyRating")}</td>
-                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
-             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
-                               <td className="tdWidth">{t("products.speedRating")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.size")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.plyRating")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.maxLoadSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.loadIndexSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.speedRating")}
+                                  </td>
 
-                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.overallDiameter")}
+                                  </td>
 
-                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.sectionWidth")}
+                                  </td>
 
-                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.standardInflationPressure")}
+                                  </td>
 
-                                         <td className="tdWidth">{t("products.standardRim")}</td>
-
-                              </tr>
-                              <tr>
-                                <td>12R22.5</td>
-                                <td>18PR</td>
-                                <td>3550/3250</td>
-                                <td>152/149</td>
-                                <td>M</td>
-                                <td>1085</td>
-                                <td>300</td>
-                                <td>930</td>
-                                <td>9.00</td>
-                              </tr>
-                               </tbody>
+                                  <td className="tdWidth">
+                                    {t("products.standardRim")}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>12R22.5</td>
+                                  <td>18PR</td>
+                                  <td>3550/3250</td>
+                                  <td>152/149</td>
+                                  <td>M</td>
+                                  <td>1085</td>
+                                  <td>300</td>
+                                  <td>930</td>
+                                  <td>9.00</td>
+                                </tr>
+                              </tbody>
                             </table>
                           </div>
                           <p></p>
