@@ -41,16 +41,6 @@ const HF252 = () => {
       });
   }, []);
 
-  useEffect(() => {
-    // Update the overflow property of the body element based on isModalOpen state
-    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
-
-    // Cleanup function to reset the overflow property when the component unmounts
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isModalOpen]);
-
   return (
     <>
       <ProductHeader />
@@ -145,50 +135,52 @@ const HF252 = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
-                                <td className="tdWidth">
-                                  {t("products.size")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.plyRating")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.maxLoadSingleDual")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.loadIndexSingleDual")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.speedRating")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.overallDiameter")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.sectionWidth")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.standardInflationPressure")}
-                                </td>
-                                <td className="tdWidth">
-                                  {t("products.standardRim")}
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>245/70R19.5</td>
-                                <td>16PR</td>
-                                <td>2180/2060</td>
-                                <td>135/133</td>
-                                <td>M</td>
-                                <td>839</td>
-                                <td>248</td>
-                                <td>830</td>
-                                <td>7.50</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
+                                  <td className="tdWidth">
+                                    {t("products.size")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.plyRating")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.maxLoadSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.loadIndexSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.speedRating")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.overallDiameter")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.sectionWidth")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.standardInflationPressure")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.standardRim")}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>245/70R19.5</td>
+                                  <td>16PR</td>
+                                  <td>2180/2060</td>
+                                  <td>135/133</td>
+                                  <td>M</td>
+                                  <td>839</td>
+                                  <td>248</td>
+                                  <td>830</td>
+                                  <td>7.50</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

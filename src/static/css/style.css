@@ -1424,7 +1424,7 @@ li:hover .lb {
   font-size: 16px;
   text-align: center;
   color: #fff;
-  width: 300px;
+  width: 100%;
   line-height: 2;
   text-indent: -10px;
   background: #e60012;
@@ -1536,8 +1536,8 @@ li:hover .lb {
 }
 .news_main1 .news_hd {
   border-bottom: 1px dashed #7f7f7f;
-  padding-bottom: 20px;
   letter-spacing: 0.5px;
+  margin-top:5%;
 }
 .news_main1 .news_hd span {
   font-size: 36px;

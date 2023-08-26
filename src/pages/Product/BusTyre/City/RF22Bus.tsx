@@ -123,15 +123,15 @@ const RF22Bus = () => {
                           data-aos-easing="ease-out-back">
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            {t("bus.inter.RF22.content1")}
+                            {t("bus.city.RF22.content1")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            {t("bus.inter.RF22.content2")}
+                            {t("bus.city.RF22.content2")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <span>&gt;</span>
-                            {t("bus.inter.RF22.content3")}
+                            {t("bus.city.RF22.content3")}
                           </p>
                           <p style={{ whiteSpace: "normal" }}>
                             <br />
@@ -140,57 +140,70 @@ const RF22Bus = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td className="tdWidth">{t("products.size")}</td>
-                                <td className="tdWidth">{t("products.plyRating")}</td>
-                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
-             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
-                               <td className="tdWidth">{t("products.speedRating")}</td>
-
-                                <td className="tdWidth">{t("products.overallDiameter")}</td>
-
-                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
-
-                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
-
-                                         <td className="tdWidth">{t("products.standardRim")}</td>
-
-                              </tr>
-                              <tr>
-                                <td >9R22.5</td>
-                                <td >14PR</td>
-                                <td >2240/2120</td>
-                                <td >136/134</td>
-                                <td >L</td>
-                                <td >972</td>
-                                <td >229</td>
-                                <td >830</td>
-                                <td >6.75</td>
-                              </tr>
-                              <tr>
-                                <td >10R22.5</td>
-                                <td >16PR</td>
-                                <td >2800/2650</td>
-                                <td >144/142</td>
-                                <td >L</td>
-                                <td >1018</td>
-                                <td >254</td>
-                                <td >900</td>
-                                <td >7.50</td>
-                              </tr>
-                              <tr>
-                                <td
-                                  
-                                  >
-                                  215/75R17.5
+                                <td className="tdWidth">
+                                  {t("products.size")}
                                 </td>
-                                <td >16PR</td>
-                                <td >1750/1600</td>
-                                <td >127/124</td>
-                                <td >K</td>
-                                <td >773</td>
-                                <td >215</td>
-                                <td >830</td>
-                                <td >6.00</td>
+                                <td className="tdWidth">
+                                  {t("products.plyRating")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.maxLoadSingleDual")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.loadIndexSingleDual")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.speedRating")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.overallDiameter")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.sectionWidth")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.standardInflationPressure")}
+                                </td>
+
+                                <td className="tdWidth">
+                                  {t("products.standardRim")}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>9R22.5</td>
+                                <td>14PR</td>
+                                <td>2240/2120</td>
+                                <td>136/134</td>
+                                <td>L</td>
+                                <td>972</td>
+                                <td>229</td>
+                                <td>830</td>
+                                <td>6.75</td>
+                              </tr>
+                              <tr>
+                                <td>10R22.5</td>
+                                <td>16PR</td>
+                                <td>2800/2650</td>
+                                <td>144/142</td>
+                                <td>L</td>
+                                <td>1018</td>
+                                <td>254</td>
+                                <td>900</td>
+                                <td>7.50</td>
+                              </tr>
+                              <tr>
+                                <td>215/75R17.5</td>
+                                <td>16PR</td>
+                                <td>1750/1600</td>
+                                <td>127/124</td>
+                                <td>K</td>
+                                <td>773</td>
+                                <td>215</td>
+                                <td>830</td>
+                                <td>6.00</td>
                               </tr>
                             </tbody>
                           </table>

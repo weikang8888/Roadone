@@ -5,7 +5,7 @@ const SubmitSuccessPage = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       window.location.href = "/";
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);

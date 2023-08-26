@@ -520,7 +520,7 @@
     }
   },
   "bus": {
-    "inter": {
+    "city": {
       "RF22": {
         "content1": "Optimized profile design, special fine pattern treatment, improve the grip of slippery road, safe, comfortable and fuel saving.",
         "content2": "High-speed specific wearable tread design for bus, ensure higher mileage.",
@@ -532,7 +532,7 @@
         "content3": "Reinforced cap specific 4 belt cap design, low heat generation recipe, optimised shoulder desigh, inhibiting reduce the rolling resistance of driving,environmental protection,suitable for multiple retreading of tires."
       }
     },
-    "city": {
+    "inter": {
       "CA10": {
         "content1": "The specific bus pattern design ensures a strong wet grip and ensures excellent braking performance.",
         "content2": "Specific steel sheet fine grain design ensures uniform wear of the cap under frequent brakes.",
