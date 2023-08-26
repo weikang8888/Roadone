@@ -1534,12 +1534,6 @@ li:hover .lb {
   height: 40px;
   background: #e60012;
 }
-.news_main1 {
-  width: 1360px;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 60px;
-}
 .news_main1 .news_hd {
   border-bottom: 1px dashed #7f7f7f;
   padding-bottom: 20px;
@@ -1868,6 +1862,9 @@ li:hover .lb {
 }
 .zx_banner {
   overflow: hidden;
+}
+.zx_banner img {
+  width: 100%;
 }
 .sh_zp .sh_zp_hd {
   font-size: 32px;

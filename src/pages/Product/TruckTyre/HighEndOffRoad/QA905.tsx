@@ -41,6 +41,16 @@ const QA905 = () => {
       });
   }, []);
 
+  useEffect(() => {
+    // Update the overflow property of the body element based on isModalOpen state
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+
+    // Cleanup function to reset the overflow property when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
+
   return (
     <>
       <ProductHeader />
@@ -134,54 +144,59 @@ const QA905 = () => {
                           <table>
                             <tbody>
                               <tr className="firstRow">
-                                <td className="tdWidth">{t("products.size")}</td>
-                                <td className="tdWidth">{t("products.plyRating")}</td>
-                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
-             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
-                               <td className="tdWidth">{t("products.speedRating")}</td>
+                                <td className="tdWidth">
+                                  {t("products.size")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.plyRating")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.maxLoadSingleDual")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.loadIndexSingleDual")}
+                                </td>
+                                <td className="tdWidth">
+                                  {t("products.speedRating")}
+                                </td>
 
-                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+                                <td className="tdWidth">
+                                  {t("products.overallDiameter")}
+                                </td>
 
-                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+                                <td className="tdWidth">
+                                  {t("products.sectionWidth")}
+                                </td>
 
-                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+                                <td className="tdWidth">
+                                  {t("products.standardInflationPressure")}
+                                </td>
 
-                                         <td className="tdWidth">{t("products.standardRim")}</td>
-
+                                <td className="tdWidth">
+                                  {t("products.standardRim")}
+                                </td>
                               </tr>
                               <tr>
-                                <td >11.00R20</td>
-                                <td
-                                  
-                                  >
-                                  18PR★★
-                                </td>
-                                <td >3550/3250</td>
-                                <td >152/149</td>
-                                <td >D</td>
-                                <td >1103</td>
-                                <td >293</td>
-                                <td >930</td>
-                                <td >8.0</td>
+                                <td>11.00R20</td>
+                                <td>18PR★★</td>
+                                <td>3550/3250</td>
+                                <td>152/149</td>
+                                <td>D</td>
+                                <td>1103</td>
+                                <td>293</td>
+                                <td>930</td>
+                                <td>8.0</td>
                               </tr>
                               <tr>
-                                <td
-                                  
-                                  >
-                                  12.00R20
-                                </td>
-                                <td
-                                  
-                                  >
-                                  20PR★★
-                                </td>
-                                <td >4000/3650</td>
-                                <td >156/153</td>
-                                <td >D</td>
-                                <td >1134</td>
-                                <td >315</td>
-                                <td >900</td>
-                                <td >8.5</td>
+                                <td>12.00R20</td>
+                                <td>20PR★★</td>
+                                <td>4000/3650</td>
+                                <td>156/153</td>
+                                <td>D</td>
+                                <td>1134</td>
+                                <td>315</td>
+                                <td>900</td>
+                                <td>8.5</td>
                               </tr>
                             </tbody>
                           </table>

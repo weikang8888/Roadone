@@ -43,6 +43,15 @@ const SocialRecruitment = ({ showHeader }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  useEffect(() => {
+    // Update the overflow property of the body element based on isModalOpen state
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+
+    // Cleanup function to reset the overflow property when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
 
   const swiperTopSlides = [
     { image: InsideImage1 },
@@ -104,245 +113,267 @@ const SocialRecruitment = ({ showHeader }) => {
                 </div>
                 <div className="zw">
                   <table>
-                    <tr className="tb_frist">
-                      <td className="tb_frist_t1">
-                        {t("socialRecruitment.position")}
-                      </td>
-                      <td className="tb_frist_t2">
-                        {t("socialRecruitment.majorRequirement")}
-                      </td>
-                      <td className="tb_frist_t3">
-                        {t("socialRecruitment.degree")}
-                      </td>
-                      <td className="tb_frist_t4">
-                        {t("socialRecruitment.numberOfHiring")}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="zw_d1">
-                        <a title="Industrial Engineering Specialist">
-                          {t("socialRecruitment.industrialEngineering")}
-                        </a>
-                      </td>
-                      <td className="zw_d2">
-                        <div className="zw_d2_box">
-                          <p>
-                            {t(
-                              "socialRecruitment.industrialEngineeringDescription1"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.industrialEngineeringDescription2"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.industrialEngineeringDescription3"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.industrialEngineeringDescription4"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.industrialEngineeringDescription5"
-                            )}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="zw_d3">
-                        {t("socialRecruitment.bachelorDegree")}
-                      </td>
-                      <td className="zw_d4">1</td>
-                    </tr>
-                    <tr>
-                      <td className="zw_d1">
-                        <a title="Motorcade Salesperson">
-                          {t("socialRecruitment.motorcadeSalesperson")}
-                        </a>
-                      </td>
-                      <td className="zw_d2">
-                        <div className="zw_d2_box">
-                          <p>
-                            {t(
-                              "socialRecruitment.motorcadeSalespersonDescription1"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.motorcadeSalespersonDescription2"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.motorcadeSalespersonDescription3"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.motorcadeSalespersonDescription4"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.motorcadeSalespersonDescription5"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.motorcadeSalespersonDescription6"
-                            )}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="zw_d3">
-                        {t("socialRecruitment.bachelorDegree")}
-                      </td>
-                      <td className="zw_d4">1</td>
-                    </tr>
-                    <tr>
-                      <td className="zw_d1">
-                        <a title="Quality Engineer">
-                          {t("socialRecruitment.qualityEngineer")}
-                        </a>
-                      </td>
-                      <td className="zw_d2">
-                        <div className="zw_d2_box">
-                          <p>
-                            {t("socialRecruitment.qualityEngineerDescription1")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.qualityEngineerDescription2")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.qualityEngineerDescription3")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.qualityEngineerDescription4")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.qualityEngineerDescription5")}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="zw_d3">
-                        {t("socialRecruitment.bachelorDegree")}
-                      </td>
-                      <td className="zw_d4">1</td>
-                    </tr>
-                    <tr>
-                      <td className="zw_d1">
-                        <a title="Formula Design Engineer">
-                          {t("socialRecruitment.formulaDesignEngineer")}
-                        </a>
-                      </td>
-                      <td className="zw_d2">
-                        <div className="zw_d2_box">
-                          <p>
-                            {t(
-                              "socialRecruitment.formulaDesignEngineerDescription1"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.formulaDesignEngineerDescription2"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.formulaDesignEngineerDescription3"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.formulaDesignEngineerDescription4"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.formulaDesignEngineerDescription5"
-                            )}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="zw_d3">
-                        {t("socialRecruitment.bachelorDegree")}
-                      </td>
-                      <td className="zw_d4">1</td>
-                    </tr>
-                    <tr>
-                      <td className="zw_d1">
-                        <a title="Structural Engineer">
-                          {t("socialRecruitment.structuralEngineer")}
-                        </a>
-                      </td>
-                      <td className="zw_d2">
-                        <div className="zw_d2_box">
-                          <p>
-                            {t(
-                              "socialRecruitment.structuralEngineerDescription1"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.structuralEngineerDescription2"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.structuralEngineerDescription3"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.structuralEngineerDescription4"
-                            )}
-                          </p>
-                          <p>
-                            {t(
-                              "socialRecruitment.structuralEngineerDescription5"
-                            )}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="zw_d3">
-                        {t("socialRecruitment.bachelorDegree")}
-                      </td>
-                      <td className="zw_d4">1</td>
-                    </tr>
-                    <tr>
-                      <td className="zw_d1">
-                        <a title="Cost Accountant">
-                          {t("socialRecruitment.costAccountant")}
-                        </a>
-                      </td>
-                      <td className="zw_d2">
-                        <div className="zw_d2_box">
-                          <p>
-                            {t("socialRecruitment.costAccountantDescription1")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.costAccountantDescription2")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.costAccountantDescription3")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.costAccountantDescription4")}
-                          </p>
-                          <p>
-                            {t("socialRecruitment.costAccountantDescription5")}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="zw_d3">
-                        {t("socialRecruitment.bachelorDegree")}
-                      </td>
-                      <td className="zw_d4">1</td>
-                    </tr>
+                    <tbody>
+                      <tr className="tb_frist">
+                        <td className="tb_frist_t1">
+                          {t("socialRecruitment.position")}
+                        </td>
+                        <td className="tb_frist_t2">
+                          {t("socialRecruitment.majorRequirement")}
+                        </td>
+                        <td className="tb_frist_t3">
+                          {t("socialRecruitment.degree")}
+                        </td>
+                        <td className="tb_frist_t4">
+                          {t("socialRecruitment.numberOfHiring")}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="zw_d1">
+                          <a title="Industrial Engineering Specialist">
+                            {t("socialRecruitment.industrialEngineering")}
+                          </a>
+                        </td>
+                        <td className="zw_d2">
+                          <div className="zw_d2_box">
+                            <p>
+                              {t(
+                                "socialRecruitment.industrialEngineeringDescription1"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.industrialEngineeringDescription2"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.industrialEngineeringDescription3"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.industrialEngineeringDescription4"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.industrialEngineeringDescription5"
+                              )}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="zw_d3">
+                          {t("socialRecruitment.bachelorDegree")}
+                        </td>
+                        <td className="zw_d4">1</td>
+                      </tr>
+                      <tr>
+                        <td className="zw_d1">
+                          <a title="Motorcade Salesperson">
+                            {t("socialRecruitment.motorcadeSalesperson")}
+                          </a>
+                        </td>
+                        <td className="zw_d2">
+                          <div className="zw_d2_box">
+                            <p>
+                              {t(
+                                "socialRecruitment.motorcadeSalespersonDescription1"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.motorcadeSalespersonDescription2"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.motorcadeSalespersonDescription3"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.motorcadeSalespersonDescription4"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.motorcadeSalespersonDescription5"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.motorcadeSalespersonDescription6"
+                              )}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="zw_d3">
+                          {t("socialRecruitment.bachelorDegree")}
+                        </td>
+                        <td className="zw_d4">1</td>
+                      </tr>
+                      <tr>
+                        <td className="zw_d1">
+                          <a title="Quality Engineer">
+                            {t("socialRecruitment.qualityEngineer")}
+                          </a>
+                        </td>
+                        <td className="zw_d2">
+                          <div className="zw_d2_box">
+                            <p>
+                              {t(
+                                "socialRecruitment.qualityEngineerDescription1"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.qualityEngineerDescription2"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.qualityEngineerDescription3"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.qualityEngineerDescription4"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.qualityEngineerDescription5"
+                              )}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="zw_d3">
+                          {t("socialRecruitment.bachelorDegree")}
+                        </td>
+                        <td className="zw_d4">1</td>
+                      </tr>
+                      <tr>
+                        <td className="zw_d1">
+                          <a title="Formula Design Engineer">
+                            {t("socialRecruitment.formulaDesignEngineer")}
+                          </a>
+                        </td>
+                        <td className="zw_d2">
+                          <div className="zw_d2_box">
+                            <p>
+                              {t(
+                                "socialRecruitment.formulaDesignEngineerDescription1"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.formulaDesignEngineerDescription2"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.formulaDesignEngineerDescription3"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.formulaDesignEngineerDescription4"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.formulaDesignEngineerDescription5"
+                              )}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="zw_d3">
+                          {t("socialRecruitment.bachelorDegree")}
+                        </td>
+                        <td className="zw_d4">1</td>
+                      </tr>
+                      <tr>
+                        <td className="zw_d1">
+                          <a title="Structural Engineer">
+                            {t("socialRecruitment.structuralEngineer")}
+                          </a>
+                        </td>
+                        <td className="zw_d2">
+                          <div className="zw_d2_box">
+                            <p>
+                              {t(
+                                "socialRecruitment.structuralEngineerDescription1"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.structuralEngineerDescription2"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.structuralEngineerDescription3"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.structuralEngineerDescription4"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.structuralEngineerDescription5"
+                              )}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="zw_d3">
+                          {t("socialRecruitment.bachelorDegree")}
+                        </td>
+                        <td className="zw_d4">1</td>
+                      </tr>
+                      <tr>
+                        <td className="zw_d1">
+                          <a title="Cost Accountant">
+                            {t("socialRecruitment.costAccountant")}
+                          </a>
+                        </td>
+                        <td className="zw_d2">
+                          <div className="zw_d2_box">
+                            <p>
+                              {t(
+                                "socialRecruitment.costAccountantDescription1"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.costAccountantDescription2"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.costAccountantDescription3"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.costAccountantDescription4"
+                              )}
+                            </p>
+                            <p>
+                              {t(
+                                "socialRecruitment.costAccountantDescription5"
+                              )}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="zw_d3">
+                          {t("socialRecruitment.bachelorDegree")}
+                        </td>
+                        <td className="zw_d4">1</td>
+                      </tr>
+                    </tbody>
                   </table>
                   <div className="zp_date clearfix">
                     <ul className="list-paddingleft-2">
@@ -363,11 +394,11 @@ const SocialRecruitment = ({ showHeader }) => {
                       <li>
                         <p>{t("socialRecruitment.tel")}: 0537-5174413</p>
                       </li>
-                      <li>
+                      {/* <li>
                         <p className="lastrow">
-                          【<a>{t("socialRecruitment.downloadResume")}</a>】
+                          <a>【{t("socialRecruitment.downloadResume")}】</a>
                         </p>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <AdvanceButton

@@ -9,7 +9,6 @@ const New = () => {
   const { t } = useTranslation();
 
   const [newsItems, setNewsItems] = useState([]);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
@@ -21,18 +20,6 @@ const New = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   return (
@@ -71,7 +58,7 @@ const New = () => {
                         </p>
                         <div className="news_rt_d3r fr clearfix">
                           <div className="yuedu fl">
-                            <a>{t("homepage.viewDetails")}</a>
+                            <a href={news.news_url}>{t("homepage.viewDetails")}</a>
                           </div>
                         </div>
                       </div>

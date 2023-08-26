@@ -41,6 +41,16 @@ const HF81 = () => {
       });
   }, []);
 
+  useEffect(() => {
+    // Update the overflow property of the body element based on isModalOpen state
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+
+    // Cleanup function to reset the overflow property when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
+
   return (
     <>
       <ProductHeader />

@@ -137,6 +137,32 @@
     padding: 2% 5%;
     font-family: "Roboto", Vernana, Microsoft Yahei, Arial;
   }
+  .news_main1 .news_box .news_m a.news_img img {
+    filter: none;
+  }
+  .news_main1 .news_box .news_rt .news_rt_d1 a {
+    font-family: "Roboto", Microsoft Yahei, Verdana, Tahoma, Arial;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.4;
+    display: inline-block;
+    margin: 3% 0 3.5%;
+  }
+  .news_main1 .news_box .news_rt .news_rt_d2 {
+    font-size: 1.1em;
+    color: #777;
+    line-height: 22px;
+  }
+  .news_rt_d3 {
+    margin: 5% 0;
+  }
+  .zxns .zx_box .newsbox{
+    margin:0;
+  }
+  .kt .cont p{
+    padding:1%;
+  }
   .zxns .zx_box .zx_list > ul > li a {
     display: block;
     text-align: center;
@@ -175,7 +201,7 @@
     font-size: 0.9em;
     border: 1px solid #b5b5b6;
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 15px;
   }
   .typebox {
     display: none;
@@ -308,8 +334,64 @@
   .yy .yy_left {
     display: none;
   }
-  .zxfw_d1 .col-9{
-    padding-left:20px;
+  .zxfw_d1 .col-9 {
+    padding-left: 20px;
+  }
+  .kt .kt_d2 a {
+    font-size: 1.5rem;
+  }
+  .kt .kt_d3 {
+    font-size: 1.1rem;
+    line-height: 22px;
+  }
+  .zxns .zx_box .zx_list > ul {
+    margin-top: 20px;
+  }
+  .fuwu_list ul {
+    margin-bottom: 30px;
+  }
+  .zx_a {
+    height: 30px;
+    line-height: 30px;
+  }
+  .zx_b .in_bg_s,
+  .zx_b .in_bg {
+    height: 30px;
+  }
+  .zxfw_d1 {
+    margin-bottom: 15px;
+  }
+  .zx_b div {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  .zx_d {
+    padding-top: 5px;
+    font-size: 0.9em;
+  }
+  .zx_d span {
+    margin: 0;
+  }
+  .text_bg {
+    height: 130px;
+  }
+  .zxfw_d1 .submit .tjbtn {
+    position: absolute;
+    bottom: -18px;
+    right: 20px;
+    background: none;
+    width: 46px;
+    height: 46px;
+  }
+  .zw table .tb_frist .tb_frist_t5,
+  .zw table .tb_frist .tb_frist_t4 {
+    display: none;
+  }
+  .zw table .zw_d4 {
+    display: none;
+  }
+  .zw table .tb_frist td {
+    height: 35px;
   }
 }
 

@@ -30,17 +30,26 @@ const MobileHomepage = () => {
   const [newsItems, setNewsItems] = useState([]);
 
   const swiperTopSlides = [
-    { image: SwiperTopImage1, link: "products1.html" },
-    { image: SwiperTopImage2, link: "products1.html" },
-    { image: SwiperTopImage3, link: "products1.html" },
-    { image: SwiperTopImage4, link: "products1.html" },
-    { image: SwiperTopImage5, link: "products1.html" },
+    { image: SwiperTopImage1 },
+    { image: SwiperTopImage2 },
+    { image: SwiperTopImage3 },
+    { image: SwiperTopImage4 },
+    { image: SwiperTopImage5 },
   ];
   const swiperSlides = [
-    { image: SwiperImage1 },
-    { image: SwiperImage2 },
-    { image: SwiperImage3 },
-    { image: SwiperImage4 },
+    {
+      image: SwiperImage1,
+      url: "/products/truck-tyres/middle-long-distance/RD15L",
+    },
+    {
+      image: SwiperImage2,
+      url: "/products/truck-tyres/middle-long-distance/RF02",
+    },
+    {
+      image: SwiperImage3,
+      url: "/products/truck-tyres/middle-long-distance/RA95",
+    },
+    { image: SwiperImage4, url: "/products/truck/middle-short-distance/GA98" },
   ];
   useEffect(() => {
     // Fetch data from phpMyAdmin using Axios
@@ -91,7 +100,7 @@ const MobileHomepage = () => {
             id="banner">
             {swiperSlides.map((slide, index) => (
               <SwiperSlide key={index}>
-                <a>
+                <a href={slide.url}>
                   <img src={slide.image} />
                 </a>
               </SwiperSlide>
@@ -134,10 +143,12 @@ const MobileHomepage = () => {
             {t("about.nationalServiceHotline")}: 400-639-1111
           </div>
           <div className="lx_c">
-            Inter{t("about.nationalServiceHotline")}: +86-537-5174476
+            Inter{t("about.nationalServiceHotline")}: +019-790-9609
           </div>
           <div className="lx_c">{t("about.email")}: roadone@hixih.com.cn</div>
-          <div className="lx_c">{t("about.website")}: http://en.tltyre.com</div>
+          <div className="lx_c">
+            {t("about.website")}: https://www.roadone.com.my/
+          </div>
         </div>
       </div>
     </>

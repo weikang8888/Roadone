@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
@@ -31,6 +31,15 @@ const Header_m = () => {
       document.body.style.overflow = "hidden"; // Disable scrolling
     }
   };
+  useEffect(() => {
+    // Update the overflow property of the body element based on menuOpen state
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+
+    // Cleanup function to reset the overflow property when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -66,7 +75,10 @@ const Header_m = () => {
               <NavLink to="/products"> {t("header.products")}</NavLink>
             </li>
             <li>
-              <NavLink to="/services"> {t("header.service")}</NavLink>
+              <NavLink to="/services/tyre-class">
+                {" "}
+                {t("header.service")}
+              </NavLink>
             </li>
             <li>
               <NavLink to="/recruitment"> {t("header.recruitment")}</NavLink>

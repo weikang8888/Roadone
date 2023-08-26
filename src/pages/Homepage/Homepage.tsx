@@ -35,10 +35,19 @@ const Homepage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [newsItems, setNewsItems] = useState([]);
   const swiperSlides = [
-    { image: SwiperImage1 },
-    { image: SwiperImage2 },
-    { image: SwiperImage3 },
-    { image: SwiperImage4 },
+    {
+      image: SwiperImage1,
+      url: "/products/truck-tyres/middle-long-distance/RD15L",
+    },
+    {
+      image: SwiperImage2,
+      url: "/products/truck-tyres/middle-long-distance/RF02",
+    },
+    {
+      image: SwiperImage3,
+      url: "/products/truck-tyres/middle-long-distance/RA95",
+    },
+    { image: SwiperImage4, url: "/products/truck/middle-short-distance/GA98" },
   ];
 
   const swiperTopSlides = [
@@ -190,7 +199,7 @@ const Homepage = () => {
                     id="banner">
                     {swiperSlides.map((slide, index) => (
                       <SwiperSlide key={index}>
-                        <a>
+                        <a href={slide.url}>
                           <img src={slide.image} />
                         </a>
                       </SwiperSlide>
@@ -224,9 +233,9 @@ const Homepage = () => {
                           {t("about.nationalServiceHotline")}:
                           <s>400-639-1111</s>
                         </span>
-                        <i>
+                        <i style={{ marginLeft: "90px" }}>
                           {t("about.internationalServiceHotline")}:
-                          <s>+86-537-5174476</s>
+                          <s>+019-790-9609</s>
                         </i>
                       </li>
                       <li>
@@ -234,7 +243,8 @@ const Homepage = () => {
                           {t("about.email")}: <s>roadone@hixih.com.cn</s>
                         </span>
                         <i className="web">
-                          {t("about.website")}: <s>http://en.tltyre.com</s>
+                          {t("about.website")}:{" "}
+                          <s>https://www.roadone.com.my/</s>
                         </i>
                       </li>
                     </ul>
