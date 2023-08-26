@@ -136,9 +136,10 @@ const RF02Light = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
                                 <td className="tdWidth">{t("products.size")}</td>
                                 <td className="tdWidth">{t("products.plyRating")}</td>
                                 <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
@@ -206,8 +207,9 @@ const RF02Light = () => {
                                 <td >770</td>
                                 <td >6.50H</td>
                               </tr>
-                            </tbody>
-                          </table>
+                               </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

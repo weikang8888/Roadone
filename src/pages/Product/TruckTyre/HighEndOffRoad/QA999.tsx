@@ -141,89 +141,100 @@ const QA999 = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
-                                <td className="tdWidth">{t("products.size")}</td>
-                                <td className="tdWidth">{t("products.plyRating")}</td>
-                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
-             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
-                               <td className="tdWidth">{t("products.speedRating")}</td>
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
+                                  <td className="tdWidth">
+                                    {t("products.size")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.plyRating")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.maxLoadSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.loadIndexSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.speedRating")}
+                                  </td>
 
-                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.overallDiameter")}
+                                  </td>
 
-                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.sectionWidth")}
+                                  </td>
 
-                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.standardInflationPressure")}
+                                  </td>
 
-                                         <td className="tdWidth">{t("products.standardRim")}</td>
-
-                              </tr>
-                              <tr>
-                                <td
-                                  
-                                  >
-                                  8.25R20
-                                </td>
-                                <td >16PR</td>
-                                <td >2430/2300</td>
-                                <td >139/137</td>
-                                <td >F</td>
-                                <td >982</td>
-                                <td >236</td>
-                                <td >930</td>
-                                <td >6.5</td>
-                              </tr>
-                              <tr>
-                                <td >9.00R20</td>
-                                <td >16PR</td>
-                                <td >2800/2650</td>
-                                <td >144/142</td>
-                                <td >F</td>
-                                <td >1028</td>
-                                <td >259</td>
-                                <td >900</td>
-                                <td >7.0</td>
-                              </tr>
-                              <tr>
-                                <td >10.00R20</td>
-                                <td >18PR*</td>
-                                <td >3250/3000</td>
-                                <td >149/146</td>
-                                <td >F</td>
-                                <td >1063</td>
-                                <td >278</td>
-                                <td >930</td>
-                                <td >7.5</td>
-                              </tr>
-                              <tr>
-                                <td >11.00R20</td>
-                                <td >18PR**</td>
-                                <td >3550/3250</td>
-                                <td >152/149</td>
-                                <td >F</td>
-                                <td >1105</td>
-                                <td >293</td>
-                                <td >930</td>
-                                <td >8.0</td>
-                              </tr>
-                              <tr>
-                                <td
-                                  
-                                  >
-                                  12.00R20
-                                </td>
-                                <td >20PR**</td>
-                                <td >4000/3650</td>
-                                <td >156/153</td>
-                                <td >F</td>
-                                <td >1140</td>
-                                <td >315</td>
-                                <td >900</td>
-                                <td >8.5</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  <td className="tdWidth">
+                                    {t("products.standardRim")}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>8.25R20</td>
+                                  <td>16PR</td>
+                                  <td>2430/2300</td>
+                                  <td>139/137</td>
+                                  <td>F</td>
+                                  <td>982</td>
+                                  <td>236</td>
+                                  <td>930</td>
+                                  <td>6.5</td>
+                                </tr>
+                                <tr>
+                                  <td>9.00R20</td>
+                                  <td>16PR</td>
+                                  <td>2800/2650</td>
+                                  <td>144/142</td>
+                                  <td>F</td>
+                                  <td>1028</td>
+                                  <td>259</td>
+                                  <td>900</td>
+                                  <td>7.0</td>
+                                </tr>
+                                <tr>
+                                  <td>10.00R20</td>
+                                  <td>18PR*</td>
+                                  <td>3250/3000</td>
+                                  <td>149/146</td>
+                                  <td>F</td>
+                                  <td>1063</td>
+                                  <td>278</td>
+                                  <td>930</td>
+                                  <td>7.5</td>
+                                </tr>
+                                <tr>
+                                  <td>11.00R20</td>
+                                  <td>18PR**</td>
+                                  <td>3550/3250</td>
+                                  <td>152/149</td>
+                                  <td>F</td>
+                                  <td>1105</td>
+                                  <td>293</td>
+                                  <td>930</td>
+                                  <td>8.0</td>
+                                </tr>
+                                <tr>
+                                  <td>12.00R20</td>
+                                  <td>20PR**</td>
+                                  <td>4000/3650</td>
+                                  <td>156/153</td>
+                                  <td>F</td>
+                                  <td>1140</td>
+                                  <td>315</td>
+                                  <td>900</td>
+                                  <td>8.5</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

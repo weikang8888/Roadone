@@ -137,9 +137,10 @@ const HF21Bus = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
                                 <td className="tdWidth">
                                   {t("products.size")}
                                 </td>
@@ -205,8 +206,9 @@ const HF21Bus = () => {
                                 <td>900</td>
                                 <td>9.00</td>
                               </tr>
-                            </tbody>
-                          </table>
+                               </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

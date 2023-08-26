@@ -141,9 +141,10 @@ const RD525 = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
                                 <td className="tdWidth">{t("products.size")}</td>
                                 <td className="tdWidth">{t("products.plyRating")}</td>
                                 <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
@@ -182,8 +183,9 @@ const RD525 = () => {
                                 <td>900</td>
                                 <td >9.00</td>
                               </tr>
-                            </tbody>
-                          </table>
+                               </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

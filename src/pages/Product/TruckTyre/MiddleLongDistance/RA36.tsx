@@ -141,9 +141,10 @@ const RA36 = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
                                 <td className="tdWidth">{t("products.size")}</td>
                                 <td className="tdWidth">{t("products.plyRating")}</td>
                                 <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
@@ -196,8 +197,9 @@ const RA36 = () => {
                                 <td >830</td>
                                 <td >12.25</td>
                               </tr>
-                            </tbody>
-                          </table>
+                               </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

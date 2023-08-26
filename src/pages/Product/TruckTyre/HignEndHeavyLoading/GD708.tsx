@@ -145,9 +145,10 @@ const GD708 = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
                                 <td className="tdWidth">
                                   {t("products.size")}
                                 </td>
@@ -211,8 +212,9 @@ const GD708 = () => {
                                 <td>930</td>
                                 <td>9.75</td>
                               </tr>
-                            </tbody>
-                          </table>
+                               </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

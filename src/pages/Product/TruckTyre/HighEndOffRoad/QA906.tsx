@@ -141,45 +141,56 @@ const QA906 = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
-                                <td className="tdWidth">{t("products.size")}</td>
-                                <td className="tdWidth">{t("products.plyRating")}</td>
-                                <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
-             <td className="tdWidth">{t("products.loadIndexSingleDual")}</td>
-                               <td className="tdWidth">{t("products.speedRating")}</td>
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
+                                  <td className="tdWidth">
+                                    {t("products.size")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.plyRating")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.maxLoadSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.loadIndexSingleDual")}
+                                  </td>
+                                  <td className="tdWidth">
+                                    {t("products.speedRating")}
+                                  </td>
 
-                                <td className="tdWidth">{t("products.overallDiameter")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.overallDiameter")}
+                                  </td>
 
-                                                               <td className="tdWidth">{t("products.sectionWidth")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.sectionWidth")}
+                                  </td>
 
-                                                <td className="tdWidth">{t("products.standardInflationPressure")}</td>
+                                  <td className="tdWidth">
+                                    {t("products.standardInflationPressure")}
+                                  </td>
 
-                                         <td className="tdWidth">{t("products.standardRim")}</td>
-
-                              </tr>
-                              <tr>
-                                <td
-                                  
-                                  >
-                                  12.00R20
-                                </td>
-                                <td
-                                  
-                                  >
-                                  20PR★★
-                                </td>
-                                <td >4000/3650</td>
-                                <td >156/153</td>
-                                <td >D</td>
-                                <td >1134</td>
-                                <td >315</td>
-                                <td >900</td>
-                                <td >8.5</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  <td className="tdWidth">
+                                    {t("products.standardRim")}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>12.00R20</td>
+                                  <td>20PR★★</td>
+                                  <td>4000/3650</td>
+                                  <td>156/153</td>
+                                  <td>D</td>
+                                  <td>1134</td>
+                                  <td>315</td>
+                                  <td>900</td>
+                                  <td>8.5</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton

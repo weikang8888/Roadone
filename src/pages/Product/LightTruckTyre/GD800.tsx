@@ -144,9 +144,10 @@ const GD800Light = () => {
                             <br />
                           </p>
                           <p></p>
-                          <table>
-                            <tbody>
-                              <tr className="firstRow">
+                          <div style={{ overflowX: "auto", width: "100%" }}>
+                            <table>
+                              <tbody>
+                                <tr className="firstRow">
                                 <td className="tdWidth">{t("products.size")}</td>
                                 <td className="tdWidth">{t("products.plyRating")}</td>
                                 <td className="tdWidth">{t("products.maxLoadSingleDual")}</td>
@@ -177,8 +178,9 @@ const GD800Light = () => {
                                 <td >870</td>
                                 <td >6.50H</td>
                               </tr>
-                            </tbody>
-                          </table>
+                               </tbody>
+                            </table>
+                          </div>
                           <p></p>
                         </div>
                         <AdvanceButton
