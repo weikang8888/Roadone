@@ -417,6 +417,7 @@
   }
   .ct_xq_d2 table .firstRow td {
     font-size: 14px;
+    white-space: nowrap;
   }
   .ct_xq_d2 table tr td {
     font-size: 12px;
